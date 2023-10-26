@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo Agenda 4</title>
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <style>
+        li {
+                border: 1px solid black;
+                padding: 10px;
+                list-style: none;
+                margin-bottom: 4px;
+                width: 300px;
+            }
+            * {
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+            let datos = [
+                { nombre: 'Alejandro', apellido: 'Di Battista', telefono: '(381) 534-3458' },
+                { nombre: 'Juan Carlos', apellido: 'Perez', telefono: '(381) 534-3458' },
+                { nombre: 'Pedro', apellido: 'Gomez', telefono: '(381) 534-3458' },
+            ]
+            
+            const Contacto = ({ nombre, apellido, telefono }) => 
+                React.createElement('li', null,
+                    React.createElement('h3', null, nombre, ' ', React.createElement('b', null, apellido)),
+                    React.createElement('p', null, `T: ${telefono}`))
+ 
+            const Agenda = (contactos) => 
+                React.createElement('div', {id: 'root'}, 
+                    React.createElement('h3', null, 'Agenda Amigos 4'),
+                    React.createElement('ul', null, ...contactos.map((contacto) => Contacto(contacto))))
+
+            ReactDOM.render( Agenda(datos), document.getElementById('root'));        
+        </script>
+    </body>
+</html>

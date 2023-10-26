@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- <link rel="stylesheet" href="fuera.css"/> -->
+
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+        <!-- <script src="separado.js"></script> -->
+
+        <title>Repado HTML</title>
+    </head>
+    <body>
+        <h1>Prueba de HTML Dinámico</h1>
+        <div id="root"></div>
+
+        <style>
+            * {
+                margin: 0;
+            }
+            h3 {
+                font-weight: lighter;
+            }
+            li {
+                border: 1px solid black;
+                padding: 10px;
+                list-style: none;
+                margin-bottom: 4px;
+                width: 300px;
+            }
+        </style>
+        <script type="text/babel">
+            function Agenda() {
+                            return (
+            <ul>
+                <Contacto nombre="Alejandro" apellido="Di Battista" telefono="(381) 534-3458"/>
+                <Contacto nombre="Juan Carlos" apellido="Perez" telefono="(381) 534-3458"/>
+                <Contacto nombre="Pedro" apellido="Gomez" telefono="(381) 534-3458"/>
+                <Contacto nombre="Maria" apellido="Gonzalez" telefono="(381) 534-3458"/>
+            </ul>
+            );
+            }
+            function Contacto({ nombre, apellido, telefono }) {
+              const li = React.createElement('li',null,
+                React.createElement('h3',null,nombre,' ', React.createElement('b', null, apellido)),
+                React.createElement('p', null, `T: ${telefono}`)
+              );
+            
+              return li;
+            }
+            
+            ReactDOM.render(
+              React.createElement(Contacto, {
+                nombre: 'Juan',
+                apellido: 'Pérez',
+                telefono: '555-1234',
+              }),
+              document.getElementById('root')
+            );
+            
+                        ReactDOM.render(<Agenda/>, document.getElementById('root'));
+        </script>
+    </body>
+</html>
