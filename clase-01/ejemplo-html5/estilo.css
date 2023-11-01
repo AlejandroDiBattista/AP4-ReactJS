@@ -1,0 +1,79 @@
+/* Estilos para el elemento principal */
+main {
+    width: 400px; /* Ancho del elemento principal */
+    margin: 0 auto; /* Centra el elemento principal horizontalmente */
+}
+
+/* Estilos para el encabezado */
+header {
+    display: flex; /* Usa flexbox para el diseño */
+    justify-content: space-between; /* Distribuye los elementos hijos uniformemente a lo largo del eje horizontal */
+    background-color: #F6E3CA; /* Color de fondo del encabezado */
+}
+
+/* Estilos para la imagen en el encabezado */
+header img {
+    align-self: flex-start; /* Alinea la imagen al inicio del eje cruzado */
+}
+
+/* Estilos para la navegación en el encabezado */
+header nav {
+    align-self: flex-end; /* Alinea la navegación al final del eje cruzado */
+}
+
+/* Estilos para la lista en la navegación */
+nav ul {
+    list-style-type: none; /* Elimina los marcadores de lista */
+    padding: 0; /* Elimina el relleno */
+}
+
+/* Estilos para los elementos de la lista en la navegación */
+nav li {
+    display: inline-block; /* Hace que los elementos de la lista se muestren en línea */
+    padding: 5px; /* Añade relleno alrededor de los elementos de la lista */
+    background-color: bisque; /* Color de fondo de los elementos de la lista */
+}
+
+/* Estilos para los elementos de la lista en la navegación cuando se pasa el ratón por encima */
+nav li:hover {
+    filter: invert(1); /* Invierte los colores cuando se pasa el ratón por encima */
+}
+
+/* Estilos para el elemento con id "titulo" */
+#titulo {
+    color: red; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor del ratón */
+}
+
+/* Estilos para los párrafos */
+p {
+    text-align: justify; /* Justifica el texto */
+}
+
+/* Estilos para los elementos con la clase "destacar" */
+.destacar {
+    color: green; /* Color del texto */
+}
+
+/* Estilos para los elementos de la lista con la clase "destacar" */
+ul .destacar {
+    background-color: yellow; /* Color de fondo */
+}
+
+/* Estilos para los párrafos con la clase "destacar" */
+p.destacar {
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Añade relleno alrededor del párrafo */
+    font-style: italic; /* Estilo de fuente en cursiva */
+    background-color: #F6E3CA; /* Color de fondo del párrafo */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #F6E3CA; /* Color de fondo del pie de página */
+    padding: 10px; /* Añade relleno alrededor del pie de página */
+    text-align: center; /* Centra el texto */
+    position: fixed; /* Fija la posición del pie de página */
+    bottom: 0; /* Coloca el pie de página en la parte inferior de la ventana */
+    width: 100%; /* Ancho del pie de página */
+}

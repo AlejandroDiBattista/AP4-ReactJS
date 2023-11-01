@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+#root {
+    width: 350px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 8px;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+li div {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+li p {
+    color: green
+}
