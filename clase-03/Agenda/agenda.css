@@ -3,6 +3,10 @@
     font-family: 'Lucida Sans', sans-serif;
 }
 
+body {
+    background-color: #b18e8e;
+}
+
 #root {
     width: 350px;
     margin: 0 auto;
@@ -19,7 +23,8 @@ ul {
 
 li {
     border: 1px solid gray;
-    border-radius: 5px;
+    background-color: white;
+    border-radius: 8px;
     padding: 8px;
     list-style: none;
     margin-bottom: 5px;
@@ -31,5 +36,6 @@ li div {
 }
 
 li p {
-    color: green
+    color: green;
+    font-size: 14px;
 }

@@ -1,0 +1,13 @@
+{
+    "nombre": "Juan",
+    "cargo": {
+        "nombre": "Gerente",
+        "salario": 10000
+    },
+    "empleados": [
+        { "nombre": "Pedro", "salario": 1000 },
+        { "nombre": "Pablo", "salario": 1000 },
+        { "nombre": "Maria", "salario": 1000 }
+    ]
+}
+

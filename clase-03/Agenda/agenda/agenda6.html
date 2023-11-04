@@ -11,29 +11,29 @@
     </head>
     <body>
         <div id="root"></div>
-       <script type="text/babel">
-            let datos = [
-                { nombre: 'Alejandro', apellido: 'Di Battista', telefono: '(381) 534-3458' },
-                { nombre: 'Juan Carlos', apellido: 'Perez', telefono: '(381) 534-3458' },
-                { nombre: 'Pedro', apellido: 'Gomez', telefono: '(381) 534-3458' },
-            ];
-
+        <script type="text/babel">
+            
             const Contacto = ({nombre, apellido, telefono}) => (
                 <li>
                     <div>{nombre} <b>{apellido}</b></div>
                     <p>T: {telefono}</p>
-                </li>)
+                </li>
+            );
 
             const Agenda = ({ contactos }) => (
                 <>
-                    <h2>Agenda Amigos 5</h2>
+                    <h2>Agenda Amigos 6</h2>
                     <ul>
-                        { contactos.map( ({nombre, apellido, telefono}) => 
-                            <Contacto nombre={nombre} apellido={apellido} telefono={telefono} />) }
+                        { contactos.map( contacto => <Contacto {...contacto} /> )}
                     </ul>
-                </>)
+                </>
+            );
 
-            ReactDOM.render(<Agenda contactos={datos} />, document.getElementById('root'));
+            fetch('agenda.json')
+                .then(response => response.json())
+                .then(datos => {
+                    ReactDOM.render(<Agenda contactos={datos} />, document.getElementById('root'));
+                });
         </script>
     </body>
 </html>
