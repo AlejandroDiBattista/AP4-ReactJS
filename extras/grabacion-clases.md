@@ -77,3 +77,12 @@ Clase 6°
 
 * 126 - Jueves 9 - 16 a 12
 
+
+
+Pueden acceder a la grabación de la clase en 
+
+https://utn.zoom.us/rec/share/ZG0H9f_50-tGbfecGOJydib_I7v1P93MVyNDMXGz2G4Gkbp567R4PEQ1P9XNElSN.F1Q1_K4mEP2Roazp
+
+Pueden acceder al código fuente en GitHub en la siguiente dirección:
+https://github.com/AlejandroDiBattista/AP4-ReactJS
+

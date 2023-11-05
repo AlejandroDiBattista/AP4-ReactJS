@@ -6,7 +6,7 @@ Este repositorio contiene los códigos fuente desarrollados durante las clases d
 
 El código aquí presente es una versión unificada y depurada del material presentado durante las clases, por lo que puede no coincidir exactamente con lo que se ha visto en las mismas.
 
-## Descargar en código 
+## Descargar el código 
 
 Para acceder al material desde sus propias computadoras, pueden clonar este repositorio utilizando Para acceder al material desde sus propias computadoras utilizando GitHub Desktop, pueden seguir estos pasos:
 
