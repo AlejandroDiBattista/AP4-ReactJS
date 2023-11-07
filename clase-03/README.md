@@ -23,6 +23,8 @@
 ### Cuando escribes el script debe agregar type="text/babel"
 
     <script type="text/babel">
+    // Codigo en JSX
+    </script>
 
 
 
