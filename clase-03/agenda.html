@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agenda</title>
+    <link rel="stylesheet" href="estilo.css">
+            
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        let datos = [
+            {nombre: "Alejandro",   apellido: "Di Battista", telefono: "(381) 534-3458"},
+            {nombre: "María",       apellido: "Perez",       telefono: "(381) 534-3459"},
+            {nombre: "Lucas",       apellido: "Herreras",    telefono: "(381) 534-3460"},
+            {nombre: "Juan",        apellido: "Perez",       telefono: "(387) 123-4561"},
+            {nombre: "Pedro",       apellido: "Gomez",       telefono: "(387) 123-4562"},
+            {nombre: "Lucia",       apellido: "Garcia",      telefono: "(387) 123-4563"},
+        ]
+
+        function Contacto( { nombre, apellido, telefono }){
+            return (
+                <li>
+                    <div>{nombre} <b>{apellido}</b></div>
+                    <p>Tel: {telefono}</p>
+                </li>
+            )
+        }
+
+        function Agenda(contactos){
+            return (
+                <>
+                    <h2>Agenda</h2>
+                    <ul>
+                        { contactos.map(Contacto) }
+                    </ul>
+                </>
+            )
+        }
+        
+        let root = document.getElementById('root')
+        ReactDOM.render( Agenda(datos), root)
+    </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

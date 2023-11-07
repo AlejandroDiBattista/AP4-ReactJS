@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="titulo">¿Cual es tu nombre?</h1>
+    <script>
+        function saludar(){
+            let nombre = prompt("¿Cual es tu nombre?");
+            let titulo = document.getElementById("titulo");
+            titulo.innerHTML = `Hola ${nombre}`;
+        }
+
+        setTimeout(saludar, 3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>Saludar</title>
+    </head>
+
+    <body>
+        <p>Demostración de una página que solicita el nombre del usuario y luego lo saluda</p>
+        <h1 id="titulo">¿Cúal es tu nombre?</h1>
+        <script>
+            function saludar() {
+                const nombre = prompt("¿Cúal es tu nombre?");       // Pide al usuario que ingrese su nombre
+                const html = `Hola <i>${nombre}</i>`;               // Crea un string con el nombre ingresado
+                document.getElementById("titulo").innerHTML = html; // Cambia el contenido del elemento con id "titulo" por el string creado
+            }
+
+            setTimeout(saludar, 100);   // Ejecuta la función saludar() después de 100 milisegundos
+        </script>
+    </body>
+</html>

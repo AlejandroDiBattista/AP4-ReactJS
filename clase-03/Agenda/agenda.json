@@ -1,9 +1,9 @@
 [
-    { "nombre": "Alejandro", "apellido": "Di Battista", "telefono": "(381) 534-3458" },
+    { "nombre": "Franco", "apellido": "Di Battista", "telefono": "(381) 534-3458" },
     { "nombre": "Juan Carlos", "apellido": "Perez", "telefono": "(381) 534-3459" },
     { "nombre": "Pedro", "apellido": "Gomez", "telefono": "(381) 534-3460" },
     { "nombre": "Luis", "apellido": "Martinez", "telefono": "(381) 534-3461" },
-    { "nombre": "Carlos", "apellido": "Rodriguez", "telefono": "(381) 534-3462" },
+    { "nombre": "Carlos", "apellido": "Perez", "telefono": "(381) 534-3462" },
     { "nombre": "Fernando", "apellido": "Gonzalez", "telefono": "(381) 534-3463" },
     { "nombre": "Miguel", "apellido": "Lopez", "telefono": "(381) 534-3464" },
     { "nombre": "Ricardo", "apellido": "Morales", "telefono": "(381) 534-3465" },
@@ -11,5 +11,9 @@
     { "nombre": "Esteban", "apellido": "Torres", "telefono": "(381) 534-3467" },
     { "nombre": "Sergio", "apellido": "Ramirez", "telefono": "(381) 534-3468" },
     { "nombre": "Daniel", "apellido": "Hernandez", "telefono": "(381) 534-3469" },
-    { "nombre": "Rafael", "apellido": "Ruiz", "telefono": "(381) 534-3470" }
+    { "nombre": "Rafael", "apellido": "Ruiz", "telefono": "(381) 534-3470" },
+    { "nombre": "Mirta", "apellido": "Legrandt", "telefono": "(001) 1111-2222" },
+    { "nombre": "Daniel", "apellido": "Hernandez", "telefono": "(381) 534-3469" },
+    { "nombre": "Rafael", "apellido": "Ruiz", "telefono": "(381) 534-3470" },
+    { "nombre": "Mirta", "apellido": "Legrandt", "telefono": "(001) 1111-2222" }
 ]

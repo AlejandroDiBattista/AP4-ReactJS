@@ -1,4 +1,4 @@
-Desarrollador web con React.js
+Desarrollador Web con React.js
 ==
 
 132 - Lunes y Miercoles 10 a 12 - ID: 619

@@ -49,3 +49,17 @@ input {
     font-size: 20px;
 
 }
+
+ol li {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ol li:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+ol li a {
+    font-size: 20px;
+}

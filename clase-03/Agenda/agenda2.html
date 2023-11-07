@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo Agenda 2</title>
+        <title>Agenda 2</title>
         <link rel="stylesheet" href="agenda.css">
     </head>
     <body>
@@ -14,16 +14,15 @@
                 { nombre: "Pedro", apellido: "Gomez", "telefono": "(381) 534-3460" },
             ];
 
-            const contactos = datos.map(({nombre, apellido, telefono}) => `
+            let contactos = datos.map(({nombre, apellido, telefono}) => `
                 <li>
-                    <div>${nombre} <b>${apellido}</b></div>
+                    <div>${nombre} <i style="color:red">${apellido}</i></div>
                     <p>T: ${telefono}</p>
-                </li>`
-            )
+                </li>`)
 
-            const agenda = `
+            let agenda = `
                 <div id="root">
-                    <h2>Agenda Amigos 2</h2>
+                    <h2>Agenda 2</h2>
                     <ul>${ contactos.join('') }</ul>
                 </div>`
 

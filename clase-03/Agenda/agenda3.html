@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo Agenda 3</title>
+        <title>Agenda 3</title>
         <link rel="stylesheet" href="agenda.css">
     </head>
     <body>
@@ -14,17 +14,21 @@
                 { nombre: "Pedro", apellido: "Gomez", "telefono": "(381) 534-3460" },
             ];
 
-            const Contacto = ({nombre, apellido, telefono}) => `
-                <li>
-                    <div>${nombre} <b>${apellido}</b></div>
-                    <p>T: ${telefono}</p>
-                </li>`
+            function Contacto({nombre, apellido, telefono}) {
+                return `
+                    <li>
+                        <div>${nombre} <b>${apellido}</b></div>
+                        <p>T: ${telefono}</p>
+                    </li>`}
 
-            const Agenda = (contactos) => `
-                <div id="root">
-                    <h2>Agenda Amigos 3</h2>
-                    <ul>${contactos.map((contacto) => Contacto(contacto)).join('')}</ul>
-                </div>`
+            function Agenda (contactos) {
+                return `
+                    <div id="root">
+                        <h2>Agenda 3</h2>
+                        <ul>
+                            ${contactos.map((contacto) => Contacto(contacto)).join('')}
+                        </ul>
+                    </div>`}
 
             document.write( Agenda(datos) )
         </script>

@@ -1,11 +1,13 @@
+//
 // Al final del archivo se definen dos funciones para mostrar los ejemplos en la consola.
 //
 // - seccion(titulo): para separar los ejemplos.
 // - mostrar(valor):  para presentar los resultados de los ejemplos.
 //      Observe que en la consola muestra el tipo de dato y el número de línea donde se llama a la función
-// 
-// Para probar en la consola se debe instalar NODEJS desde https://nodejs.org/es/ 
+//
+// Para probar en la consola se debe instalar NODEJS desde https://nodejs.org/es/
 // y ejecutar el comando 'node ejemplos.js' (o F5 desde Visual Studio Code)
+//
 
 seccion('Ejemplo uso de "number"')
 let a0 = 100            // Numeros enteros

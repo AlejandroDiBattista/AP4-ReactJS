@@ -3,37 +3,42 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo Agenda 6</title>
+        <title>Agenda 5</title>
         <link rel="stylesheet" href="agenda.css">
         <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
     <body>
         <div id="root"></div>
         <script type="text/babel">
 
-            const Contacto = ({nombre, apellido, telefono}) => (
+            let datos = [
+                { nombre: "Alejandro", apellido: "Di Battista", telefono: "(381) 534-3458" },
+                { nombre: "Juan Carlos", apellido: "Perez", telefono: "(381) 534-3459" },
+                { nombre: "Pedro", apellido: "Gomez", "telefono": "(381) 534-3460" },
+            ];
+
+            function Contacto({nombre, apellido, telefono}) {
+                return (
                 <li>
                     <div>{nombre} <b>{apellido}</b></div>
                     <p>T: {telefono}</p>
                 </li>
-            );
+                )}
 
-            const Agenda = ({ contactos }) => (
+            function Agenda({ contactos }) {
+                return (
                 <>
-                    <h2>Agenda Amigos 6</h2>
+                    <h2>Agenda 6</h2>
                     <ul>
-                        { contactos.map( contacto => <Contacto {...contacto} /> )}
+                        { contactos.map( (contacto) => <Contacto {...contacto} />) }
                     </ul>
-                </>
-            );
+                </> 
+                )}
 
-            fetch('agenda.json')
-                .then(response => response.json())
-                .then(datos => {
-                    ReactDOM.render(<Agenda contactos={datos} />, document.getElementById('root'));
-                });
+            ReactDOM.render(<Agenda contactos={datos} />, document.getElementById('root'));
         </script>
     </body>
 </html>

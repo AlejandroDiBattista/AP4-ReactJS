@@ -1,6 +1,7 @@
 AP4.2 - Videos de las clases
 =
 
+
 Clase 1°
 -
 
@@ -15,6 +16,7 @@ Clase 1°
 
 * 126 - Martes 31 - 10 a 12
 [Ver video](https://utn.zoom.us/rec/share/dyyCvsz5Si6RHNQ263RawphQjbRnS2Ep5Qwgxobzna-daIkH87WBnfb6qpL2DwV2.txbu7MKM30KJBTwx)
+
 
 Clase 2°
 -
@@ -31,14 +33,18 @@ Clase 2°
 * 126 - Jueves 2 - 10 a 12
 [Ver video](https://utn.zoom.us/rec/share/ZG0H9f_50-tGbfecGOJydib_I7v1P93MVyNDMXGz2G4Gkbp567R4PEQ1P9XNElSN.F1Q1_K4mEP2Roazp)
 
+
 Clase 3°
 -
 
 * 132 - Lunes 6 - 10 a 12
+[Ver video](https://utn.zoom.us/rec/share/K9ZonuXiRyq9V9rcnKvk-poq9UehdwmA2N30RxKpmyqUNL4isoybS1TaKF9rz3D0.4PuBlbxS8JY6Bu1b)
 
 * 133 - Lunes 6 - 15 a 17
+[Ver video](https://utn.zoom.us/rec/share/LVk_8OtZH4jk8l0ta_EvF5PEH-F4SxDxLjZ_5XsQRy1Dthf_88cidojs10mAsNuP.l0YZeFRn-OZEE9Uj)
 
 * 134 - Lunes 6 - 19 a 21
+[Ver video](https://utn.zoom.us/rec/share/wXhje_IklzSW59FB42ytnQwzxP9tqqDtbHvLNH4R4eWIJTYg2B-WVDvs01JiTYgg.7AyT7CcjZNAKHUvw)
 
 * 126 - Martes 7 - 10 a 12
 
@@ -53,6 +59,7 @@ Clase 4°
 * 134 - Miercoles 8 - 19 a 21
 
 * 126 - Jueves 9 - 10 a 12
+
 
 Clase 5°
 -
