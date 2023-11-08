@@ -49,6 +49,7 @@ Clase 3°
 * 126 - Martes 7 - 10 a 12
 [Ver video](https://utn.zoom.us/rec/share/OEWeKShuJnqtN-MalmjCjnV703OF_VQaUU0h7wr8I1657EUFb5P3W2uXxKnrJ--V.96JxJR_ZXrVhbDDg)
 
+
 Clase 4°
 -
 

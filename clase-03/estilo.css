@@ -1,6 +1,4 @@
 body {
-    background-color: red;
-
     box-sizing: border-box;
     background : linear-gradient(to bottom right, blue, cyan);
     margin: 0;

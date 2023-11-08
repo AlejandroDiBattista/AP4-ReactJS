@@ -21,7 +21,7 @@
                     const [contactos, setContactos] = React.useState([]);
 
                     React.useEffect( () => {
-                        fetch('agenda.json')
+                        fetch('agenda.json')    // Carga los datos de una fuente externa
                             .then(response => response.json())
                             .then(setContactos);
                     }, []);
@@ -64,6 +64,5 @@
                 ReactDOM.render(<Agenda/>, root);
             </script>
         </main>
-
     </body>
 </html>

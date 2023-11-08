@@ -14,7 +14,8 @@ let a0 = 100            // Numeros enteros
 let a1 = 100.1          // Numeros decimales
 let a2 = 0xA0B1C2       // Incluso numeros Hexadecimal (pe. para poner un color)
 
-mostrar(a0)
+
+
 mostrar(a1)
 mostrar(a2)
 
