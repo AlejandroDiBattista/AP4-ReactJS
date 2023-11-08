@@ -1,7 +1,7 @@
 Desarrollador Web con React.js
 ==
 
-132 - Lunes y Miercoles 10 a 12 - ID: 619
+132 - Lunes y Miercoles 10 a 12 - ID: 691
 [Ingresar](https://campus.argentinaprograma.utn.edu.ar/course/view.php?id=691)
 
 133 - Lunes y Miercoles 15 a 17 - ID: 697
