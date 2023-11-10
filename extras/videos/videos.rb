@@ -8,9 +8,14 @@ def cargar_videos(lineas)
             clase = $1.to_i
             clases << { clase: clase, videos: {} }
         end
-        if linea =~ /^\* (\d{3}) -/i
+        if linea =~ /^\* (\d{3})\s*-\s*(.*?)\s*-\s*(.*)/i
             curso = $1.to_i
+            fecha = $2
+            hora = $3
+            puts "Clase #{clase}|Curso #{curso}|#{fecha} - #{hora}"
             clases.last[:videos][curso] = nil 
+            clases.last[:fecha] = fecha
+            clases.last[:hora] = hora
         end 
         if linea =~ /^\[Ver video\]\((.*)\)/i
             url = $1
@@ -30,15 +35,26 @@ def traer_plantilla(clase)
     end
 end
 
+def rellenar(plantilla, variables)
+    texto = plantilla
+    variables.each do |key, value|
+        key = "{#{key}}"
+        value = value.to_s 
+        if texto =~ /#{key}/
+            texto = texto.gsub(key, value)
+
+        end
+    end
+    texto
+end
+
 def generar_texto_videos(clase)
     texto = ''
     numero = clase[:clase].to_s.rjust(2, '0')
     plantilla = traer_plantilla(numero)
     clase[:videos].each do |curso, url|
-        texto_copiar = plantilla
-                            .gsub("{video}", url)
-                            .gsub("{clase}", numero)
-                            .gsub("{curso}", curso.to_s)
+        datos = { video: url, clase: numero, curso: curso.to_s}.merge(clase)
+        texto_copiar = rellenar(plantilla, datos)
 
         texto += "## Clase #{numero} - Curso #{curso}\n\n"
         texto += "  Cambiar en #{generar_url_clase(curso, numero)}\n\n"

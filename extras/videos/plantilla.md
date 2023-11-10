@@ -1,3 +1,5 @@
+Clase {clase} | {fecha} de {hora}
+
 Puede ver el video en:
 
 <b>{video}</b>
