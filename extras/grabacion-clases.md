@@ -54,13 +54,16 @@ Clase 4°
 -
 
 * 132 - Miercoles 8 - 10 a 12
+[Ver video](https://utn.zoom.us/rec/share/9Z5QOhj6rZ-wOhClx53AxIoJYJmpCQ2F-4365oAKuHWgJhIldWX2ieKjMdVtDSAm.OFOnWMaZCnfRrEvN)
 
 * 133 - Miercoles 8 - 15 a 17
+[Ver video](https://utn.zoom.us/rec/share/eNReUU9kT4WG_ZcoSX7o3cJGGW8CaztklkG1orFvDs-_muUII3ev7YCklDCyccDF.uEtuG1c3Oe5mh7Gi)
 
 * 134 - Miercoles 8 - 19 a 21
+[Ver video](https://utn.zoom.us/rec/share/Ro018UFqq1rzCvBUe0w3ijRH8SvrupIGXg4s-V222lbueU1RSi-VPrTiUvFHOhcJ.XV9BdmKTV0tPJ_p4)
 
 * 126 - Jueves 9 - 10 a 12
-
+[Ver video](https://utn.zoom.us/rec/share/bUas8SSs3TzvcqdS_yYY92zl7CsrjxaUccBoB-mNRf1XY7H3iJOhPKbb--GyoIRB.3Yf1Rmv3o9aSIdGT)
 
 Clase 5°
 -
@@ -87,10 +90,8 @@ Clase 6°
 
 
 
-Pueden acceder a la grabación de la clase en 
-
-https://utn.zoom.us/rec/share/ZG0H9f_50-tGbfecGOJydib_I7v1P93MVyNDMXGz2G4Gkbp567R4PEQ1P9XNElSN.F1Q1_K4mEP2Roazp
-
 Pueden acceder al código fuente en GitHub en la siguiente dirección:
-https://github.com/AlejandroDiBattista/AP4-ReactJS
+
+[Ver código fuente](
+https://github.com/AlejandroDiBattista/AP4-ReactJS)
 

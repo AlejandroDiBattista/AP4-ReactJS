@@ -46,7 +46,7 @@ mostrar(c1)
 mostrar(c2)
 mostrar(c3)
 
-if (12 > 10) mostrar("12 es mayor que 10")
+if (12 > 10) mostrar("12 es mayor que 10") 
 
 let c4 = 12 > 10 
 if (c4) mostrar("12 es mayor que 10")    
