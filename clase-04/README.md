@@ -16,5 +16,8 @@ y el codigo JSX con la etiqueta
         // Codigo 
     </script>
 
-Pueden tomar de ejemplo agenta_todo_en_uno.html
+Pueden tomar de ejemplo 
+**agenta_todo_en_uno.html** 
+
+[Ver codigo](https://github.com/AlejandroDiBattista/AP4-ReactJS/blob/main/clase-04/agenda_todo_en_uno.html)
 
