@@ -1,0 +1,29 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, green, lightgreen);    
+    border-radius: 15px;
+}
+
+nav img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 5px;
+}
+
+nav ul li a {
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 10px;
+}
+nav ul li a:hover {
+    color: #fff;
+    background-color: green;
+}

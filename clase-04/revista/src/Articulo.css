@@ -1,0 +1,34 @@
+article {
+    padding: 20px;
+}
+
+article h2 {
+    font-size: xx-large;
+    margin: 0;
+    color: green;
+    font-weight : normal;
+    font-family: Impact;
+}
+
+article .autor {
+    font-size: small;
+    text-align: right;
+    margin-top: 40px;
+}
+
+article .autor b {
+    color: green;
+
+}
+
+article p {
+    font-size: medium;
+    text-align: justify;
+}
+
+article footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: small;
+    color: darkgreen;
+}

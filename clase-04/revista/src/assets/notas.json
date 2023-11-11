@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "titulo": "Curso de React",
+        "contenido": "¡Bienvenido al Curso de React!\nReact es una biblioteca de JavaScript desarrollada por Facebook que ha revolucionado la forma en que construimos interfaces de usuario en la web. Con React, puedes crear aplicaciones web interactivas y eficientes, aprovechando conceptos como el flujo de datos unidireccional y los componentes reutilizables.\n En este curso, exploraremos los fundamentos de React, desde la creación de componentes simples hasta la gestión del estado de la aplicación. Aprenderás a construir interfaces dinámicas y a utilizar las potentes herramientas que React ofrece para hacer que el desarrollo de aplicaciones web sea más rápido y efectivo. ¡Prepárate para sumergirte en el emocionante mundo de React!",
+        "autor": "Juan Perez"
+    },
+    {
+        "id": 2,
+        "titulo": "Curso de Vue",
+        "contenido": "¡Bienvenido al Curso de Vue!\nVue.js es un marco progresivo de JavaScript que se ha convertido en una opción popular para el desarrollo de interfaces de usuario interactivas y eficientes. Con su enfoque intuitivo y su curva de aprendizaje suave, Vue ofrece una experiencia de desarrollo flexible y poderosa.\nEn este curso, exploraremos los conceptos fundamentales de Vue, desde la creación de componentes hasta la manipulación del estado de la aplicación. Aprenderás a construir aplicaciones web modernas y escalables, aprovechando las características únicas que Vue proporciona para facilitar el desarrollo. ¡Prepárate para sumergirte en el fascinante mundo de Vue.js!",
+        "autor": "Juan Perez"
+    },
+    {
+        "id": 3,
+        "titulo": "Curso de Angular",
+        "contenido": "¡Bienvenido al Curso de Angular!\nAngular es un potente marco de desarrollo web desarrollado por Google. Este curso te llevará a través de los aspectos fundamentales de Angular, permitiéndote construir aplicaciones web robustas y escalables. Con Angular, podrás aprovechar la modularidad, la inyección de dependencias y una arquitectura basada en componentes para crear experiencias de usuario modernas y dinámicas.\nDurante este curso, exploraremos desde los conceptos básicos hasta las características avanzadas de Angular. Aprenderás sobre enlace de datos bidireccional, servicios, enrutamiento y gestión de estado. Prepárate para adentrarte en el emocionante mundo de Angular y llevar tus habilidades de desarrollo web al siguiente nivel.",
+        "autor": "María López"
+    },
+    {
+        "id": 4,
+        "titulo": "Curso de Svelte",
+        "contenido": "¡Bienvenido al Curso de Svelte!\nSvelte es un framework de desarrollo web que ha ganado popularidad por su enfoque innovador en la construcción de aplicaciones. A diferencia de otros frameworks, Svelte realiza la mayor parte del trabajo durante el tiempo de compilación, generando código optimizado y eficiente para el navegador. Esto resulta en aplicaciones más rápidas y con un tamaño de archivo reducido.\n\nDurante este curso, exploraremos los conceptos fundamentales de Svelte, desde la creación de componentes hasta la gestión del estado de la aplicación. Descubrirás cómo Svelte simplifica el desarrollo al eliminar la necesidad de un marco de trabajo en tiempo de ejecución, lo que significa que tus aplicaciones son más livianas y rápidas. ¡Prepárate para sumergirte en el emocionante mundo de Svelte y mejorar tu flujo de desarrollo!",
+        "autor": "María López"
+    },
+    {
+        "id": 5,
+        "titulo": "Curso de React Native",
+        "contenido": "¡Bienvenido al Curso de React Native!\nReact Native es un marco de desarrollo que te permite construir aplicaciones móviles nativas utilizando React y JavaScript. Con React Native, puedes desarrollar aplicaciones para iOS y Android simultáneamente, compartiendo gran parte del código entre ambas plataformas. Este curso te guiará a través de los conceptos fundamentales y las mejores prácticas para crear aplicaciones móviles robustas y eficientes con React Native.\nExploraremos desde la instalación y configuración inicial hasta la construcción de interfaces de usuario interactivas y la integración de funcionalidades nativas. Prepárate para sumergirte en el emocionante mundo del desarrollo móvil con React Native y descubrir cómo puedes crear aplicaciones potentes y de alto rendimiento con facilidad. ¡Vamos a comenzar!",
+        "autor": "Carlos Díaz"
+    }
+]
