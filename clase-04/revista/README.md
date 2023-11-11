@@ -1,8 +1,26 @@
-# React + Vite
+# Revista Interactiva
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto simula una revista digital que permite visualizar varias notas y navegar entre ellas.
 
-Currently, two official plugins are available:
+### Componentes de la aplicación
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación se divide en cuatro componentes principales:
+
+* Revista: Este componente muestra el menú, la navegación y el artículo actual.
+* Menú: Este componente simula el menú de la página.
+* Recorrer: Este componente permite ir a la nota siguiente o a la anterior.
+* Artículo: Este componente muestra la nota en la revista.
+
+### Datos
+
+El contenido de las notas está guardado en el archivo datos.json. 
+Este archivo contiene todas las notas que se pueden visualizar en la revista.
+
+### Aclaración
+
+Para poder probar el sistema debe bajase a una carpeta. Dentro de ella debe llamarse a 
+
+```batch
+node install
+node run dev
+```
