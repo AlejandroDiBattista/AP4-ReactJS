@@ -22,5 +22,6 @@ Para poder probar el sistema debe bajase a una carpeta. Dentro de ella debe llam
 
 ```batch
 node install
+node i -g vite
 node run dev
 ```

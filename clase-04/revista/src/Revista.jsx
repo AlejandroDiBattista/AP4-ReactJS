@@ -31,7 +31,7 @@ function Revista() {
       <main>
         <Menu />
         <Recorrer actual={actual} cantidad={cantidad} siguiente={siguiente} anterior={anterior} />
-        <Articulo {...nota} /> // Note que se pasa un objeto con todas las propiedades de la nota
+        <Articulo {...nota} /> 
       </main>
     </>
   )
