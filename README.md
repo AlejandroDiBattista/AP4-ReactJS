@@ -1,26 +1,9 @@
-# Revista Interactiva
+# AP4.0 | Desarrollador Web con ReactJS
 
-Este proyecto simula una revista digital que permite visualizar varias notas y navegar entre ellas.
+## Materíal de apoyo
 
-### Componentes de la aplicación
+Este repositorio contiene material de soporte para las clases del curso "Desarrollador Web con ReactJS" de Argentina Programa 4.0.
 
-La aplicación se divide en cuatro componentes principales:
+El material corresponde al código fuente de los ejemplos desarrollados en los cursos 126, 132, 133 y 134.
 
-* Revista: Este componente muestra el menú, la navegación y el artículo actual.
-* Menú: Este componente simula el menú de la página.
-* Recorrer: Este componente permite ir a la nota siguiente o a la anterior.
-* Artículo: Este componente muestra la nota en la revista.
-
-### Datos
-
-El contenido de las notas está guardado en el archivo datos.json. 
-Este archivo contiene todas las notas que se pueden visualizar en la revista.
-
-### Aclaración
-
-Para poder probar el sistema debe bajase a una carpeta. Dentro de ella debe llamarse a 
-
-```batch
-node install
-node run dev
-```
+Los ejemplos están depurados respecto a lo dictado en las clases, por lo que su coincidencia con lo enseñado puede ser aproximada.
