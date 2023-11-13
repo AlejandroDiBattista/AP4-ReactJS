@@ -1,0 +1,22 @@
+.mostrar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.mostrar button {
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+button {
+  cursor: pointer;  
+  padding: 2px 8px;
+
+  border-radius: 20px;
+}
