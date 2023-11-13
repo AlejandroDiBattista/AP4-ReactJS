@@ -86,12 +86,10 @@ Clase 6°
 
 * 134 - Miercoles 15 - 19 a 21
 
-* 126 - Jueves 9 - 16 a 12
-
+* 126 - Jueves 16 - 16 a 12
 
 
 Pueden acceder al código fuente en GitHub en la siguiente dirección:
 
-[Ver código fuente](
-https://github.com/AlejandroDiBattista/AP4-ReactJS)
+[Ver código fuente](https://github.com/AlejandroDiBattista/AP4-ReactJS)
 
