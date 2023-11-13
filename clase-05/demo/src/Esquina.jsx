@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Semaforo from './Semaforo';
-import './DemoSemaforo.css';
+import './Esquina.css';
 
 const duracionFase = { rojo: 4, amarillo: 1, verde: 3 }
 
@@ -18,7 +18,7 @@ function calcularColor(segundos, fase) {
 }
 
 
-function DemoSemaforo({ cruce = "Cordoba y 25 de Mayo" }) {
+function Esquina({ cruce = "Cordoba y 25 de Mayo" }) {
     const [segundos, setSegundos] = useState(0)
 
     useEffect(() => {
@@ -50,4 +50,6 @@ function DemoSemaforo({ cruce = "Cordoba y 25 de Mayo" }) {
     );
 }
 
-export default DemoSemaforo;
+Esquina.Semaforo = (props) => <Semaforo {...props} />;
+
+export default Esquina;

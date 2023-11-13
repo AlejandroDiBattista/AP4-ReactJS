@@ -30,5 +30,10 @@ function Accion({ nombre, accion }) {
     return <button onClick={accion}>{nombre}</button>
 }
 
+Tarjeta.Titulo = Titulo
+Tarjeta.Menu = Menu
+Tarjeta.Accion = Accion
 
-export {Tarjeta, Titulo, Menu, Accion}
+// export {Tarjeta, Titulo, Menu, Accion}
+export default Tarjeta
+export { Tarjeta, Titulo, Menu, Accion }

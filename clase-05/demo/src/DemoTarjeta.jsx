@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Tarjeta, Titulo, Menu, Accion } from './Tarjeta'
+// import Tarjeta  from './Tarjeta'
 
 function DemoTarjeta() {
   const [contador, setContador] = useState(0)

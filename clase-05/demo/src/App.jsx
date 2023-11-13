@@ -1,13 +1,13 @@
 import './App.css'
 import DemoTarjeta from './DemoTarjeta';
-import  DemoSemaforo from './DemoSemaforo';
+import Esquina from './Esquina';
 
 export default function App() {
-  
+
   return (
     <>
       <main>
-        <DemoSemaforo />
+        <Esquina />
         <DemoTarjeta />
       </main>
     </>
