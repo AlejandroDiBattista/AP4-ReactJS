@@ -1,0 +1,14 @@
+.esquina {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding: 30px;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    margin: 0;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+.esquina .nombre {
+    width: 300px;
+}

@@ -1,0 +1,40 @@
+.semaforo {
+    border-radius: 60px;
+    border: 6px solid #444;
+
+    background-color: #555;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.semaforo > div {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    border: 3px solid rgba(79, 71, 55, 0.449);
+}
+
+.semaforo div.luzRoja {
+    background-color: red;
+    box-shadow: 0px 0px 20px red;
+}
+
+.semaforo div.luzAmarilla {
+    background-color: yellow;
+    box-shadow: 0px 0px 20px yellow;
+}
+
+.semaforo div.luzVerde {
+    background-color: green;
+    box-shadow: 0px 0px 10px green;
+}
+
+.semaforo div.luzApagada {
+    background-color: gray;
+}
+
