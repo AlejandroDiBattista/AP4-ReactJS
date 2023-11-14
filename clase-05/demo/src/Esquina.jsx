@@ -17,7 +17,6 @@ function calcularColor(segundos, fase) {
     return 'rojo'
 }
 
-
 function Esquina({ cruce = "Cordoba y 25 de Mayo" }) {
     const [segundos, setSegundos] = useState(0)
 
@@ -30,6 +29,7 @@ function Esquina({ cruce = "Cordoba y 25 de Mayo" }) {
 
     const color1 = calcularColor(segundos, 0)
     const color2 = calcularColor(segundos, 4)
+    
     const hora = (new Date()).toLocaleString().split(" ")[1]
     return (
         <div className='esquina'>

@@ -19,7 +19,8 @@ function App() {
   function alActualizar(nuevo) {
     if (nuevo != null) {
       if (nuevo.id === 0) {
-        const nuevos = [...contactos, { ...nuevo, ...{ id: contactos.length + 1 } }]
+        const id = Number(new Date())
+        const nuevos = [...contactos, { ...nuevo, ...{ id } }]
         setContactos(nuevos)
       } else {
         const nuevos = contactos.map((contacto) => contacto.id === nuevo.id ? nuevo : contacto)
@@ -29,17 +30,28 @@ function App() {
     setEditar(false)
   }
 
+  function alBorrar(id) {
+    const nuevos = contactos.filter((contacto) => contacto.id !== id)
+    setContactos(nuevos)
+  }
+
   function alEditar(id) {
     setEditar(true)
     setActual(id)
   }
-
+  
   const contacto = contactos.find((contacto) => contacto.id === actual) ?? { id: 0, nombre: '', apellido: ''}
 
-  const listaContactos = contactos.map((contacto) => <Mostrar key={contacto.id} contacto={contacto} alEditar={()=> alEditar(contacto.id)} />)
+  const listaContactos = contactos.map((contacto) =>
+    <Mostrar
+        contacto={contacto}
+        alEditar={() => alEditar(contacto.id)}
+        alBorrar={() => alBorrar(contacto.id)}
+        key={contacto.id} />
+  )
   return (
     <>
-      <h1>App Vacia</h1>
+      <h1>Agenda</h1>
       {!editar && <button onClick={() => alEditar(0)}>Agregar</button>}
       {editar
         ? <Formulario contacto={contacto} alActualizar={alActualizar} />

@@ -37,3 +37,4 @@ Tarjeta.Accion = Accion
 // export {Tarjeta, Titulo, Menu, Accion}
 export default Tarjeta
 export { Tarjeta, Titulo, Menu, Accion }
+

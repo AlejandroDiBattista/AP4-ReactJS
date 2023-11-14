@@ -1,9 +1,9 @@
-Clase {clase} | {fecha} de {hora}
+Clase {clase} | {fecha} de {hora} | Curso {curso}
 
 Puede ver el video en:
 
-<b>{video}</b>
+{video}
 
 El código fuente generado en la clase lo puede ver en: 
 
-<b>https://github.com/AlejandroDiBattista/AP4-ReactJS/tree/main/clase-{clase}</b>
+https://github.com/AlejandroDiBattista/AP4-ReactJS/tree/main/clase-0{clase}

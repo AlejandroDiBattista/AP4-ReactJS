@@ -1,0 +1,13 @@
+.buscar {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+.buscar input {
+  border-radius: 20px;
+  padding: 0 10px;
+}
+

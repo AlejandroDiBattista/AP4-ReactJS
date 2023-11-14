@@ -1,6 +1,10 @@
 AP4.2 - Videos de las clases
 =
 
+Pueden acceder al código fuente en GitHub en la siguiente dirección:
+
+[Ver código fuente](https://github.com/AlejandroDiBattista/AP4-ReactJS)
+
 
 Clase 1°
 -
@@ -65,31 +69,37 @@ Clase 4°
 * 126 - Jueves 9 - 10 a 12
 [Ver video](https://utn.zoom.us/rec/share/bUas8SSs3TzvcqdS_yYY92zl7CsrjxaUccBoB-mNRf1XY7H3iJOhPKbb--GyoIRB.3Yf1Rmv3o9aSIdGT)
 
+
 Clase 5°
 -
 
 * 132 - Lunes 13 - 10 a 12
+[Ver video](https://utn.zoom.us/rec/share/uil4JdvskThkLjRBpv-XWuFcOgOgR7NrRyKgqw7vV7JyfbenUtBToQtHQfM9PYJx.EO4_aomdUpELIAkS)
 
 * 133 - Lunes 13 - 15 a 17
+[Ver video](https://utn.zoom.us/rec/share/1d-B9ejjayiPfnEgSrtQ4-nvWiZCjJdHp-__E35VNrW9_qRTXP6wTrk31AHLXHwS.aKnMk_hO5x080j5u)
 
 * 134 - Lunes 13 - 19 a 21
+[Ver video](https://utn.zoom.us/rec/share/01MdDOO0kZkNw8j7ev2wPZopqYFCREHBkyjfHB6ModwAbygHBkF8BuXUIoVAtAdT.HmXIlBJyMqO0M67o)
 
 * 126 - Martes 14 - 10 a 12
+[Ver video](https://utn.zoom.us/rec/share)
 
 
 Clase 6°
 -
 
 * 132 - Miercoles 15 - 10 a 12
+[Ver video]()
 
 * 133 - Miercoles 15 - 15 a 17
+[Ver video]()
 
 * 134 - Miercoles 15 - 19 a 21
+[Ver video]()
 
 * 126 - Jueves 16 - 16 a 12
+[Ver video]()
 
 
-Pueden acceder al código fuente en GitHub en la siguiente dirección:
-
-[Ver código fuente](https://github.com/AlejandroDiBattista/AP4-ReactJS)
 

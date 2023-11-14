@@ -1,0 +1,66 @@
+main {
+  width: 550px;
+  margin: 0 auto;
+  background-color: aqua;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+main h1 {
+  margin: 0;
+}
+
+main button {
+  margin-top: 20px;
+  padding: 5px;
+}
+
+
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 50px
+}
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario div {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario .botones {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.formulario button{
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main > button {
+  width: 100px;
+}
+
+main ul {
+  list-style: none;
+  padding: 0;
+}
+
+main ul li {
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 300px;
+}

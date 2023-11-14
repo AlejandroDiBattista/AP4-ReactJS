@@ -1,0 +1,26 @@
+.busqueda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.entrada {
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
+
+.entrada input {
+    margin: 0;
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+.entrada button {
+    background-color: transparent;
+    border: 1px solid black;
+    font-size: 18px;
+    padding: 10px;
+}
+
