@@ -31,7 +31,7 @@ export function EditarContacto({ contacto, alGuardar }) {
         <label>Apellido:</label><br />
         <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
         <br />
-        <p>{nombre} <b>{apellido}</b></p>
+        <p>{contacto.id == 0 ? "Agregando" : "Editando"}</p>
         <br />
 
         <button onClick={guardar}>Guardar</button>

@@ -28,8 +28,7 @@ function App() {
       setContactos(contactos)
     }
 
-
-    setContacto({id: 0, nombre: '', apellido: '' })
+    setContacto({ id: 0, nombre: '', apellido: '' })
   }
     
   function agregar() {
