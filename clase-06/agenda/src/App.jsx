@@ -17,8 +17,8 @@ const generarId = () => Number(new Date());
 function App() {
   const [editar, setEditar] = useState(false)
   const [actual, setActual] = useState(0)
-  const [contactos, setContactos] = useState(datosIniciales)
-  
+  const [contactos, setContactos] = useState([])
+
   function alActualizar(nuevo) {
     if (nuevo != null) {
       if (nuevo.id === 0) {
@@ -62,6 +62,19 @@ function App() {
         : listaContactos }
     </>
   )
+}
+
+function useLocalStorate(key, initialValue = []) {
+  const [value, setValue] = useState(() => {
+    const initial = localStorage.getItem(key)
+    return initial ? JSON.parse(initial) : initialValue
+  })
+  
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(value))
+  }, [key, value])
+  
+  return [value, setValue]
 }
 
 export default App

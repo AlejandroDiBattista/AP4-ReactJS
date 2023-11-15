@@ -16,7 +16,7 @@ function Formulario({ contacto, alActualizar }) {
             <form action="">
                 <div>
                     <label>Nombre</label><br />
-                    <input type="text" value={nombre} onChange={ponerNombre} />
+                    <input autoFocus type="text" value={nombre} onChange={ponerNombre} />
                 </div>
 
                 <div>
