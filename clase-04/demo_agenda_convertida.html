@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agenda en un Archivo</title>
+    
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <style>
+            
+article {
+    padding: 20px;
+}
+
+article h2 {
+    font-size: xx-large;
+    margin: 0;
+    color: green;
+    font-weight : normal;
+    font-family: Impact;
+}
+
+article .autor {
+    font-size: small;
+    text-align: right;
+    margin-top: 40px;
+}
+
+article .autor b {
+    color: green;
+
+}
+
+article p {
+    font-size: medium;
+    text-align: justify;
+}
+
+article footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: small;
+    color: darkgreen;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, green, lightgreen);    
+    border-radius: 15px;
+}
+
+nav img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 5px;
+}
+
+nav ul li a {
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 10px;
+}
+nav ul li a:hover {
+    color: #fff;
+    background-color: green;
+}
+
+.esta_clase_no_se_usa {
+    color: red;
+    background-color: yellow;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+main {
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    padding: 5px;
+}
+
+button {
+    margin-left: 5px;
+    border: 1px solid green;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    padding: 0 12px;
+    position: relative;
+    top: 5px;
+    right: 0;
+}
+
+button:hover {
+    background-color: lightgreen;
+}
+
+
+.recorrer {
+    position: relative;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.recorrer span {
+    padding-top: 8px;
+    padding-right: 10px;
+}
+
+        </style>
+
+        <script type="text/babel">
+            // Muestra el articulo que le llega desde la revista
+function Articulo({ titulo, contenido, autor }) {
+  const lineas = contenido.split('\n')              // Separa el contenido en lineas
+  const parrafos = lineas.map((linea, i) => <p key={i}>{linea}</p>) // Crea un párrafo por cada linea
+
+  return (
+    <article>
+        <h2>{titulo}</h2>
+        {parrafos}
+        <Autor autor={autor} />
+        <footer>Todos los derechos reservados</footer>
+    </article>
+  )
+}
+
+// Este componente es interno. No se usa fuera de este archivo
+function Autor({ autor = 'Anonimo' }) {
+  return <p className='autor'>Artículo escrito por <b>{autor}</b></p>
+}
+
+function Recorrer({ actual, cantidad, anterior, siguiente }) {
+    return (
+        <div className='recorrer'>
+            <span>Nota {actual} de {cantidad}</span>
+            <button onClick={anterior}  disabled={actual==1}> Anterior </button>
+            <button onClick={siguiente} disabled={actual==cantidad} >Siguiente</button>
+        </div>
+    )
+}
+
+function Revista() {
+  // Desde la revista se puede acceder a todas las notas y se coordina que nota se mostrará
+
+  const [actual, setActual] = React.useState(1)   // Para poder seleccionar cual es la nota actual.
+
+  const cantidad = notas.length             // Para saber cuantas notas hay en total
+  const nota = notas[actual - 1]            // Las notas comienzan en 1, pero el arreglo comienza en 0
+
+  function siguiente() {
+    if(actual == cantidad) return       // Si es la última nota, no hacer nada
+    setActual(actual + 1)
+  }
+
+  function anterior() {
+    if(actual == 1) return              // Si es la primera nota, no hacer nada
+    setActual(actual - 1)
+  }
+
+  return (
+    <>
+      <main>
+        <Menu />
+        <Recorrer actual={actual} cantidad={cantidad} siguiente={siguiente} anterior={anterior} />
+        <Articulo {...nota} /> 
+      </main>
+    </>
+  )
+}
+
+            let root = document.getElementById('root');
+            ReactDOM.render( <Revista />, root);
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>
