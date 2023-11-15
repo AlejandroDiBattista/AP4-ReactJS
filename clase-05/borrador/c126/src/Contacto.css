@@ -51,9 +51,7 @@ form .acciones {
     flex-direction: row;
     justify-content: space-between;
     
-    background-color: #ffd;
-    
-    border: 1px solid #000;
+    border: 1px solid #ccc;
     border-radius: 15px;
 
     margin-bottom: 5px;
