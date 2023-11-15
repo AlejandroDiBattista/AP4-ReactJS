@@ -1,0 +1,91 @@
+main {
+    width: 400px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0 auto;
+    width: 180px;
+    height: 100%;
+    padding: 10px;
+
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000;
+    border: 1px solid #000;
+}
+
+form label {
+    margin-top: 10px;
+    padding: 0;
+}
+
+form input {
+    margin: 0;
+}
+
+form .acciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.lista  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.lista li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    background-color: #ffd;
+    
+    border: 1px solid #000;
+    border-radius: 15px;
+
+    margin-bottom: 5px;
+    padding: 5px;
+    padding-left: 10px ;
+}
+
+.lista div, .lista p, .lista span  {
+    margin: 0;
+}
+
+.lista span {
+    font-size: 20px;
+}
+
+.lista .acciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: start; ;
+    gap: 5px;
+    width: 50px;
+}
+
+.lista .acciones button {
+    width: 50px;
+    font-size: 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+button {
+    border-radius: 40px;
+    border: 1px solid #000;
+    padding: 2px 10px;
+}

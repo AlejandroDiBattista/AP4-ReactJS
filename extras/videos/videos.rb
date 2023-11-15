@@ -76,7 +76,6 @@ end
 lineas = open('grabacion-clases.md').readlines
 clases = cargar_videos(lineas)
 
-pp clases
 clases.each do |clase|
     generar_texto_videos(clase)
 end

@@ -83,7 +83,7 @@ Clase 5°
 [Ver video](https://utn.zoom.us/rec/share/01MdDOO0kZkNw8j7ev2wPZopqYFCREHBkyjfHB6ModwAbygHBkF8BuXUIoVAtAdT.HmXIlBJyMqO0M67o)
 
 * 126 - Martes 14 - 10 a 12
-[Ver video](https://utn.zoom.us/rec/share)
+[Ver video](https://utn.zoom.us/rec/share/395AqjzBHJL_yieFM2k4WIrPK7TyT02AhJbtDlVn5pcARb2J49HFw6Lg9Z71eY_9._eToDTXjQYj2ay6E)
 
 
 Clase 6°

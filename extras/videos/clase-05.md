@@ -55,7 +55,7 @@ Clase 5 | Martes 14 de 10 a 12 | Curso 126
 
 Puede ver el video en:
 
-https://utn.zoom.us/rec/share
+https://utn.zoom.us/rec/share/395AqjzBHJL_yieFM2k4WIrPK7TyT02AhJbtDlVn5pcARb2J49HFw6Lg9Z71eY_9._eToDTXjQYj2ay6E
 
 El código fuente generado en la clase lo puede ver en: 
 
