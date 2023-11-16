@@ -90,16 +90,29 @@ Clase 6°
 -
 
 * 132 - Miercoles 15 - 10 a 12
-[Ver video]()
+[Ver video](https://utn.zoom.us/rec/share/mncqINS9mtDprp4E9Xi0A5OXlsCMZynfqldT31TD7JP_qcuFlAJEeFBc-WKVzkcK.c08qd52c85EUxjcm)
 
 * 133 - Miercoles 15 - 15 a 17
-[Ver video]()
+[Ver video](https://utn.zoom.us/rec/share/x9iWhW7D3C_8JqRybsbOLqg2Cb-QqcXzBzlMiJ6rvXIB6OXgboprGZtIMdRBXQtR.YZ4u0R_AfGZ8Gldv)
 
 * 134 - Miercoles 15 - 19 a 21
-[Ver video]()
+[Ver video](https://utn.zoom.us/rec/share/2DWfYif6toM3u2sRDyBH2EUXl7zH2PwX_3vGcXqXto7bjFC5Q7KQGy857fIfAOoM.x3nT0WU38ojXxCXm)
 
 * 126 - Jueves 16 - 16 a 12
+[Ver video](https://utn.zoom.us/rec/share/dFg9HhH04Bmuy8DknaQhOdCXIYJjIxgtMRhIzKHAIzbtBrfLmE9uR9QltcJeMC4p.4uqb1zsK3RFEbAmy)
+
+
+Clase 7°
+-
+
+* 132 - Lunes 20 - 10 a 12
 [Ver video]()
 
+* 133 - Lunes 20 - 15 a 17
+[Ver video]()
 
+* 134 - Lunes 20 - 19 a 21
+[Ver video]()
 
+* 126 - Martes 20 - 10 a 12
+[Ver video]()

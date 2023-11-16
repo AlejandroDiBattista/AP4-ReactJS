@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Votos</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .voting-container {
+      width: 300px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .voting-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      width: 48%; /* 48% to leave a small gap between buttons */
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel">
+    const VotingBox = () => {
+      const [voteCount, setVoteCount] = React.useState(0);
+
+      const handleVote = (increment) => {
+        setVoteCount(Math.max(0, voteCount + increment));
+      };
+
+      return (
+        <div className="voting-box">
+          <h2>Nombre del Candidato</h2>
+          <p>{`Votos: ${voteCount}`}</p>
+          <div className="button-container">
+            <button onClick={() => handleVote(1)}>+</button>
+            <button onClick={() => handleVote(-1)}>-</button>
+          </div>
+        </div>
+      );
+    };
+
+    const App = () => {
+      return (
+        <div>
+          <div className="voting-container">
+            <VotingBox />
+          </div>
+          <div className="voting-container">
+            <VotingBox />
+          </div>
+        </div>
+      );
+    };
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
+
