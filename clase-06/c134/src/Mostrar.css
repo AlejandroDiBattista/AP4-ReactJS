@@ -1,0 +1,37 @@
+.mostrar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.mostrar button {
+  padding: 2px 8px;
+  font-size: 8px;
+  font-weight: 100;
+  margin: 0;
+  height: 14px;
+}
+
+button {
+  cursor: pointer;  
+  padding: 2px 8px;
+
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.mostrar .acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.infoId {
+  margin: 0;
+  font-size: 6px;
+}
