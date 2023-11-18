@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="./public/cne.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boca de Urna</title>
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- 
+    Curso 126 - Grupo 0 -> hugobenitez31@hotmail.com
+    26282939; Benites, Hugo
+  -->
+  <style>
+    :root {
+      background: rgb(2, 0, 36);
+      background: linear-gradient(315deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+      display: flex;
+      justify-content: center;
+    }
+
+
+    h1 {
+      font-size: 3.2em;
+      line-height: 1.1;
+      color: aliceblue;
+    }
+
+    .container {
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .candidato {
+      color: #333;
+      font-size: 36px;
+    }
+
+    p {
+      color: blue;
+
+      font-size: 60px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    button {
+      flex: 1;
+      background-color: #3498db;
+      color: white;
+      font-size: 24px;
+      font-weight: 800;
+
+      border: none;
+      padding: 10px 0px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 5px;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+  <script type="text/babel">
+    const { useState } = React;
+    function App() {
+      let candidatos = [
+        { nombre: "Sergio T. Massa" },
+        { nombre: "Javier Milei" }
+      ]
+
+      return (
+        <>
+          <h1>Boca de Urna</h1>
+          {candidatos.map((candidato, index) => (
+            <Contador key={index} nombre={candidato.nombre} />
+          ))}
+        </>
+      )
+    }
+    const Contador = (props) => {
+      const [contador, setContador] = useState(0);
+
+      const sumarVotos = () => {
+        setContador(contador + 1)
+      }
+      const restarVotos = () => {
+        if (contador > 0) {
+          setContador(contador - 1)
+        }
+
+      }
+      return (
+        <div className='container'>
+          <h1 className='candidato'>{props.nombre}</h1>
+          <p>{contador}</p>
+          <div className='button-container'>
+            <button onClick={restarVotos}  >-</button>
+            <button onClick={sumarVotos}>+</button>
+          </div>
+
+        </div>
+      )
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+    )
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

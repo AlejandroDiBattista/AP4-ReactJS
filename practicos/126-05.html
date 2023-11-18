@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boca de Urnas</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 
+        Curso 126 - Grupo 05 -> robcaniza@gmail.com
+            20542289; Caniza, Roberto Carlos
+            16415069; Cernada, Miguel Angel
+            28449465; Gonzalez, Griselda Vanina
+            22073012; Jerez, María Carola
+            25340610; Clavario, Osvaldo Adrian
+            20853611; Villalba, Raul Orlando
+    -->
+    <style>
+        body {
+            box-sizing: border-box;
+            background : linear-gradient(to bottom right, blue, cyan);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #root {
+            margin: 0 auto;
+            width: 230px;
+        }
+
+        h2  {
+            text-align: center;
+            font-size: 32px;
+            color: white;
+            padding-bottom: 25px;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 35px;
+            padding: 5px 10px 0px 10px;
+            width: 100%;
+            background: white;
+            border: thin solid black;
+            border-radius: 15px;
+        }
+
+        li div {
+            margin-bottom: 5px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        li p {
+            color: blue;
+            margin: 0;
+            text-align: center;
+            font-size: 75px;
+            padding-bottom: 10px;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: rgb(0, 200, 255);
+            color: white;
+            font-size: 40px;
+            border: 0;
+            width: 100px;
+            cursor: pointer;
+        }
+
+        .boton {
+            border: solid thin black;
+            background-color:rgb(0, 200, 255);
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script type="text/babel">
+        let datos = [
+            { nombre: "Candidato 1" },
+            { nombre: "Candidato 2" }
+        ]
+        
+        function Contador() {
+            const [cuenta, setCuenta] = React.useState(0);
+
+            const incrementar = () => {
+                setCuenta(cuenta + 1);
+            }
+       
+            const decrementar = () => {
+                setCuenta(cuenta - 1);
+            }
+       
+            return (
+                <>
+                <div className="Contador">
+                    <p>{cuenta}</p>
+                    <div class="botones">
+                        <div class="boton"><button onClick={incrementar}><b>+</b></button></div>
+                        <div class="boton"><button disabled={cuenta <= 0 } onClick={decrementar}><b>-</b></button></div>
+                    </div>
+                </div>
+                </>
+            );
+        }
+
+        function Candidato( { nombre } ){
+            return (
+                <>
+                <li>
+                    <div><b>{ nombre }</b></div>
+                    <Contador />
+                </li>
+                </>
+            )
+        }
+
+        function BocaUrnas( { candidatos } ){
+            return (
+                <>
+                <h2>Boca de urnas</h2>
+                <ul>
+                    {candidatos.map((candidato, i) => <Candidato key={i} {...candidato} />)}
+                </ul>
+                </>
+            )
+        }
+
+        let root = document.getElementById('root')
+        ReactDOM.render( <BocaUrnas candidatos={datos} />, root)
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico 1</title>
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+        Curso 126 - Grupo 07 -> veritocapito@gmail.com
+            28411719; Capobianco Veronica   
+            24020437; Stegmann Carlos Ariel   
+            22200876; Villavicencio Mariana   
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', monospace;
+        }
+
+        #root {
+            height: 100vh;
+            background: linear-gradient(147deg, rgb(40, 21, 236), rgb(32, 218, 233));
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        h1 {
+            color: whitesmoke;
+        }
+
+        h3{
+            font-size: 60px;
+            color: rgb(40, 21, 236);
+        }
+
+        .tablero{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: whitesmoke ;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid rgb(4, 10, 97);
+        }
+
+        .board{
+            display: flex;
+            gap: 10px;
+        }
+
+        button{
+            width: 100px;
+            height: 50px;
+            font-size: 36px;
+            font-weight: bold;
+            border-radius: 10px;
+            color: whitesmoke;
+            background-color: rgb(43, 165, 209);
+            border: 0.2px solid rgb(4, 10, 97);
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        function Table() {
+            return (
+                <>
+                    <h1>Boca De Hurnas</h1>
+                    <Counter title="Candidato 1" />
+                    <Counter title="Candidato 2" />
+                </>
+            )
+        }
+
+        function Counter({ title }) {
+            let [counter, setCounter] = React.useState(0)
+
+            function add() {
+                setCounter(++counter)
+            }
+
+            function subtract() {
+                (counter != 0) ? setCounter(--counter): alert(`Minimo ya alcanzado para el ${title}.`);
+            }
+
+            return (
+                <div className="tablero">
+                    <h2>{title}</h2>
+                    <h3>{counter}</h3>
+                    <div className="board">
+                        <Button op={add} symbol={'+'}/>
+                        <Button op={subtract} symbol={'-'}/>
+                    </div>
+                </div>
+            )
+        }
+
+        function Button({op, symbol}){
+            return <button onClick={op}>{symbol}</button>
+        }
+
+        let root = document.getElementById('root')
+        ReactDOM.render(Table(), root)
+
+    </script>
+
+
+</body>
+
+</html>

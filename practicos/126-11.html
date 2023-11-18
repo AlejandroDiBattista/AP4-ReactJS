@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Agenda en un Archivo</title>
+
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <!-- 
+            Curso 126 - Grupo 11 -> miargentina@hugodiaz.com
+                16771692; Hugo Dante, Diaz 
+                20746139; Aranda, Marcelo 
+                28127040; Arrascaeta, Gabriela Natalia 
+                20520745; Figueira Perez, Elias 
+                28348022; Vega, Luciano 
+        -->
+        <style>
+            body {
+                margin: 0;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                    sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                }
+
+            code {
+                font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+                    monospace;
+            }
+
+            .App {
+                text-align: center;
+             }
+
+            .App-header {
+                background-color: #2960ce;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: calc(10px + 2vmin);
+                color: white;
+                }
+
+            button {
+                width: 80px;
+                font-size: 2em;
+                margin: 10px auto;
+                border-radius: 10px;
+                background-color: aqua;
+                color: white;
+            }
+
+            .candidato {
+                width: 300px;
+                border: 1px solid black;
+                text-align: center;
+                border-radius: 10px;
+                color: black;
+                background-color: white;
+            }
+
+            h3 {
+                font-size: 3em;
+                margin: 2px auto;
+                color: blue;
+            }
+        </style>
+
+        <script type="text/babel">
+            const {useState} = React
+            function App() {
+            return (
+                <div className="App">
+                <header className="App-header">
+                    <h1>Boca de urnas</h1>
+                    <Candidato numero="1" />
+                    <br/>
+                    <Candidato numero="2" />
+                    </header>
+                </div>
+            );
+            }
+
+            function Candidato({numero}) {
+
+                const [contador, setContador] = useState("0")
+
+                const incrementarContador = () => {
+                    let n = Number(contador)
+                    setContador(n+1)
+                }
+                const decrementarContador = () => {
+                    let n = Number(contador)
+                    if (n>0) {
+                        setContador(n-1)
+                    }
+                }
+
+            return (
+                    <div className="candidato">
+                        <h2>
+                        Candidato {numero}
+                        </h2>
+                        <h3>{contador}</h3>
+                        <div className="botonera">
+                        <button onClick={e => incrementarContador()}>+</button>
+                        <button onClick={e => decrementarContador()}>-</button>
+                        </div>
+                    </div>
+            )
+      }
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boca de Urnas</title>
+  <meta name="author" content="Grupo 4: Mariano Mello DNI:26165883, Stella Maris Loreto DNI:17318955, Monica DNI: --, Fabian DNI:--, Mario DNI-- ">
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+  <!-- 
+    Curso 132 - Grupo 4 -> mo.dottori@gmail.com
+      26141170; D Julio, Fabian; ID:6201
+      26165883; Mariano, Mello; ID:24079
+      25131771; Matricardi, Mario Andres; ID:21514
+      18306509; Rochetti, Mónica Viviana; ID:16362
+      25772960; Scaltritti, Edgar; ID:24065
+      17318955; Stella Maris, Loreto; ID:26040 
+  -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #b3e0ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      align-items: center;
+      background-color: white;
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .botones {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    h1 {
+      margin-bottom: 1em;
+    }
+
+    h2 {
+      color: black;
+      margin: 0;
+    }
+
+    p {
+      color: #001a33;
+      font-size: 36px;
+      text-align: center;
+      margin: 0;
+    }
+
+    button {
+      background-color: #007acc;
+      color: white;
+      font-size: 18px;
+      margin-top: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 48%;
+    }
+  </style>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    const BocaDeUrnas = () => {
+      const [contadorCandidato1, setContadorCandidato1] = useState(0);
+      const [contadorCandidato2, setContadorCandidato2] = useState(0);
+
+      const incrementarContador = (candidato) => {
+        if (candidato === 1) {
+          setContadorCandidato1(contadorCandidato1 + 1);
+        } else {
+          setContadorCandidato2(contadorCandidato2 + 1);
+        }
+      };
+
+      const decrementarContador = (candidato) => {
+        if (candidato === 1 && contadorCandidato1 > 0) {
+          setContadorCandidato1(contadorCandidato1 - 1);
+        } else if (candidato === 2 && contadorCandidato2 > 0) {
+          setContadorCandidato2(contadorCandidato2 - 1);
+        }
+      };
+
+      const handleKeyPress = (event, candidato) => {
+        if (event.key === '+' || event.key === '-') {
+          event.preventDefault();
+          if (event.key === '+') {
+            incrementarContador(candidato);
+          } else {
+            decrementarContador(candidato);
+          }
+        }
+      };
+
+      return (
+        <div>
+          <h1>Boca de Urnas</h1>
+          <div className="box">
+            <h2>Candidato 1</h2>
+            <p>{contadorCandidato1}</p>
+            <div className="botones">
+              <button onClick={() => incrementarContador(1)} onKeyPress={(e) => handleKeyPress(e, 1)} tabIndex="0">+</button>
+              <button onClick={() => decrementarContador(1)} onKeyPress={(e) => handleKeyPress(e, 1)} tabIndex="0">-</button>
+            </div>
+          </div>
+          <div className="box">
+            <h2>Candidato 2</h2>
+            <p>{contadorCandidato2}</p>
+            <div className="botones">
+              <button onClick={() => incrementarContador(2)} onKeyPress={(e) => handleKeyPress(e, 2)} tabIndex="0">+</button>
+              <button onClick={() => decrementarContador(2)} onKeyPress={(e) => handleKeyPress(e, 2)} tabIndex="0">-</button>
+            </div>
+          </div>
+        </div>
+      );
+    };
+
+    const rootElement = document.getElementById('root');
+    ReactDOM.render(<BocaDeUrnas />, rootElement);
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  
+</body>
+</html>

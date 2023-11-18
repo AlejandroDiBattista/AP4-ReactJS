@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agenda en un Archivo</title>
+    
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <!-- 
+            Curso 134 - Grupo 07 -> mahmudpaa@gmail.com
+                21418801; Adrián Mahmud
+                20948507; Carlos Manera
+                18383939; Alfonso Arias
+
+                NOTA: Enviaron 3 archivos, tuve que corregir para que funcionen.
+        -->
+        <style>
+            div {  
+                background: white;
+                border-radius: 20px;
+                border: 1px solid darkblue;
+                height: 450px;
+                width: 300px;
+                margin: 0 auto;
+                align-items: center;
+            }
+
+            body {
+                background: linear-gradient(110deg, blue, dodgerblue);
+                height: 100%;	
+                text-align: center;
+                align-items: center;
+            }
+
+            h1 {
+                text-align: center;
+                color: white;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 1.8em;
+                line-height: 1.1;
+            }
+
+            h3 {
+                text-align: center;
+                font-size: 2em;
+                color: blue;
+            }
+
+            button {
+                background: dodgerblue;
+                border: 1px solid transparent;
+                border-radius: 5px;
+                text-align: center;
+                height: 50px;
+                width: 70px;
+                font-size: 1.8em;
+                line-height: 1.1;
+                cursor: pointer;
+                transition: border-color 0.25s;
+            }
+
+            button:hover {
+                background: orange;
+            }
+            
+            button:focus, button:focus-visible {
+                background: red;
+            }
+
+            @media (prefers-color-scheme: light) {
+                :root {
+                    color: #213547;
+                    background-color: #ffffff;
+                }
+                a:hover {
+                    color: #747bff;
+                }
+                button {
+                    background-color: #f9f9f9;
+                }
+            }
+
+        </style>
+        
+        <script type="text/babel">
+            class Contadores extends React.Component {
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                    contador1: 0,
+                    contador2: 0
+                    };
+                }
+
+                incrementarContador1() {
+                    this.setState({ contador1: this.state.contador1 + 1 });
+                }
+
+                decrementarContador1() {
+                    if (this.state.contador1 > 0){
+                    this.setState({ contador1: this.state.contador1 - 1 });
+                    }
+                }
+                
+                incrementarContador2() {
+                    this.setState({ contador2: this.state.contador2 + 1 });
+                }
+
+                decrementarContador2() {
+                    if (this.state.contador2 > 0)
+                    this.setState({ contador2: this.state.contador2 - 1 });
+                }
+
+
+                render() {
+                    const recuadro = { padding: '30px', };
+
+                return (
+                    <div >
+                        <h2>Candidato 1:</h2> 
+                        <h3>{this.state.contador1}</h3>   
+                        <button onClick={() => this.incrementarContador1()}>+</button>
+                        <button onClick={() => this.decrementarContador1()}>-</button>
+                        <br />
+                        <br />
+                        <h2>Candidato 2: </h2>
+                        <h3>{this.state.contador2}</h3>
+                        <button onClick={() => this.incrementarContador2()}>+</button>
+                        <button onClick={() => this.decrementarContador2()}>-</button>
+                    </div>
+                );
+                }
+            }
+
+            ReactDOM.render(<Contadores />,  document.getElementById('root'));
+
+
+        </script>
+
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

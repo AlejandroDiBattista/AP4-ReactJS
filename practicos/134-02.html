@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boca de Urna</title>
+    <link rel="shortcut icon" href="./urna.ico.png" type="image/x-icon">
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+      Curso 134 - Grupo 02 -> aegagranea@gmail.com
+        24997860; Alejandra Edith, Gauna
+        18877611; Gloria Salas, Diego Leonardo
+        10537291; llanes, Luis Hector
+        23687562; Mema, Miguel Angel
+        18880363; Soliz, Viviana
+        17223917; Valenzuela, Martin
+    -->
+
+    <style>
+      body {
+        margin: 0;
+        min-width: 320px;
+        min-height: 100vh;
+        background: linear-gradient(to bottom right, blue, lightblue);
+        display: flex;
+        justify-content: center;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        color: black;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .contador {
+        text-align: center;
+        height: 220px;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: aliceblue;
+        border-radius: 10px;
+        margin-top: 50px;
+      }
+
+      .contador-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .contador-container button {
+        width: 100px;
+        height: 70px;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        margin: 0 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 2em;
+        color: white;
+        background-color: lightskyblue;
+      }
+
+      .contador-container p {
+        font-size: 3em;
+        margin: 0 20px;
+        color: blue;
+      }
+    </style>
+
+    <script type="text/babel">
+      const Candidato = ({ nombre }) => {
+        const [contador, setContador] = React.useState(0);
+
+        const clickIncrement = () => {
+          setContador(contador + 1);
+        };
+
+        const clickDecrement = () => {
+          if (contador > 0) {
+            setContador(contador - 1);
+          }
+        };
+        return (
+          <div className="contador">
+            <h2>{nombre}</h2>
+            <div className="contador-container">
+              <p>{contador}</p>
+              <div>
+                <button onClick={clickIncrement}>+</button>
+                <button onClick={clickDecrement}>-</button>
+              </div>
+            </div>
+          </div>
+        );
+      };
+      const Contador = () => {
+        return (
+          <>
+            <h1>Boca de Urnas</h1>
+            <Candidato nombre="Candidato 1" />
+            <Candidato nombre="Candidato 2" />
+          </>
+        );
+      };
+      ReactDOM.render(
+        <Contador />,
+        document.getElementById("root")
+      );
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

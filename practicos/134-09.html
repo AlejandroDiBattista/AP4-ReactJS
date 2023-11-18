@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+  Hola, Profe! Buenos días.
+Comparto el trabajo práctico 
+
+Grupo 9 
+Comisión: Lunes y Miercoles de 10hs a 12hs
+
+Ignacio Sosa
+DNI 
+satrianoignacio@gmail.com
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boca de Urnas</title>
+  <!-- 
+    Curso 134 - Grupo 09 -> satrianoignacio@gmail.com
+      28079719; Ignacio Sosa
+
+      NOTA: Funciona perfercto pero no usa react!!!
+  -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom right, rgb(10, 10, 90), rgb(5, 235, 235));
+      color: rgb(25, 25, 25);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .candidate-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    .counter-container {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 21px;
+    }
+
+    button {
+      font-size: 1rem;
+      margin: 5px;
+      cursor: pointer;
+      background-color: rgb(5, 235, 235);
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 30px;
+      width: 70px;
+      color: rgb(25, 25, 25);
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 style="color: white;">Boca de Urnas</h1>
+
+  <div class="candidate-container" id="counterA">
+    <h2>Candidato 1</h2>
+    <p>Votos: <span id="countA">0</span></p>
+    <button onclick="increment('countA')">+</button>
+    <button onclick="decrement('countA')">-</button>
+  </div>
+
+  <div class="candidate-container" id="counterB">
+    <h2>Candidato 2</h2>
+    <p>Votos: <span id="countB">0</span></p>
+    <button onclick="increment('countB')">+</button>
+    <button onclick="decrement('countB')">-</button>
+  </div>
+
+  <footer>Ignacio Sosa - Grupo 9 </footer>
+
+  <script>
+    function increment(counterId) {
+      const countElement = document.getElementById(counterId);
+      if (countElement) {
+        let count = parseInt(countElement.textContent);
+        countElement.textContent = count + 1;
+      }
+    }
+
+    function decrement(counterId) {
+      const countElement = document.getElementById(counterId);
+      if (countElement) {
+        let count = parseInt(countElement.textContent);
+        countElement.textContent = count > 0 ? count - 1 : 0;
+      }
+    }
+  </script>
+
+</body>
+
+</html>

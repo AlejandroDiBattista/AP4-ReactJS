@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Boto Cantado APP</title>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  
+  <!-- 
+    Curso 126 - Grupo 03 -> matiasgonard@hotmail.com
+      26057002; Gonard, Matias 
+      25387571; Alegre, Ramiro Alejandro 
+      24393561; Jorge Christian, Ponce  
+  -->
+  
+  <style>
+   body {
+  background-image: linear-gradient(to bottom right, #002fff, #00d5ff);
+  color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  text-align: center;
+}
+.contador-container {
+  padding-bottom: 20px;
+  font-size:80px;
+}
+
+.contador {
+  display: inline-block;
+  padding: 2px 2px;
+  
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.633);
+  border-radius: 15px;
+  color: #000000;
+  background: white;
+  max-width: 300px;
+  box-sizing: content-box;
+  margin-bottom: 20px;
+  width: 500px;
+}
+
+button {
+  display: inline-block;
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  color: #ffffff;
+  background: rgb(27, 153, 255);
+  width: 48%;
+  margin:2%;
+  line-height: 50px;
+  max-width: 90px;
+}
+
+button:hover {
+  background-color: #274bdb;
+  color: white;
+  
+}
+
+h2 {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+}
+
+span {
+  color: blue;
+  font-size: 90px;
+}
+button {
+ 
+
+  &:active {
+    background-color: rgb(27, 153, 255);  }
+}
+
+
+  </style>
+
+  <script type="text/babel" defer>
+    const { useState } = React;
+
+    function App() {
+      const [contador1, setContador1] = useState(0);
+      const [contador2, setContador2] = useState(0);
+
+      const handleIncrement = (contador, setContador) => {
+        setContador(contador + 1);
+      };
+
+      const handleDecrement = (contador, setContador) => {
+        if (contador > 0) {
+          setContador(contador - 1);
+        }
+      };
+
+      return (
+        <div className="boca-de-urnas">
+          <div className="contador-container">
+            <div className="contador">
+              <h2>Candidato 1</h2>
+              <span>{contador1}</span>
+              <div className="contador1">
+                <button onClick={() => handleDecrement(contador1, setContador1)}>-</button>
+                <button onClick={() => handleIncrement(contador1, setContador1)}>+</button>
+              </div>
+            </div>
+          </div>
+
+          <div className="contador-container">
+            <div className="contador">
+              <h2>Candidato 2</h2>
+              <span>{contador2}</span>
+              <div className="contador1">
+                <button onClick={() => handleDecrement(contador2, setContador2)}>-</button>
+                <button onClick={() => handleIncrement(contador2, setContador2)}>+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    );
+  </script>
+</head>
+<body>
+  <h1>Boca de urnas</h1>
+  <div id="root"></div>
+</body>
+</html>

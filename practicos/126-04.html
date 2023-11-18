@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agenda en un Archivo</title>
+    
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!-- 
+            Curso 126 - Grupo 04 -> rozziesteban@gmail.com
+                27173739; Esteban Costilla Rozzi
+                24106061; Gabriel Ritacco
+                28627630; Ximena Romani
+                23486429; Juan José Coronel
+        -->
+        <style>
+            #root {
+
+                max-width: 1280px;
+                margin: 0 auto;
+                padding: 2rem;
+                text-align: center;
+            }
+            :root {
+                font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+                line-height: 1.5;
+                font-weight: 400;
+                margin: 0;
+                color-scheme: light dark;
+                color: rgba(255, 255, 255, 0.87);
+                background-image: linear-gradient(to bottom right, rgb(10, 31, 251), rgb(32, 220, 254));
+                text-rendering: optimizeLegibility;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                box-sizing: border-box;
+                }
+
+                body {
+                margin: 0;
+                display: flex;
+                place-items: center;
+                min-width: 320px;
+                min-height: 100vh;
+                }
+
+                h1 {
+                font-size: 3.2em;
+                line-height: 1.1;
+                color: white;
+                margin-top: 0 ;
+                margin-bottom: 0em;
+                }
+
+                h2 {
+                font-size: 2.8em;
+                padding: 0;
+                margin: 0
+                }
+
+                .dosContadoresDiv {
+                display: flex;
+                flex-direction: column;
+                gap: 2.5em;
+                }
+
+                .divCandidato1 {
+                background-color: #ffffff;
+                padding: 0.5em;
+                border-radius: 1em;
+                border: solid 2px rgb(0, 0, 0);
+                color: black;
+                }
+
+                .divCandidato2 {
+                background-color: #ffffff;
+                padding: 0.5em;
+                border-radius: 1em;  
+                border: solid 2px rgb(0, 0, 0);
+                color: black;
+                }
+
+                .contador {
+                font-size: 8em;
+                box-sizing: border-box;
+                padding-top: 0.2em;
+                padding-bottom: 0.5em;
+                margin: 0;
+                color: blue;
+                line-height: 0.4em;
+                }
+
+                .botonera {
+                display: flex;
+                justify-content:space-around
+                }
+
+                button {
+                border-radius: 10px;
+                border: 2px solid black;
+                padding: 0.1em 1em;
+                font-size: 3.4em;
+                margin: 0.01em;
+                font-weight: 800;
+                font-family: inherit;
+                background-color: rgb(56, 179, 255);
+                cursor: pointer;
+                transition: border-color 0.25s;
+                }
+
+                button:hover {
+                background-color: rgb(0, 0, 255);
+            }
+        </style>
+
+        <script type="text/babel">
+
+            const { useState } = React
+
+            function App() {
+                return (
+                <>
+                    <div className='dosContadoresDiv'>
+                    <h1>Boca de urnas</h1>
+                    <Candidato1 />
+                    <Candidato2 />
+                    </div>      
+                </>
+                )
+            }
+
+            function Candidato1() {
+                const [count, setCount] = useState(0)
+
+                //función aumento
+                const aumento = () => {
+                    setCount(count +1);
+                }
+                //función decremento para impedir que vaya debajo de 0 el contador
+
+                const decremento = () => {
+                    setCount(cuentaAnterior => Math.max(cuentaAnterior -1, 0));
+                }
+
+
+                return (
+                <div className="divCandidato1">
+                    <h2>Candidato 1</h2>
+                    <div className="contador">{count}</div>
+                    <div className="botonera">
+                        <button onClick={aumento}>+</button>
+                        <button onClick={decremento}>-</button>
+                    </div>
+                    
+                    </div>
+                    )
+                }
+
+            function Candidato2() {
+
+                const [count2, setCount] = useState(0)
+
+                    //función aumento
+                    const aumento = () => {
+                        setCount(count2 +1);
+                    }
+                    //función decremento para impedir que vaya debajo de 0 el contador
+
+                    const decremento = () => {
+                        setCount(cuentaAnterior => Math.max(cuentaAnterior -1, 0));
+                    }
+                return (
+                <div className="divCandidato2">
+                    <h2>Candidato 2</h2>
+                    <div className="contador">{count2}</div>
+                    
+
+                    <div className="botonera">
+                        <button onClick={aumento}>+</button>
+                        <button onClick={decremento}>-</button>
+                    </div>
+
+                    </div>
+                )
+            }
+            
+
+            
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agenda en un Archivo</title>
+    
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <!-- 
+            Curso 126 - Grupo 10 ->
+            28505602; Joandet, Mariela Giselle 
+            27536857; Morón, Patricio
+         -->
+        <style>
+            
+        :root {
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            line-height: 0;
+        }
+
+        body {
+            background: rgb(0,4,255);
+            background: linear-gradient(145deg, rgba(0,4,255,1) 35%, rgba(0,229,255,1) 100%);
+            margin: 0;
+            display: flex;
+            min-width: 320px;
+            min-height: 100vh;
+        }
+
+        #root {
+            max-width: 1280px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+            h1 {
+            font-size: 1.5em;
+            line-height: 2;
+            color: white;
+        }
+
+            .card {
+            border-radius: 10px;
+            border: 1px solid black;
+            padding: 5px;
+            margin: 20px 0;
+            background-color: white;
+        }
+            .card__title{
+            color: black;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+            .card__count{
+            color: #0000ff;
+            font-size: 3em;
+            font-weight: 500;
+        }
+
+            button {
+            border-radius: 8px;
+            color: white;
+            border: 1px solid black;
+            background-color:#00bfff;
+            padding: 3px 30px;
+            margin: 2px;
+            font-size: 1.8em;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+        }
+            button:hover {
+            border-color: #006f94;
+            background-color:#006f94;
+        }
+
+        </style>
+
+        <script type="text/babel">
+            let datos = [
+                { nombre: "Alejandro", apellido: "Di Battista", telefono: "(381) 534-3458" },
+                { nombre: "Juan Carlos", apellido: "Perez", telefono: "(381) 534-3459" },
+                { nombre: "Pedro", apellido: "Gomez", "telefono": "(381) 534-3460" },
+            ];
+
+            function Contacto({nombre, apellido, telefono}) {
+                return (
+                <li>
+                    <div>{nombre} <b>{apellido}</b></div>
+                    <p>T: {telefono}</p>
+                </li>
+                )}
+
+            function Agenda({ contactos }) {
+                return (
+                <>
+                    <h2>Agenda 6</h2>
+                    <ul>
+                        { contactos.map( (contacto) => <Contacto {...contacto} />) }
+                    </ul>
+                </> 
+                )}
+
+            function Candidato({who}){
+                const [count, setCount] = React.useState(0)
+
+                function sumar(){
+                    setCount(count + 1)	
+                }
+
+                function restar(){
+                    if(count > 0){
+                        setCount(count - 1)
+                    }
+                } 
+
+                return (
+                    <div className="card">
+                    <p className="card__title">{who}</p>
+                    <p className="card__count">{count}</p>
+                    <button onClick={sumar}> + </button>
+                    <button onClick={restar}> - </button>
+                    </div>
+                )
+            }
+
+            function BocaDeUrnas(){
+                return (
+                <>
+                    <h1>Boca de urnas</h1>
+                    <Candidato who="Candidato 1"/>
+                    <Candidato who="Candidato 2"/>
+                </> 
+            )}
+
+            ReactDOM.render(
+                <BocaDeUrnas />
+                , document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

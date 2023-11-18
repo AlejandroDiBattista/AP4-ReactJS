@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contador</title>
+   
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!-- 
+            Curso 134 - Grupo 01 -> Antonioleiva909@gmail.com
+                13510492; Antonio, Leiva
+
+                NOTA: Avisa que no funciona
+                NOTA2: ¿El resto del equipo trabajo?
+        -->   
+        <style>
+            * {
+                margin: 0;
+                font-family: 'Lucida Sans', sans-serif;
+            }
+
+            body {
+                background-color: rgb(14, 172, 235);
+            }
+
+            #root {
+                width: 200px;
+                margin: 0 auto;
+                text-align: center;
+                height: 300px;
+               
+            }
+
+   
+            h2 {
+                text-align: center;
+                padding: 10px;
+            }
+
+            ul {
+                padding: 0;
+            }
+
+            ul li {
+                border: 1px solid gray;
+                background-color: white;
+                border-radius: 8px;
+                padding: 8px;
+                list-style: none;
+                margin-bottom: 5px;
+            }
+
+            ul li div {
+                margin-bottom: 50px;
+                font-size: 20px;
+            }
+
+            h2 {
+                text-align: center;
+                margin-top: 30px;
+                color: white;
+            }
+           
+            ul li p {
+                color:blue ;
+                font-size: 15px;
+            }
+
+            input {
+                width: 100%;
+                padding: 5px 15px;
+                border-radius: 20px;
+                border: 1px solid gray;
+                margin: 10px 0;
+                font-size: 20px;
+            }
+       
+            ol li {
+                margin: 5px;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            ol li:hover {
+                cursor: pointer;
+                background-color: antiquewhite;
+            }
+
+            ol li a {
+                font-size: 20px;
+            }
+
+            span {
+                font-size: 1cm;
+                align-items: center;
+                margin: 0;
+                text-align: center;
+            }
+
+            .btn{
+                margin-top: 10px;
+                font-size: 1.5rem;
+                flex-direction: column;  
+                align-items: center;
+                background-color: skyblue;
+                color: white;
+                cursor: pointer;
+                padding: 5px;
+                width: 70px;
+                height: 40px;
+            }
+           
+        </style>
+
+       
+
+        <script type="text/babel">
+            let datos = [
+                { nombre: "Candidato ", apellido: "1",},
+                { nombre: "Candidato", apellido: "2", },
+                   
+               
+            ];
+
+                     
+            function Contacto({nombre, apellido, telefono}) {
+                return (
+                <li>
+                    <div>{nombre} <b>{apellido}</b></div>
+                    <p>
+                        <span id="valor">0</span>
+                        <div class="contenedor-botones">
+                        <button class="btn" id="incrementar"> + </button>
+       
+                        <button class="btn" id="decrementar"> - </button>
+
+    </div>
+     
+                       
+                        </p>
+                </li>
+                )}
+
+                             
+                           
+
+            function Agenda({ contactos }) {
+                return (
+                <>
+                    <h2>Boca de urna</h2>
+                 
+                    <ul>
+                        { contactos.map( (contacto) => <Contacto {...contacto} />) }
+                    </ul>
+                </>
+                )}
+
+            ReactDOM.render(<Agenda contactos={datos} />, document.getElementById('root'));
+
+           
+
+        </script>
+
+               
+<script>
+const Contador = document.getElementById("contar");
+        const sumar = document.getElementById("incrementar");
+        const restar = document.getElementById("decrementar");
+       
+        let número = 0;
+       
+        sumar.addEventListener("click", ()=>{
+            número++;
+            Contador.innerHTML = número;
+        });
+       
+        restar.addEventListener("click", ()=>{
+            if(número==0){}
+            else{
+                número--;
+                Contador.innerHTML = número;
+            }
+           
+        });
+
+
+</script>
+
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

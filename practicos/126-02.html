@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boca de urnas</title>
+
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 
+      Curso 126 - Grupo 2 -> jonatanpetri@gmail.com
+        28557311; Petri, Jonatan
+        26622005; Bergalo, Laura Isabel
+        25477764; Pampín, Diego Hernán
+        24438294; Rodera, Dalila Maricel
+        17400167; Verges, Luis
+        22936851; Wenner, Gustavo Javier
+    -->
+    <style>
+        body {
+            justify-content: center;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom right, blue, cyan);
+            margin: 0;
+            padding-top: 100px;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        
+        
+        
+        #root2 {
+            justify-items: center;
+            margin: 0 auto;
+            border-top: 100px;
+            margin-top: 100px;
+            width: 225px;
+            height: 200px;
+        }
+        #root3 {
+            justify-items: center;
+            margin: 0 auto;
+            border-top: 100px;
+            margin-top: 100px;
+            width: 225px;
+            height: 200px;
+        }
+        
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            font-size: 32px;
+            color: #fff;
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            font-size: 32px;
+            color: #000;
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .calculator {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            padding: 10px;
+            padding-top: 0px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            border-top: 100px;
+            background-color: #fff;
+        }
+        
+        .section {
+            text-align: right;
+            display: flex;
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        button {
+            background-color: rgb(0, 200, 255);
+            height: 60px;
+            width: 100px;
+            font-size: 35px;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        input {
+            height: 60px;
+            width: 100px;
+            font-size: 50px;
+            color: blue;
+            text-align: center;
+            padding: 10px 10px;
+            margin: 0px;
+            border: 0px;
+            cursor: pointer;
+        }
+        .spacio {
+            width: 100px;
+            height: 100px;
+            align-items: center;
+        }
+        footer {
+            margin-inline-start: 20px; /* Espacio entre el footer y el nuevo contenido */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 16px;
+            color: #000000;
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            background-color: #000000;
+            margin: 0 auto; /* Para centrar horizontalmente */
+        }
+        
+    </style>
+   
+</head>
+
+<body>
+    <div class="body">
+      <h1>Boca de urnas</h1>
+    </div>
+    <div id="root2" data-candidato="Candidato 1"></div>
+    <div id="root3" data-candidato="Candidato 2"></div>
+    <div id="spacio"></div>
+    
+  
+    
+  
+    <script type="text/babel">
+      class Calculator extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            value: 0,
+            candidato: ''
+          };
+        }
+  
+        componentDidMount() {
+          const element = document.getElementById(this.props.rootId);
+          if (element) {
+            const candidato = element.getAttribute('data-candidato');
+            if (candidato) {
+              this.setState({ candidato });
+            }
+          }
+        }
+  
+        handleOperation = (operation) => {
+          this.setState((prevState) => ({
+            value: operation === 'add' ? prevState.value + 1 : Math.max(0, prevState.value - 1)
+          }));
+        };
+  
+        render() {
+          return (
+            <div className="calculator">
+              <h2>{this.state.candidato}</h2>
+              <div>
+                <input type="text" value={this.state.value} readOnly />
+              </div>
+              <div className="section">
+                <button onClick={() => this.handleOperation('add')}>+</button>
+                <button onClick={() => this.handleOperation('subtract')}>-</button>
+              </div>
+            </div>
+          );
+        }
+      }
+  
+      ReactDOM.render(
+        <Calculator rootId="root2" />,
+        document.getElementById('root2')
+      );
+  
+      ReactDOM.render(
+        <Calculator rootId="root3" />,
+        document.getElementById('root3')
+      );
+    </script>
+  </body>
+
+  
