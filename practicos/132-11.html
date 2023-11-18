@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+  <!-- 
+    Curso 132 - Grupo 11 ->
+      22962605; Javier Aguerregaray 
+      26739987; Solange Blanc 
+      21476196; Lorena Lavigna 
+      20298589; Ricardo Ariel Fernández 
+      26098677; Domenico Alejandro Gabriel 
+   -->
+  <title>Boca de Urnas</title>
+  <style>
+    #root {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;    
+    }
+
+	body {
+	  background: linear-gradient(to right, #002DFF, #02B9E4);
+	  margin: 0; /* Asegura que no haya márgenes por defecto en el body */
+	  padding: 0; /* Asegura que no haya relleno por defecto en el body */
+	}
+	
+	h1{
+	color:white;
+	}
+
+    .caja {
+      padding: 20px;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .boton {
+      padding: 5px;
+      height: 80px;
+      width: 80px;
+      font-size: xx-large;
+      margin: 5px;
+      border-radius: 8px;
+      color: #FFFFFF;
+      background: #02B9E4;
+    }
+
+    .letraCandidato {
+      font-size: large;
+      font-weight: bold;
+      color: #000000;
+      text-align: center;
+    }
+
+    .letraGrande {
+      font-size: xx-large;
+      color: #0600FF;
+      text-align: center;
+    }
+  </style>
+  <script type="text/babel">
+    const { useState } = React;
+
+    const ContadorBoton = () => {
+      const [contador, setContador] = useState(0);
+
+      const siguiente = () => {   
+        setContador(contador + 1);
+      };
+      
+      const atras = () => {
+        if (contador > 0)
+        setContador(contador - 1);
+      };
+
+      return (
+        <div className="caja">
+		  
+          <p className="letraCandidato">Candidato:</p>
+          <p className="letraGrande">{contador}</p>
+          <button className="boton" onClick={siguiente}>+</button>
+          <button className="boton" onClick={atras}>-</button>
+        </div>				
+		
+      );
+    };
+
+    ReactDOM.createRoot(document.getElementById('root')).render(
+      <React.StrictMode>
+        <ContadorBoton />		
+      </React.StrictMode>
+    );
+  </script>
+</head>
+<body>
+	<H1><p style="text-align: center;">BOCA DE URNAS </p><H1>
+  <div id="root"></div>
+
+</body>
+</html>

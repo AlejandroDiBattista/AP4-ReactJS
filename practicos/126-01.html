@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pie de urna</title>
+    
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+        Curso 126 - Grupo 01 -> wendyzubiaga@gmail.com
+            27190813; Zubiaga, Wendy 
+            27678855; Lofiego, Marcelo Alejandro  
+            27584437; Mauricio, Tolosa  
+     -->
+
+    <style>
+        body {
+	    font-family: Arial;
+            margin: 0;
+            text-align: center;
+            min-width: 320px;
+            min-height: 100vh;
+            background : linear-gradient(to bottom right, blue, cyan);
+        }
+
+        ul {
+            padding: 0;
+            }
+
+        h1 {
+            font-size: 3em;
+            line-height: 1.1;
+            color: #ffffff;
+            }
+        h2 {
+            margin-top: 5px;
+	    margin-bottom: 0;
+            font-size: 2.5em;
+            color: black;
+            }
+        
+        h3 {
+            margin-top: 10px;
+	    margin-bottom: 0;
+            font-size: 5em;
+            color:blue;
+        }
+
+        li {
+            border-color: black;
+            border-style:solid;
+            margin-bottom: 30px;
+            border-radius: 25px;
+            display:inline-block;
+            list-style: none;
+            width:  300px;
+            background: white;
+	    padding-top:0;
+        } 
+    
+        button {
+            background-color: dodgerblue;
+            color: white;
+            border-radius:15px;
+            width: 130px;
+	    height:75px;
+            font-size: 3em;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            border-color: dodgerblue;
+            border-style:solid;
+        }
+        
+        button:focus,
+        button:focus-visible {
+            outline: 4px auto -webkit-focus-ring-color;}
+
+    </style>
+
+    <script type="text/babel">
+        const { useState } = React
+
+        function Candidato({ id,nombreCandidato, votos}) {
+            const [count, setCount] = useState(votos)
+            return (
+            <div>
+                <li key={id}>
+                    <div><h2>{nombreCandidato}</h2></div>
+                    <div><h3>{count}</h3></div>
+                    <div className="card">
+                        <button onClick={() => setCount((count) => count + 1)}>
+                            + 
+                        </button>
+                        <button onClick={() => setCount((count) => Math.max(count - 1,0))}>
+                            - 
+                        </button>      
+                    </div>
+                </li>
+            </div>
+        )}
+
+        function App() {
+            const [count, setCount] = useState(0);
+            let datos = [
+                { id:1,nombreCandidato: "Candidato 1", votos: 11 },
+                { id:2,nombreCandidato: "Candidato 2", votos: 9 },
+            ];
+            return (
+            <>
+                <h1>Boca de urnas</h1>
+                <ul>
+                    { datos.map( Candidato ) }
+                </ul>
+            </> 
+        )}
+
+        const rootElement = document.getElementById('root')
+        ReactDOM.render(<App />, rootElement)
+
+    </script>
+    </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

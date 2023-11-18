@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boca de Urnas</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- 
+        Curso 133 - Grupo 8 -> ricardo.aranda@bue.edu.ar
+            27803086; Aranda, Ricardo Mauro    
+            27660701; Amaya, Jesica Elizabeth  
+            21669385; Avendaño, Maria Jose     
+            28299300; Juarez, Maria Soledad    
+            21328822; Pedraza, Jose Maria      
+            20654068; San, Patricia Isabel    
+     -->
+    <style>
+        h2 {
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 40px;
+text-align: center;
+}
+section {
+    background-color:white;
+    margin: 10px 300px auto;
+    border-radius: 20px;
+}
+.contador {
+    display: flex;
+    justify-content: center;
+    }
+    div{
+        border-radius: 20px;
+    }
+
+    H3 {
+display: flex;
+justify-content: center;
+padding: 5px;
+font-size: 90px;
+color: blue;
+}
+button{
+    width: 180px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 0px;
+    margin-bottom: 10px;
+    background-color: rgb(0, 217, 255);
+    font-size: 40px;
+    color: azure;
+    display: flexbox;
+    justify-content: center;
+    
+}
+
+body{
+background: rgb(26, 15, 238);
+background: linear-gradient(90deg, rgb(9, 0, 167) 0%, rgb(10, 97, 179) 35%, rgb(104, 202, 241)100%);
+}
+h1 {
+    font-size: 50px;
+    color: beige;
+    vertical-align: top;
+    margin-top: 0px;
+    padding-top: 20px;
+    text-align: center;    
+    text-decoration: solid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+
+
+    </style>
+    
+    
+    
+    <script type="text/babel">
+        
+        function App() { 
+  return (
+    <>
+    <Titulo />
+    <Candicont candidato="Candidato 1"/>
+    
+    <Candicont candidato="Candidato 2"/>
+    
+    </>
+  )
+}
+function Candicont(prop){
+    return (
+        <section>
+            <h2>{prop.candidato}</h2>
+            <div className='contador'>
+            <Contador/>
+            </div>
+        </section>
+        
+            )}
+            function Contador() { 
+const [count, setCount] = React.useState(0);
+
+function handleClick1() {
+    setCount(count + 1);
+}
+function handleClick2() { if (count > 0)
+    setCount(count - 1);
+}
+        return (
+        <div>
+        <h3>{count}</h3>
+        <button onClick={handleClick1}><b>+</b></button> 
+        <button onClick={handleClick2}><b>-</b></button>
+        </div>
+    )}
+    function Titulo(){
+    return (
+        <main>
+            <header>
+            <h1>Boca de Urnas</h1>
+            </header>
+        </main>)
+    }
+    ReactDOM.render(<App/>, document.getElementById('root'));
+    
+    
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

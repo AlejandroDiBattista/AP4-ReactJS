@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boca de urna en un Archivo</title>
+    
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+        Curso 134 - Grupo 6 -> fedatu@hotmail.com
+            12700995; Fernando Darío TULA
+
+
+    -->
+    <style>
+        *
+        {
+            margin: 0;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body
+        {
+            background: linear-gradient(to bottom right, rgb(24, 24, 245), rgb(5, 193, 240));
+            height:100vh;
+        }
+
+        #root
+        {
+            width: 350px;
+            margin: 0 auto;
+        }
+
+        h2
+        {
+            text-align: center;
+            padding: 10px;
+            color: white;
+            font-size: 30px;
+        }
+
+        .ContenedorGeneral
+        {
+            padding: 0;
+        }
+
+        .Ficha 
+        {
+            border: 1px solid gray;
+            background-color: white;
+            border-radius: 20px;
+            padding: 8px;
+            list-style: none;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            height: 250px;
+        }
+
+        .Candidato
+        {
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .Contador
+        {
+            color: blue;
+            font-size: 100px;
+            height: 140px;
+            line-height: 140px;
+            text-align: center;
+        }
+
+        .Boton
+        {
+            background-color: rgb(15, 169, 230);
+            border: 2px solid black;
+            width: 90%;
+            height: 60px;
+            color: white;
+            font-weight: bold;
+            font-size: 40px;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        .ContenedorBotones
+        {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <!-- Script React -->
+    <script type="text/babel">
+        let datos = [
+            { nombre: "Candidato 1", contador:"0", index:0},
+            { nombre: "Candidato 2", contador:"0", index:1},
+        ];
+
+        function incrementar(index) {
+            // Clonar el array de datos para no mutar el estado directamente
+            const nuevosDatos = [...datos];
+
+            // Incrementar el contador del candidato correspondiente
+            nuevosDatos[index].contador = (parseInt(nuevosDatos[index].contador) + 1).toString();
+            
+            // Actualizar el estado
+            datos = nuevosDatos;
+
+            // Renderizar nuevamente con los datos actualizados
+            renderizar();
+        }
+
+        function decrementar(index)
+        {
+            // Clonar el array de datos para no mutar el estado directamente
+            const nuevosDatos = [...datos];
+
+            // Incrementar el contador del candidato correspondiente
+            // con condicion de guarda para evitar datos negativos
+            if (parseInt(nuevosDatos[index].contador)>0)
+                nuevosDatos[index].contador = (parseInt(nuevosDatos[index].contador) - 1).toString();
+            
+            // Actualizar el estado
+            datos = nuevosDatos;
+
+            // Renderizar nuevamente con los datos actualizados
+            renderizar();
+        }
+
+        function Ficha({nombre, contador, index}) {
+            return (
+            <div className="Ficha">
+                <div className="Candidato">{nombre}</div>
+                <div className="Contador">{contador}</div>
+                <div className="ContenedorBotones">
+                    <button className="Boton" onClick={() => incrementar(index)}>+</button>
+                    <button className="Boton" onClick={() => decrementar(index)}>-</button>
+                </div>
+            </div>
+            );
+        }
+
+        function Fichas({ candidatos }) {
+            return (
+            <>
+                <div className="ContenedorGeneral">
+                    { candidatos.map( (candidato) => <Ficha {...candidato} />) }
+                </div>
+            </> 
+            )}
+
+        function renderizar() {
+            ReactDOM.render(<Fichas candidatos={datos} />, document.getElementById('root'));
+        }
+
+        // Renderizar inicialmente
+        renderizar();
+    </script>
+</head>
+<body>
+    <h2>Boca de urnas</h2>
+    <div id="root"></div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boca de Urnas</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 
+      Curso 132 - Grupo 06 -> irinagretti@gmail.com
+        25254895; Agretti, Irina
+        25430546; Aste, Nicolas Matias        
+        26641479; Cruz, Laura Patricia        
+        20665292; Forcadell, María Gabriela    
+        23408851; Gamarra, Vanesa Roxana       
+        27479190; Gutierrez, Matias Sebastian 
+     -->
+<style>
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+header {
+  margin: auto;
+  text-align: center;
+  font-size: 5vw;
+  background: #000000;
+  color: white;
+}
+h2 {
+  font-size: 2.5em; 
+}
+p{
+  font-size: 3vw;
+  color:#F6B50E;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed; 
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #73ACDF;
+}
+
+.right {
+  right: 0;
+  background-color: rgb(255, 255, 255);
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  font-size: 2vw;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.btn {
+  
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 4px 36px;
+  cursor: pointer;
+}
+.success {background-color: #3b6e9b;} /* Green */
+.success:hover {background-color: #3b6e9b;}
+.danger {background-color: #000000;} /* Red */ 
+.danger:hover {background: #000000;}
+
+</style>
+
+  
+<script type="text/babel">
+const Contador = ({ value }) => {
+
+const [contador, setContador] = useState(value);
+
+const handleClick = () => {
+    setContador(contador + 1)
+}
+const handleClick2 = () => {
+    setContador(contador - 1)
+}
+
+return (
+<>
+<div className="Header">
+    
+</div>
+
+<div className="split left"> 
+    <div className="centered">
+        <h2>Candidato 1:</h2>
+        <div className="card"> 
+            <p>{contador}</p>            
+            <button className="btn success" onClick={handleClick}>
+                 +
+            </button>
+            <button className="btn danger" onClick={handleClick2}>
+                 -
+            </button>
+        </div>
+    </div>
+</div>   
+
+</>
+)
+}
+const Contador2 = ({ value }) => {
+
+const [contador2, setContador2] = useState(value);
+
+const handleClick = () => {
+    setContador2(contador2 + 1)
+}
+const handleClick2 = () => {
+    setContador2(contador2 - 1)
+}
+
+return (
+<>
+<div className="Header">
+
+</div>
+
+<div className="split right">   
+    <div className="centered"> 
+        <h2>Candidato 2:</h2>
+        <div className="card"> 
+            <p>{contador2}</p>
+        
+            <button className="btn success" onClick={handleClick}>
+                +
+            </button>
+            <button   button className="btn danger" onClick={handleClick2}>
+                -
+            </button>
+        </div>
+    </div>   
+</div>
+
+</>
+)
+}
+ReactDOM.render(<Contador value={0} />,  
+    <Contador2 value={0} />, document.getElementById('root'));
+</script>
+  </head>
+        <body>
+          <div id="root"></div>
+
+  </body>
+</html>

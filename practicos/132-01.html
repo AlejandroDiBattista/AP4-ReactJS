@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boca de urna</title>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    
+<!-- 
+    Curso 132 - Grupo 01 -> balestri@gmail.com
+        26673161; Balestri, Sebastian Gabriel 
+        26627727; Andrea Lujan, Alonso        
+        27247889; Bamba, Mariela              
+        26061287; D Angelo, Maximiliano       
+        11266094; Lopez, Ruben Leonardo       
+        25283578; María Angélica, Caprarulo   
+ -->
+</body>
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Lucida Sans', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(315deg, rgb(0, 150, 255) 10%, rgba(0,0,255,1) 90%);
+            height: 100vh;
+        }
+
+        #root {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin: auto;
+            padding: 50px;
+        }
+
+        .tarjeta {
+            border: 3px solid black;
+            margin: auto;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            width: 200px;
+            background-color: whitesmoke;
+
+        }
+
+        .tarjetaCandidato {
+            text-align: center;
+            font-size: 30px;
+            padding: 6px;
+        }
+
+        .votos {
+            text-align: center;
+            font-size: 40px;
+            color: blue;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ;
+        }
+
+        .boton {
+            border: 1px solid black;
+            font-size: 45px;
+            font-weight: bold;
+            margin: 10px;
+            height: 50px;
+            width: 80px;
+            background-color: #51d1f6;
+
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
+
+    <script type="text/babel">
+        let candidatos = [
+            { nombre: "Candidato 1", votos: 0 },
+            { nombre: "Candidato 2", votos: 0 },
+        ];
+
+        function Candidato({ nombre, votos }) {
+            const [contador, setContador] = React.useState(votos)
+
+            const Mas = () => {
+                setContador(contador + 1)
+            }
+
+            const Menos = () => {
+                contador >= !0 ? setContador(contador - 1) : contador
+            }
+
+            return (
+                <div className="tarjeta">
+                    <div className="tarjetaCandidato">
+                        {nombre}
+                    </div>
+                    <div className="votos">
+                        <b>{contador}</b>
+                    </div>
+                    <div className="botones">
+                        <button className="boton" onClick={Mas}>+</button>
+                        <button className="boton" onClick={Menos}>-</button>
+                    </div>
+                </div >
+            )
+        }
+
+        function BocaDeUrna({ candidatos }) {
+            return (
+                <div>
+                    <h2>Boca de urnas</h2>
+                    <ul>
+                        {candidatos.map((candidatos) => <Candidato {...candidatos} key={candidatos.nombre} />)}
+                    </ul>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<BocaDeUrna candidatos={candidatos} />, document.getElementById('root'));
+    </script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
