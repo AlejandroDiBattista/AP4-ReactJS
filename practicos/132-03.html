@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Práctico 1</title>
+
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <!-- 
+            Curso 132 - Grupo 03 -> dragonrosadito@gmail.com
+                25519623; Silvina Gaitan 
+                27351505; Adriana Galvan 
+                28109573; Eduardo Nuñez Fonaroli
+         -->
+         
+        <style>
+            .cuerpo {
+                margin: 0;
+                border-radius: 20px;
+                max-width: 1280px;
+                margin: 0 auto;
+                padding: 2rem;
+                text-align: center;
+                background-color: rgba(49, 233, 243, 0.409);
+            }
+
+            .card {
+                border-radius: 20px;
+                border: 1px solid #ccc;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .card2 {
+                display: flex;
+                gap: 10px;
+                border-radius: 20px;
+                border: 1px solid #ccc;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            button {
+                padding: 8px 28px;
+                font-size: 20px;
+                color: rgb(17, 17, 17);
+                border: 0;
+                font-weight: 700;
+                background: #43d8e9;
+                border-radius: 9px;
+                border: 1px solid black;
+            }
+
+            span {
+                color: rgb(2, 2, 21);
+                font-weight: 500;
+                font-size: 30px;
+            }
+        </style>
+
+        <script type="text/babel">
+            const { useState } = React;
+            
+            function App() {
+                return (
+                    <>
+                        <div className="cuerpo">
+                            <h1>Boca de Urna</h1>
+                            <div className="card">
+                                <h2>Candidato 1</h2>
+                                <Contar />
+                            </div>
+                            <div className="card">
+                                <h2>Candidato 2</h2>
+                                <Contar />
+                            </div>
+                        </div>
+                    </>
+                );
+
+                function Contar() {
+                    const [count, setCount] = useState(0);
+
+                    const incrementCount = () => {
+                        setCount(count + 1);
+                    };
+
+                    const decrementCount = () => {
+                        if (count > 0) {
+                            setCount(count - 1);
+                        }
+                    };
+
+                    return (
+                        <div>
+                            <span>{count}</span>
+                            <div className="card2">
+                                <button onClick={incrementCount}>+</button>
+                            </div>
+                            <div className="card2">
+                                <button onClick={decrementCount}>-</button>
+                            </div>
+                        </div>
+                    );
+                }
+            }
+
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

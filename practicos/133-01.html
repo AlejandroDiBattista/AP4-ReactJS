@@ -1,209 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boca de Urna - Grupo 4</title>
+    <title>Boca De Urnas</title>
 
     <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<!-- 
-  Curso 133 - Grupo 1 -> javier.osvaldo.russo@gmail.com
-
- -->
+    <!-- 
+      Curso 133 - Grupo 01 -> yesikmor26@gmail.com
+        27295145; Morleo, Yesica Alejandra  
+        23988040; Escudero, Sergio Javier   
+        28860847; Miranda, Maria Grisel   
+        21307211; Ortiz, Oscar Alejandro  
+        24519014; Zurita, Gladis  
+    -->
     <style>
-        #root {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0rem;
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, sans-serif;
+      }
+
+      body {
+        place-items: center;
+        line-height: 1.5;
+        font-weight: 400;
+        min-height: 100vh;
+        background-image: linear-gradient(to right bottom, #0000ff, #00e6ff);
+      }
+
+      .app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #titulo {
+        margin: 15px;
+        color: white;
+        font-size: 35px;
         text-align: center;
+      }
 
-        background: transparent;
-        /*background: rgb(9,9,121);
-        background: linear-gradient(135deg, rgba(9,9,121,1) 0%, rgba(9,9,121,1) 22%, rgba(0,212,255,1) 100%);*/
-        }
+      .card {
+        width: 250px;
+        height: 270px;
+        margin: 5px;
+        border: 1px solid black;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #fff;
+      }
 
-        .logo {
-        height: 6em;
-        padding: 1.5em;
-        will-change: filter;
-        transition: filter 300ms;
-        }
+      .candi {
+        color: black;
+        font-size: 30px;
+        padding: 10px;
+      }
 
-        .logo:hover {
-        filter: drop-shadow(0 0 2em #646cffaa);
-        }
+      .contador {
+        color: blue;
+        font-size: 100px;
+      }
 
-        .logo.react:hover {
-        filter: drop-shadow(0 0 2em #61dafbaa);
-        }
+      .boton {
+        width: 100px;
+        height: 40px;
+        border: 1px solid black;
+        background-color: deepskyblue;
+        margin: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
 
-        @keyframes logo-spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
+      .boton:hover {
+        background-color: blue;
+      }
+      
+      @media only screen and (max-width: 600px) {
         .card {
-            padding: 2em;
+          width: 200px;
+          height: 245px;
         }
 
-        .read-the-docs {
-            color: #888;
+        .contador {
+          font-size: 70px;
+        }
+        .candi {
+          font-size: 25px;
         }
 
-        :root {
-            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-            line-height: 1.5;
-            font-weight: 400;
-
-            color-scheme: light dark;
-            color: rgba(255, 255, 255, 0.87);
-            /*background-color: #242424;*/
-            background: linear-gradient(135deg, rgba(9,9,121,1) 0%, rgba(9,9,121,1) 22%, rgba(0,212,255,1) 100%);
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+        .boton {
+          width: 70px;
+          height: 50px;
         }
 
-        a {
-          font-weight: 500;
-          color: #646cff;
-          text-decoration: inherit;
+        #titulo {
+          margin: 30px;
+          font-size: 30px;
         }
-
-        a:hover {
-          color: #535bf2;
-        }
-
-        body {
-          margin: 0;
-          display: flex;
-          place-items: center;
-          min-width: 320px;
-          min-height: 100vh;
-        }
-
-        h1 {
-          font-size: 3.2em;
-          line-height: 1.1;
-        }
-
-        button {
-          border-radius: 8px;
-          border: 1px solid transparent;
-          padding: 0.6em 1.2em;
-          font-size: 1em;
-          font-weight: 500;
-          font-family: inherit;
-          background-color: #1a1a1a;
-          cursor: pointer;
-          transition: border-color 0.25s;
-        }
-
-        button:hover {
-          border-color: #646cff;
-        }
-        
-        button:focus,
-        button:focus-visible {
-          outline: 4px auto -webkit-focus-ring-color;
-        }
-
-        @media (prefers-color-scheme: light) {
-            :root {
-            color: #213547;
-            background-color: #ffffff;
-          }
-          a:hover {
-            color: #747bff;
-          }
-          button {
-            background-color: #f9f9f9;
-          }
-        }       
+      }
     </style>
 
-    <script type="text/babel">
-        function App(){
-            const [count, setCount] = React.useState(0);
-            const [count2, setCount2] = React.useState(0);
-            const style = { 
-                fondo:{ 
-                  backgroundColor: 'white',
-                  borderRadius: 15,
-                  border: '1 solid',
-                  color: 'black',
-                  margin: 15
-                },
-            
-                titulo: { 
-                  color: 'black',
-                },
-            
-                tit: { 
-                  color: 'white',
-                },
-            
-                numero: {
-                  color: 'blue',
-                },
+<script type="text/babel">
+  const { useState, useEffect } = React;
 
-                boton: { 
-                  color: 'white',
-                  border: '1 solid rgba(255,255,255, 1)',
-                  backgroundColor: 'cyan',
-                  margin: 3,
-                  width: 80,
-                  fontSize: 30,
-                  height: 50,
-                  padding: 0,
-                },
-            };
+  function App() {
+    return (
+      <div className="app">
+        <h2 id="titulo">Boca de Urnas</h2>
+        <Candidato candidatoNumero={1} contadorInicial={0} />
+        <Candidato candidatoNumero={2} contadorInicial={0} />
+      </div>
+    );
+  }
 
-            return (
-                <>
-                <h2 style={style.tit}>Boca de urnas</h2>
-                <br />
-                <div className="card" style={style.fondo}>
-                    <h3 style={style.titulo}>Candidato 1</h3>
-                    <h1 id="result1" style={style.numero}>{count}</h1>
-                    <div sx={{ display: "flex", flexDirection:'row'}}>
-                        <button style={style.boton} onClick={() => setCount((count) => count + 1)}>
-                            <b>+</b> 
-                        </button>
-                        <button style={style.boton} onClick={() => setCount((count) => count !== 0 ? count - 1 : 0)}>
-                            <b>-</b> 
-                        </button>
-                    </div>
-                </div>
+  const Candidato = ({ candidatoNumero, contadorInicial }) => {
+    const [count, setCount] = useState(() => {
+      const storedCount = localStorage.getItem(
+        `candidato${candidatoNumero}`
+      );
+      return storedCount ? parseInt(storedCount, 10) : contadorInicial;
+    });
 
-                <div className="card" style={style.fondo}>
-                    <h3 style={style.titulo}>Candidato 2</h3>
-                    <h1 id="result1" style={style.numero}>{count2}</h1>
-                    <div sx={{ display: "flex", flexDirection:'row'}}>
-                        <button style={style.boton} onClick={() => setCount2((count2) => count2 + 1)}>
-                            <b>+</b>  
-                        </button>
-                        <button style={style.boton} onClick={() => setCount2((count2) => count2 !== 0 ? count2 - 1 : 0 )}>
-                            <b>-</b>  
-                        </button>
-                    </div>
-                </div>
-                </>
-        )};
+    const handleDecrement = () => {
+  if (count > 0) {
+    if (window.confirm("¿Realmente quieres descontar un voto?")) {
+      setCount(count - 1);
+    }
+  } else {
+    alert("No puedes descontar más votos. El contador está en 0.");
+  }
+};
 
-        ReactDOM.render(<App />, document.getElementById('root'));
-        
-    </script>     
+    useEffect(() => {
+      localStorage.setItem(`candidato${candidatoNumero}`, count.toString());
+    }, [count, candidatoNumero]);
+
+    return (
+      <div className="card">
+        <h2 className="candi">Candidato {candidatoNumero}</h2>
+        <p className="contador">{count}</p>
+        <button className="boton" onClick={() => setCount(count + 1)}>
+          ➕
+        </button>
+        <button className="boton" onClick={handleDecrement}>
+          ➖
+        </button>
+      </div>
+    );
+  };
+
+  ReactDOM.render(<App />, document.getElementById('root'));
+</script>
 </head>
 
-<body>
-    <div id="root"></div>    
-</body>
-
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

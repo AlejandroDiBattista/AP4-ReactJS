@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+        Curso 132 - Grupo 12 -> leonardogabriel@gmail.com
+
+        23274538; Aramayo, Sergio Adrian
+        23730805; Brizuela, Jorge Daniel
+        22326063; D'acchille, Leonardo Gabriel
+        27792195; Fernández Gasc, Agustín
+        21744970; Feyling, Elbio Adalberto
+        26054685; Colina, Mauricio Aurelio Nicolas
+     -->
+
+     <title>Boca de Urnas</title>
+    <style>
+        html {
+            height: -webkit-fill-available;
+        }
+
+        body {
+            min-height: -webkit-fill-available;
+            min-height: 100vh;
+            background-image: linear-gradient(to right bottom, #1923f8, #0073ff, #00a1ff, #00c8ff, #35e9fc);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 50px;
+        }
+
+        h1.contador {
+            color: #1923f8;
+            font-size: 96px;
+            font-weight: 400;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        ul.boca-de-urnas {
+            list-style: none;
+            padding: 0;
+            display: block;
+            width: 260px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        ul.boca-de-urnas li {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #000;
+        }
+
+        ul.boca-de-urnas li:last-child {
+            margin-bottom: 0;
+        }
+
+        .btn-contador {
+            color: #fff;
+            font-size: 40px;
+            line-height: 50px;
+            background-color: #2dbdfb;
+            padding: 20px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            width: 100px;
+            border-radius: 10px;
+            margin: 5px;
+            border: 1px solid #000;
+            font-weight: 600;
+        }
+
+        .btn-contador:active {
+            transform: scale(.95);
+        }
+    </style>
+
+
+    <script type="text/babel">
+
+        const { useState, StrictMode } = React;
+
+        let arrCandidatos = [
+            { id: 1, nombre: "Candidato 1" },
+            { id: 2, nombre: "Candidato 2" },
+        ]
+
+        function Btn(props) {
+            return (
+                <>
+                    <button className={props.clase} onClick={props.action}>{props.etiqueta}</button>
+                </>
+            )
+        }
+
+        function Contador(props) {
+            const [contador, setContador] = useState(0);
+            const incrementarContador = () => {
+                setContador(contador + 1);
+            }
+            const decrementarContador = () => {
+                if (contador !== 0) {
+                    setContador(contador - 1);
+                }
+            }
+
+            return (
+                <>
+                    <h1 className="contador">{contador}</h1>
+                    <Btn clase="btn-contador" action={incrementarContador} etiqueta="+" />
+                    <Btn clase="btn-contador" action={decrementarContador} etiqueta="-" />
+                </>
+            )
+        }
+
+        function BocaDeUrna(props) {
+            return (
+                <>
+                    <h2>{props.nombre}</h2>
+                    <Contador />
+                </>
+            )
+        }
+
+        function BocaDeUrnaLista(props) {
+            const candidatos = props.candidatos;
+            const listaBocaDeUrnas = candidatos.map((candidato) => <li key={candidato.id}><BocaDeUrna nombre={candidato.nombre} /></li>);
+            return (
+                <ul className="boca-de-urnas">{listaBocaDeUrnas}</ul>
+            )
+        }
+
+        function Main() {
+            return (
+                <>
+                    <h1>Boca de Urnas</h1>
+                    <BocaDeUrnaLista candidatos={arrCandidatos} />
+                </>
+            )
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<StrictMode><Main /></StrictMode>);
+
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>Pie de urna</title>
+    <!-- 
+        Curso 126 - Grupo 00.02 -> leousogral@gmail.com
+            27398193; Moyano Leonardo
+     -->
+    <style>
+        body {
+            box-sizing: border-box;
+            background: linear-gradient(to bottom right, blue, cyan);
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #root {
+            margin: 0 auto;
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            color: white;
+            ;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            width: 100%;
+            background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 40px 0px, rgba(0, 0, 0, 0.1) 0px 15px 30px 0px, rgba(0, 0, 0, 0.1) 0px 5px 10px 0px;
+        }
+
+        li div {
+            margin-bottom: 5px;
+            font-size: 34px;
+        }
+
+        li p {
+            color: rgb(0, 0, 255);
+            margin: 0;
+        }
+
+        #candidato {
+            text-align: center;
+        }
+
+        #botones {
+            display: flex;
+            justify-content: center;
+        }
+
+        #cuenta {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        #menos,
+        #mas {
+            width: 100px;
+            background-color: rgb(0, 191, 255);
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 3px;
+            font-size: 60px;
+            color: white;
+        }
+    </style>
+    
+    <script type="text/babel">
+        let datos = [
+            { nombreCandidato: "Massa" },
+            { nombreCandidato: "Milei" }
+        ]
+
+        function Contador() {
+            let [cuenta, setCuenta] = React.useState(0)
+
+            function Incrementar() {
+                setCuenta(cuenta + 1);
+            }
+
+            function Decrementar() {
+                setCuenta(cuenta - 1);
+            }
+
+            if (cuenta < 0) {
+                setCuenta(cuenta + 1)
+                alert("No puede ser menor que cero")
+            }
+
+            return (
+                <div>
+                    <div id="cuenta">
+                        <p>{cuenta}</p>
+                    </div>
+                    <div id="botones">
+                        <p><button onClick={Incrementar} id="mas">+</button></p>
+                        <p><button onClick={Decrementar} id="menos">-</button></p>
+                    </div>
+                </div>
+            )
+        }
+
+        function Candidato({ nombreCandidato }) {
+            return (
+                <li>
+                    <div id="candidato"><b>{nombreCandidato}</b></div>
+                    <div><Contador /></div>
+                </li>
+            )
+        }
+
+        function Eleccion(candidatos) {
+            return (
+                <>
+                    <h2>Boca de urnas</h2>
+                    <ul>
+                        {candidatos.map(Candidato)}
+                    </ul>
+                </>
+            )
+        }
+
+        let root = document.getElementById('root')
+        ReactDOM.render(Eleccion(datos), root)
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>

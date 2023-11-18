@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador Boca de Urnas</title>
+
+<script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--
+        Curso 133 - Grupo 07 -> alejandro.medina.ar@gmail.com
+            27238487; Medina, Oscar Alejandro 
+            28492517; Quipildor, Matias 
+            28706770; Rios, Natalia Soledad  
+            27721196; Quiroga, Rafael Antonio 
+     -->
+
+<style>
+    body {
+      background: linear-gradient(to bottom right, rgb(81, 2, 225), rgb(7, 188, 209));  
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      
+    }
+
+    .titulo {
+      font-family: 'Arial', sans-serif;
+      color: #fff;   
+      font-size: 48px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contenedor-candidato {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .contador {
+      text-align: center;
+      background-color: #fff;
+      border-radius: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border: 2px solid black;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .pie {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;   
+
+    }
+
+    .contendor-pie {
+      padding-top: 50px;
+      
+    }
+
+    h2 {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      font-size: 32px;
+      font-weight: bold;
+      
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 86px;
+      font-weight: bold;
+      color: blue;
+    }
+
+    button {
+      width: 105px;
+      height: 50px;  
+      font-size: 32px;
+      margin: 5px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      border: 2px solid black;
+      border-radius: 12px;
+      background-color: rgb(0, 191, 255);
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #156092;
+    }
+
+    button:active {
+        background-color: red;
+      }
+
+  </style>
+<script type="text/babel">
+  const ContadorCandidato = ({ candidatoNombre }) => {
+    const [contador, setContador] = React.useState(0);
+    const incrementarContador = () => {
+      setContador(contador + 1);
+    };
+
+    const decrementarContador = () => {
+      setContador(contador - 1 >= 0 ? contador - 1 : 0);
+    };
+
+    return (
+      <div className="contenedor-candidato">
+        <div className="contador">
+          <h2>{candidatoNombre}</h2>
+          <p>{contador}</p>
+          <button onClick={incrementarContador}>+</button>
+          <button onClick={decrementarContador}>-</button>
+        </div>
+      </div>
+    );
+  };
+
+  const App = () => {
+    return (
+        <>
+        <div><h1 className="titulo">Boca de Urnas</h1></div>
+        <div>
+        <ContadorCandidato candidatoNombre="Candidato 1" />
+        <ContadorCandidato candidatoNombre="Candidato 2" />
+       </div>
+       <div className="contendor-pie"><p className="pie">Desarrollado por: Grupo Nº: 7, Comisión Nº: 133 | Desarrollador Web Con React JS - UTN</p>
+        <p className="pie">Integrantes: Medina Oscar Alejandro, Rios Natalia Soledad, Quipildor Matias, Quiroga Rafael Antonio</p>
+        <p className="pie">15/11/2023</p></div>
+       </>
+    );
+  };
+
+  ReactDOM.render(<App />, document.getElementById('root'));
+</script> 
+  
+</head>
+<body>
+
+<div id="root"></div>
+
+</body>
+</html>

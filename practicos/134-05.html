@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pie de urna</title>
+        
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+       
+        <!-- 
+            Curso 134 - Grupo 05 ->oscarmaciel.dg@gmail.com
+                24600911; Oscar Alberto, Maciel
+                24836529; Alonzo, Sandra Del Valle
+                23805016; Juan Carlos, Galan
+                22092359; Ratti, Analia
+         -->
+        <style>
+
+            * {
+                margin: 0;
+                font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            }
+
+            body {
+                background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 25%, rgba(0,212,255,1) 86%);
+                margin: 0;
+                display: flex;
+                place-items: center;
+                min-width: 320px;
+                min-height: 100vh;
+            }
+
+            button {
+                color: white;
+                font-size: 2.5em;
+                border-color: black;
+                border-style: solid;
+                background-color: rgb(0, 162, 255);
+                border-radius: 8px;
+                padding: 0.6em 1.2em;
+                font-weight: 900;
+                margin: 8px;
+                cursor: pointer;
+
+            }
+
+            #root {
+                margin: auto;
+                max-width: 1280px;
+                text-align: center;
+                align-items: center;
+                margin-top: 3rem;
+            }
+
+            h1 {
+                text-align: center;
+                padding: 14px;
+                color:rgb(0, 0, 0);
+            }
+
+            ul {
+                margin-bottom: 5px;
+                display: inline;
+                align-items: center;
+            }
+
+            .tarjeta {
+                background-color: aliceblue;
+                padding: 0.5em;
+                border-radius: 5%;
+                border-color: black;
+                border-style: solid;
+                border-width: 2px;
+                margin: 30px;
+                width: 300px;
+                position: relative;
+                }
+
+            .votos {
+                color: rgb(0, 0, 255);
+                font-size: 4em;
+                font-weight: 500;
+                padding-bottom: 1rem;
+            }
+
+            h1.titulo {
+                color: white;
+                font-weight: bold;
+                margin-top: -0.5em;
+                font-size: 3rem;
+            }
+
+        </style>
+    </head>
+    <body>
+       
+    <div id="root"></div>
+        <script type="text/babel">
+            
+            let datos = [
+                { nombre: "1", votos: "" },
+                { nombre: "2", votos: ""},
+            ];
+
+
+        function Votos({inicial=0}) {
+                let [cantidad, setCantidad] = React.useState(inicial);
+
+            function sumar(){
+                setCantidad(cantidad+1);
+            }
+            function restar(){
+                cantidad > 0 && setCantidad(cantidad - 1);
+            }
+
+        return (
+            <> 
+            <p className="votos">{cantidad}</p>
+            <button onClick={sumar} >+</button>
+            <button onClick={restar} >-</button>
+            </>
+        )
+        }
+
+
+        function Candidatos({nombre, votos}) {
+            
+            return (
+            <div className="tarjeta">
+                <div><h1>Candidato {nombre} </h1></div> 
+                <Votos/>
+            </div>
+            )}
+
+        function Votacion({ candidatos }) {
+            
+            return (                
+            <>
+                <h1 className="titulo">Boca de urnas</h1>
+                <ul>
+                    { candidatos.map( (candidato) => <Candidatos {...candidato} />) }
+                </ul>
+            </> 
+                )}
+
+            ReactDOM.render(<Votacion candidatos={datos} />, document.getElementById('root'));
+        </script>
+    </body>
+    
+</html>
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boca de Urnas</title>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- 
+    Curso 133 - Grupo 05 -> germanlequio@gmail.com
+      22395460; German Fabio, Lequio
+      25226833; Arias, María De Los Ángeles
+      28335534; Borda, Mariana Beatriz
+      27649885; Fernandez, Pablo
+      17546258; Hortal Toribio, Vanila Isabel
+      27295203; Rojo Heinze, Facundo
+   -->
+   
+  <style>
+  #root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom right, #0001FE, #00E6FF);
+  width: 100%;
+  height: 100%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .titulo {
+  color: white;
+  font-size: 3em;
+
+  }
+
+  .contenedor {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: thin solid black;
+  border-radius: 1.5em;
+  width: 15%;
+  height: 15%;
+  margin: 3em auto 2em auto;
+  box-shadow: 4px 3px 4px 3px rgba(33, 1, 44, 0.37);
+  }
+
+  .contenedor2 {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  }
+
+  .boton {
+  margin: 1em;
+  background-color: #00BFFF;
+  color: white;
+  font-weight: bolder;
+  font-size: large;
+  box-shadow: 4px 3px 4px 3px rgba(33, 1, 44, 0.37);
+  cursor: pointer;
+  }
+
+
+  button:hover {
+  background-color: #0056b3;
+  }
+
+  label {
+  font-size: 2em;
+  color: blue;
+  font-weight: bold;
+  }
+
+  p {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00BFFF;
+  text-shadow: 5px 5px 5px rgb(1, 1, 19);
+  }
+
+  </style>
+  <script type="text/babel">
+    const { useState } = React;
+
+  const Voto = (datos) => {
+    const [contador, setContador] = useState(Number(datos.cont));
+
+    const incrementarContador = () => {
+      setContador(contador + 1);
+    };
+
+    const decrementarContador = () => {
+      if (contador > 0) {
+        setContador(contador - 1);
+      }
+    };
+
+    return (
+      <div className="contenedor">
+        <p>{datos.name}</p>
+        <label htmlFor="">{contador}</label>
+        <div className="contenedor2">
+          <button className="boton" onClick={decrementarContador}>
+            -
+          </button>
+          <button className="boton" onClick={incrementarContador}>
+            +
+          </button>
+        </div>
+      </div>
+    );
+  };
+
+  function App() {
+    return (
+      <>
+        <p className="titulo">Boca de Urnas</p>
+        <div>
+          <Voto name="Candidato 1" cont="0" />
+          <Voto name="Candidato 2" cont="0" />
+        </div>
+      </>
+    );
+  }
+  ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('root'))
+
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>

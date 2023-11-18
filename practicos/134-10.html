@@ -3,105 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Boca de Urna</title>
+        <title>Agenda en un Archivo</title>
     
         <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
 
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- 
-            Curso 134 - Grupo 10 -> ordoneznoeliap@gmail.com
-              28544777; Ordoñez, Noelia 
-              26231942; Copte, Fernando David 
-              28089601; González, Fabián 
-              25636445; Moltoni, Andres Fernando 
-              22433454; Rodríguez, Maria Isabel 
-              27972561; Tapia Suarez, Andrea Lorena 
+            Curso 134 - Grupo 10 -> monser980@gmail.com
+                16778627; Ucelay, Hector
+
+                Nota: Mando un pdf y github pero no el html 
+                Resultado: Ok (con ayuda)
         -->
         <style>
-            body{
-                background-color: rgb(101, 101, 249);
-                padding: 10px;
-                align-items: center;
-            }
-
-            h1{
-                color: aliceblue;
-            }
-
-            h2{
-                font-size: 38px;
-                font: bolder;
-            }
             
-            #root {
-                max-width: 1280px;
-                margin: 0 auto;
-                padding: 2rem;
-                text-align: center;
-            }
-
-            .logo {
-                height: 6em;
-                padding: 1.5em;
-                will-change: filter;
-                transition: filter 300ms;
-            }
-            .logo:hover {
-                filter: drop-shadow(0 0 2em #646cffaa);
-            }
-            .logo.react:hover {
-                filter: drop-shadow(0 0 2em #61dafbaa);
-            }
-
-            @keyframes logo-spin {
-                from {
-                    transform: rotate(0deg);
-                }
-                to {
-                    transform: rotate(360deg);
-                }
-            }
-
-            @media (prefers-reduced-motion: no-preference) {
-                a:nth-of-type(2) .logo {
-                    animation: logo-spin infinite 20s linear;
-                }
-            }
-
-            .card{
-                margin: 10px;
-                padding: 2em;
-                width: 100%;
-                background-color: white;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                border: 2px black;
-                border-radius: 25px;
-                /*border-color: black;*/  
-            }
-
-            .contador{
-                font-size: 72px;
-                font-weight: bold;
-            }
-
-            .boton{
-                margin: 2px;
-                padding: .5em;
-                width: 40%;
-                font-size: 48px;
-                font-weight: bolder;
-                background-color: rgb(101, 101, 249);
-                color: aliceblue;
-                border-color: black;
-            }
-
-            .read-the-docs {
-                color: #888;
-            }
-
             :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -112,8 +29,6 @@
   background-color: #242424;
 
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -169,79 +84,120 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+body{
+  background: linear-gradient(125deg, rgba(26,16,191,1) 0%, rgba(14,14,128,1) 36%, rgba(15,185,215,0.7231267507002801) 100%);
 
-            
-
-
-
-
-           
-        </style>
-
-        <script type="text/babel">
-            
-function App() {
-  const [countC1, setCountC1] = React.useState(0)
-  const [countC2, setCountC2] = React.useState(0)
-  
-
-  const incrementarC1 = () => {
-    setCountC1((countC1) => countC1 + 1)
-  }
-  const decrementarC1 = () => {
-    setCountC1((countC1) => countC1 - 1)
-  }
-
-  const incrementarC2 = () => {
-    setCountC2((countC2) => countC2 + 1)
-  }
-  const decrementarC2 = () => {
-    setCountC2((countC2) => countC2 - 1)
-  }
-
-
-  return (
-    <>
-    <h1>Boca de Urna</h1>
-    <div class="card">
-        <h2>Candidato 1</h2>
-        <div class="contador">
-            {countC1}
-        </div>
-        <div>
-            <button onClick={incrementarC1} class="boton">
-                + 
-            </button>
-            <button disabled={countC1<=0} onClick={decrementarC1} class="boton">
-                - 
-            </button>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Candidato 2</h2>
-        <div class="contador">
-            {countC2}
-        </div>
-        <div>
-            <button onClick={incrementarC2} class="boton">
-                +
-            </button>
-            <button disabled={countC2<=0} onClick={decrementarC2} class="boton">
-                -
-            </button>
-        </div>
-    </div>
-
-
-    </>
-  )
 }
 
+.logo {
+  height: 4em;
+  padding: 0.5em;
+  will-change: filter;
+  transition: filter 100ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.tarjeta{
+  border: 2px solid black;
+  border-radius: 15px;
+  background: rgb(213, 219, 211);
+  margin: 20px ;
+
+}
+.tarjeta button{
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  background: rgb(132, 173, 234);
+  margin-top: 0;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+        </style>
+        
+        <script type="text/babel">
+            let todos= [
+                { "id": 1, "nombre": "Candidato 1", "apellido": "cualquiera" },
+                { "id": 2, "nombre": "Candidato 2", "apellido": "segundo" }
+            ]
+
+        function Crear() {
+            return (
+                <>
+                    {todos.map((candidato) => ( <App nombre={candidato.nombre} key={candidato.id}  /> ))}
+                </>
+            )
+        }
+
+        function App(props) {  
+            const { nombre } = props || {};
 
 
-            ReactDOM.render(<App/>, document.getElementById('root'));
-        </script>
+            const [count, setCount] = React.useState(0);    // Se agrega "React." para que funcione en el navegador
+
+            const aumentar = () => {setCount((prevCount) => prevCount + 1); };
+
+            const decrementar = () => {if (count > 0) {setCount((prevCount) => prevCount - 1);}else{
+                alert('Valores Negativos no aseptados')
+            }
+            };
+            return (
+                <>
+                <div className='card tarjeta'>
+                    <div className=''>
+                    <h3>{ nombre }</h3>
+                    <a href="#" target="_blank">
+                    </a>
+                    </div>
+                    <h1 className='text-primary'> {count}</h1>
+                    <div className="d-flex justify-content-between">
+                    <button className='h2' onClick={aumentar}>+</button>
+                    <button className='h2' onClick={decrementar}>-</button>
+                    </div>
+                </div>
+                </>
+            );
+        }
+
+            ReactDOM.render(            
+                <div className="container d-lg-flex justify-content-center align-content-center flex-wrap">
+                    <Crear/>
+                </div>, document.getElementById('root')
+            );
+        
+    </script>
+
     </head>
 
     <body>

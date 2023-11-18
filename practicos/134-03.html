@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--  
+    UTN - CURSO REACT - TURNO NOCHE - LUNES Y MIERCOLES - COMISION 134 - GRUPO 3 
+      Integrantes :  AMADO , GUSTAVO FABIAN  D.N.I. :  21670449
+                    SPECTERMAN , LUIS OMAR   D.N.I. :  14620696
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boca de Urnas</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 
+        Curso 134 - Grupo 03 -> lspecte@gmail.com
+            21.670.449; Amado, Gustavo Fabian          
+            14.620.696; Specterman, Luis Omar           
+    -->
+    <style>
+        * {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(60deg, #000dff, #00b3ff);
+        }
+
+        #root {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 10px;
+            font-size: 30px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        ul li {
+            border: 1px solid gray;
+            background-color: white;
+            border-radius: 20px;
+            padding: 8px;
+            list-style: none;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        ul li div {
+            margin-bottom: 5px;
+            font-size: 25px;
+        }
+
+        ul li p {
+            color: rgb(7, 8, 7);
+            font-size: 50px;
+        }
+
+        button {
+            width: 120px;
+            font-size: 32px;
+            background: rgb(152, 182, 236);
+            padding: 8px 8px;
+            border-radius: 10px;
+            margin: 5px 0 5px 5px;
+            box-shadow: 0 5px #999;
+        }
+
+        button:hover {
+            background: rgb(191, 191, 247);
+        }
+
+        button:active {
+            background-color: rgb(191, 191, 247);
+            box-shadow: 0 1px #999;
+            transform: translate(4px);
+        }
+    </style>
+
+    <script type="text/babel">
+        let datos = [{ nombre: "Candidato", orden: "1", inicial: 0 },
+        { nombre: "Candidato", orden: "2", inicial: 0 },
+        { nombre: "Candidato", orden: "3", inicial: 100 },
+        ];
+
+        const Candidato = ({ nombre, orden, inicial }) => {
+            const [votos, setVotos] = React.useState(inicial);
+
+            const incrementarVotos = () => {
+                setVotos(votos + 1);
+            };
+
+            const decrementarVotos = () => {
+                if (votos > 0) {
+                    setVotos(votos - 1)
+                };
+            };
+
+            return (
+                <li>
+                    <div><b>{nombre} {orden}</b></div>
+                    <p><b>{votos}</b></p>
+                    <button onClick={incrementarVotos}><b>+</b></button>
+                    <button onClick={decrementarVotos}><b>-</b></button>
+                </li>
+            );
+        };
+
+        const Votos = ({ candidatos }) => (
+            <>
+                <h2><b>Boca de Urnas</b></h2>
+                <ul>
+                    {candidatos.map(candidato => <Candidato key={candidato.orden} {...candidato} />)}
+                </ul>
+            </>
+        );
+
+        ReactDOM.render(<Votos candidatos={datos} />, document.getElementById('root'));
+    </script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>

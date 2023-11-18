@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Boca de urnas</title>
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <!-- 
+            Curso 133 - Grupo 02 -> miriany.gonzalez@gmail.com
+                17675854; Gonzalez, Mirian Yolanda
+                26631150; Milano, Cristian Andrés
+                26321091; Otegui, Luciano Jesús
+                26107345; Rodríguez, María Paula
+                25106719; Ruiz Diaz, Betiana
+                22776836; Sierra, Magdalena
+         -->
+      <style>
+        body{
+          background: linear-gradient(to bottom right, rgb(0, 11, 255), rgb(0, 221, 255));
+          min-height: 100vh
+        }
+        h1{
+          color:white;
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .candidato1{
+          padding-top: 5px;
+          background-color: white;
+          border: solid 1px rgb(70, 69, 69);
+          border-radius: 10px;
+          width: 300px;
+          height: 250px;
+          margin-left: 39%;
+          text-align: center;
+        }
+        .candidato2{
+          margin-top: 5px;
+          padding-top: 5px;
+          background-color: white;
+          border: solid 1px  rgb(70, 69, 69);
+          border-radius: 10px;
+          width: 300px;
+          height: 230px;
+          margin-left: 39%;
+          text-align: center;
+        }
+        p{
+          color: blue;
+          font-size: 80px;
+          font-family: Arial, Helvetica, sans-serif;
+          text-align: center;
+          margin-top: -20px;
+          margin-bottom: 30px;
+        }
+        .cand{
+          margin-top: 10px;
+          color: black;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 40px;
+        }
+        button{
+          width: 40%;
+          height: 60px;
+          margin-top: -30px;
+          margin-left: 3px;
+          background-color:cyan;
+          border: solid 1px rgb(151, 149, 149);
+          border-radius: 10px;
+          font: bold;
+          color: white;
+          font-size: 45px;
+        }
+        ol li {
+          margin: 5px;
+          padding: 10px;
+          border-radius: 5px;
+        }
+        ol li:hover {
+          cursor: pointer;
+          background-color: antiquewhite;
+        }
+        ol li a {
+          font-size: 20px;
+        }
+    </style>
+    <script type="text/babel">
+      function Votos ({ value }) {
+        const [votos, Setmodificar] = React.useState(0)
+          const handleClickSumar = () => 
+            {Setmodificar(votos + 1)
+            }
+            const handleClickRestar = () => {
+              if (votos > 0) {
+                Setmodificar(votos - 1)
+              }
+            }
+              return (
+                <>
+                  <h1>Boca de urnas</h1>
+                  <div class="candidato1">
+                    <p class="cand">Candidato 1</p>
+                    <p>{votos}</p>
+                    <button onClick={handleClickSumar}>+</button>
+                    <button onClick={handleClickRestar}>-</button>
+                  </div>
+                </>
+              )
+            }
+        function Votosb  ({ value })  {
+          const [votos, Setmodificar] = React.useState(0)
+            const handleClickSumar = () => {
+              Setmodificar(votos + 1)
+            }
+              const handleClickRestar = () => {
+                if (votos > 0) {
+                  Setmodificar(votos - 1)
+                }
+            }
+            return (
+                  <>
+                    <div class="candidato2">
+                      <p class="cand">Candidato 2</p>
+                      <p>{votos}</p>
+                    <button onClick={handleClickSumar}>+</button>
+                    <button onClick={handleClickRestar}>-</button>
+                  </div>
+                  </>
+                  )
+        }
+        ReactDOM.render(<> <Votos /> <Votosb /> </>,document.getElementById('root'))
+        </script>
+    </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

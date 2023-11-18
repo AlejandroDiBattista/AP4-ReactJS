@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Boca de Urnas</title>
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <!-- 
+          Curso 132 - Grupo 10 -> vampirulo10@hotmail.com
+            26216892; Gonzalez, Armando 
+            24803332; Garcia, Dante Marcelo 
+            29322781; Marchesini, Ramón Ricardo  
+            20213119; Markus, Laura  
+            27016688; Ortiz, Juan Pablo 
+            26703609; Panno, Diego Mauricio
+            22252000; Milan, Luciana
+         -->
+        <style>
+           body{
+  background-image: linear-gradient(to bottom right, #000BFF, #00E8FF, white);
+  background-repeat: no-repeat;
+}
+
+.centrar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor{
+  border: 4px solid rgb(26, 26, 208);
+  border-radius: 15px;
+  width: 14em;
+  height: 13em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(100, 193, 248);
+  box-shadow: 1em 1em 2em  #000BFF;
+  font-size: 1.7em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+h1{
+  color: white;
+  text-align: center;
+  font-size: 4.5em;
+  margin-top: 0.2em;
+}
+
+h3{
+  margin-top: 10px;
+ font-size: 2em; 
+ font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+  font-size: 3.5em;
+  margin-top: -35px;
+}
+
+.boton{
+  display: flex;
+  align-items: center;
+  margin-top: -50px;
+}
+
+button{
+  width: 2em;
+  height: 1.3em;
+  margin: 7.5px; 
+  color: blue;
+  font-size: 2.5em;
+  background-color: aquamarine;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #00E8FF;
+}
+
+button:active{
+ color: aquamarine;
+ background-color: blue;
+}
+
+@media only screen and (max-width: 414px){
+  .contenedor{
+    width: 10em;
+    height: 9em;
+    font-size: 1.4em;
+  }
+
+h1{
+  font-size: 3.5em;
+  }
+  
+h3{
+  font-size: 1.5em; 
+  }
+  
+  button{
+    width: 1.3em;
+    height: 1em;
+    margin-top: -0.3em;
+    font-size: 2.5em;
+  }
+body{
+  height: 850px;
+}
+}
+
+
+
+
+        </style>
+
+        <script type="text/babel">
+        const { useState } = React;
+
+            function Candidato(prop) {
+  const [cuenta, setCuenta] = useState(0)
+  return (
+    <>
+    <div className="centrar">
+    <div className="contenedor">
+    <h3>{prop.titulo}</h3>
+        <h2>{cuenta}</h2>
+        <div className="boton">
+            <button onClick={function click1() { setCuenta(cuenta + 1) } }>+</button> 
+            <button onClick={ function click2() {if (cuenta>0) {setCuenta(cuenta - 1) }} }>-</button>
+            </div>
+            </div>
+            </div>
+      </>
+  )
+ }
+
+ function App() {
+  
+  return (
+    <>
+    <h1>Boca de urnas</h1>
+    <Candidato  titulo="Candidato 1"/>
+    <Candidato titulo="Candidato 2"/>
+      </>
+  )
+ } 
+    ReactDOM.render(<App/>, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

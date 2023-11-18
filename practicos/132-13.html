@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boca de Urnas - Grupo13</title>
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+      Curso 132 - Grupo 13 -> matete@gmail.com
+        27547856; Lorenzo, Matías 
+        26954194; Linares, Pablo 
+        27042272; Ortiz Flores, Marisa 
+        28013926; Ramírez, Ernesto 
+     -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Sono", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to bottom right, #0007ff, #00e9ff);
+        background-attachment: fixed;
+      }
+
+      h1 {
+        color: white;
+        margin: 36px 0;
+        text-align: center;
+      }
+
+      .candidatos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .contador {
+        border: 1px solid black;
+        border-radius: 16px;
+        padding: 10px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin: 10px;
+        align-items: center;
+      }
+
+      .contador h2 {
+        font-size: 2.2rem;
+      }
+
+      .contador h3 {
+        color: blue;
+        font-size: 5.4rem;
+        font-weight: 100;
+      }
+
+      .botones {
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+      }
+
+      .contador button {
+        background-color: #00bffe;
+        font-size: 3rem;
+        font-weight: 900;
+        color: white;
+        padding: 0 10px;
+        border-radius: 10px;
+        width: 120px;
+        margin: 5px;
+      }
+    </style>
+      <script type="text/babel">
+      const Contador = ({ candidato }) => {
+        const [contador, setContador] = React.useState(0);
+
+        const incrementar = () => {
+          setContador(contador + 1);
+        };
+
+        const decrementar = () => {
+          if (contador > 0) setContador(contador - 1);
+        };
+
+        return (
+          <div className="contador">
+            <h2>{candidato}</h2>
+            <h3>{contador}</h3>
+            <div className="botones">
+              <button onClick={incrementar}>+</button>
+              <button onClick={decrementar}>-</button>
+            </div>
+          </div>
+        );
+      };
+
+      function App() {
+        const candidatos = ["Candidato 1", "Candidato 2"];
+        return (
+          <div>
+            <h1>Boca de Urnas</h1>
+            <div className="candidatos">
+              {candidatos.map((candidato, index) => (
+                <Contador key={index} candidato={candidato} />
+              ))}
+            </div>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  
+  </body>
+</html>

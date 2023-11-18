@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boca de urna - trabajo práctico Nº 1 - Grupo 4</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+        Curso 134 - Grupo 04 -> adrmou@gmail.com
+        18454726; Herrera, Juan Adolfo                             
+        20521480; Montenegro, Fabián                               
+        22639502; Mourad, Adrián                                   
+        20561094; Noguerol, Maria Marcela                          
+        24192661; Ochoa, Fabián Andrés                             
+        25262567; Waelkens, Verónica María                         
+     -->
+
+     <style>
+        * {
+            font-family: 'Lucida Sans', sans-serif;
+        }
+        body {
+            background: linear-gradient(to right, blue, cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .boca {
+            font-size: 1.5em;
+        }
+        .candidato {
+            background-color: azure;
+            border-radius: 10px;
+            margin:  25px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 6px 6px 10px #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .contadorVotos {
+            color: blue;
+            font-size: 5.2em;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+        }
+        .btn {
+            border-radius: 8px;
+            border: 1px solid gray;
+            padding: 0.6em 1.2em;
+            font-size: 1em;
+            font-weight: 500;
+            font-family: inherit;
+            cursor: pointer;
+            transition: border-color 0.25s;
+            color: white;
+            background-color: rgb(0, 191, 255);
+            margin: 10px;
+            box-shadow: 6px 6px 10px #333;
+        }
+        .btn:hover {
+            background-color: rgb(57, 56, 60);
+            box-shadow: none;
+        }
+        .derechos {
+            color: rgb(238, 233, 233);
+            font-size: 0.5em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <script type="text/babel">
+            let { useState } = React;
+            let datos = [
+                { nombre: "Candidato 1" },
+                { nombre: "Candidato 2" },
+            ];
+            function Candidato({ nombre }) {
+                let [cantidadVotos, setCantidadVotos] = useState(0);
+                function incrementoVotos() {
+                    setCantidadVotos(cantidadVotos + 1);
+                }
+                function decrementoVotos() {
+                    if (cantidadVotos > 0) {
+                        setCantidadVotos(cantidadVotos - 1);
+                    }
+                }
+                return (
+                    <div className="candidato">
+                        <div className="datos"><b>{nombre}</b></div>
+                        <div className="contadorVotos"><b>{cantidadVotos}</b></div>
+                        <div>
+                            <button className="btn" onClick={incrementoVotos}>+</button>
+                            <button className="btn" onClick={decrementoVotos}>-</button>
+                        </div>
+                    </div>
+                )
+            }
+            function BocaUrna({ candidatos }) {
+                return (
+                    <>
+                        <div className="boca">
+                            <h2>Boca de urnas</h2>
+                            <div id="bocaUrna">
+                                {candidatos.map((candidato) => <Candidato {...candidato} />)}
+                            </div>
+                        </div>
+                        <div>
+                             <p className="derechos"> &#169; 2023 Grupo 4 - Trabajo práctico Nº 1</p>    
+                        </div>
+                    </>
+                )
+            }
+            ReactDOM.render(<BocaUrna candidatos={datos} />, document.getElementById('root'))
+        </script>
+        <div id="root"></div>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo</title>
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+        Curso 132 - Grupo 02 -> juliomolina17@gmail.com
+            25748773; Gaso, Marcos Leonardo                
+            26056809; Lavayen, Juan Entiqur               
+            27522838; Maggiolo, Gisela                    
+            25893714; Molina, Julio                       
+            19018934; Monzon Fernandez, Lucila Emilce     
+            26690663; Sidi, Andres                        
+     -->
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Lucida Sans', sans-serif;
+        }
+
+        body {
+            background-image: linear-gradient(to right, blue, #0f96df);
+        }
+
+        #root {
+            width: 350px;
+            margin: 0 auto;
+        }
+
+        .boton{
+            display: flex;
+            justify-content: center;
+        }
+
+        h1{
+            color: white;
+        }
+
+        h1,h2 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        p{
+            text-align: center;
+            color: blue;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 60%;
+            height: 40vh;
+            background-color: white;
+            margin-bottom: 20px;
+            border: 2px black;
+            border-radius: 10px;
+        }
+
+        .card h1{
+            color: black;
+        }
+
+        button{
+            width: 40%;
+            height: 40px;
+            background-color: #0f96df;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            color: white;
+        }
+        button p{
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+
+
+    <script type="text/babel">
+
+        let datos=[
+            {nombre:'Candidato 1'},
+            {nombre:'Candidato 2'}
+        ];
+
+        function Miboton() {
+            
+            const [count, setCount] = React.useState(0);
+            function Incrementar() {
+                return (
+                    <p>{setCount(count + 1)}</p>
+                );
+            }
+
+            function Disminuir() {
+
+                if (count > 0) {
+                    return (
+                        <p>{setCount(count - 1)}</p>
+                    );
+                }
+            }
+
+            return (
+                <div>
+                    <h1>{count}</h1>
+                    <div className="boton">
+                        <button onClick={Incrementar}><p>+</p></button>
+                        <button onClick={Disminuir}><p>-</p></button>
+                </div>
+                </div>
+            );
+        }
+
+        function Card({candidatos}) {
+            const card= candidatos.map((candidato) =>
+                    <div className="card">
+                        <h2>{candidato.nombre}</h2>
+                        <Miboton />
+                    </div>
+                    )
+            return (
+                <div className="container">
+                    <h1>Boca de urnas</h1>
+                    {card}
+                </div>
+            )
+        }
+
+        let root = document.getElementById('root')
+        ReactDOM.render(<Card candidatos={datos}/>, root)
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+</body>
+
+</html>
