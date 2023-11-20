@@ -1,0 +1,203 @@
+
+<!DOCTYPE HTML5>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="text/html">
+  <title>Boca de Urna</title>
+ 
+    <!-- 
+        Curso 134 - Grupo 06 -> ciropuig1@gmail.com
+          18367300; Ciro, Puig
+
+          funciona: si
+          diseño: si
+          implementacion: useState
+          reutilizacion: no
+
+          - Usa createElement en lugar de JSX
+    -->
+
+  <style>
+    :root {
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    .App-header {
+      width: 400px;
+      background-color: #0556f7;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .App {
+      border-radius: 10px;
+      width: min-content;
+      align-items: center;
+      background-color: #0155fe;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }*/
+
+    a {
+      font-weight: 500;
+      color: #646cff;
+      text-decoration: inherit;
+    }
+
+    a:hover {
+      color: #535bf2;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 320px;
+      min-height: 100vh;
+      max-height: 100vh;
+      background: linear-gradient(to right bottom, blue, white);
+    }
+
+    h1 {
+      font-size: 3.2em;
+      line-height: 1.1;
+      color: white;
+    }
+
+    .space {
+      width: 10px;
+      height: auto;
+      display: inline-block;
+    }
+
+    button {
+      width: 25%;
+      border-radius: 8px;
+      border: 3px solid black;
+      padding: 0.6em 0.6em;
+      font-size: 2em;
+      font-weight: 500;
+      text-align: center;
+      font-family: inherit;
+      background-color: #06b3e8;
+      color: white;
+      cursor: pointer;
+      transition: border-color 0.25s;
+      margin: auto;
+      padding: 5px;
+    }
+
+    button:hover {
+      border-color: #646cff;
+    }
+
+    button:focus,
+    button:focus-visible {
+      outline: 4px auto -webkit-focus-ring-color;
+    }
+
+    #root {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 1280px;
+      height: auto;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .counter {
+      width: auto;
+      height: 300px;
+      border-radius: 10px;
+      border: 3px solid;
+      background-color: white;
+      text-align: center;
+    }
+
+    .counter h2 {
+      font-size: 40px;
+      color: blue;
+    }
+
+    .counter p {
+
+      font-size: 4em;
+      color: blue;
+      margin: 10px;
+    }
+
+    .counter-container {
+      width: auto;
+      height: auto;
+    }
+  </style>
+   
+  </head>
+
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script> 
+
+  <script>
+    function App() {
+      const [counter1, setCounter1] = React.useState(0);
+      const [counter2, setCounter2] = React.useState(0);
+
+      const handleIncrement = (counterSetter) => {
+        counterSetter((prevCounter) => prevCounter + 1);
+      };
+
+      const handleDecrement = (counterSetter) => {
+        counterSetter((prevCounter) => Math.max(prevCounter - 1, 0));
+      };
+
+      return(
+       React.createElement('div', { className: 'App' },
+        React.createElement('header', { className: 'App-header' },
+          React.createElement('h1', null, 'Boca de Urnas'),
+          React.createElement('div', { className: 'counter-container' },
+            React.createElement('div', { className: 'counter' },
+              React.createElement('h2', null, 'Candidato 1'),
+              React.createElement('p', null, counter1),
+              React.createElement('div', null,
+                React.createElement('button', { onClick: () => handleIncrement(setCounter1) }, '+'),
+                React.createElement('div', { className: 'space' }),
+                React.createElement('button', { onClick: () => handleDecrement(setCounter1) }, '-')
+              )
+            ),
+            React.createElement('br'),
+            React.createElement('br'),
+            React.createElement('div', { className: 'counter' },
+              React.createElement('h2', null, 'Candidato 2'),
+              React.createElement('p', null, counter2),
+              React.createElement('div', null,
+                React.createElement('button', { onClick: () => handleIncrement(setCounter2) }, '+'),
+                React.createElement('div', { className: 'space' }),
+                React.createElement('button', { onClick: () => handleDecrement(setCounter2) }, '-')
+              )
+            )
+          )
+        )
+       ) 
+      );
+    }
+
+    const rootElement = document.getElementById('root');
+    ReactDOM.render(React.createElement(App), rootElement);
+  </script>
+</body>
+
+</html>

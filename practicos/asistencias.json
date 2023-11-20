@@ -1,0 +1,92 @@
+[
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Acevedo, Gabriel",
+    "dni": "16070863",
+    "email": "acegabriel62@gmail.com",
+    "asistencias": 4,
+    "id": "7663"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Adrián, Villarruel",
+    "dni": "27070913",
+    "email": "tomas.villarruel@mi.unc.edu.ar",
+    "asistencias": 0,
+    "id": "26055"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Agretti, Irina",
+    "dni": "25254895",
+    "email": "irinagretti@gmail.com",
+    "asistencias": 6,
+    "id": "9197"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Aguerregaray, Javier",
+    "dni": "22962605",
+    "email": "aguerregarayja@yahoo.com.ar",
+    "asistencias": 6,
+    "id": "9489"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Alegre, Cristina",
+    "dni": "20387275",
+    "email": "alegretinita@gmail.com",
+    "asistencias": 5,
+    "id": "4034"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Alfieri, Carlos Roque",
+    "dni": "23979860",
+    "email": "alfiericarlos@hotmail.com",
+    "asistencias": 6,
+    "id": "24031"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Amato, Natalia Alejandra",
+    "dni": "24334174",
+    "email": "herdanoe1@outlook.com",
+    "asistencias": 0,
+    "id": "16645"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Andrea Lujan, Alonso",
+    "dni": "26627727",
+    "email": "andreaalonso727@gmail.com",
+    "asistencias": 6,
+    "id": "25778"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Ansotegui, Fernando",
+    "dni": "18226488",
+    "email": "feransotegui@gmail.com",
+    "asistencias": 0,
+    "id": "6975"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Aragón, Cecilia Valeria Isabel",
+    "dni": "27029838",
+    "email": "valeriaaragon@gmail.com",
+    "asistencias": 3,
+    "id": "3415"
+  }
+]

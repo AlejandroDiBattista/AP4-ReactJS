@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Aplicación React</title>
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
-
+    
+    <title>Tu Aplicación React</title>
 <!-- 
   Curso 133 - Grupo 03 -> tsade@live.com.ar
     21992626; Villafañe, Adriana
     18123292; Aberbach, Angel Sergio
     17219543; Molina, Edmundo
     18445270; Lopez, Viviana
+
+    funciona: si
+    diseño: si
+    implementacion: useState
+    reutilizacion: no
+
+    - Usa estados separados para cada candidato en lugar de componentes
  -->
+
     <style>
         * {
     margin: 0;
@@ -75,6 +83,7 @@ footer {
 }
 
     </style>
+
     <script type="text/babel">
 
       const { useState } = React;

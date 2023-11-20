@@ -17,7 +17,15 @@
             27016688; Ortiz, Juan Pablo 
             26703609; Panno, Diego Mauricio
             22252000; Milan, Luciana
+  
+            funciona: si
+            diseño: si
+            implementacion: funcion
+            reutilizacion: si
+  
+            - Le nombre a funciones anonimas en el manejo de los eventos   
          -->
+         
         <style>
            body{
   background-image: linear-gradient(to bottom right, #000BFF, #00E8FF, white);
@@ -121,37 +129,37 @@ body{
         </style>
 
         <script type="text/babel">
-        const { useState } = React;
+          const { useState } = React;
 
-            function Candidato(prop) {
-  const [cuenta, setCuenta] = useState(0)
-  return (
-    <>
-    <div className="centrar">
-    <div className="contenedor">
-    <h3>{prop.titulo}</h3>
-        <h2>{cuenta}</h2>
-        <div className="boton">
-            <button onClick={function click1() { setCuenta(cuenta + 1) } }>+</button> 
-            <button onClick={ function click2() {if (cuenta>0) {setCuenta(cuenta - 1) }} }>-</button>
-            </div>
-            </div>
-            </div>
-      </>
-  )
- }
+          function Candidato(prop) {
+            const [cuenta, setCuenta] = useState(0)
+            return (
+              <>
+                <div className="centrar">
+                  <div className="contenedor">
+                    <h3>{prop.titulo}</h3>
+                    <h2>{cuenta}</h2>
+                    <div className="boton">
+                      <button onClick={ function click1() { setCuenta(cuenta + 1) } }>+</button> 
+                      <button onClick={ function click2() { if (cuenta>0) { setCuenta(cuenta - 1)} } }>-</button>
+                    </div>
+                  </div>
+                </div>
+              </>
+              )
+          }
 
- function App() {
-  
-  return (
-    <>
-    <h1>Boca de urnas</h1>
-    <Candidato  titulo="Candidato 1"/>
-    <Candidato titulo="Candidato 2"/>
-      </>
-  )
- } 
-    ReactDOM.render(<App/>, document.getElementById('root'));
+        function App() {
+          return (
+            <>
+              <h1>Boca de urnas</h1>
+              <Candidato  titulo="Candidato 1"/>
+              <Candidato titulo="Candidato 2"/>
+            </>
+          )
+        } 
+        
+        ReactDOM.render(<App/>, document.getElementById('root'));
         </script>
     </head>
 

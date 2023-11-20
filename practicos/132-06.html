@@ -15,7 +15,18 @@
         20665292; Forcadell, María Gabriela    
         23408851; Gamarra, Vanesa Roxana       
         27479190; Gutierrez, Matias Sebastian 
+        
+        funciona: si
+        diseño: no
+        implementacion: funcion
+        reutilizacion: no
+   
+        - Crear dos componente en lugar de reutilizar el mismo
+        - No controla que no se pueda votar negativo
+        - No declara el useState y no pone los componente dentre de <> </>
+        - Sin las modificaciones introducidas no funcionaba 
      -->
+
 <style>
 #root {
   max-width: 1280px;
@@ -131,79 +142,77 @@ p{
 
   
 <script type="text/babel">
+const { useState } = React;
 const Contador = ({ value }) => {
+  const [contador, setContador] = useState(value);
 
-const [contador, setContador] = useState(value);
+  const handleClick = () => {
+    setContador(contador + 1);
+  };
+  const handleClick2 = () => {
+    setContador(contador - 1);
+  };
 
-const handleClick = () => {
-    setContador(contador + 1)
-}
-const handleClick2 = () => {
-    setContador(contador - 1)
-}
+  return (
+    <>
+      <div className="Header"></div>
 
-return (
-<>
-<div className="Header">
-    
-</div>
-
-<div className="split left"> 
-    <div className="centered">
-        <h2>Candidato 1:</h2>
-        <div className="card"> 
-            <p>{contador}</p>            
+      <div className="split left">
+        <div className="centered">
+          <h2>Candidato 1:</h2>
+          <div className="card">
+            <p>{contador}</p>
             <button className="btn success" onClick={handleClick}>
-                 +
+              +
             </button>
             <button className="btn danger" onClick={handleClick2}>
-                 -
+              -
             </button>
+          </div>
         </div>
-    </div>
-</div>   
-
-</>
-)
-}
+      </div>
+    </>
+  );
+};
 const Contador2 = ({ value }) => {
+  const [contador2, setContador2] = useState(value);
 
-const [contador2, setContador2] = useState(value);
+  const handleClick = () => {
+    setContador2(contador2 + 1);
+  };
+  const handleClick2 = () => {
+    setContador2(contador2 - 1);
+  };
 
-const handleClick = () => {
-    setContador2(contador2 + 1)
-}
-const handleClick2 = () => {
-    setContador2(contador2 - 1)
-}
+  return (
+    <>
+      <div className="Header"></div>
 
-return (
-<>
-<div className="Header">
-
-</div>
-
-<div className="split right">   
-    <div className="centered"> 
-        <h2>Candidato 2:</h2>
-        <div className="card"> 
+      <div className="split right">
+        <div className="centered">
+          <h2>Candidato 2:</h2>
+          <div className="card">
             <p>{contador2}</p>
-        
-            <button className="btn success" onClick={handleClick}>
-                +
-            </button>
-            <button   button className="btn danger" onClick={handleClick2}>
-                -
-            </button>
-        </div>
-    </div>   
-</div>
 
-</>
-)
+            <button className="btn success" onClick={handleClick}>
+              +
+            </button>
+            <button className="btn danger" onClick={handleClick2}>
+              -
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
-ReactDOM.render(<Contador value={0} />,  
-    <Contador2 value={0} />, document.getElementById('root'));
+ReactDOM.render(
+  <>
+  <Contador value={0} />
+  <Contador2 value={0} />
+  </>,
+  document.getElementById('root')
+);
 </script>
   </head>
         <body>

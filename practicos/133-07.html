@@ -14,7 +14,13 @@
             28492517; Quipildor, Matias 
             28706770; Rios, Natalia Soledad  
             27721196; Quiroga, Rafael Antonio 
+            
+            funciona: si
+            diseño: si
+            implementacion: funcion
+            reutilizacion: si
      -->
+
 
 <style>
     body {
@@ -119,6 +125,7 @@
 
     const decrementarContador = () => {
       setContador(contador - 1 >= 0 ? contador - 1 : 0);
+      // contador > 0 ? contador - 1 : 0
     };
 
     return (
@@ -141,9 +148,6 @@
         <ContadorCandidato candidatoNombre="Candidato 1" />
         <ContadorCandidato candidatoNombre="Candidato 2" />
        </div>
-       <div className="contendor-pie"><p className="pie">Desarrollado por: Grupo Nº: 7, Comisión Nº: 133 | Desarrollador Web Con React JS - UTN</p>
-        <p className="pie">Integrantes: Medina Oscar Alejandro, Rios Natalia Soledad, Quipildor Matias, Quiroga Rafael Antonio</p>
-        <p className="pie">15/11/2023</p></div>
        </>
     );
   };

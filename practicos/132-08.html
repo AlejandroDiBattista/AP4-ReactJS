@@ -13,6 +13,13 @@
         24859318; Volonté, Analia Verónica  
         20387275; Alegre, Cristina Mabel    
         23979860; Alfieri, Carlos Roque      
+  
+        funciona: si
+        diseño: si
+        implementacion: funcion
+        reutilizacion: si
+  
+        - Le agregar una clase a cada elementos para poder darle estilos y esto es innecesario. 
      -->
     <style>
       *{
@@ -71,7 +78,6 @@ function App() {
     <>
     <div id="contenedor">
     <div id="titulo">Boca de urnas</div>
-    
         <Contador candidato="Candidato 1"/>
         <Contador candidato="Candidato 2"/>
     </div>
@@ -79,15 +85,10 @@ function App() {
   )
 }
 
-
 function Contador({ candidato}) {
-
   const [count, setCount] = React.useState(0);
 
-  const incremento = () => {
-    setCount(count + 1);
-  };
-
+  const incremento = () => { setCount(count + 1); };
   const decremento = () => {
     if (count > 0) {
       setCount(count - 1);
@@ -96,14 +97,13 @@ function Contador({ candidato}) {
 
   return (
     <>
-    <div id='contador'>
-      <h2 className='h2'>{candidato}</h2>
-      <p className='numero'>{count}</p>
-      <button className='boton' onClick={incremento}>+</button>
-      <button className='boton' onClick={decremento}>-</button>
-    </div>
-    
-  </>
+      <div id='contador'>
+        <h2 className='h2'>{candidato}</h2>
+        <p className='numero'>{count}</p>
+        <button className='boton' onClick={incremento}>+</button>
+        <button className='boton' onClick={decremento}>-</button>
+      </div>
+    </>
   );
 }
 

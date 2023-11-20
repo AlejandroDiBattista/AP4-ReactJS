@@ -14,8 +14,14 @@
             Curso 134 - Grupo 10 -> monser980@gmail.com
                 16778627; Ucelay, Hector
 
-                Nota: Mando un pdf y github pero no el html 
-                Resultado: Ok (con ayuda)
+                funciona: si
+                diseño: si
+                implementacion: funcion
+                reutilizacion: si
+        
+                - Usa bootstrap para dar formato a la pagina 
+                - Usa una lista de objetos para crear los componentes en lugar de dos componentes
+                - Uso un pdf para enviar todo en un archivo.                 
         -->
         <style>
             
@@ -155,12 +161,12 @@ body{
         function Crear() {
             return (
                 <>
-                    {todos.map((candidato) => ( <App nombre={candidato.nombre} key={candidato.id}  /> ))}
+                    {todos.map((candidato) => ( <Votos nombre={candidato.nombre} key={candidato.id}  /> ))}
                 </>
             )
         }
 
-        function App(props) {  
+        function Votos(props) {  
             const { nombre } = props || {};
 
 
@@ -169,7 +175,7 @@ body{
             const aumentar = () => {setCount((prevCount) => prevCount + 1); };
 
             const decrementar = () => {if (count > 0) {setCount((prevCount) => prevCount - 1);}else{
-                alert('Valores Negativos no aseptados')
+                alert('Valores Negativos no aceptados')
             }
             };
             return (

@@ -18,6 +18,13 @@
             25636445; Moltoni, Andres Fernando 
             22433454; Rodríguez, Maria Isabel 
             27972561; Tapia Suarez, Andrea Lorena 
+        
+            funciona: si
+            diseño: si
+            implementacion: useState
+            reutilizacion: no
+        
+            - No utilizar componentes de react        
     -->
         <style>
 
@@ -182,65 +189,62 @@ h2{
         <script type="text/babel">
             const { useState } = React;
             function App() {
-  const [countC1, setCountC1] = useState(0)
-  const [countC2, setCountC2] = useState(0)
-  
+        const [countC1, setCountC1] = useState(0)
+        const [countC2, setCountC2] = useState(0)
+        
 
-  const incrementarC1 = () => {
-    setCountC1((countC1) => countC1 + 1)
-  }
-  const decrementarC1 = () => {
-    setCountC1((countC1) => countC1 - 1)
-  }
+        const incrementarC1 = () => {
+          setCountC1((countC1) => countC1 + 1)
+        }
+        const decrementarC1 = () => {
+          setCountC1((countC1) => countC1 - 1)
+        }
 
-  const incrementarC2 = () => {
-    setCountC2((countC2) => countC2 + 1)
-  }
-  const decrementarC2 = () => {
-    setCountC2((countC2) => countC2 - 1)
-  }
+        const incrementarC2 = () => {
+          setCountC2((countC2) => countC2 + 1)
+        }
+        const decrementarC2 = () => {
+          setCountC2((countC2) => countC2 - 1)
+        }
 
+        return (
+          <>
+            <h1>Boca de Urna</h1>
+            <div className="card">
+                <h2>Candidato 1</h2>
+                <div className="contador">
+                    {countC1}
+                </div>
+                <div>
+                    <button onClick={incrementarC1} className="boton">
+                        + 
+                    </button>
+                    <button disabled={countC1<=0} onClick={decrementarC1} className="boton">
+                        - 
+                    </button>
+                </div>
+            </div>
 
-  return (
-    <>
-    <h1>Boca de Urna</h1>
-    <div className="card">
-        <h2>Candidato 1</h2>
-        <div className="contador">
-            {countC1}
-        </div>
-        <div>
-            <button onClick={incrementarC1} className="boton">
-                + 
-            </button>
-            <button disabled={countC1<=0} onClick={decrementarC1} className="boton">
-                - 
-            </button>
-        </div>
-    </div>
+            <div className="card">
+                <h2>Candidato 2</h2>
+                <div className="contador">
+                    {countC2}
+                </div>
+                <div>
+                    <button onClick={incrementarC2} className="boton">
+                        +
+                    </button>
+                    <button disabled={countC2<=0} onClick={decrementarC2} className="boton">
+                        -
+                    </button>
+                </div>
+            </div>
+            </>
+          )
+        }
+        ReactDOM.render(<App />, document.getElementById("root"));
 
-    <div className="card">
-        <h2>Candidato 2</h2>
-        <div className="contador">
-            {countC2}
-        </div>
-        <div>
-            <button onClick={incrementarC2} className="boton">
-                +
-            </button>
-            <button disabled={countC2<=0} onClick={decrementarC2} className="boton">
-                -
-            </button>
-        </div>
-    </div>
-
-
-    </>
-  )
-}
-      ReactDOM.render(<App />, document.getElementById("root"));
-
-        </script>
+      </script>
 
     </head>
 
