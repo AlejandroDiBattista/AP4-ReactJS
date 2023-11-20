@@ -18,12 +18,12 @@
             
             funciona: si
             diseño: si
-            implementacion: funcion 
+            implementacion: función 
             reutilizacion: si
 
             - No inicializa las variables en 0 
-            - Usa una coleccion en lugar de simplemente dos componentes
-     -->
+            - Usa una colección en lugar de simplemente dos componentes
+    -->
 
     <style>
         body {
@@ -92,7 +92,7 @@
     </style>
 
     <script type="text/babel">
-        const { useState } = React
+        const { useState, useEffect } = React
 
         function Candidato({ id,nombreCandidato, votos}) {
             const [count, setCount] = useState(votos)
@@ -116,8 +116,8 @@
         function App() {
             const [count, setCount] = useState(0);
             let datos = [
-                { id:1,nombreCandidato: "Candidato 1", votos: 11 },
-                { id:2,nombreCandidato: "Candidato 2", votos: 9 },
+                { id:1, nombreCandidato: "Candidato 1", votos: 0 },
+                { id:2, nombreCandidato: "Candidato 2", votos: 0 },
             ];
             return (
             <>

@@ -122,13 +122,14 @@ def resumir_resultados(resultados)
     puts "- Resumen de resultados ---------------------------------------"
     resultados.sort_by{|x|[x[:curso], x[:grupo]]}.each do |resultado|
         hay_error = resultado[:faltan].size + resultado[:alumnos].size  != resultado[:miembros]
-        if hay_error
         puts "  %3i-%02i | %-2s | %i / %i / %i %s" % [resultado[:curso], resultado[:grupo],  
         resultado[:resultado][:funciona], 
         resultado[:alumnos].size, resultado[:faltan].size, resultado[:miembros] , hay_error ? "ERROR" : ""]
-        end
     end 
     resultados.map{|r| [r[:curso], r[:grupo], r[:resultado][:funciona]]}
+    puts "Total alumnos: #{resultados.map{|r| r[:alumnos].size}.sum}"
+    puts "Total faltan: #{resultados.map{|r| r[:faltan].size}.sum}"
+    puts "Total miembros: #{resultados.map{|r| r[:miembros]}.sum}"
 end
 
 # listar_con_notas salida
