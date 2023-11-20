@@ -106,10 +106,10 @@ Clase 7°
 -
 
 * 132 - Lunes 20 - 10 a 12
-[Ver video]()
+[Ver video](https://utn.zoom.us/rec/share/30iHTIUEKugy3a5zU8b4HpYd30ldNo015-OjwZ-N4d4343vPsus41Z6EDPyrig8t.yLjDU_8nzBNCXLts)
 
 * 133 - Lunes 20 - 15 a 17
-[Ver video]()
+[Ver video](https://utn.zoom.us/rec/share/EyWFaPP0GlfcDKU7cHE1zQKpx4LwyPaG2eZhMfQ3q5y7kDsmCUQM4JLXihXOlZ08.xyZmoDPOBUpiBa13)
 
 * 134 - Lunes 20 - 19 a 21
 [Ver video]()

@@ -10,12 +10,12 @@
     ],
     "notas": [
       "No inicializa las variables en 0",
-      "Usa una coleccion en lugar de simplemente dos componentes"
+      "Usa una colección en lugar de simplemente dos componentes"
     ],
     "resultado": {
       "funciona": "si",
       "diseño": "si",
-      "implementacion": "funcion",
+      "implementacion": "función",
       "reutilizacion": "si"
     },
     "faltan": [

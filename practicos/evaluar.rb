@@ -152,3 +152,4 @@ resumir_resultados(resultados)
 # pp b=resultados.find{|r| r[:curso] == 132 && r[:grupo] == 10}[:alumnos].sort
 # pp c=resultados.find{|r| r[:curso] == 132 && r[:grupo] == 10}[:faltan].sort
 # pp b - a
+

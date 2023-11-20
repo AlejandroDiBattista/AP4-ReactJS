@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contador de Votos</title>
   <style>
+    
     body {
       display: flex;
       align-items: center;
@@ -14,23 +15,15 @@
       background: linear-gradient(to bottom right, #3498db, #87CEFA);
     }
 
-    .voting-container {
-      width: 300px;
-      text-align: center;
-      margin: 10px;
-      border-radius: 20px;
-      overflow: hidden;
-      background-color: #87CEFA; /* Fondo celeste */
-    }
-
-    .voting-box {
+    .contador {
       border: 1px solid #ccc;
       padding: 10px;
       margin-bottom: 10px;
       border-radius: 20px;
+      width: 400px;
     }
 
-    .button-container {
+    .botones {
       display: flex;
       justify-content: space-between;
     }
@@ -43,7 +36,7 @@
       border-radius: 10px; /* Esquinas redondeadas en los botones */
     }
 
-    .vote-count {
+    .numero {
       font-size: 60px; /* Tamaño de la fuente del contador */
     }
   </style>
@@ -55,7 +48,7 @@
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   
   <script type="text/babel">
-    const VotingBox = () => {
+    const Votos = ({candidato}) => {
       const [voteCount, setVoteCount] = React.useState(0);
 
       const handleVote = (increment) => {
@@ -63,10 +56,10 @@
       };
 
       return (
-        <div className="voting-box">
-          <h2>Nombre del Candidato</h2>
-          <p className="vote-count">{voteCount}</p>
-          <div className="button-container">
+        <div className="contador">
+          <h2>{candidato}</h2>
+          <p className="numero">{voteCount}</p>
+          <div className="botones">
             <button onClick={() => handleVote(1)}>+</button>
             <button onClick={() => handleVote(-1)}>-</button>
           </div>
@@ -77,12 +70,8 @@
     const App = () => {
       return (
         <div>
-          <div className="voting-container">
-            <VotingBox />
-          </div>
-          <div className="voting-container">
-            <VotingBox />
-          </div>
+            <Votos />
+            <Votos />
         </div>
       );
     };
