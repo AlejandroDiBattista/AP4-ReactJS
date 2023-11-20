@@ -1,206 +1,216 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Agenda en un Archivo</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boca de urna</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+      Curso 126 - Grupo 04 -> agusbenja1@gmail.com
+        24242777; Julio Delaunay
+        10564273; Miguel Angel Trubiano
+        16770894; Marcelo Berretta
+        27047018; Karina Serrano
+        24255423; Morales Marcela Yanina
+        28430341; Gomez Vanesa     
+
+        funciona: si
+        diseño: si
+        implementacion: useState
+        reutilizacion: no
+
+        - Usa useState para cada candidato
+        - Usa setTimeout para cambiar el color y el tamaño de la fuente
+        - El nombre de las funciones para modificar los contadores esta en mayuscula
+    -->
     
-        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
 
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-        <!-- 
-            Curso 126 - Grupo 04 -> rozziesteban@gmail.com
-                27173739; Esteban Costilla Rozzi
-                24106061; Gabriel Ritacco
-                28627630; Ximena Romani
-                23486429; Juan José Coronel
+      body {
+        text-align: center;
+        background-image: linear-gradient(135deg, blue, cyan);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: calc(15px + 2vmin);
+        color: white;
+      }
+      
+      p {
+        margin: 0;
+        padding: 0;
+        
+      }
 
-                funciona: si
-                diseño: si
-                implementacion: funcion
-                reutilizacion: no
+      .cajas {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-                - Crea dos componentes que hacen exactamente lo mismo.
-            -->
-        <style>
-            #root {
+      .caja {
+        /* width: 150px;  la odifico por la línea de abajo*/
+        width: 190px;
+        /* height: 150px;  dejo el height por defecto*/
+        margin-top: 10px;
+        border: solid 1px black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px 5px;
+        border-radius: 20px;
+        background-color: white;
+      }
 
-                max-width: 1280px;
-                margin: 0 auto;
-                padding: 2rem;
-                text-align: center;
-            }
-            :root {
-                font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-                line-height: 1.5;
-                font-weight: 400;
-                margin: 0;
-                color-scheme: light dark;
-                color: rgba(255, 255, 255, 0.87);
-                background-image: linear-gradient(to bottom right, rgb(10, 31, 251), rgb(32, 220, 254));
-                text-rendering: optimizeLegibility;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                box-sizing: border-box;
-                }
+      .botones {
+        display: flex;
+        justify-content: space-between;
+      }
 
-                body {
-                margin: 0;
-                display: flex;
-                place-items: center;
-                min-width: 320px;
-                min-height: 100vh;
-                }
+      .contador {
+        /*font-size: 45px;*/
+        font-size: 85px; /* Agrando los contadores*/
+        color: blue;
+        
+      }
+      .contador2 {
+        /*font-size: 45px;*/
+        font-size: 85px; /* Agrando los contadores*/
+        color: blue;
+        
+      }
 
-                h1 {
-                font-size: 3.2em;
-                line-height: 1.1;
-                color: white;
-                margin-top: 0 ;
-                margin-bottom: 0em;
-                }
+      button {
+        width: 80px; /* Ensancho los botones con esta nueva línea*/
+        background-color: rgb(28, 181, 232);
+        padding: 10px 20px;
+        margin: 3px;
+        font-size: 20px;
+        color: white;
+        border: solid 0.5px grey;
+        border-radius: 5px;
+      }
+      button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px #171010;
+        transition: 0.3s;
+      }
 
-                h2 {
-                font-size: 2.8em;
-                padding: 0;
-                margin: 0
-                }
+      /* CAMBIO NUMEROS */
+    </style>
 
-                .dosContadoresDiv {
-                display: flex;
-                flex-direction: column;
-                gap: 2.5em;
-                }
+    <script type="text/babel">
+      const { useState } = React;
 
-                .divCandidato1 {
-                background-color: #ffffff;
-                padding: 0.5em;
-                border-radius: 1em;
-                border: solid 2px rgb(0, 0, 0);
-                color: black;
-                }
+      function App() {
+        const [contador1, setContador1] = useState(0);
 
-                .divCandidato2 {
-                background-color: #ffffff;
-                padding: 0.5em;
-                border-radius: 1em;  
-                border: solid 2px rgb(0, 0, 0);
-                color: black;
-                }
+        const [contador2, setContador2] = useState(0);
 
-                .contador {
-                font-size: 8em;
-                box-sizing: border-box;
-                padding-top: 0.2em;
-                padding-bottom: 0.5em;
-                margin: 0;
-                color: blue;
-                line-height: 0.4em;
-                }
+        const sumar = (contador, setContador) => {
+          setContador(contador + 1);
+        };
 
-                .botonera {
-                display: flex;
-                justify-content:space-around
-                }
+        // OPtimizaría código en la función restar
+        const restar = (contador, setContador) => {
+          if (contador === 0) {
+            // Usaría igualdad estricta
+            return;
+          }
+          setContador(contador - 1);
+        };
 
-                button {
-                border-radius: 10px;
-                border: 2px solid black;
-                padding: 0.1em 1em;
-                font-size: 3.4em;
-                margin: 0.01em;
-                font-weight: 800;
-                font-family: inherit;
-                background-color: rgb(56, 179, 255);
-                cursor: pointer;
-                transition: border-color 0.25s;
-                }
+        function SumarCandidato1() {
+          sumar(contador1, setContador1);
+          const p = document.querySelector(".contador");
+          p.style.fontSize = "85px";
+          p.style.color = "green";
 
-                button:hover {
-                background-color: rgb(0, 0, 255);
-            }
-        </style>
+          setTimeout(() => {
+            p.style.fontSize = "85px";
+            p.style.color = "blue";
+          }, 1000);
+        }
 
-        <script type="text/babel">
+        function RestarCandidato1() {
+          restar(contador1, setContador1);
 
-            const { useState } = React
+          const p = document.querySelector(".contador");
+          p.style.fontSize = "85px";
+          p.style.color = "red";
 
-            function App() {
-                return (
-                <>
-                    <div className='dosContadoresDiv'>
-                    <h1>Boca de urnas</h1>
-                    <Candidato1 />
-                    <Candidato2 />
-                    </div>      
-                </>
-                )
-            }
+          setTimeout(() => {
+          p.style.fontSize = "85px";
+          p.style.color = "blue";
+         }, 1000);
+        }
 
-            function Candidato1() {
-                const [count, setCount] = useState(0)
+        function SumarCandidato2() {
+          sumar(contador2, setContador2);
+          const p = document.querySelector(".contador2");
+          p.style.fontSize = "85px";
+          p.style.color = "green";
 
-                //función aumento
-                const aumento = () => {
-                    setCount(count +1);
-                }
-                //función decremento para impedir que vaya debajo de 0 el contador
+          setTimeout(() => {
+            p.style.fontSize = "85px";
+            p.style.color = "blue";
+          }, 1000);
+        }
+        function RestarCandidato2() {
+          restar(contador2, setContador2);
+          const p = document.querySelector(".contador2");
+          p.style.fontSize = "85px";
+          p.style.color = "red";
 
-                const decremento = () => {
-                    setCount(cuentaAnterior => Math.max(cuentaAnterior -1, 0));
-                }
-
-
-                return (
-                <div className="divCandidato1">
-                    <h2>Candidato 1</h2>
-                    <div className="contador">{count}</div>
-                    <div className="botonera">
-                        <button onClick={aumento}>+</button>
-                        <button onClick={decremento}>-</button>
-                    </div>
-                    
-                    </div>
-                    )
-                }
-
-            function Candidato2() {
-
-                const [count2, setCount] = useState(0)
-
-                    //función aumento
-                    const aumento = () => {
-                        setCount(count2 +1);
-                    }
-                    //función decremento para impedir que vaya debajo de 0 el contador
-
-                    const decremento = () => {
-                        setCount(cuentaAnterior => Math.max(cuentaAnterior -1, 0));
-                    }
-                return (
-                <div className="divCandidato2">
-                    <h2>Candidato 2</h2>
-                    <div className="contador">{count2}</div>
-                    
-
-                    <div className="botonera">
-                        <button onClick={aumento}>+</button>
-                        <button onClick={decremento}>-</button>
-                    </div>
-
-                    </div>
-                )
-            }
-            
+          setTimeout(() => {
+            p.style.fontSize = "85px";
+            p.style.color = "blue";
+          }, 1000);
+        }
 
             
 
-            ReactDOM.render(<App />, document.getElementById('root'));
-        </script>
-    </head>
+        return (
+          <div className="App">
+            <header className="App-header">
+              <h4>Boca de urnas</h4>
+              <div className="cajas">
+                <div className="caja">
+                  <p>Candidato 1</p>
+                  <p className="contador">{contador1}</p>
+                  <div className="botones">
+                    <button onClick={SumarCandidato1}>+</button>
+                    <button onClick={RestarCandidato1}>-</button>
+                  </div>
+                </div>
+                <div className="caja">
+                  <p>Candidato 2</p>
+                  <p className="contador2">{contador2}</p>
+                  <div className="botones">
+                    <button onClick={SumarCandidato2}>+</button>
+                    <button onClick={RestarCandidato2}>-</button>
+                  </div>
+                </div>
+              </div>
+            </header>
+          </div>
+        );
+      }
 
-    <body>
-        <div id="root"></div>
-    </body>
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

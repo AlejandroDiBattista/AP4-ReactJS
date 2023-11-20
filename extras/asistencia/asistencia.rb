@@ -15,7 +15,7 @@ def leer(origen)
         {   curso: 0, 
             grupo: 0,
             nombre: "#{x[0].nombre}, #{x[1].nombre}", 
-            dni: x[3], email: x[4],
+            dni: x[3].to_i, email: x[4],
             asistencias: x[3..-1].count{|y| y["P"]},
             id: x[2],
         }
@@ -86,9 +86,9 @@ def leer_asistencias
 
     salida = []
     for curso in cursos
-        asistencias = leer(cursos.first)
+        asistencias = leer(curso)
         asistencias.each{|x| x[:curso] = extraer_curso(curso)}
-        salida += asistencias
+        asistencias.each{|x| salida << x}
     end 
     salida 
 end 
@@ -108,23 +108,40 @@ def leer_grupos()
 
         curso = file.split("_")[1].split(".")[0].to_i
         grupos = CSV.read(file)
-        grupos = grupos.select{|x| !x[0][/grupo/i]}
-        grupos[2..-1].each{|x|  salida[x[2]] = {grupo: x[0].strip, curso: curso}}
+        grupos = grupos.select{|x| !x[0][/^\s*grupo/i]}
+        grupos.each{|x|  salida[x[2].to_i] = {grupo: x[0].strip.to_i, curso: curso}}
     end 
     salida 
 end
 
 grupos = leer_grupos()
-asistencias = leer_asistencias.first(10)
+pp grupos.select{|k,v| v[:curso] == 133}
+asistencias = leer_asistencias()
+nunca = asistencias.select{|x| x[:asistencias] == 0}
+una = asistencias.select{|x| x[:asistencias] == 1}
+dos = asistencias.select{|x| x[:asistencias] == 2}
+tres = asistencias.select{|x| x[:asistencias] == 3}
+
+puts "- ESTADISTICAS --------------------------------------"
+puts "  Hay #{grupos.size} alumnos en grupos"
+puts "  Hay #{asistencias.size} alumnos en asistencias"
+puts "  Hay #{nunca.size} alumnos que nunca asistieron"	
+puts "  Hay #{una.size} alumnos que asistieron una vez"
+puts "  Hay #{dos.size} alumnos que asistieron dos veces"
+puts "  Hay #{tres.size} alumnos que asistieron tres veces"
+puts 
+
+n = 0
 asistencias.each do |asistencia|
     grupo = grupos[asistencia[:dni]]
-    if grupo 
+    if grupo
         asistencia[:grupo] = grupo[:grupo]
         if asistencia[:curso] != grupo[:curso]
-            puts "ERROR: #{asistencia[:dni]} esta en el curso #{asistencia[:curso]} y en el grupo #{asistencia[:grupo]}"
+            puts "ERROR: #{asistencia[:dni]} está en el curso #{asistencia[:curso]} y en el grupo #{asistencia[:grupo]} (grupo #{grupo[:curso]}))"
         end
-    else 
-        puts asistencia[:dni] + " no esta en ningun grupo"
+    # elsif asistencia[:asistencias] > 1
+    #     print "%4i - " % (n += 1)
+    #     puts "#{asistencia[:dni]} - #{asistencia[:nombre].ljust(40)} | #{asistencia[:asistencias]} | Curso: #{asistencia[:curso]} "
     end
     # asistencia[:curso] = grupos[asistencia[:dni]][:curso]
 end

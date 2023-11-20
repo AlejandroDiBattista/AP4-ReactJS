@@ -1,9 +1,9 @@
 [
   {
     "curso": 132,
-    "grupo": "7",
+    "grupo": 7,
     "nombre": "Acevedo, Gabriel",
-    "dni": "16070863",
+    "dni": 16070863,
     "email": "acegabriel62@gmail.com",
     "asistencias": 4,
     "id": "7663"
@@ -12,43 +12,43 @@
     "curso": 132,
     "grupo": 0,
     "nombre": "Adrián, Villarruel",
-    "dni": "27070913",
+    "dni": 27070913,
     "email": "tomas.villarruel@mi.unc.edu.ar",
     "asistencias": 0,
     "id": "26055"
   },
   {
     "curso": 132,
-    "grupo": "6",
+    "grupo": 6,
     "nombre": "Agretti, Irina",
-    "dni": "25254895",
+    "dni": 25254895,
     "email": "irinagretti@gmail.com",
     "asistencias": 6,
     "id": "9197"
   },
   {
     "curso": 132,
-    "grupo": "11",
+    "grupo": 11,
     "nombre": "Aguerregaray, Javier",
-    "dni": "22962605",
+    "dni": 22962605,
     "email": "aguerregarayja@yahoo.com.ar",
     "asistencias": 6,
     "id": "9489"
   },
   {
     "curso": 132,
-    "grupo": "8",
+    "grupo": 8,
     "nombre": "Alegre, Cristina",
-    "dni": "20387275",
+    "dni": 20387275,
     "email": "alegretinita@gmail.com",
     "asistencias": 5,
     "id": "4034"
   },
   {
     "curso": 132,
-    "grupo": "8",
+    "grupo": 8,
     "nombre": "Alfieri, Carlos Roque",
-    "dni": "23979860",
+    "dni": 23979860,
     "email": "alfiericarlos@hotmail.com",
     "asistencias": 6,
     "id": "24031"
@@ -57,16 +57,16 @@
     "curso": 132,
     "grupo": 0,
     "nombre": "Amato, Natalia Alejandra",
-    "dni": "24334174",
+    "dni": 24334174,
     "email": "herdanoe1@outlook.com",
     "asistencias": 0,
     "id": "16645"
   },
   {
     "curso": 132,
-    "grupo": 0,
+    "grupo": 1,
     "nombre": "Andrea Lujan, Alonso",
-    "dni": "26627727",
+    "dni": 26627727,
     "email": "andreaalonso727@gmail.com",
     "asistencias": 6,
     "id": "25778"
@@ -75,18 +75,3519 @@
     "curso": 132,
     "grupo": 0,
     "nombre": "Ansotegui, Fernando",
-    "dni": "18226488",
+    "dni": 18226488,
     "email": "feransotegui@gmail.com",
     "asistencias": 0,
     "id": "6975"
   },
   {
     "curso": 132,
-    "grupo": "11",
+    "grupo": 11,
     "nombre": "Aragón, Cecilia Valeria Isabel",
-    "dni": "27029838",
+    "dni": 27029838,
     "email": "valeriaaragon@gmail.com",
     "asistencias": 3,
     "id": "3415"
+  },
+  {
+    "curso": 132,
+    "grupo": 12,
+    "nombre": "Aramayo, Sergio Adrian",
+    "dni": 23274538,
+    "email": "sergiolq2050@gmail.com",
+    "asistencias": 4,
+    "id": "19500"
+  },
+  {
+    "curso": 132,
+    "grupo": 5,
+    "nombre": "Arditi, Lorena",
+    "dni": 27386100,
+    "email": "lore_ar@hotmail.com",
+    "asistencias": 6,
+    "id": "12266"
+  },
+  {
+    "curso": 132,
+    "grupo": 6,
+    "nombre": "Aste, Nicolas Matias",
+    "dni": 25430546,
+    "email": "astenicolasmati@gmail.com",
+    "asistencias": 6,
+    "id": "16941"
+  },
+  {
+    "curso": 132,
+    "grupo": 11,
+    "nombre": "Avila, Sergio",
+    "dni": 26555662,
+    "email": "juanhoracio93@gmail.com",
+    "asistencias": 2,
+    "id": "21532"
+  },
+  {
+    "curso": 132,
+    "grupo": 1,
+    "nombre": "Balestri, Sebastian Gabriel",
+    "dni": 26673161,
+    "email": "balestri@gmail.com",
+    "asistencias": 6,
+    "id": "19416"
+  },
+  {
+    "curso": 132,
+    "grupo": 1,
+    "nombre": "Bamba, Mariela",
+    "dni": 27247889,
+    "email": "marielab_017@hotmail.com",
+    "asistencias": 5,
+    "id": "24115"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Berestain, Edgardo Luis",
+    "dni": 22952954,
+    "email": "edgardoberestain@gmail.com",
+    "asistencias": 2,
+    "id": "5124"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Bisinella, Fernando Miguel",
+    "dni": 24572639,
+    "email": "fermibi@gmail.com",
+    "asistencias": 0,
+    "id": "21572"
+  },
+  {
+    "curso": 132,
+    "grupo": 11,
+    "nombre": "Blanc, Solange",
+    "dni": 26739987,
+    "email": "solangeblanc@yahoo.com.ar",
+    "asistencias": 5,
+    "id": "19862"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Borgiani, Alejandra Noemi",
+    "dni": 17158631,
+    "email": "lulubel@gmail.com",
+    "asistencias": 0,
+    "id": "1021"
+  },
+  {
+    "curso": 132,
+    "grupo": 12,
+    "nombre": "Brizuela, Jorge Daniel",
+    "dni": 23730805,
+    "email": "danibrizu@yahoo.com.ar",
+    "asistencias": 6,
+    "id": "10228"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Cabrera, Juan Carlos",
+    "dni": 28294031,
+    "email": "j.c.cabrera2015@gmail.com",
+    "asistencias": 1,
+    "id": "10664"
+  },
+  {
+    "curso": 132,
+    "grupo": 9,
+    "nombre": "Camaño, Ivan Alejandro",
+    "dni": 2575419,
+    "email": "ivan192ar@yahoo.com.ar",
+    "asistencias": 6,
+    "id": "23916"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Caplan, Gerardo Alfredo",
+    "dni": 12971573,
+    "email": "gerardocaplan@gmail.com",
+    "asistencias": 0,
+    "id": "8064"
+  },
+  {
+    "curso": 132,
+    "grupo": 10,
+    "nombre": "Copte, Fernando David",
+    "dni": 26231942,
+    "email": "ferdacop@gmail.com",
+    "asistencias": 5,
+    "id": "21527"
+  },
+  {
+    "curso": 132,
+    "grupo": 6,
+    "nombre": "Cruz, Laura Patricia",
+    "dni": 26641479,
+    "email": "lalicruguer1@gmail.com",
+    "asistencias": 5,
+    "id": "22668"
+  },
+  {
+    "curso": 132,
+    "grupo": 12,
+    "nombre": "D'acchille, Leonardo Gabriel",
+    "dni": 22326063,
+    "email": "leonardogabriel@gmail.com",
+    "asistencias": 6,
+    "id": "12060"
+  },
+  {
+    "curso": 132,
+    "grupo": 1,
+    "nombre": "D Angelo, Maximiliano",
+    "dni": 26061287,
+    "email": "maximilianorey@gmail.com",
+    "asistencias": 5,
+    "id": "22117"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "David, Moreira",
+    "dni": 25724439,
+    "email": "daviddmoreira77@gmail.com",
+    "asistencias": 2,
+    "id": "25835"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "De Lucia, Maria De Los Angeles",
+    "dni": 27580917,
+    "email": "madelucia80@gmail.com",
+    "asistencias": 0,
+    "id": "13919"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Demitropulos, Ada",
+    "dni": 22198073,
+    "email": "adademitropulos@hotmail.com",
+    "asistencias": 0,
+    "id": "325"
+  },
+  {
+    "curso": 132,
+    "grupo": 4,
+    "nombre": "D Julio, Fabian",
+    "dni": 26141170,
+    "email": "fabiandjulio@gmail.com",
+    "asistencias": 6,
+    "id": "6201"
+  },
+  {
+    "curso": 132,
+    "grupo": 11,
+    "nombre": "Domenico, Alejandro Gabriel",
+    "dni": 26098677,
+    "email": "domenico_alejandro@yahoo.com.ar",
+    "asistencias": 6,
+    "id": "1152"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Duran, Jorge",
+    "dni": 16227509,
+    "email": "duranjoge7@gmail.com",
+    "asistencias": 1,
+    "id": "10207"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Enrique, Daniela Alejandra",
+    "dni": 27878888,
+    "email": "alejandra.dann@gmail.com",
+    "asistencias": 0,
+    "id": "4461"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Espinosa, Eustaquia",
+    "dni": 13417289,
+    "email": "bomplandeustaquia@gmail.com",
+    "asistencias": 0,
+    "id": "5995"
+  },
+  {
+    "curso": 132,
+    "grupo": 3,
+    "nombre": "Espinoza, Nestor Gonzalo",
+    "dni": 27048420,
+    "email": "gonza79@gmail.com",
+    "asistencias": 2,
+    "id": "16836"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Fabro, Matias Ezequiel",
+    "dni": 26937977,
+    "email": "matiasfabro@gmail.com",
+    "asistencias": 0,
+    "id": "24100"
+  },
+  {
+    "curso": 132,
+    "grupo": 8,
+    "nombre": "Fajardo, David Elías",
+    "dni": 27759143,
+    "email": "profedavidelias09@gmail.com",
+    "asistencias": 3,
+    "id": "4656"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Fernandez, Marcelo Fabian",
+    "dni": 22303960,
+    "email": "marcelofer@outlook.com",
+    "asistencias": 2,
+    "id": "13550"
+  },
+  {
+    "curso": 132,
+    "grupo": 11,
+    "nombre": "Fernández, Ricardo Ariel",
+    "dni": 20298589,
+    "email": "insumos_y_servicios@yahoo.com.ar",
+    "asistencias": 4,
+    "id": "23981"
+  },
+  {
+    "curso": 132,
+    "grupo": 12,
+    "nombre": "Fernández Gasc, Agustín",
+    "dni": 27792195,
+    "email": "agustiiin@yahoo.com.ar",
+    "asistencias": 5,
+    "id": "24126"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Fernández Ponce, Eliana",
+    "dni": 18750590,
+    "email": "eliferpon@hotmail.com",
+    "asistencias": 1,
+    "id": "5256"
+  },
+  {
+    "curso": 132,
+    "grupo": 12,
+    "nombre": "Feyling, Elbio Adalberto",
+    "dni": 21744970,
+    "email": "elbfey@yahoo.com.ar",
+    "asistencias": 6,
+    "id": "5229"
+  },
+  {
+    "curso": 132,
+    "grupo": 6,
+    "nombre": "Forcadell, María Gabriela",
+    "dni": 20665292,
+    "email": "gabrielaforcadell@gmail.com",
+    "asistencias": 5,
+    "id": "14113"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Fraise, Maria Belen",
+    "dni": 17331753,
+    "email": "mbfraise@gmail.com",
+    "asistencias": 1,
+    "id": "13802"
+  },
+  {
+    "curso": 132,
+    "grupo": 7,
+    "nombre": "Furrer, Gustavo Omar",
+    "dni": 20984165,
+    "email": "gustavofurrer1@gmail.com",
+    "asistencias": 5,
+    "id": "8789"
+  },
+  {
+    "curso": 132,
+    "grupo": 3,
+    "nombre": "Gaitan, Silvina",
+    "dni": 25519623,
+    "email": "dragonrosadito@gmail.com",
+    "asistencias": 6,
+    "id": "19678"
+  },
+  {
+    "curso": 132,
+    "grupo": 3,
+    "nombre": "Galvan, Adriana Del Valle",
+    "dni": 27351505,
+    "email": "adridvgalvangonzalez@gmail.com",
+    "asistencias": 6,
+    "id": "25720"
+  },
+  {
+    "curso": 132,
+    "grupo": 6,
+    "nombre": "Gamarra, Vanesa Roxana",
+    "dni": 23408851,
+    "email": "vanesaroshanajgamarra@gmail.com",
+    "asistencias": 5,
+    "id": "20505"
+  },
+  {
+    "curso": 132,
+    "grupo": 5,
+    "nombre": "Garay, Pablo",
+    "dni": 28293485,
+    "email": "p.garay@yahoo.com.ar",
+    "asistencias": 6,
+    "id": "21556"
+  },
+  {
+    "curso": 132,
+    "grupo": 2,
+    "nombre": "Gaso, Marcos Leonardo",
+    "dni": 25748773,
+    "email": "marcos_gaso@hotmail.com",
+    "asistencias": 6,
+    "id": "13706"
+  },
+  {
+    "curso": 132,
+    "grupo": 5,
+    "nombre": "Gigena Parola, Fernando Gastón",
+    "dni": 26815349,
+    "email": "liongigena@gmail.com",
+    "asistencias": 6,
+    "id": "6992"
+  },
+  {
+    "curso": 132,
+    "grupo": 10,
+    "nombre": "González, Fabián",
+    "dni": 28089601,
+    "email": "fadago1@gmail.com",
+    "asistencias": 5,
+    "id": "6214"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Gonzalez Bustos, Anahí Luisa Del Valle",
+    "dni": 28118621,
+    "email": "anahigonzalezbustos@gmail.com",
+    "asistencias": 0,
+    "id": "1611"
+  },
+  {
+    "curso": 132,
+    "grupo": 3,
+    "nombre": "Gordillo, Gaston",
+    "dni": 23190956,
+    "email": "gastonmgordillo@gmail.com",
+    "asistencias": 3,
+    "id": "8005"
+  },
+  {
+    "curso": 132,
+    "grupo": 6,
+    "nombre": "Gutierrez, Matias Sebastian",
+    "dni": 27479190,
+    "email": "matias_paternal04@hotmail.com",
+    "asistencias": 5,
+    "id": "15439"
+  },
+  {
+    "curso": 132,
+    "grupo": 7,
+    "nombre": "Hechem, Guillermo",
+    "dni": 17046828,
+    "email": "guillermohechem@hotmail.com",
+    "asistencias": 5,
+    "id": "8614"
+  },
+  {
+    "curso": 132,
+    "grupo": 8,
+    "nombre": "Henaín, Carolina",
+    "dni": 23698221,
+    "email": "carolinahenain74@gmail.com",
+    "asistencias": 4,
+    "id": "25718"
+  },
+  {
+    "curso": 132,
+    "grupo": 9,
+    "nombre": "Ituarte, Adrián",
+    "dni": 22887116,
+    "email": "adrianituarte@gmail.com",
+    "asistencias": 3,
+    "id": "363"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Katherine Sara, Yrigoyen",
+    "dni": 19027818,
+    "email": "katherineyrugoyen@gmail.com",
+    "asistencias": 0,
+    "id": "25922"
+  },
+  {
+    "curso": 132,
+    "grupo": 3,
+    "nombre": "Latrecchiana, Guillermo",
+    "dni": 20879501,
+    "email": "glatrecchiana@gmail.com",
+    "asistencias": 5,
+    "id": "8618"
+  },
+  {
+    "curso": 132,
+    "grupo": 2,
+    "nombre": "Lavayen, Juan Entiqur",
+    "dni": 26056809,
+    "email": "juanlavayen@hotmail.com",
+    "asistencias": 5,
+    "id": "10734"
+  },
+  {
+    "curso": 132,
+    "grupo": 11,
+    "nombre": "Lavigna, Lorena",
+    "dni": 21476196,
+    "email": "lorena.lavigna@consultoriosurquiza.com",
+    "asistencias": 6,
+    "id": "12258"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Leonardo, Lammoglia",
+    "dni": 27046144,
+    "email": "llammoglia@gmail.com",
+    "asistencias": 0,
+    "id": "25935"
+  },
+  {
+    "curso": 132,
+    "grupo": 7,
+    "nombre": "Lignini, Sergio Darío Duilio",
+    "dni": 13538353,
+    "email": "sergiolignini@gmail.com",
+    "asistencias": 6,
+    "id": "19526"
+  },
+  {
+    "curso": 132,
+    "grupo": 13,
+    "nombre": "Linares, Pablo",
+    "dni": 26954194,
+    "email": "pablovictorlinares@gmail.com",
+    "asistencias": 6,
+    "id": "17540"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Lopez, Gerardo Marcelo",
+    "dni": 23379670,
+    "email": "gerardomarcelolopez019@gmail.com",
+    "asistencias": 0,
+    "id": "24021"
+  },
+  {
+    "curso": 132,
+    "grupo": 1,
+    "nombre": "Lopez, Ruben Leonardo",
+    "dni": 11266094,
+    "email": "lopezrubenleonardo@gmail.com",
+    "asistencias": 5,
+    "id": "18938"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Lucaioli, Guillermo Hernan Luis",
+    "dni": 18002113,
+    "email": "ghlucax@yahoo.com.ar",
+    "asistencias": 1,
+    "id": "8657"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Ludueña, Maria Gabriela",
+    "dni": 27896360,
+    "email": "gluduena@gmail.com",
+    "asistencias": 1,
+    "id": "14114"
+  },
+  {
+    "curso": 132,
+    "grupo": 2,
+    "nombre": "Maggiolo, Gisela",
+    "dni": 27522838,
+    "email": "sydgi4@gmail.com",
+    "asistencias": 4,
+    "id": "8219"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Maldonado, Cesar Fabian",
+    "dni": 27587010,
+    "email": "maldonadocesarfabian@gmail.com",
+    "asistencias": 1,
+    "id": "3496"
+  },
+  {
+    "curso": 132,
+    "grupo": 13,
+    "nombre": "Maldonado, Leonardo",
+    "dni": 23665179,
+    "email": "leo.tango.arg@gmail.com",
+    "asistencias": 4,
+    "id": "21503"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Marcelo, Montes De Oca",
+    "dni": 10758491,
+    "email": "marcelo.mdeoca@gmail.com",
+    "asistencias": 0,
+    "id": "25953"
+  },
+  {
+    "curso": 132,
+    "grupo": 1,
+    "nombre": "María Angélica, Caprarulo",
+    "dni": 25283578,
+    "email": "angie_caprarulo@hotmail.com",
+    "asistencias": 5,
+    "id": "25785"
+  },
+  {
+    "curso": 132,
+    "grupo": 4,
+    "nombre": "Mariano, Mello",
+    "dni": 26165883,
+    "email": "hablaconwafle@gmail.com",
+    "asistencias": 4,
+    "id": "24079"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Marin, Alicia",
+    "dni": 27411188,
+    "email": "marinlourdes@gmail.com",
+    "asistencias": 1,
+    "id": "1374"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Marin, Rolando",
+    "dni": 28414888,
+    "email": "rojama888@hotmail.com",
+    "asistencias": 3,
+    "id": "22614"
+  },
+  {
+    "curso": 132,
+    "grupo": 13,
+    "nombre": "Matías, Lorenzo",
+    "dni": 27547856,
+    "email": "matete@gmail.com",
+    "asistencias": 6,
+    "id": "25967"
+  },
+  {
+    "curso": 132,
+    "grupo": 4,
+    "nombre": "Matricardi, Mario Andres",
+    "dni": 25131771,
+    "email": "mariojs9265@gmail.com",
+    "asistencias": 6,
+    "id": "21514"
+  },
+  {
+    "curso": 132,
+    "grupo": 12,
+    "nombre": "Mauricio Aurelio Nicolas, Colina",
+    "dni": 26054685,
+    "email": "mcolina77@gmail.com",
+    "asistencias": 5,
+    "id": "25971"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Meraviglia, Julian Eduardo",
+    "dni": 27177414,
+    "email": "julianmeraviglia@gmail.com",
+    "asistencias": 0,
+    "id": "11158"
+  },
+  {
+    "curso": 132,
+    "grupo": 2,
+    "nombre": "Molina, Julio",
+    "dni": 25893714,
+    "email": "juliomolina17@gmail.com",
+    "asistencias": 6,
+    "id": "11287"
+  },
+  {
+    "curso": 132,
+    "grupo": 10,
+    "nombre": "Moltoni, Andres Fernando",
+    "dni": 25636445,
+    "email": "amoltoni@yahoo.com",
+    "asistencias": 5,
+    "id": "1773"
+  },
+  {
+    "curso": 132,
+    "grupo": 2,
+    "nombre": "Monzon Fernandez, Lucila Emilce",
+    "dni": 19018934,
+    "email": "lucilamonzon96@gmail.com",
+    "asistencias": 5,
+    "id": "23969"
+  },
+  {
+    "curso": 132,
+    "grupo": 5,
+    "nombre": "Muñoz, Santiago",
+    "dni": 18846213,
+    "email": "santiago.munoz.chi@gmail.com",
+    "asistencias": 5,
+    "id": "22553"
+  },
+  {
+    "curso": 132,
+    "grupo": 3,
+    "nombre": "Núñez Fornaroli, Eduardo Daniel",
+    "dni": 28109573,
+    "email": "eduardodnf@gmail.com",
+    "asistencias": 4,
+    "id": "21552"
+  },
+  {
+    "curso": 132,
+    "grupo": 10,
+    "nombre": "Ordoñez, Noelia",
+    "dni": 28544777,
+    "email": "ordoneznoeliap@gmail.com",
+    "asistencias": 5,
+    "id": "17197"
+  },
+  {
+    "curso": 132,
+    "grupo": 13,
+    "nombre": "Ortiz Flores, Marisa",
+    "dni": 27042272,
+    "email": "mare.ortizflores@gmail.com",
+    "asistencias": 6,
+    "id": "14796"
+  },
+  {
+    "curso": 132,
+    "grupo": 7,
+    "nombre": "Ousset, Alejandro",
+    "dni": 25542841,
+    "email": "aleousset@gmail.com",
+    "asistencias": 6,
+    "id": "1038"
+  },
+  {
+    "curso": 132,
+    "grupo": 5,
+    "nombre": "Pasquinelli, Gianni",
+    "dni": 27879997,
+    "email": "giannipasquinelli@gmail.com",
+    "asistencias": 6,
+    "id": "25759"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Patricia, Medina",
+    "dni": 22372475,
+    "email": "patomedinasalas@gmail.com",
+    "asistencias": 0,
+    "id": "17866"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Pereyra, Dionisio Osvaldo",
+    "dni": 11917681,
+    "email": "compusur04@gmail.com",
+    "asistencias": 3,
+    "id": "5044"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Perez, Esteban Alejandro",
+    "dni": 24271970,
+    "email": "estalej@gmail.com",
+    "asistencias": 5,
+    "id": "22820"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Perulero, Alejandra",
+    "dni": 23764860,
+    "email": "alejandraperulero@gmail.com",
+    "asistencias": 0,
+    "id": "25730"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Pittaluga, Sebastian",
+    "dni": 25020992,
+    "email": "sebapitta@gmail.com",
+    "asistencias": 1,
+    "id": "19324"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Quiroga, Romina",
+    "dni": 24605998,
+    "email": "quirogaro@hotmail.com",
+    "asistencias": 3,
+    "id": "18721"
+  },
+  {
+    "curso": 132,
+    "grupo": 13,
+    "nombre": "Ramírez, Ernesto",
+    "dni": 28013926,
+    "email": "ernesto.luis.ramirez@gmail.com",
+    "asistencias": 5,
+    "id": "5855"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Regueira, María Alejandra",
+    "dni": 18248964,
+    "email": "estudioregueira@gmail.com",
+    "asistencias": 0,
+    "id": "13777"
+  },
+  {
+    "curso": 132,
+    "grupo": 4,
+    "nombre": "Rochetti, Mónica Viviana",
+    "dni": 18306509,
+    "email": "mo.dottori@gmail.com",
+    "asistencias": 6,
+    "id": "16362"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Rodriguez, Thais",
+    "dni": 19051340,
+    "email": "t.rodriz95@gmail.com",
+    "asistencias": 0,
+    "id": "20054"
+  },
+  {
+    "curso": 132,
+    "grupo": 10,
+    "nombre": "Rodríguez, Maria Isabel",
+    "dni": 22433454,
+    "email": "mariia813@hotmail.com.ar",
+    "asistencias": 5,
+    "id": "14144"
+  },
+  {
+    "curso": 132,
+    "grupo": 5,
+    "nombre": "Roldán, Natalia",
+    "dni": 24820797,
+    "email": "roldannatysol@gmail.com",
+    "asistencias": 5,
+    "id": "16605"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Romina, Imbarrato",
+    "dni": 26737589,
+    "email": "rei_dg@hotmail.com",
+    "asistencias": 1,
+    "id": "26021"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Ruiz, Mauro Gastón",
+    "dni": 27648040,
+    "email": "merkanomgr@gmail.com",
+    "asistencias": 0,
+    "id": "15585"
+  },
+  {
+    "curso": 132,
+    "grupo": 7,
+    "nombre": "Sandoval, Waldo David",
+    "dni": 24780479,
+    "email": "sandovaly@yahoo.com",
+    "asistencias": 4,
+    "id": "20794"
+  },
+  {
+    "curso": 132,
+    "grupo": 9,
+    "nombre": "Scali, Lila",
+    "dni": 23327737,
+    "email": "lcscali@gmail.com",
+    "asistencias": 5,
+    "id": "12165"
+  },
+  {
+    "curso": 132,
+    "grupo": 4,
+    "nombre": "Scaltritti, Edgar",
+    "dni": 25772960,
+    "email": "edgarscal@gmail.com",
+    "asistencias": 2,
+    "id": "24065"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Scarpino, Carlos",
+    "dni": 25418073,
+    "email": "cacoar2002@yahoo.com.ar",
+    "asistencias": 1,
+    "id": "3029"
+  },
+  {
+    "curso": 132,
+    "grupo": 2,
+    "nombre": "Sidi, Andres",
+    "dni": 26690663,
+    "email": "andressidi@gmail.com",
+    "asistencias": 2,
+    "id": "1794"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Silva, Gabriela Yanina",
+    "dni": 27118364,
+    "email": "yanina-silva@hotmail.com",
+    "asistencias": 1,
+    "id": "7918"
+  },
+  {
+    "curso": 132,
+    "grupo": 9,
+    "nombre": "Solis, Verónica",
+    "dni": 26670634,
+    "email": "veromsolis1978@gmail.com",
+    "asistencias": 5,
+    "id": "20558"
+  },
+  {
+    "curso": 132,
+    "grupo": 9,
+    "nombre": "Sosa, Ignacio",
+    "dni": 28079719,
+    "email": "satrianoignacio@gmail.com",
+    "asistencias": 6,
+    "id": "9097"
+  },
+  {
+    "curso": 132,
+    "grupo": 4,
+    "nombre": "Stella Maris, Loreto",
+    "dni": 17318955,
+    "email": "sml65ar@yahoo.com.ar",
+    "asistencias": 5,
+    "id": "26040"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Tapia, Guillermo",
+    "dni": 22205633,
+    "email": "guille1tapia@yahoo.es",
+    "asistencias": 0,
+    "id": "22188"
+  },
+  {
+    "curso": 132,
+    "grupo": 10,
+    "nombre": "Tapia Suarez, Andrea Lorena",
+    "dni": 27972561,
+    "email": "andrealorenasuarez9@gmail.com",
+    "asistencias": 4,
+    "id": "1722"
+  },
+  {
+    "curso": 132,
+    "grupo": 9,
+    "nombre": "Tome, Leonardo",
+    "dni": 23766082,
+    "email": "leomtome@gmail.com",
+    "asistencias": 4,
+    "id": "25721"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Valdez, Alejandra",
+    "dni": 26551446,
+    "email": "alejandradecarlos@hotmail.com",
+    "asistencias": 3,
+    "id": "987"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Vergelin, Carolina",
+    "dni": 25647344,
+    "email": "carolinavergelin@gmail.com",
+    "asistencias": 0,
+    "id": "3263"
+  },
+  {
+    "curso": 132,
+    "grupo": 8,
+    "nombre": "Volonté, Analia",
+    "dni": 24859318,
+    "email": "analiavolonte@gmail.com",
+    "asistencias": 6,
+    "id": "21511"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Zelaschi, Mariana Beatriz",
+    "dni": 16168865,
+    "email": "marianazelaschi@yahoo.com.ar",
+    "asistencias": 0,
+    "id": "23944"
+  },
+  {
+    "curso": 132,
+    "grupo": 8,
+    "nombre": "Zimmer, Susana Mónica",
+    "dni": 22948947,
+    "email": "susanazimmer1903@gmail.com",
+    "asistencias": 3,
+    "id": "19952"
+  },
+  {
+    "curso": 132,
+    "grupo": 0,
+    "nombre": "Zuccararini, Gabriel",
+    "dni": 26101547,
+    "email": "gabrielzuccarini@gmail.com",
+    "asistencias": 0,
+    "id": "7709"
+  },
+  {
+    "curso": 134,
+    "grupo": 2,
+    "nombre": "Alejandra Edith, Gauna",
+    "dni": 24997860,
+    "email": "aegagranea@gmail.com",
+    "asistencias": 6,
+    "id": "25765"
+  },
+  {
+    "curso": 134,
+    "grupo": 5,
+    "nombre": "Alonzo, Sandra Del Valle",
+    "dni": 24836529,
+    "email": "salonzo50@gmail.com",
+    "asistencias": 5,
+    "id": "19047"
+  },
+  {
+    "curso": 134,
+    "grupo": 3,
+    "nombre": "Amado, Gustavo Fabian",
+    "dni": 21670449,
+    "email": "gustavofab@gmail.com",
+    "asistencias": 6,
+    "id": "21496"
+  },
+  {
+    "curso": 134,
+    "grupo": 1,
+    "nombre": "Andres, Alegre",
+    "dni": 23995110,
+    "email": "andresarielalegre@gmail.com",
+    "asistencias": 3,
+    "id": "25782"
+  },
+  {
+    "curso": 134,
+    "grupo": 1,
+    "nombre": "Antonio, Leiva",
+    "dni": 13510492,
+    "email": "Antonioleiva909@gmail.com",
+    "asistencias": 6,
+    "id": "25788"
+  },
+  {
+    "curso": 134,
+    "grupo": 7,
+    "nombre": "Arias, Alfonso Jose",
+    "dni": 18383939,
+    "email": "alfonsojosearias@gmail.com",
+    "asistencias": 5,
+    "id": "1332"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Arteijo Calderon, Antonio Emanuel",
+    "dni": 18808705,
+    "email": "antonio.arteijo@gmail.com",
+    "asistencias": 1,
+    "id": "2035"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Bertoli, Eduardo Fabián",
+    "dni": 22737305,
+    "email": "efbertoli@gmail.com",
+    "asistencias": 1,
+    "id": "5189"
+  },
+  {
+    "curso": 134,
+    "grupo": 6,
+    "nombre": "Bianchetti, Gerardo Horacio",
+    "dni": 18258700,
+    "email": "gbianchetti@msn.com",
+    "asistencias": 6,
+    "id": "8072"
+  },
+  {
+    "curso": 134,
+    "grupo": 9,
+    "nombre": "Borda, Victor",
+    "dni": 17168120,
+    "email": "victtoriob@yahoo.com.ar",
+    "asistencias": 5,
+    "id": "20617"
+  },
+  {
+    "curso": 134,
+    "grupo": 8,
+    "nombre": "Bruno, Claudio",
+    "dni": 20784683,
+    "email": "cdbruno10@hotmail.com",
+    "asistencias": 6,
+    "id": "3750"
+  },
+  {
+    "curso": 134,
+    "grupo": 7,
+    "nombre": "Cadona, Andrea Roxana",
+    "dni": 23997439,
+    "email": "andreacadona3@gmail.com",
+    "asistencias": 2,
+    "id": "1675"
+  },
+  {
+    "curso": 134,
+    "grupo": 8,
+    "nombre": "Cardinale, Claudia",
+    "dni": 17315674,
+    "email": "ccardinale2004@yahoo.com.ar",
+    "asistencias": 4,
+    "id": "3692"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Carreras, Jose",
+    "dni": 17985878,
+    "email": "josecarrerasfilms@gmail.com",
+    "asistencias": 0,
+    "id": "10502"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Casanella Mozzi, Pedro",
+    "dni": 17132583,
+    "email": "pcasanell2@alumno.uned.es",
+    "asistencias": 0,
+    "id": "18002"
+  },
+  {
+    "curso": 134,
+    "grupo": 9,
+    "nombre": "Castillo, Alexander Gustavo",
+    "dni": 34190400,
+    "email": "alxander89@gmail.com",
+    "asistencias": 6,
+    "id": "24456"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Chillón, 20561786",
+    "dni": 20571786,
+    "email": "juan_pablo_chillon@hotmail.com",
+    "asistencias": 0,
+    "id": "23987"
+  },
+  {
+    "curso": 134,
+    "grupo": 6,
+    "nombre": "Ciro, Puig",
+    "dni": 18367300,
+    "email": "ciropuig1@gmail.com",
+    "asistencias": 3,
+    "id": "25822"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Claudio, Gimenez",
+    "dni": 23390597,
+    "email": "claudio.gimenez.666@gmail.com",
+    "asistencias": 0,
+    "id": "25824"
+  },
+  {
+    "curso": 134,
+    "grupo": 3,
+    "nombre": "D'agostino, Enrique",
+    "dni": 18388935,
+    "email": "dagostinoenrique@gmail.com",
+    "asistencias": 6,
+    "id": "5663"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Dfsfsd, Czxczxc",
+    "dni": 12345678,
+    "email": "fsdf@gmail.com",
+    "asistencias": 0,
+    "id": "23931"
+  },
+  {
+    "curso": 134,
+    "grupo": 3,
+    "nombre": "Dileo, Juan Carlos",
+    "dni": 14568996,
+    "email": "bdileo35@gmail.com",
+    "asistencias": 3,
+    "id": "10668"
+  },
+  {
+    "curso": 134,
+    "grupo": 8,
+    "nombre": "Eduardo José, Riera",
+    "dni": 17626756,
+    "email": "juanpe752@gmail.com",
+    "asistencias": 6,
+    "id": "25918"
+  },
+  {
+    "curso": 134,
+    "grupo": 1,
+    "nombre": "Femia, Cintia",
+    "dni": 24909032,
+    "email": "femiacintia@gmail.com",
+    "asistencias": 6,
+    "id": "24048"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Fernandez, Javier",
+    "dni": 2846385,
+    "email": "javierfernandez3f@gmail.com",
+    "asistencias": 0,
+    "id": "23918"
+  },
+  {
+    "curso": 134,
+    "grupo": 6,
+    "nombre": "Fernando Darío, Tula",
+    "dni": 12700995,
+    "email": "fedatu@hotmail.com",
+    "asistencias": 6,
+    "id": "25853"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Gayá, Nancy Lorena",
+    "dni": 24717738,
+    "email": "nanchu_lore@hotmail.com",
+    "asistencias": 1,
+    "id": "16557"
+  },
+  {
+    "curso": 134,
+    "grupo": 2,
+    "nombre": "Gloria Salas, Diego Leonardo",
+    "dni": 18877611,
+    "email": "dlgloriasalas@gmail.com",
+    "asistencias": 6,
+    "id": "4997"
+  },
+  {
+    "curso": 134,
+    "grupo": 6,
+    "nombre": "Greco, Juan Manuel",
+    "dni": 23196253,
+    "email": "grecoarqui@gmail.com",
+    "asistencias": 5,
+    "id": "10882"
+  },
+  {
+    "curso": 134,
+    "grupo": 4,
+    "nombre": "Herrera, Juan Adolfo",
+    "dni": 18454726,
+    "email": "juanherrera545@hotmail.com",
+    "asistencias": 6,
+    "id": "23963"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Herrera, Ricardo",
+    "dni": 24634910,
+    "email": "h_rc@hotmail.com",
+    "asistencias": 0,
+    "id": "18273"
+  },
+  {
+    "curso": 134,
+    "grupo": 2,
+    "nombre": "Illanes, Luis Hector",
+    "dni": 10537291,
+    "email": "lh.illanes@gmail.com",
+    "asistencias": 6,
+    "id": "23926"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Jhon Deyvid, Ajoruro Condori",
+    "dni": 13494441,
+    "email": "jhoni.keih@gmail.com",
+    "asistencias": 4,
+    "id": "25903"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Jose Luis, Ramos Lima",
+    "dni": 9974525,
+    "email": "joseluisramoslima@gmail.com",
+    "asistencias": 0,
+    "id": "25916"
+  },
+  {
+    "curso": 134,
+    "grupo": 6,
+    "nombre": "José María, Percíncula",
+    "dni": 21974569,
+    "email": "doctorpc.liebig@gmail.com",
+    "asistencias": 5,
+    "id": "25841"
+  },
+  {
+    "curso": 134,
+    "grupo": 5,
+    "nombre": "Juan Carlos, Galan",
+    "dni": 23805016,
+    "email": "juancgalan47@gmail.com",
+    "asistencias": 6,
+    "id": "10657"
+  },
+  {
+    "curso": 134,
+    "grupo": 5,
+    "nombre": "Laudelino, Alejandra",
+    "dni": 24572588,
+    "email": "aleenmercadolibre2@protonmail.ch",
+    "asistencias": 6,
+    "id": "22523"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Lucena, Nayarit",
+    "dni": 17247704,
+    "email": "zoraidamarinacardenasduque@gmail.com",
+    "asistencias": 0,
+    "id": "16744"
+  },
+  {
+    "curso": 134,
+    "grupo": 3,
+    "nombre": "Luna, Juan Marcelo",
+    "dni": 24234578,
+    "email": "elpocitano@gmail.com",
+    "asistencias": 4,
+    "id": "10929"
+  },
+  {
+    "curso": 134,
+    "grupo": 7,
+    "nombre": "Mahmud, Adrián",
+    "dni": 21418801,
+    "email": "mahmudpaa@gmail.com",
+    "asistencias": 5,
+    "id": "376"
+  },
+  {
+    "curso": 134,
+    "grupo": 7,
+    "nombre": "Manera, Carlos Federico",
+    "dni": 20948507,
+    "email": "charlymanera@gmail.com",
+    "asistencias": 6,
+    "id": "3164"
+  },
+  {
+    "curso": 134,
+    "grupo": 1,
+    "nombre": "Marisol, Sanabria",
+    "dni": 24220385,
+    "email": "marsanab@yahoo.com",
+    "asistencias": 4,
+    "id": "25966"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Maroglio, Flavio Oscar",
+    "dni": 20310540,
+    "email": "fmaroglio@gmail.com",
+    "asistencias": 0,
+    "id": "23982"
+  },
+  {
+    "curso": 134,
+    "grupo": 8,
+    "nombre": "Martinez, Mariana",
+    "dni": 20796343,
+    "email": "marian1810@hotmail.com",
+    "asistencias": 6,
+    "id": "14450"
+  },
+  {
+    "curso": 134,
+    "grupo": 6,
+    "nombre": "Mazzaglia, Alejandro Delfor",
+    "dni": 14797420,
+    "email": "admazzaglia@gmail.com",
+    "asistencias": 2,
+    "id": "1141"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Medran, Rodolfo",
+    "dni": 23744404,
+    "email": "danmedran@hotmail.com",
+    "asistencias": 0,
+    "id": "18531"
+  },
+  {
+    "curso": 134,
+    "grupo": 2,
+    "nombre": "Mema, Miguel Angel",
+    "dni": 23687562,
+    "email": "miguelamema@gmail.com",
+    "asistencias": 4,
+    "id": "16145"
+  },
+  {
+    "curso": 134,
+    "grupo": 9,
+    "nombre": "Messina Ramos, Rafael Atilio",
+    "dni": 22234890,
+    "email": "messina.rafael@gmail.com",
+    "asistencias": 6,
+    "id": "18085"
+  },
+  {
+    "curso": 134,
+    "grupo": 5,
+    "nombre": "Miguel Angel, Tarabine",
+    "dni": 25256244,
+    "email": "migueltarabine76@gmail.com",
+    "asistencias": 4,
+    "id": "25982"
+  },
+  {
+    "curso": 134,
+    "grupo": 4,
+    "nombre": "Montenegro, Fabian",
+    "dni": 20521480,
+    "email": "fabymontenegro@gmail.com",
+    "asistencias": 3,
+    "id": "6194"
+  },
+  {
+    "curso": 134,
+    "grupo": 4,
+    "nombre": "Mourad, Adrian",
+    "dni": 22639502,
+    "email": "adrmou@gmail.com",
+    "asistencias": 4,
+    "id": "358"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Niveyro, Luis Eduardo",
+    "dni": 20607892,
+    "email": "luisniveyro@live.com.ar",
+    "asistencias": 0,
+    "id": "25729"
+  },
+  {
+    "curso": 134,
+    "grupo": 4,
+    "nombre": "Noguerol, Maria Marcela",
+    "dni": 20561094,
+    "email": "marcelnoguerol@yahoo.com.ar",
+    "asistencias": 5,
+    "id": "23986"
+  },
+  {
+    "curso": 134,
+    "grupo": 4,
+    "nombre": "Ochoa, Fabián Andrés",
+    "dni": 24192661,
+    "email": "ochoafabian2020@gmail.com",
+    "asistencias": 3,
+    "id": "6212"
+  },
+  {
+    "curso": 134,
+    "grupo": 1,
+    "nombre": "Ojeda, Miriam Beatriz",
+    "dni": 20644779,
+    "email": "estrellita.figueroa@gmail.com",
+    "asistencias": 5,
+    "id": "16293"
+  },
+  {
+    "curso": 134,
+    "grupo": 9,
+    "nombre": "Ondarra, Marcelo",
+    "dni": 21634979,
+    "email": "mrondarra@hotmail.com",
+    "asistencias": 6,
+    "id": "23999"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Onsari, Vanesa",
+    "dni": 24111284,
+    "email": "vaonsari@hotmail.com",
+    "asistencias": 1,
+    "id": "20476"
+  },
+  {
+    "curso": 134,
+    "grupo": 5,
+    "nombre": "Oscar Alberto, Maciel",
+    "dni": 24600911,
+    "email": "grafis.dg@gmail.com",
+    "asistencias": 6,
+    "id": "24042"
+  },
+  {
+    "curso": 134,
+    "grupo": 7,
+    "nombre": "Pablo Germán, Falabella",
+    "dni": 24390071,
+    "email": "pfalabel@gmail.com",
+    "asistencias": 3,
+    "id": "26011"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Pastrana, Claudia Gabriela",
+    "dni": 24456849,
+    "email": "gabrielapastranapoesia@gmail.com",
+    "asistencias": 0,
+    "id": "3709"
+  },
+  {
+    "curso": 134,
+    "grupo": 1,
+    "nombre": "Perriere, Mariano",
+    "dni": 25307768,
+    "email": "mariiiiiiano@gmail.com",
+    "asistencias": 5,
+    "id": "25722"
+  },
+  {
+    "curso": 134,
+    "grupo": 5,
+    "nombre": "Ratti, Analia",
+    "dni": 22092359,
+    "email": "analia.v.ratti@gmail.com",
+    "asistencias": 5,
+    "id": "1621"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Rebrij, Arnaldo Victor",
+    "dni": 13212842,
+    "email": "arnireb@hotmail.com",
+    "asistencias": 0,
+    "id": "2194"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Regalado Manay, Tomas",
+    "dni": 19054345,
+    "email": "andersonedlp_10@hotmail.com",
+    "asistencias": 3,
+    "id": "22050"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Salinas Salinas, Liliana Elizabeth De",
+    "dni": 4358203,
+    "email": "lilianasalinas_s02@fpuna.edu.py",
+    "asistencias": 0,
+    "id": "23922"
+  },
+  {
+    "curso": 134,
+    "grupo": 7,
+    "nombre": "Seguí, Nicolás",
+    "dni": 23248493,
+    "email": "nicosegui@hotmail.com",
+    "asistencias": 2,
+    "id": "17060"
+  },
+  {
+    "curso": 134,
+    "grupo": 8,
+    "nombre": "Sisti, Karina",
+    "dni": 25072309,
+    "email": "karisisti@gmail.com",
+    "asistencias": 5,
+    "id": "11426"
+  },
+  {
+    "curso": 134,
+    "grupo": 2,
+    "nombre": "Soliz, Viviana",
+    "dni": 18880363,
+    "email": "vivianasolizosinaga@gmail.com",
+    "asistencias": 5,
+    "id": "23967"
+  },
+  {
+    "curso": 134,
+    "grupo": 3,
+    "nombre": "Specterman, Luis Omar",
+    "dni": 14620696,
+    "email": "lspecte@gmail.com",
+    "asistencias": 6,
+    "id": "23940"
+  },
+  {
+    "curso": 134,
+    "grupo": 1,
+    "nombre": "Suárez, Guillermo",
+    "dni": 20635719,
+    "email": "guillesuarez68@gmail.com",
+    "asistencias": 3,
+    "id": "8606"
+  },
+  {
+    "curso": 134,
+    "grupo": 0,
+    "nombre": "Tissera, Cristian Andres",
+    "dni": 22491855,
+    "email": "cristian_tissera@yahoo.com.ar",
+    "asistencias": 0,
+    "id": "3936"
+  },
+  {
+    "curso": 134,
+    "grupo": 10,
+    "nombre": "Ucelay, Hector R",
+    "dni": 16778627,
+    "email": "ucelayh@gmail.com",
+    "asistencias": 4,
+    "id": "26359"
+  },
+  {
+    "curso": 134,
+    "grupo": 2,
+    "nombre": "Valenzuela, Martin",
+    "dni": 17223917,
+    "email": "mevalenzuela@yahoo.com",
+    "asistencias": 6,
+    "id": "14874"
+  },
+  {
+    "curso": 134,
+    "grupo": 8,
+    "nombre": "Vega, Juan Leandro",
+    "dni": 25319269,
+    "email": "vegajuanleandro@gmail.com",
+    "asistencias": 4,
+    "id": "10831"
+  },
+  {
+    "curso": 134,
+    "grupo": 4,
+    "nombre": "Waelkens, Verónica María",
+    "dni": 25262567,
+    "email": "verowaelkens@gmail.com",
+    "asistencias": 6,
+    "id": "20597"
+  },
+  {
+    "curso": 134,
+    "grupo": 3,
+    "nombre": "Zujew, Cristian Alejo",
+    "dni": 16875503,
+    "email": "czujew@gmail.com",
+    "asistencias": 5,
+    "id": "3874"
+  },
+  {
+    "curso": 133,
+    "grupo": 3,
+    "nombre": "Aberbach, Angel Sergio",
+    "dni": 18123292,
+    "email": "aberbacha@gmail.com",
+    "asistencias": 4,
+    "id": "1904"
+  },
+  {
+    "curso": 133,
+    "grupo": 6,
+    "nombre": "Affatati, Jorge Omar",
+    "dni": 11704906,
+    "email": "j.o.affatati@gmail.com",
+    "asistencias": 6,
+    "id": "10294"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Aguilar, Bernarda",
+    "dni": 24684875,
+    "email": "bettu3254@gmail.com",
+    "asistencias": 2,
+    "id": "2468"
+  },
+  {
+    "curso": 133,
+    "grupo": 3,
+    "nombre": "Aldo Sebastián, Barreiro",
+    "dni": 29321745,
+    "email": "bas19822009@hotmail.com",
+    "asistencias": 2,
+    "id": "975"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Alegre, Carlos",
+    "dni": 24661359,
+    "email": "carlosdaniel40@hotmail.com.ar",
+    "asistencias": 0,
+    "id": "3060"
+  },
+  {
+    "curso": 133,
+    "grupo": 11,
+    "nombre": "Alegre, Fernando",
+    "dni": 23011166,
+    "email": "alegrefer@gmail.com",
+    "asistencias": 5,
+    "id": "5412"
+  },
+  {
+    "curso": 133,
+    "grupo": 6,
+    "nombre": "Alvarez Lockmann, Tobías Daniel",
+    "dni": 27872276,
+    "email": "tobiasalvarez@yahoo.com.ar",
+    "asistencias": 5,
+    "id": "20115"
+  },
+  {
+    "curso": 133,
+    "grupo": 8,
+    "nombre": "Amaya, Jesica Elizabeth",
+    "dni": 27660701,
+    "email": "jesicaeamaya@gmail.com",
+    "asistencias": 5,
+    "id": "9696"
+  },
+  {
+    "curso": 133,
+    "grupo": 7,
+    "nombre": "Andrés, Sebastian Fernando",
+    "dni": 26144929,
+    "email": "sfandress.prog@gmail.com",
+    "asistencias": 4,
+    "id": "19413"
+  },
+  {
+    "curso": 133,
+    "grupo": 9,
+    "nombre": "Aragon, Jose Esteban",
+    "dni": 28496461,
+    "email": "jjeaa461@yahoo.com.ar",
+    "asistencias": 5,
+    "id": "10422"
+  },
+  {
+    "curso": 133,
+    "grupo": 8,
+    "nombre": "Aranda, Ricardo Mauro",
+    "dni": 27803086,
+    "email": "maurosaxaranda@gmail.com",
+    "asistencias": 6,
+    "id": "18311"
+  },
+  {
+    "curso": 133,
+    "grupo": 5,
+    "nombre": "Arias, María De Los Ángeles",
+    "dni": 25226833,
+    "email": "mariadelosangelesarias@hotmail.com",
+    "asistencias": 2,
+    "id": "13923"
+  },
+  {
+    "curso": 133,
+    "grupo": 8,
+    "nombre": "Avendaño, Maria Jose",
+    "dni": 21669385,
+    "email": "mariajoseavendanio774@gmail.com",
+    "asistencias": 5,
+    "id": "14166"
+  },
+  {
+    "curso": 133,
+    "grupo": 9,
+    "nombre": "Ayala, Esteban Adrian",
+    "dni": 28602971,
+    "email": "estebanadrianayala@gmail.com",
+    "asistencias": 4,
+    "id": "5902"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Barros, Jorge Claudio",
+    "dni": 27650866,
+    "email": "claudioakd@gmail.com",
+    "asistencias": 0,
+    "id": "10224"
+  },
+  {
+    "curso": 133,
+    "grupo": 6,
+    "nombre": "Bazyluk, Samuel",
+    "dni": 26922514,
+    "email": "samu201233@gmail.com",
+    "asistencias": 5,
+    "id": "24099"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Bogado, Fernando Cesar",
+    "dni": 27488211,
+    "email": "ferbogado59@gmail.com",
+    "asistencias": 0,
+    "id": "6913"
+  },
+  {
+    "curso": 133,
+    "grupo": 5,
+    "nombre": "Borda, Mariana Beatriz",
+    "dni": 28335534,
+    "email": "marianaborda80@gmail.com",
+    "asistencias": 6,
+    "id": "24149"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Bordon, Federico Matias",
+    "dni": 28462348,
+    "email": "federicomatiasbordon@gmail.com",
+    "asistencias": 0,
+    "id": "6779"
+  },
+  {
+    "curso": 133,
+    "grupo": 1,
+    "nombre": "Brito, Pablo Daniel",
+    "dni": 29155815,
+    "email": "pablobrito1@hotmail.com",
+    "asistencias": 3,
+    "id": "17601"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Burgos Valdez, Eduardo Enrique",
+    "dni": 26793663,
+    "email": "eebv241178@gmail.com",
+    "asistencias": 1,
+    "id": "5185"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Cardozo, Lelia Zunilda",
+    "dni": 27454463,
+    "email": "lcardozo130@gmail.com",
+    "asistencias": 1,
+    "id": "11969"
+  },
+  {
+    "curso": 133,
+    "grupo": 4,
+    "nombre": "Carrión, Sergio",
+    "dni": 16995968,
+    "email": "sec.carrion@gmail.com",
+    "asistencias": 5,
+    "id": "19466"
+  },
+  {
+    "curso": 133,
+    "grupo": 9,
+    "nombre": "Castañar Petarcich, Juan Martin",
+    "dni": 28788914,
+    "email": "juanpetarcich@gmail.com",
+    "asistencias": 6,
+    "id": "24160"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Ceferino Agustin, Luna",
+    "dni": 22304731,
+    "email": "agustinluna2011@gmail.com",
+    "asistencias": 0,
+    "id": "25767"
+  },
+  {
+    "curso": 133,
+    "grupo": 4,
+    "nombre": "Cejas, Oscar Orlando",
+    "dni": 28038634,
+    "email": "oscarcejas80@gmail.com",
+    "asistencias": 3,
+    "id": "17406"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Claudepierre, Jorge",
+    "dni": 23166335,
+    "email": "jorgecristi1@gmail.com",
+    "asistencias": 0,
+    "id": "10167"
+  },
+  {
+    "curso": 133,
+    "grupo": 6,
+    "nombre": "Climente, Carlos Matías",
+    "dni": 28693607,
+    "email": "matiasclimente@gmail.com",
+    "asistencias": 6,
+    "id": "24158"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Collavino, Alejandro",
+    "dni": 29337879,
+    "email": "acollavino@gmail.com",
+    "asistencias": 0,
+    "id": "1166"
+  },
+  {
+    "curso": 133,
+    "grupo": 9,
+    "nombre": "Correa, Nelida",
+    "dni": 26949681,
+    "email": "yazelly@yahoo.com.ar",
+    "asistencias": 6,
+    "id": "16781"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Cristian, Portales",
+    "dni": 28072807,
+    "email": "CRISDAMIANPORTALES@HOTMAIL.COM",
+    "asistencias": 1,
+    "id": "25830"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Cristian Diego, Maciocia",
+    "dni": 26371019,
+    "email": "dm121014@zohomail.com",
+    "asistencias": 0,
+    "id": "3959"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Diaz, Diego Horacio",
+    "dni": 27400268,
+    "email": "diazdiegohoracio01@gmail.com",
+    "asistencias": 0,
+    "id": "4981"
+  },
+  {
+    "curso": 133,
+    "grupo": 3,
+    "nombre": "Edmundo, Molina",
+    "dni": 17219543,
+    "email": "padreedmundo@yahoo.com.ar",
+    "asistencias": 5,
+    "id": "26007"
+  },
+  {
+    "curso": 133,
+    "grupo": 1,
+    "nombre": "Escudero, Sergio Javier",
+    "dni": 23988040,
+    "email": "sergioescudero@hotmail.com",
+    "asistencias": 6,
+    "id": "19547"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Esmoris, Natalia",
+    "dni": 25485756,
+    "email": "nacrismo@yahoo.com.ar",
+    "asistencias": 0,
+    "id": "16611"
+  },
+  {
+    "curso": 133,
+    "grupo": 5,
+    "nombre": "Fernandez, Pablo",
+    "dni": 27649885,
+    "email": "ferpa567@gmail.com",
+    "asistencias": 4,
+    "id": "17496"
+  },
+  {
+    "curso": 133,
+    "grupo": 11,
+    "nombre": "Flores, Néstor",
+    "dni": 20566779,
+    "email": "ngfreyes@gmail.com",
+    "asistencias": 5,
+    "id": "16817"
+  },
+  {
+    "curso": 133,
+    "grupo": 10,
+    "nombre": "Garcia, Dante Marcelo",
+    "dni": 24803332,
+    "email": "dante.m.garcia.75@gmail.com",
+    "asistencias": 6,
+    "id": "24046"
+  },
+  {
+    "curso": 133,
+    "grupo": 5,
+    "nombre": "German Fabio, Lequio",
+    "dni": 22395460,
+    "email": "germanlequio@gmail.com",
+    "asistencias": 5,
+    "id": "25872"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Giannantonio, Amadeo Raul",
+    "dni": 23108691,
+    "email": "amadeoraulgiannantonio@gmail.com",
+    "asistencias": 0,
+    "id": "22468"
+  },
+  {
+    "curso": 133,
+    "grupo": 10,
+    "nombre": "Gonzalez, Armando",
+    "dni": 26216892,
+    "email": "vampirulo10@hotmail.com",
+    "asistencias": 6,
+    "id": "22034"
+  },
+  {
+    "curso": 133,
+    "grupo": 2,
+    "nombre": "Gonzalez, Mirian Yolanda",
+    "dni": 17675854,
+    "email": "miriany.gonzalez@gmail.com",
+    "asistencias": 6,
+    "id": "23955"
+  },
+  {
+    "curso": 133,
+    "grupo": 9,
+    "nombre": "Guardia, Natalia",
+    "dni": 24271308,
+    "email": "natalialeticiaguardia@gmail.com",
+    "asistencias": 5,
+    "id": "16685"
+  },
+  {
+    "curso": 133,
+    "grupo": 11,
+    "nombre": "Gutierrez, Virginia Alejandra",
+    "dni": 23644604,
+    "email": "virginia1612@gmail.com",
+    "asistencias": 3,
+    "id": "20752"
+  },
+  {
+    "curso": 133,
+    "grupo": 11,
+    "nombre": "Herrera, Elvira",
+    "dni": 24830411,
+    "email": "herrerae034@gmail.com",
+    "asistencias": 6,
+    "id": "5414"
+  },
+  {
+    "curso": 133,
+    "grupo": 5,
+    "nombre": "Hortal Toribio, Vanila Isabel",
+    "dni": 17546258,
+    "email": "vanihortaltoribio@gmail.com",
+    "asistencias": 5,
+    "id": "20515"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Ibarra, Marcela Solange",
+    "dni": 28864590,
+    "email": "imarcelasolange486@gmail.com",
+    "asistencias": 0,
+    "id": "24164"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Jose Luis, Fioravanti",
+    "dni": 26236186,
+    "email": "josefiora@yahoo.com.ar",
+    "asistencias": 0,
+    "id": "25915"
+  },
+  {
+    "curso": 133,
+    "grupo": 8,
+    "nombre": "Juarez, Maria Soledad",
+    "dni": 28299300,
+    "email": "solej1980@yahoo.com",
+    "asistencias": 6,
+    "id": "22862"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Juarez, Paola Viviana",
+    "dni": 23857715,
+    "email": "pjuarez3001@gmail.com",
+    "asistencias": 0,
+    "id": "17809"
+  },
+  {
+    "curso": 133,
+    "grupo": 9,
+    "nombre": "Juárez, Raul",
+    "dni": 28139432,
+    "email": "raul.juarez.ar@gmail.com",
+    "asistencias": 5,
+    "id": "22184"
+  },
+  {
+    "curso": 133,
+    "grupo": 7,
+    "nombre": "Latorre, Adrian",
+    "dni": 22781140,
+    "email": "adrian.latorre@gmail.com",
+    "asistencias": 2,
+    "id": "341"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Lopez, Juan Alberto",
+    "dni": 17350661,
+    "email": "lopezja2005@yahoo.com.ar",
+    "asistencias": 0,
+    "id": "10637"
+  },
+  {
+    "curso": 133,
+    "grupo": 3,
+    "nombre": "López, Viviana",
+    "dni": 18445270,
+    "email": "viviana.lopez.design@gmail.com",
+    "asistencias": 6,
+    "id": "20782"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Lucero, Analia Gabriela",
+    "dni": 28582894,
+    "email": "anitagl09@outlook.com",
+    "asistencias": 0,
+    "id": "1636"
+  },
+  {
+    "curso": 133,
+    "grupo": 10,
+    "nombre": "Marchesini, Ramón Ricardo",
+    "dni": 29322781,
+    "email": "marchesiniramonricardo@gmail.com",
+    "asistencias": 4,
+    "id": "22651"
+  },
+  {
+    "curso": 133,
+    "grupo": 10,
+    "nombre": "Markus, Laura",
+    "dni": 20213119,
+    "email": "lauratgo@gmail.com",
+    "asistencias": 5,
+    "id": "11649"
+  },
+  {
+    "curso": 133,
+    "grupo": 7,
+    "nombre": "Medina, Oscar Alejandro",
+    "dni": 27238487,
+    "email": "alejandro.medina.ar@gmail.com",
+    "asistencias": 6,
+    "id": "17388"
+  },
+  {
+    "curso": 133,
+    "grupo": 6,
+    "nombre": "Miguel, Gloria",
+    "dni": 25386064,
+    "email": "gloria.miguel@hotmail.com",
+    "asistencias": 4,
+    "id": "8321"
+  },
+  {
+    "curso": 133,
+    "grupo": 12,
+    "nombre": "Milan, Luciana",
+    "dni": 22252000,
+    "email": "lucianadelfin@gmail.com",
+    "asistencias": 6,
+    "id": "24009"
+  },
+  {
+    "curso": 133,
+    "grupo": 2,
+    "nombre": "Milano, Cristian Andrés",
+    "dni": 26631150,
+    "email": "cristianmilano25@gmail.com",
+    "asistencias": 6,
+    "id": "3916"
+  },
+  {
+    "curso": 133,
+    "grupo": 1,
+    "nombre": "Miranda, Maria Grisel",
+    "dni": 28860847,
+    "email": "kasumita@gmail.com",
+    "asistencias": 6,
+    "id": "24163"
+  },
+  {
+    "curso": 133,
+    "grupo": 4,
+    "nombre": "Molina, Leonardo",
+    "dni": 20505136,
+    "email": "leonardomariomolina@gmail.com",
+    "asistencias": 6,
+    "id": "12073"
+  },
+  {
+    "curso": 133,
+    "grupo": 1,
+    "nombre": "Morleo, Yesica Alejandra",
+    "dni": 27295145,
+    "email": "yesikmor26@gmail.com",
+    "asistencias": 6,
+    "id": "21542"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Mortola, Ana Florencia",
+    "dni": 25198353,
+    "email": "afmortola@gmail.com",
+    "asistencias": 0,
+    "id": "1515"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Olivieri Alberti, Alfredo Horacio",
+    "dni": 18149366,
+    "email": "alfredo.olivieri@gmail.com",
+    "asistencias": 1,
+    "id": "1353"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Omar Augusto José, Mierez",
+    "dni": 29035524,
+    "email": "augustomierez@gmail.com",
+    "asistencias": 0,
+    "id": "25793"
+  },
+  {
+    "curso": 133,
+    "grupo": 10,
+    "nombre": "Ortiz, Juan Pablo",
+    "dni": 27016688,
+    "email": "guaranicazador@gmail.com",
+    "asistencias": 6,
+    "id": "10998"
+  },
+  {
+    "curso": 133,
+    "grupo": 1,
+    "nombre": "Ortiz, Oscar Alejandro",
+    "dni": 21307211,
+    "email": "okyformosa@gmail.com",
+    "asistencias": 5,
+    "id": "21495"
+  },
+  {
+    "curso": 133,
+    "grupo": 2,
+    "nombre": "Otegui, Luciano Jesús",
+    "dni": 26321091,
+    "email": "luciano_otegui@hotmail.com",
+    "asistencias": 6,
+    "id": "24083"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Pablo Daniel, Arraiza",
+    "dni": 18077559,
+    "email": "pablo.arraiza@bue.edu.ar",
+    "asistencias": 1,
+    "id": "17532"
+  },
+  {
+    "curso": 133,
+    "grupo": 10,
+    "nombre": "Panno, Diego Mauricio",
+    "dni": 26703609,
+    "email": "diegompanno@gmail.com",
+    "asistencias": 5,
+    "id": "5013"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Pauluzzi, Maria",
+    "dni": 25873616,
+    "email": "elipauluzzi077@gmail.com",
+    "asistencias": 4,
+    "id": "21518"
+  },
+  {
+    "curso": 133,
+    "grupo": 8,
+    "nombre": "Pedraza, Jose Maria",
+    "dni": 21328822,
+    "email": "jose_maria71@hotmail.com",
+    "asistencias": 6,
+    "id": "10504"
+  },
+  {
+    "curso": 133,
+    "grupo": 11,
+    "nombre": "Peredo, Isabel",
+    "dni": 23697935,
+    "email": "peredoisabel839@gmail.com",
+    "asistencias": 6,
+    "id": "9221"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Perez, Mariana",
+    "dni": 27969320,
+    "email": "marianper543@gmail.com",
+    "asistencias": 0,
+    "id": "14441"
+  },
+  {
+    "curso": 133,
+    "grupo": 7,
+    "nombre": "Quipildor, Matias",
+    "dni": 28492517,
+    "email": "mhquipildor@gmail.com",
+    "asistencias": 5,
+    "id": "22148"
+  },
+  {
+    "curso": 133,
+    "grupo": 7,
+    "nombre": "Quiroga, Rafael Antonio",
+    "dni": 27721196,
+    "email": "quiroga.rafael@gmail.com",
+    "asistencias": 5,
+    "id": "18084"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Rafael Rito, Villavicencio",
+    "dni": 24766716,
+    "email": "rafavicencio_766@hotmail.com",
+    "asistencias": 0,
+    "id": "26017"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Raffo Benegas, Maximiliano Tiburcio",
+    "dni": 23903344,
+    "email": "mtraffo@gmail.com",
+    "asistencias": 0,
+    "id": "15737"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Rebeca Analia, Pla",
+    "dni": 27683493,
+    "email": "rebepla40@gmail.com",
+    "asistencias": 3,
+    "id": "26020"
+  },
+  {
+    "curso": 133,
+    "grupo": 7,
+    "nombre": "Rios, Natalia Soledad",
+    "dni": 28706770,
+    "email": "nasori29@hotmail.com",
+    "asistencias": 6,
+    "id": "16714"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Rivas, Mariné",
+    "dni": 23978613,
+    "email": "rivas.marine07@gmail.comr",
+    "asistencias": 0,
+    "id": "14734"
+  },
+  {
+    "curso": 133,
+    "grupo": 6,
+    "nombre": "Rodriguez, Dario Fernando",
+    "dni": 21669584,
+    "email": "dariorodriguez2907@gmail.com",
+    "asistencias": 4,
+    "id": "4575"
+  },
+  {
+    "curso": 133,
+    "grupo": 2,
+    "nombre": "Rodríguez, María Paula",
+    "dni": 26107345,
+    "email": "mariapaularodriguezmontes@gmail.com",
+    "asistencias": 5,
+    "id": "14319"
+  },
+  {
+    "curso": 133,
+    "grupo": 5,
+    "nombre": "Rojo Heinze, Facundo",
+    "dni": 27295203,
+    "email": "matiasrheinze@gmail.com",
+    "asistencias": 2,
+    "id": "6387"
+  },
+  {
+    "curso": 133,
+    "grupo": 4,
+    "nombre": "Rolt, Cristián",
+    "dni": 23623908,
+    "email": "crolt24374@gmail.com",
+    "asistencias": 6,
+    "id": "3846"
+  },
+  {
+    "curso": 133,
+    "grupo": 2,
+    "nombre": "Ruiz Diaz, Betiana",
+    "dni": 25106719,
+    "email": "betianar76@gmail.com",
+    "asistencias": 5,
+    "id": "2479"
+  },
+  {
+    "curso": 133,
+    "grupo": 4,
+    "nombre": "Russo, Javier",
+    "dni": 17606845,
+    "email": "javier.osvaldo.russo@gmail.com",
+    "asistencias": 5,
+    "id": "9557"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Saez Bonilla, Fernando Daniel",
+    "dni": 25166985,
+    "email": "saezfernando@gmail.com",
+    "asistencias": 1,
+    "id": "6968"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Sánchez, Mariana",
+    "dni": 28476143,
+    "email": "marianasanchez1@gmail.com",
+    "asistencias": 0,
+    "id": "14461"
+  },
+  {
+    "curso": 133,
+    "grupo": 8,
+    "nombre": "Santana, Patricia Isabel",
+    "dni": 20654068,
+    "email": "casadealma_terapia@live.com",
+    "asistencias": 4,
+    "id": "17818"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Schachtel, Fabián Marcelo Jose",
+    "dni": 26150032,
+    "email": "fmjsch@gmail.com",
+    "asistencias": 1,
+    "id": "6221"
+  },
+  {
+    "curso": 133,
+    "grupo": 4,
+    "nombre": "Siccardi, Javier",
+    "dni": 23543250,
+    "email": "javisic@gmail.com",
+    "asistencias": 6,
+    "id": "9490"
+  },
+  {
+    "curso": 133,
+    "grupo": 2,
+    "nombre": "Sierra, Magdalena",
+    "dni": 22776836,
+    "email": "mg_sierra@yahoo.com.ar",
+    "asistencias": 4,
+    "id": "13277"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Soria, Alfredo Oscar",
+    "dni": 20714091,
+    "email": "nexosrl@outlook.com",
+    "asistencias": 1,
+    "id": "23990"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Terra, Diego",
+    "dni": 25123134,
+    "email": "cesarterra1975@gmail.com",
+    "asistencias": 0,
+    "id": "4864"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Tobio, Natalia",
+    "dni": 27319013,
+    "email": "tobionatalia1@gmail.com",
+    "asistencias": 0,
+    "id": "16629"
+  },
+  {
+    "curso": 133,
+    "grupo": 3,
+    "nombre": "Villafañe, Adriana",
+    "dni": 21992626,
+    "email": "tsade@live.com.ar",
+    "asistencias": 5,
+    "id": "419"
+  },
+  {
+    "curso": 133,
+    "grupo": 12,
+    "nombre": "Vilte, Valeria Viviana",
+    "dni": 26793708,
+    "email": "valevil78@gmail.com",
+    "asistencias": 4,
+    "id": "20412"
+  },
+  {
+    "curso": 133,
+    "grupo": 3,
+    "nombre": "Virulegio, Joan",
+    "dni": 19091457,
+    "email": "joan.ignacio@hotmail.com",
+    "asistencias": 5,
+    "id": "9839"
+  },
+  {
+    "curso": 133,
+    "grupo": 11,
+    "nombre": "Yahari, Daniel Mario",
+    "dni": 21164296,
+    "email": "dmyahari@yahoo.com.ar",
+    "asistencias": 4,
+    "id": "4389"
+  },
+  {
+    "curso": 133,
+    "grupo": 0,
+    "nombre": "Zuleta, Cecilia Veronica",
+    "dni": 27481529,
+    "email": "veronikzuleta@gmail.com",
+    "asistencias": 0,
+    "id": "3417"
+  },
+  {
+    "curso": 133,
+    "grupo": 1,
+    "nombre": "Zurita, Gladis",
+    "dni": 24519014,
+    "email": "glad_zur@hotmail.com.ar",
+    "asistencias": 6,
+    "id": "8311"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Agostini, Antonio Alberto",
+    "dni": 25954988,
+    "email": "agostini_anto@yahoo.com.ar",
+    "asistencias": 0,
+    "id": "2033"
+  },
+  {
+    "curso": 126,
+    "grupo": 10,
+    "nombre": "Aguado, Guillermo",
+    "dni": 26700128,
+    "email": "oveja70@live.com",
+    "asistencias": 4,
+    "id": "8616"
+  },
+  {
+    "curso": 126,
+    "grupo": 10,
+    "nombre": "Alarcón, Carmen Elizabet",
+    "dni": 28255234,
+    "email": "elizabet.c.alarcon1981@gmail.com",
+    "asistencias": 3,
+    "id": "24147"
+  },
+  {
+    "curso": 126,
+    "grupo": 6,
+    "nombre": "Aldeco, Inés",
+    "dni": 25549334,
+    "email": "maldeco16@gmail.com",
+    "asistencias": 6,
+    "id": "24059"
+  },
+  {
+    "curso": 126,
+    "grupo": 3,
+    "nombre": "Alegre, Ramiro Alejandro",
+    "dni": 25387571,
+    "email": "ramiroalegre1976@gmail.com",
+    "asistencias": 5,
+    "id": "21623"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Alicia Beatriz, López",
+    "dni": 17623291,
+    "email": "aliciablopez@vivaldi.net",
+    "asistencias": 0,
+    "id": "25774"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Alvarez, Natalia",
+    "dni": 24873083,
+    "email": "natalia.humanista@gmail.com",
+    "asistencias": 0,
+    "id": "22548"
+  },
+  {
+    "curso": 126,
+    "grupo": 3,
+    "nombre": "Arabito, Mauricio Andrés",
+    "dni": 17846564,
+    "email": "maarabito@gmail.com",
+    "asistencias": 2,
+    "id": "21945"
+  },
+  {
+    "curso": 126,
+    "grupo": 11,
+    "nombre": "Aranda, Marcelo",
+    "dni": 20746139,
+    "email": "maranda.gm@gmail.com",
+    "asistencias": 6,
+    "id": "22018"
+  },
+  {
+    "curso": 126,
+    "grupo": 6,
+    "nombre": "Arguello, Alejandro Esteban",
+    "dni": 25427798,
+    "email": "alejandroestebanarguello@gmail.com",
+    "asistencias": 5,
+    "id": "1145"
+  },
+  {
+    "curso": 126,
+    "grupo": 11,
+    "nombre": "Arrascaeta, Gabriela Natalia",
+    "dni": 28127040,
+    "email": "nattyarrascaeta@hotmail.com",
+    "asistencias": 2,
+    "id": "7903"
+  },
+  {
+    "curso": 126,
+    "grupo": 12,
+    "nombre": "Benitez, Hugo",
+    "dni": 26282939,
+    "email": "hugobenitez31@hotmail.com",
+    "asistencias": 4,
+    "id": "22126"
+  },
+  {
+    "curso": 126,
+    "grupo": 10,
+    "nombre": "Bentos, Claudia",
+    "dni": 27112882,
+    "email": "cbentos87@hotmail.com",
+    "asistencias": 3,
+    "id": "3670"
+  },
+  {
+    "curso": 126,
+    "grupo": 2,
+    "nombre": "Bergalo, Laura Isabel",
+    "dni": 26622005,
+    "email": "bergalolaura.programacion@gmail.com",
+    "asistencias": 5,
+    "id": "11626"
+  },
+  {
+    "curso": 126,
+    "grupo": 4,
+    "nombre": "Berretta, Marcelo",
+    "dni": 16770894,
+    "email": "marcelo.berretta@hotmail.com",
+    "asistencias": 6,
+    "id": "21485"
+  },
+  {
+    "curso": 126,
+    "grupo": 3,
+    "nombre": "Blanco, Marcelo",
+    "dni": 25478945,
+    "email": "marcelo.blanco1@gmail.com",
+    "asistencias": 4,
+    "id": "24058"
+  },
+  {
+    "curso": 126,
+    "grupo": 1,
+    "nombre": "Bonavitta, Diego",
+    "dni": 28361935,
+    "email": "diegonqn@gmail.com",
+    "asistencias": 3,
+    "id": "4883"
+  },
+  {
+    "curso": 126,
+    "grupo": 10,
+    "nombre": "Brina, Maximiliano",
+    "dni": 23689403,
+    "email": "maximilianobrina@gmail.com",
+    "asistencias": 5,
+    "id": "15606"
+  },
+  {
+    "curso": 126,
+    "grupo": 7,
+    "nombre": "Capobianco, Veronica",
+    "dni": 28411719,
+    "email": "veritocapito@gmail.com",
+    "asistencias": 6,
+    "id": "21560"
+  },
+  {
+    "curso": 126,
+    "grupo": 7,
+    "nombre": "Carbone, Adrian",
+    "dni": 18262096,
+    "email": "adrianfranciscocarbone@gmail.com",
+    "asistencias": 4,
+    "id": "340"
+  },
+  {
+    "curso": 126,
+    "grupo": 9,
+    "nombre": "Castellani, Leticia Laura",
+    "dni": 22467143,
+    "email": "castellanileticia2@gmail.com",
+    "asistencias": 5,
+    "id": "12141"
+  },
+  {
+    "curso": 126,
+    "grupo": 1,
+    "nombre": "Castellano, Fernando",
+    "dni": 22124929,
+    "email": "fcfbcastelo11@gmail.com",
+    "asistencias": 5,
+    "id": "6901"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Castro, Ruben Andres",
+    "dni": 27942294,
+    "email": "elgranrube@hotmail.com",
+    "asistencias": 1,
+    "id": "18914"
+  },
+  {
+    "curso": 126,
+    "grupo": 5,
+    "nombre": "Cernada, Miguel Angel",
+    "dni": 16415069,
+    "email": "mikicerny@yahoo.com.ar",
+    "asistencias": 6,
+    "id": "16126"
+  },
+  {
+    "curso": 126,
+    "grupo": 8,
+    "nombre": "Coronel, Juan José",
+    "dni": 23486429,
+    "email": "juanjocoronel1j@gmail.com",
+    "asistencias": 6,
+    "id": "21949"
+  },
+  {
+    "curso": 126,
+    "grupo": 8,
+    "nombre": "Costilla Rozzi, Esteban",
+    "dni": 27173739,
+    "email": "rozziesteban@gmail.com",
+    "asistencias": 6,
+    "id": "21538"
+  },
+  {
+    "curso": 126,
+    "grupo": 4,
+    "nombre": "Delaunay, Julio",
+    "dni": 24242777,
+    "email": "juliodelaunay72@gmail.com",
+    "asistencias": 5,
+    "id": "11281"
+  },
+  {
+    "curso": 126,
+    "grupo": 7,
+    "nombre": "Echevarne, Sergio Ernesto",
+    "dni": 24270785,
+    "email": "sergio.echevarne1@gmail.com",
+    "asistencias": 2,
+    "id": "19531"
+  },
+  {
+    "curso": 126,
+    "grupo": 3,
+    "nombre": "Escola, Roxana",
+    "dni": 23470268,
+    "email": "roxanaescola@hotmail.com",
+    "asistencias": 2,
+    "id": "18886"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Falcon, Ruben",
+    "dni": 26672744,
+    "email": "ruben@falcon.com.ar",
+    "asistencias": 0,
+    "id": "18903"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Fernandez, Emilse Soledad",
+    "dni": 27078732,
+    "email": "emiferna79@hotmail.com",
+    "asistencias": 0,
+    "id": "5593"
+  },
+  {
+    "curso": 126,
+    "grupo": 11,
+    "nombre": "Figueira Perez, Elias",
+    "dni": 20520745,
+    "email": "eliasmail0745@gmail.com",
+    "asistencias": 5,
+    "id": "5312"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Flores, Julio Cesar",
+    "dni": 28469810,
+    "email": "juliocesarfloreslopez@hotmail.com",
+    "asistencias": 0,
+    "id": "11278"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Fratini, Lucas",
+    "dni": 27181465,
+    "email": "matias_anubis@hotmail.com",
+    "asistencias": 0,
+    "id": "12496"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Galvez, Patricia",
+    "dni": 26287879,
+    "email": "patriciagggalvez@gmail.com",
+    "asistencias": 1,
+    "id": "17819"
+  },
+  {
+    "curso": 126,
+    "grupo": 6,
+    "nombre": "Gamboa, Rene",
+    "dni": 23231981,
+    "email": "marlop02_@hotmail.com",
+    "asistencias": 5,
+    "id": "8489"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Gentile, Luis Alberto",
+    "dni": 20572856,
+    "email": "luisgentile@live.com",
+    "asistencias": 0,
+    "id": "23988"
+  },
+  {
+    "curso": 126,
+    "grupo": 4,
+    "nombre": "Gómez, Vanesa Gisela",
+    "dni": 28430341,
+    "email": "agusbenja1@gmail.com",
+    "asistencias": 6,
+    "id": "20494"
+  },
+  {
+    "curso": 126,
+    "grupo": 3,
+    "nombre": "Gonard, Matias",
+    "dni": 26057002,
+    "email": "matiasgonard@hotmail.com",
+    "asistencias": 6,
+    "id": "24077"
+  },
+  {
+    "curso": 126,
+    "grupo": 5,
+    "nombre": "Gonzalez, Griselda Vanina",
+    "dni": 28449465,
+    "email": "griseldavanina@hotmail.es",
+    "asistencias": 4,
+    "id": "22799"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Gonzalez, Rodolfo Alberto",
+    "dni": 26864744,
+    "email": "roagonzalez@yahoo.com",
+    "asistencias": 0,
+    "id": "18535"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Heredia, Luisa",
+    "dni": 20399217,
+    "email": "heredia.luisa@gmail.com",
+    "asistencias": 0,
+    "id": "13159"
+  },
+  {
+    "curso": 126,
+    "grupo": 11,
+    "nombre": "Hugo Dante, Diaz",
+    "dni": 16771692,
+    "email": "miargentina@hugodiaz.com",
+    "asistencias": 6,
+    "id": "25978"
+  },
+  {
+    "curso": 126,
+    "grupo": 5,
+    "nombre": "Jerez, María Carola",
+    "dni": 22073012,
+    "email": "mariacarolaaa@gmail.com",
+    "asistencias": 6,
+    "id": "13851"
+  },
+  {
+    "curso": 126,
+    "grupo": 10,
+    "nombre": "Joandet, Mariela Giselle",
+    "dni": 28505602,
+    "email": "mari_joandet@hotmail.com",
+    "asistencias": 5,
+    "id": "14674"
+  },
+  {
+    "curso": 126,
+    "grupo": 3,
+    "nombre": "Jorge Christian, Ponce",
+    "dni": 24393561,
+    "email": "jorgecponce40@gmail.com",
+    "asistencias": 4,
+    "id": "25911"
+  },
+  {
+    "curso": 126,
+    "grupo": 7,
+    "nombre": "Lirussi, Dario",
+    "dni": 24679669,
+    "email": "dlirussi@hotmail.com",
+    "asistencias": 2,
+    "id": "4533"
+  },
+  {
+    "curso": 126,
+    "grupo": 1,
+    "nombre": "Lofiego, Marcelo Alejandro",
+    "dni": 27678855,
+    "email": "marceloalejandrolofiego@hotmail.com.ar",
+    "asistencias": 5,
+    "id": "24125"
+  },
+  {
+    "curso": 126,
+    "grupo": 9,
+    "nombre": "Lorenzo, Mariela Andrea",
+    "dni": 27544892,
+    "email": "mariulorenzo@gmail.com",
+    "asistencias": 6,
+    "id": "14666"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Mao, Nicolas",
+    "dni": 41435342,
+    "email": "nicolas_mao@outlook.com",
+    "asistencias": 1,
+    "id": "24925"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Marcela, Carabajal Vega",
+    "dni": 20310629,
+    "email": "marcelavega.mv.3024@gmail.com",
+    "asistencias": 0,
+    "id": "13430"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Martin, Norma Noemi",
+    "dni": 18018838,
+    "email": "normamanassero@gmail.com",
+    "asistencias": 0,
+    "id": "17287"
+  },
+  {
+    "curso": 126,
+    "grupo": 9,
+    "nombre": "Martinez, Carlos Daniel",
+    "dni": 26412222,
+    "email": "carlosdmartinez121@gmail.com",
+    "asistencias": 6,
+    "id": "3141"
+  },
+  {
+    "curso": 126,
+    "grupo": 1,
+    "nombre": "Mauricio, Tolosa",
+    "dni": 27584437,
+    "email": "tolosamauricio@hotmail.com",
+    "asistencias": 5,
+    "id": "26054"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Medina, Francisco Roberto",
+    "dni": 7071813,
+    "email": "tecmedina@gmail.com",
+    "asistencias": 0,
+    "id": "7364"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Mensato, Marcela",
+    "dni": 17629234,
+    "email": "nocambiarla123@gmail.com",
+    "asistencias": 0,
+    "id": "13429"
+  },
+  {
+    "curso": 126,
+    "grupo": 4,
+    "nombre": "Morales, Marcela Yanina",
+    "dni": 24255423,
+    "email": "farito17@hotmail.com",
+    "asistencias": 6,
+    "id": "13468"
+  },
+  {
+    "curso": 126,
+    "grupo": 10,
+    "nombre": "Morón, Patricio",
+    "dni": 27536857,
+    "email": "patriciomoron@gmail.com",
+    "asistencias": 5,
+    "id": "17876"
+  },
+  {
+    "curso": 126,
+    "grupo": 12,
+    "nombre": "Moyano, Leonardo",
+    "dni": 27398193,
+    "email": "leousogral@gmail.com",
+    "asistencias": 4,
+    "id": "11998"
+  },
+  {
+    "curso": 126,
+    "grupo": 6,
+    "nombre": "Neiman, Rosana",
+    "dni": 25851689,
+    "email": "rosananeiman77@gmail.com",
+    "asistencias": 6,
+    "id": "18840"
+  },
+  {
+    "curso": 126,
+    "grupo": 5,
+    "nombre": "Osvaldo Adrian, Clavario",
+    "dni": 25340610,
+    "email": "adrianclavario@gmail.com",
+    "asistencias": 5,
+    "id": "25763"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Pablo, Gabriel Martin",
+    "dni": 25696470,
+    "email": "gabrielpablo091218@gmail.com",
+    "asistencias": 0,
+    "id": "7801"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Paez, Maria De Las Nieves",
+    "dni": 22195519,
+    "email": "mariadelasnievespaez@gmail.com",
+    "asistencias": 3,
+    "id": "13918"
+  },
+  {
+    "curso": 126,
+    "grupo": 2,
+    "nombre": "Pampín, Diego Hernán",
+    "dni": 25477764,
+    "email": "dhpampin@gmail.com",
+    "asistencias": 3,
+    "id": "4978"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Passaro, Lorena",
+    "dni": 27124880,
+    "email": "lorepass@hotmail.com",
+    "asistencias": 2,
+    "id": "24107"
+  },
+  {
+    "curso": 126,
+    "grupo": 8,
+    "nombre": "Perez, Pablo",
+    "dni": 27529355,
+    "email": "pablo.eluniversoweb@gmail.com",
+    "asistencias": 6,
+    "id": "21544"
+  },
+  {
+    "curso": 126,
+    "grupo": 2,
+    "nombre": "Petri, Jonatan",
+    "dni": 28557311,
+    "email": "jonatanpetri@gmail.com",
+    "asistencias": 6,
+    "id": "10065"
+  },
+  {
+    "curso": 126,
+    "grupo": 8,
+    "nombre": "Ritacco, Gabriel",
+    "dni": 24106061,
+    "email": "la_casita_libros@hotmail.com",
+    "asistencias": 6,
+    "id": "7752"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Rivas, Jose",
+    "dni": 19094562,
+    "email": "jose-julian17@hotmail.com",
+    "asistencias": 0,
+    "id": "10359"
+  },
+  {
+    "curso": 126,
+    "grupo": 5,
+    "nombre": "Roberto Carlos, Caniza",
+    "dni": 20542289,
+    "email": "robcaniza@gmail.com",
+    "asistencias": 4,
+    "id": "26023"
+  },
+  {
+    "curso": 126,
+    "grupo": 2,
+    "nombre": "Rodera, Dalila Maricel",
+    "dni": 24438294,
+    "email": "dalilarodera123@gmail.com",
+    "asistencias": 4,
+    "id": "4174"
+  },
+  {
+    "curso": 126,
+    "grupo": 8,
+    "nombre": "Romani, Maria Ximena",
+    "dni": 28627630,
+    "email": "ximenaromani@hotmail.com",
+    "asistencias": 5,
+    "id": "14425"
+  },
+  {
+    "curso": 126,
+    "grupo": 1,
+    "nombre": "Rubio, Maria Laura",
+    "dni": 28060544,
+    "email": "laura80rubio@gmail.com",
+    "asistencias": 3,
+    "id": "14210"
+  },
+  {
+    "curso": 126,
+    "grupo": 9,
+    "nombre": "Ruiz, Guillermo",
+    "dni": 24840635,
+    "email": "grupodepracticas2013@gmail.com",
+    "asistencias": 5,
+    "id": "21510"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Scarlassa, Ariel",
+    "dni": 25669541,
+    "email": "oloduk@yahoo.com.ar",
+    "asistencias": 1,
+    "id": "2119"
+  },
+  {
+    "curso": 126,
+    "grupo": 4,
+    "nombre": "Serrano, Karina",
+    "dni": 27047018,
+    "email": "karinaserrano90@gmail.com",
+    "asistencias": 6,
+    "id": "24105"
+  },
+  {
+    "curso": 126,
+    "grupo": 9,
+    "nombre": "Shaya, Julio César",
+    "dni": 23631166,
+    "email": "julio.shaya@gmail.com",
+    "asistencias": 6,
+    "id": "11293"
+  },
+  {
+    "curso": 126,
+    "grupo": 8,
+    "nombre": "Sorensen, Ariel",
+    "dni": 23224868,
+    "email": "arielsorensen@hotmail.com",
+    "asistencias": 4,
+    "id": "2122"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Spinoza, Claudia",
+    "dni": 28684577,
+    "email": "spinozaclaudia@gmail.com",
+    "asistencias": 0,
+    "id": "3672"
+  },
+  {
+    "curso": 126,
+    "grupo": 7,
+    "nombre": "Stegmann, Carlos Ariel",
+    "dni": 24020437,
+    "email": "arielstegmann74@gmail.com",
+    "asistencias": 5,
+    "id": "3130"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Teseria Sarcay, Haidee Ivone Del Milagro",
+    "dni": 24761200,
+    "email": "ivonesarcay@gmail.com",
+    "asistencias": 0,
+    "id": "8800"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Tirado, Ernesto Eduardo",
+    "dni": 20661494,
+    "email": "tiradoer69@gmail.com",
+    "asistencias": 0,
+    "id": "5849"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Torretta, Sandra",
+    "dni": 24844811,
+    "email": "sandratorretta@hotmail.com",
+    "asistencias": 0,
+    "id": "19042"
+  },
+  {
+    "curso": 126,
+    "grupo": 4,
+    "nombre": "Trubiano, Miguel Angel",
+    "dni": 10564273,
+    "email": "trubiano59@hotmail.com",
+    "asistencias": 6,
+    "id": "21479"
+  },
+  {
+    "curso": 126,
+    "grupo": 9,
+    "nombre": "Tula, Miguel Angel",
+    "dni": 25761175,
+    "email": "matula77@yahoo.com.ar",
+    "asistencias": 6,
+    "id": "24064"
+  },
+  {
+    "curso": 126,
+    "grupo": 6,
+    "nombre": "Vecchio, Luciana Vanina",
+    "dni": 28362944,
+    "email": "lvecchio80@gmail.com",
+    "asistencias": 2,
+    "id": "12823"
+  },
+  {
+    "curso": 126,
+    "grupo": 11,
+    "nombre": "Vega, Luciano",
+    "dni": 28348022,
+    "email": "cluciano.vega@gmail.com",
+    "asistencias": 6,
+    "id": "21936"
+  },
+  {
+    "curso": 126,
+    "grupo": 2,
+    "nombre": "Verges, Luis",
+    "dni": 17400167,
+    "email": "chinoverges@gmail.com",
+    "asistencias": 6,
+    "id": "13024"
+  },
+  {
+    "curso": 126,
+    "grupo": 0,
+    "nombre": "Vidal, Graciela",
+    "dni": 23372627,
+    "email": "gracielavida1000@gmail.com",
+    "asistencias": 0,
+    "id": "8502"
+  },
+  {
+    "curso": 126,
+    "grupo": 5,
+    "nombre": "Villalba, Raul Orlando",
+    "dni": 10853611,
+    "email": "vipescri@hotmail.com",
+    "asistencias": 6,
+    "id": "18178"
+  },
+  {
+    "curso": 126,
+    "grupo": 7,
+    "nombre": "Villavicencio, Mariana",
+    "dni": 22200876,
+    "email": "mariana_villavicencio@hotmail.com",
+    "asistencias": 5,
+    "id": "14444"
+  },
+  {
+    "curso": 126,
+    "grupo": 2,
+    "nombre": "Wenner, Gustavo Javier",
+    "dni": 22936851,
+    "email": "gjwenner@gmail.com",
+    "asistencias": 6,
+    "id": "22195"
+  },
+  {
+    "curso": 126,
+    "grupo": 1,
+    "nombre": "Zubiaga, Wendy",
+    "dni": 27190813,
+    "email": "wendyzubiaga@gmail.com",
+    "asistencias": 6,
+    "id": "20861"
+  },
+  {
+    "curso": 126,
+    "grupo": 6,
+    "nombre": "Zurita Villalonga, Guillermo Jose",
+    "dni": 23079217,
+    "email": "guillermozu@gmail.com",
+    "asistencias": 6,
+    "id": "21499"
   }
 ]

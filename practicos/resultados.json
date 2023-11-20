@@ -1,0 +1,1216 @@
+[
+  {
+    "curso": 126,
+    "grupo": 1,
+    "email": "wendyzubiaga@gmail.com",
+    "alumnos": [
+      27190813,
+      27678855,
+      27584437
+    ],
+    "notas": [
+      "No inicializa las variables en 0",
+      "Usa una coleccion en lugar de simplemente dos componentes"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      28361935,
+      22124929,
+      28060544
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 126,
+    "grupo": 2,
+    "email": "jonatanpetri@gmail.com",
+    "alumnos": [
+      28557311,
+      26622005,
+      25477764,
+      24438294,
+      17400167,
+      22936851
+    ],
+    "notas": [
+      "usa clases en lugar de funciones",
+      "almacena los datos en un atribulo 'data-candidato' en lugar de ser propiedades",
+      "instala los componentes por separados"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "clase",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 126,
+    "grupo": 3,
+    "email": "matiasgonard@hotmail.com",
+    "alumnos": [
+      26057002,
+      25387571,
+      24393561
+    ],
+    "notas": [
+      "en lugar de definir un componente y reutilizar implementa con dos useState"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "useState",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+      17846564,
+      25478945,
+      23470268
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 126,
+    "grupo": 4,
+    "email": "agusbenja1@gmail.com",
+    "alumnos": [
+      24242777,
+      10564273,
+      16770894,
+      27047018,
+      24255423,
+      28430341
+    ],
+    "notas": [
+      "Usa useState para cada candidato",
+      "Usa setTimeout para cambiar el color y el tamaño de la fuente",
+      "El nombre de las funciones para modificar los contadores esta en mayuscula"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "useState",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 126,
+    "grupo": 5,
+    "email": "robcaniza@gmail.com",
+    "alumnos": [
+      20542289,
+      16415069,
+      28449465,
+      22073012,
+      25340610,
+      10853611
+    ],
+    "notas": [
+      "Crea una lista en lugar de usar 2 componentes"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 126,
+    "grupo": 7,
+    "email": "veritocapito@gmail.com",
+    "alumnos": [
+      28411719,
+      24020437,
+      22200876
+    ],
+    "notas": [
+      "Crea un componente para hacer un boton innecesariamente"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      18262096,
+      24270785,
+      24679669
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 126,
+    "grupo": 8,
+    "email": "pablo.eluniversoweb@gmail.com",
+    "alumnos": [
+      27529355,
+      24106061,
+      28627630,
+      27173739,
+      23486429
+    ],
+    "notas": [
+      "Crea una lista en lugar de usar 2 componentes"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      23224868
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 126,
+    "grupo": 9,
+    "email": "julio.shaya@gmail.com",
+    "alumnos": [
+      23631166,
+      22467143,
+      27544892,
+      26412222,
+      24840635,
+      25761175
+    ],
+    "notas": [
+      "No pasa el nombre del candidato como propiedad",
+      "Usa mayusculas para las funciones auxiliares que define"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 126,
+    "grupo": 10,
+    "email": "patriciomoron@gmail.com",
+    "alumnos": [
+      28505602,
+      27536857
+    ],
+    "notas": [
+      "Dejo el componente Agenda y Contactos del ejemplo de donde tomaron el código"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      26700128,
+      28255234,
+      27112882,
+      23689403
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 126,
+    "grupo": 11,
+    "email": "miargentina@hugodiaz.com",
+    "alumnos": [
+      16771692,
+      20746139,
+      28127040,
+      20520745,
+      28348022
+    ],
+    "notas": [
+      "El contador lo hacer con un string en lugar de un numero"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 5
+  },
+  {
+    "curso": 126,
+    "grupo": 12,
+    "email": "hugobenitez31@hotmail.com",
+    "alumnos": [
+      26282939
+    ],
+    "notas": [
+      "Usa una colección en lugar de llamar 2 veces al mismo componente"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      27398193
+    ],
+    "miembros": 2
+  },
+  {
+    "curso": 126,
+    "grupo": 12,
+    "email": "leousogral@gmail.com",
+    "alumnos": [
+      27398193
+    ],
+    "notas": [
+      "Crea una lista en lugar de usar 2 componentes",
+      "La funcion para manejar los eventos estan en mayusculas"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      26282939
+    ],
+    "miembros": 2
+  },
+  {
+    "curso": 132,
+    "grupo": 1,
+    "email": "balestri@gmail.com, maximilianorey@gmail.com",
+    "alumnos": [
+      26673161,
+      26627727,
+      27247889,
+      26061287,
+      11266094,
+      25283578
+    ],
+    "notas": [
+      "Usan una lista en lugar de 2 componentes",
+      "Las funciones para manejar los eventos estan en mayusculas"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 2,
+    "email": "juliomolina17@gmail.com",
+    "alumnos": [
+      25748773,
+      26056809,
+      27522838,
+      25893714,
+      19018934,
+      26690663
+    ],
+    "notas": [
+      "Usa una coleccion en lugar de simplemente dos componentes",
+      "La funcion para manejar los eventos estan en mayusculas"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 3,
+    "email": "dragonrosadito@gmail.com",
+    "alumnos": [
+      25519623,
+      27351505,
+      28109573
+    ],
+    "notas": [
+      "No pasa el nombre del candidato como propiedad"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "parcial",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      27048420,
+      23190956,
+      20879501
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 4,
+    "email": "mo.dottori@gmail.com",
+    "alumnos": [
+      26141170,
+      26165883,
+      25131771,
+      18306509,
+      25772960,
+      17318955
+    ],
+    "notas": [
+      "usa estados por separados en lugar de crear un componente",
+      "gestiona la pulsacion de las teclas '+' y '-' cuando no se lo pide (y no lo hace bien)"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "useState",
+      "reutilizacion": "parcial"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 5,
+    "email": "santiago.munoz.chi@gmail.com",
+    "alumnos": [
+      18846213,
+      27386100,
+      28293485,
+      26815349,
+      27879997,
+      24820797
+    ],
+    "notas": [
+      "No usa componentes"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "useState",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 6,
+    "email": "irinagretti@gmail.com",
+    "alumnos": [
+      25254895,
+      25430546,
+      26641479,
+      20665292,
+      23408851,
+      27479190
+    ],
+    "notas": [
+      "Crear dos componente en lugar de reutilizar el mismo",
+      "No controla que no se pueda votar negativo",
+      "No declara el useState y no pone los componente dentre de <> </>",
+      "Sin las modificaciones introducidas no funcionaba"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "no",
+      "implementacion": "funcion",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 7,
+    "email": "sergiolignini@gmail.com",
+    "alumnos": [
+      13538353,
+      16070863,
+      20984165,
+      17046828,
+      25542841,
+      24780479
+    ],
+    "notas": [
+      "Usa 2 estados en lugar de crear un componente y reutilizarlo",
+      "En lugar de controlar que no se puede ingresar valores negativo deshabilitando el boton"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "useState",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 8,
+    "email": "analiavolonte@gmail.com",
+    "alumnos": [
+      24859318,
+      20387275,
+      23979860
+    ],
+    "notas": [
+      "Le agregar una clase a cada elementos para poder darle estilos y esto es innecesario."
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      27759143,
+      23698221,
+      22948947
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 9,
+    "email": "satrianoignacio@gmail.com",
+    "alumnos": [
+      28079719
+    ],
+    "notas": [
+      "Funciona perfecto pero no usa react!!!"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "JavaScript",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+      2575419,
+      22887116,
+      23327737,
+      26670634,
+      23766082
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 10,
+    "email": "ordoneznoeliap@gmail.com",
+    "alumnos": [
+      28544777,
+      26231942,
+      28089601,
+      25636445,
+      22433454,
+      27972561
+    ],
+    "notas": [
+      "No utilizar componentes de react"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "useState",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 11,
+    "email": "domenico_alejandro@yahoo.com.ar",
+    "alumnos": [
+      26098677,
+      22962605,
+      26739987,
+      21476196,
+      20298589
+    ],
+    "notas": [
+      "El contador funciona pero solo emplea uno.",
+      "El componente no permite indicar el nombre del candidato."
+    ],
+    "resultado": {
+      "funciona": "no",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+      27029838,
+      26555662
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 12,
+    "email": "leonardogabriel@gmail.com",
+    "alumnos": [
+      23274538,
+      23730805,
+      22326063,
+      27792195,
+      21744970,
+      26054685
+    ],
+    "notas": [
+      "Usa una lista en lugar de 2 componentes",
+      "Crear un componente para el boton totalmente innecesario"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 132,
+    "grupo": 13,
+    "email": "matete@gmail.com",
+    "alumnos": [
+      27547856,
+      26954194,
+      27042272,
+      28013926
+    ],
+    "notas": [
+      "Usa una lista en lugar de 2 componentes"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      23665179
+    ],
+    "miembros": 5
+  },
+  {
+    "curso": 132,
+    "grupo": 14,
+    "email": "leo.tango.arg@gmail.com",
+    "alumnos": [
+      23665179
+    ],
+    "notas": [
+      "Crea un componente para el boton totalmente innecesario"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 0
+  },
+  {
+    "curso": 133,
+    "grupo": 1,
+    "email": "yesikmor26@gmail.com",
+    "alumnos": [
+      27295145,
+      23988040,
+      28860847,
+      21307211,
+      24519014
+    ],
+    "notas": [
+      "Confirma la eliminacion de un voto",
+      "Persiste los datos en localStorage"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      29155815
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 133,
+    "grupo": 2,
+    "email": "miriany.gonzalez@gmail.com",
+    "alumnos": [
+      17675854,
+      26631150,
+      26321091,
+      26107345,
+      25106719,
+      22776836
+    ],
+    "notas": [
+      "Realizar dos componentes identicos en lu reutilizar el componente",
+      "setValue esta mal el uso de mayuscula",
+      "Son identicos  133-02 y 133-06"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 133,
+    "grupo": 3,
+    "email": "tsade@live.com.ar",
+    "alumnos": [
+      21992626,
+      18123292,
+      17219543,
+      18445270
+    ],
+    "notas": [
+      "Usa estados separados para cada candidato en lugar de componentes"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "useState",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+      29321745,
+      19091457
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 133,
+    "grupo": 4,
+    "email": "sec.carrion@gmail.com",
+    "alumnos": [
+      16995968,
+      28038634,
+      20505136,
+      23623908,
+      17606845,
+      23543250
+    ],
+    "notas": [
+      "Usa estados separados para cada candidato en lugar de componentes",
+      "El estilo de los elementos se define en el mismo componente"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "useState",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 133,
+    "grupo": 5,
+    "email": "germanlequio@gmail.com",
+    "alumnos": [
+      22395460,
+      25226833,
+      28335534,
+      27649885,
+      17546258,
+      27295203
+    ],
+    "notas": [
+      "define clases innesarias para dar formato a los elementos"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 133,
+    "grupo": 6,
+    "email": "samu201233@gmail.com",
+    "alumnos": [
+      26922514,
+      11704906,
+      27872276,
+      28693607,
+      25386064,
+      21669584
+    ],
+    "notas": [
+      "Realizar dos componentes identicos en lu reutilizar el componente",
+      "setValue esta mal el uso de mayuscula",
+      "Son identicos  133-02 y 133-06"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 133,
+    "grupo": 7,
+    "email": "alejandro.medina.ar@gmail.com",
+    "alumnos": [
+      27238487,
+      28492517,
+      28706770,
+      27721196
+    ],
+    "notas": [
+
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      26144929,
+      22781140
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 133,
+    "grupo": 8,
+    "email": "ricardo.aranda@bue.edu.ar",
+    "alumnos": [
+      27803086,
+      27660701,
+      21669385,
+      28299300,
+      21328822,
+      20654068
+    ],
+    "notas": [
+      "define un componente inncesario para mostrar el nombre del candidato"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 133,
+    "grupo": 10,
+    "email": "vampirulo10@hotmail.com",
+    "alumnos": [
+      26216892,
+      24803332,
+      29322781,
+      20213119,
+      27016688,
+      26703609,
+      22252000
+    ],
+    "notas": [
+      "Le nombre a funciones anonimas en el manejo de los eventos"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 133,
+    "grupo": 11,
+    "email": "alegrefer@gmail.com",
+    "alumnos": [
+      23011166,
+      20566779,
+      23644604,
+      24830411,
+      23697935,
+      21164296,
+      26793708
+    ],
+    "notas": [
+      "La estetica no esta bien reproducida"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 134,
+    "grupo": 1,
+    "email": "Antonioleiva909@gmail.com",
+    "alumnos": [
+      13510492
+    ],
+    "notas": [
+      "Avisó que no funcionaba",
+      "No usa los eventos de react, intenga usar eventos de JavaScript",
+      "Dejo el componente Agenda y Contactos del ejemplo de donde tomaron el código"
+    ],
+    "resultado": {
+      "funciona": "no",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      23995110,
+      24909032,
+      24220385,
+      20644779,
+      25307768,
+      20635719
+    ],
+    "miembros": 7
+  },
+  {
+    "curso": 134,
+    "grupo": 2,
+    "email": "aegagranea@gmail.com",
+    "alumnos": [
+      24997860,
+      18877611,
+      10537291,
+      23687562,
+      18880363,
+      17223917
+    ],
+    "notas": [
+      "El nombre de los componentes no son descriptivos"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 134,
+    "grupo": 3,
+    "email": "lspecte@gmail.com",
+    "alumnos": [
+      21670449,
+      14620696
+    ],
+    "notas": [
+      "Usa una lista de candidatos en lugar de dos componentes"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      18388935,
+      14568996,
+      24234578,
+      16875503
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 134,
+    "grupo": 4,
+    "email": "adrmou@gmail.com",
+    "alumnos": [
+      18454726,
+      20521480,
+      22639502,
+      20561094,
+      24192661,
+      25262567
+    ],
+    "notas": [
+      "Usa una lista de candidatos en lugar de dos componentes"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 134,
+    "grupo": 5,
+    "email": "oscarmaciel.dg@gmail.com",
+    "alumnos": [
+      24600911,
+      24836529,
+      23805016,
+      22092359
+    ],
+    "notas": [
+      "Usa una lista de candidatos en lugar de dos componentes",
+      "Usa 'condición && código' para controlar el decremento"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      24572588,
+      25256244
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 134,
+    "grupo": 6,
+    "email": "ciropuig1@gmail.com",
+    "alumnos": [
+      18367300
+    ],
+    "notas": [
+      "Usa createElement en lugar de JSX"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "useState",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+      18258700,
+      12700995,
+      23196253,
+      21974569,
+      14797420
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 134,
+    "grupo": 6,
+    "email": "fedatu@hotmail.com",
+    "alumnos": [
+      12700995
+    ],
+    "notas": [
+      "No usa useSate",
+      "No usa eventos de react",
+      "Reinstala el componente cada vez que produce un evento para simular el cambio de estado"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      18258700,
+      18367300,
+      23196253,
+      21974569,
+      14797420
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 134,
+    "grupo": 7,
+    "email": "mahmudpaa@gmail.com",
+    "alumnos": [
+      21418801,
+      20948507,
+      18383939
+    ],
+    "notas": [
+      "Enviaron 3 archivos, tuve que corregir para que funcionen.",
+      "Implementa el componente usando clases en lugar de hooks",
+      "Usa dos estados independientes en lugar de crear  un componente y reutilizarlo"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "clase",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+      23997439,
+      24390071,
+      23248493
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 134,
+    "grupo": 8,
+    "email": "cdbruno10@hotmail.com",
+    "alumnos": [
+      20784683,
+      17626756,
+      20796343
+    ],
+    "notas": [
+      "Usa dos estados independientes en lugar de crear  un componente y reutilizarlo",
+      "Usan funciones auxiliares en mayusculas",
+      "Emplea una unica funcion para manejar todos los eventos de todos los estados"
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "no"
+    },
+    "faltan": [
+      17315674,
+      25072309,
+      25319269
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 134,
+    "grupo": 9,
+    "email": "mrondarra@hotmail.com",
+    "alumnos": [
+      17168120,
+      21634979
+    ],
+    "notas": [
+      "No funciona porque utiliza variables en lugar de setState"
+    ],
+    "resultado": {
+      "funciona": "no",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      34190400,
+      22234890
+    ],
+    "miembros": 4
+  },
+  {
+    "curso": 134,
+    "grupo": 10,
+    "email": "monser980@gmail.com",
+    "alumnos": [
+      16778627
+    ],
+    "notas": [
+      "Usa bootstrap para dar formato a la pagina",
+      "Usa una lista de objetos para crear los componentes en lugar de dos componentes",
+      "Uso un pdf para enviar todo en un archivo."
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+
+    ],
+    "miembros": 1
+  }
+]
