@@ -11,9 +11,9 @@ Luego incrustar el CSS dentro del elemento
     </style>
 ```
 
-El css que deben incrustar se forma copiando todos los css de todos los componentes dentro de <style>.
+El css que deben incrustar se forma copiando todos los css de todos los componentes dentro de **<style>**
 
-y el código JSX con la etiqueta 
+y el código JSX con la etiqueta  **<script>**
 
 ```html
     <script type="text/babel">
@@ -21,13 +21,13 @@ y el código JSX con la etiqueta
     </script>
 ```
 
-El codigo jsx que se debe incrustar se forma copiando todos los archivos jsx que se utilizaron eliminando toda referencia a importacion o exportación dentro de *style*
+El código jsx que se debe incrustar se forma copiando todos los archivos jsx que se utilizaron eliminando toda referencia a importación o exportación dentro de *style*
 
-Un observacion extra...
+Un observación extra...
 
-Cuando realizamos un componente que mantine un estado (como es este caso) hay que importar la función "useState" para ello se usa la expresion "import { useState } from './React'" cosa que no se puede hacer ya que eliminamos toda importacion. 
+Cuando realizamos un componente que mantine un estado (como es este caso) hay que importar la función **useState** para ello se usa la expresion **import { useState } from './React'** cosa que no se puede hacer ya que eliminamos toda importación
 
-Para resolver este problema debe colocarse como primera linea del codigo javascript la expresion "const {useState} = React" que comple la misma funcion que la importación 
+Para resolver este problema debe colocarse como primera linea del codigo javascript la expresion **const {useState} = React** que cúmple la misma función que la importación 
 
 Le dejo un archivo que se puede usar como base para realizar la conversion. 
 
