@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    margin: 0 auto;
+    width: 600px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #726fa0;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+nav img {
+    margin-left: 5px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #444071;
+}
+
+.active {
+    background-color: #352f73;
+}
+
+article {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(90vh - 40px); /* Asegura que el contenedor abarque al menos el 100% de la altura de la ventana menos 100px */
+    margin: 20px 0;
+}
+
+article h2 {
+    color: #525071;
+}
+
+article b {
+    margin: 10px 0;
+}
+footer {
+  margin-top: auto; /* Empuja el pie de página hacia la parte inferior del contenedor */
+  color: white;
+  background-color: #726fa0;
+  padding: 4px;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+

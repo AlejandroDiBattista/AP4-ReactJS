@@ -104,30 +104,24 @@ const { useState } = React;
     ];   
 
     function Contador({nombre}){
-
         let [contador, setContador] = useState(0);
 
         function incrementar(){
             setContador(contador + 1);
-           
         }
 
         function decrementar(){
             if(contador <= 0){
-
-            contador = 0;
-            }
-            else {
+                contador = 0;
+            } else {
                 setContador(contador - 1);
             }           
-           
         }
 
         return  (
             <div>
                 <div className="total">{contador}</div>
                 <div className="botones">
-             
                     <button onClick={incrementar}>+</button>
                     <button onClick={decrementar}>-</button>
                 </div>          
@@ -138,11 +132,8 @@ const { useState } = React;
     function Candidato({nombre}) {
         return (
         <li>          
-
             <div className="nombre"><b> {nombre} </b></div>
-
             <Contador nombre ={nombre} />               
-          
         </li>
         )}   
 
