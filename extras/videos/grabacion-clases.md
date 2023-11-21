@@ -112,7 +112,7 @@ Clase 7°
 [Ver video](https://utn.zoom.us/rec/share/EyWFaPP0GlfcDKU7cHE1zQKpx4LwyPaG2eZhMfQ3q5y7kDsmCUQM4JLXihXOlZ08.xyZmoDPOBUpiBa13)
 
 * 134 - Lunes 20 - 19 a 21
-[Ver video]()
+[Ver video](https://utn.zoom.us/rec/share/HCySF0eMfyR2uGAzS2RHtItKSOMFGShtFHQAl9soDitKGcgamIE1LKWi1_4zcBHR.o6tdZ3hCx_jFeHRe)
 
 * 126 - Martes 20 - 10 a 12
-[Ver video]()
+[Ver video](https://utn.zoom.us/rec/share/UngWq3u5WwITerZ2csCTKR4saPpQ068E2l67cqjexG0B-XpQ8NU2c_5uo5jMqrHH.jgnmo0bjJXyMJOH6)
