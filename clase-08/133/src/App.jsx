@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+
 import { ContadorFormulario } from './ContadorFormulario';
 import { ContadorLista } from './ContadorLista';
 
@@ -16,7 +17,7 @@ function App() {
   
   function agregar(nombre) {
     const nuevo = { id, nombre, cantidad: 0 }
-    const copia = [...contadores, nuevo]
+    const copia = [...contadores, nuevo ]
     setContadores(copia)
     
     setId(id + 1)

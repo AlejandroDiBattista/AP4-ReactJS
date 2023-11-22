@@ -14,3 +14,19 @@ El código fuente generado en la clase lo puede ver en:
 https://github.com/AlejandroDiBattista/AP4-ReactJS/tree/main/clase-08
 ---
 
+## Clase 08 - Curso 133
+
+  Cambiar en https://campus.argentinaprograma.utn.edu.ar/course/view.php?id=697&section=8
+
+---
+Clase 8 | Miercoles 22 de 15 a 17 | Curso 133
+
+Puede ver el video en:
+
+https://utn.zoom.us/rec/share/RIzlRvrqGEmgwJIMEjU9F6zihyohxXLEgnU1T2gweJFak2A5HQquMCqWqpesFL3r.fnNNXZiD7WDLxW_p
+
+El código fuente generado en la clase lo puede ver en: 
+
+https://github.com/AlejandroDiBattista/AP4-ReactJS/tree/main/clase-08
+---
+
