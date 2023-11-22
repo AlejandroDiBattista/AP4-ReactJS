@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Librería REACT -->       
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        
+        <!-- Librería Babel para convertir JSX -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <title>Título</title>
+        <style>
+          * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin:0 auto;
+    width: 320px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+form {
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form input {
+    font-size: 20px;
+    width: 180px;
+    border-radius: 50px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    font-size: 15px;
+    width: 70px;
+    border-radius: 50px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    margin-left: 10px;
+}
+ul {
+    list-style-type: none;
+    padding: 10px 0px;
+}
+
+li.destacar {
+    color: red;
+}
+
+li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;;
+}
+
+.cantidad {
+    font-weight: bold;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30px;
+    width: 70px;
+    gap: 10px
+}
+
+.botones button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+}
+      </style>
+
+        <script type="text/babel">
+            const { useState, useEffect } = React        
+
+            // App.jsx
+          
+            const datoIniciales = [
+            { id: 1, nombre: 'Autos', cantidad: 10 },
+            { id: 2, nombre: 'Camionetas', cantidad: 0 },
+            { id: 3, nombre: 'Bici',  cantidad: 3 }
+            ]
+
+            function App() {
+            const [proximoID, setProximoID] = useState(4)
+            const [contadores, setContadores] = useState(datoIniciales)
+
+            function agregar(nombre) {
+                const nuevo = { id: proximoID, nombre, cantidad: 0 }
+                setContadores([...contadores, nuevo])
+
+                setProximoID(proximoID + 1)
+            }
+            
+            function sumar(id) {
+                const actual = contadores.find(contador => contador.id === id) 
+                const nuevo = { ...actual, cantidad : actual.cantidad + 1 }
+                const nuevos = contadores.map(contador => contador.id === id ? nuevo : contador)
+                setContadores(nuevos)
+            }
+
+            function borrar(id) {
+                const borrados = contadores.filter(contador => contador.id !== id)
+                setContadores(borrados)
+            }
+
+            return (
+                <>
+                <main>
+                    <h1>Control de Transito</h1>
+                    <ContadorForm alAgregar={agregar} />
+                    <ContadorList contadores={contadores} alSumar={sumar} alBorrar={borrar}/>
+                </main>
+                </>
+            )
+    }
+            // ContadorForm.jsx
+
+            function ContadorForm({ alAgregar }) {
+            const [nombre, setNombre] = useState('')
+
+            function cambiar(evento) {
+                setNombre(evento.target.value)
+            }
+
+            function agregar(evento) {
+                alAgregar(nombre)
+                setNombre('')
+                evento.preventDefault()
+            }
+
+            return (
+                <form>
+                <input type="search" value={nombre} onChange={cambiar} placeholder="Nombre" />
+                <button onClick={agregar}>Agregar</button>
+                </form>
+            )
+            }
+
+            // ContadorList.jsx
+                function ContadorList({ contadores, alSumar, alBorrar }) {
+                return (
+                    <ul>
+                    {contadores.map(contador => <ContadorItem
+                        key={contador.id}
+                        contador={contador}
+                        alSumar={alSumar}
+                        alBorrar={alBorrar} />)}
+                    </ul>
+                );
+                }
+            // ContadorItem.jsx
+                function ContadorItem({ contador, alSumar, alBorrar }) {
+                const { id, nombre, cantidad } = contador;
+                const color = { color: cantidad < 10 ? 'blue' : 'red' };
+                return (
+                    <li>
+                    <span style={color}>{cantidad}</span>
+                    <span>{nombre}</span>
+                    <div className='botones'>
+                        <button onClick={() => alSumar(id)}>+</button>
+                        <button onClick={() => alBorrar(id)}>x</button>
+                    </div>
+                    </li>
+                );
+                }
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>
