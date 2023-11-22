@@ -1,0 +1,65 @@
+.cronometro { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cronometro div {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 10px;
+    width: 50px;
+    text-align: right;
+}
+
+.cronometro .nombre {
+    font-size: 25px;
+    margin: 0 10px;
+    width: 150px;
+    text-align: left;
+}
+
+.cronometro button {
+    font-size: 25px;
+    background-color: #008000;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+form input {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 5px 10px;
+    width: 200px;
+}
+
+form button {
+    background-color: #008000;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
