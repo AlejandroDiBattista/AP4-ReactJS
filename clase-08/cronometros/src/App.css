@@ -47,19 +47,19 @@ form {
 
 form input {
     border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 16px;
-    padding: 5px 10px;
-    width: 200px;
+    border-radius: 30px;
+    font-size: 32px;
+    padding: 5px 10px 5px 20px;
+    width: 247px;
 }
 
 form button {
     background-color: #008000;
     border: none;
-    border-radius: 20px;
+    border-radius: 30px;
     color: #fff;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 5px 25px;
 }

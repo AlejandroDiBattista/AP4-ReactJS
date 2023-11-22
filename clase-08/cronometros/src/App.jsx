@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useReducer } from 'react'
 import './App.css'
 
 const datosIniciales = [
@@ -6,39 +6,55 @@ const datosIniciales = [
   { nombre: 'Dos', segundos: 0, activo: false, id: 2 },
   { nombre: 'Tres', segundos: 0, activo: true, id: 3 },
 ]
+
+function reducer(cronometros, action) {
+  const { id, nombre, activo } = action
+  
+  switch (action.type) {
+    case 'incrementar':
+      return cronometros.map(cronometro => cronometro.activo ? { ...cronometro, segundos: cronometro.segundos + 1 } : cronometro  )
+    
+    case 'agregar':
+      return [...cronometros, { id, nombre, segundos: 0, activo: true }]
+    
+    case 'cambiar':
+      return cronometros.map(cronometro => cronometro.id === id ? { ...cronometro, activo } : cronometro )
+    
+    case 'borrar':
+      return cronometros.filter(cronometro => cronometro.id !== id)  
+    
+    default:
+      throw new Error()
+  }
+}
+
+function hora(segundos) {
+  const minutos = Math.floor(segundos / 60)
+  const seg = segundos % 60
+  return `${minutos}:${seg < 10 ? '0' : ''}${seg}`
+}
+
 function App() {
-  const [cronometros, setCronometros] = useState(datosIniciales)
+  const [cronometros, dispatch] = useReducer(reducer, datosIniciales)
   const [proximoID, setProximoID] = useState(4)
 
-   useEffect(() => {
-    const time = setInterval(incrementar, 1000);
-    return () => clearInterval(time);
-   }, [])
+  useEffect(() => {
+    const timer = setInterval(() => { dispatch({ type: 'incrementar' }) }, 1000)
+    return () => clearInterval(timer)
+  }, [])
   
-  function actualizar(cronometro) {
-    if (cronometro.activo) {
-      return { ...cronometro, segundos: cronometro.segundos + 1 }
-    }
-    return cronometro
-  }
 
-  function incrementar() {
-    setCronometros( cronometros => cronometros.map( actualizar ) )
-  }
- 
   function agregar(nombre) {
     setProximoID(proximoID + 1)
-    const nuevos = [...cronometros, { nombre, segundos: 0, activo: true, id: proximoID }]
-    setCronometros( nuevos )
+    dispatch({ type: 'agregar', nombre, id: proximoID })
   }
+  
   function cambiar(id, activo) {
-    const nuevos = cronometros.map( cronometro => cronometro.id === id ? { ...cronometro, activo } : cronometro )
-    setCronometros( nuevos )
+    dispatch({ type: 'cambiar', id, activo })
   }
 
   function borrar(id) {
-    const nuevos = cronometros.filter( cronometro => cronometro.id !== id )
-    setCronometros( nuevos )
+    dispatch({ type: 'borrar', id })
   }
 
   return (
@@ -52,8 +68,12 @@ function App() {
   )
 }
 
+function iniciarNombre() {
+  console.log('iniciarNombre')
+  return 'aa';
+}
 function Formulario({ alAgregar }) {
-  const [nombre, setNombre] = useState('')
+  const [nombre, setNombre] = useState( () => iniciarNombre() )
   
   const cambiar = e => setNombre(e.target.value)
   const agregar = e => {
@@ -63,7 +83,7 @@ function Formulario({ alAgregar }) {
   }
   return (
     <form>
-      <input type="search" value={nombre}  onChange={cambiar} placeholder="Ingresar un nombre" />
+      <input type="search" value={nombre}  onChange={cambiar} placeholder="" />
       <button onClick={agregar}>Agregar</button>
     </form>
   )
@@ -71,12 +91,13 @@ function Formulario({ alAgregar }) {
 
 function Cronometro({ cronometro, alCambiar, alBorrar }) {
   const { nombre, segundos, activo, id } = cronometro
+  const color = { color: activo ? 'black' : 'gray' }
   return (
-    <li className="cronometro">
+    <li className="cronometro" style={color}>
       <div className='nombre'>{nombre}</div>
-      <div>{segundos}</div>
-      <button onClick={() => alCambiar(id, !activo)}> {activo ? '||' : '>'}</button>
-      <button onClick={() => alBorrar(id)}>X</button>
+      <div>{ hora(segundos) }</div>
+      <button onClick={ () => alCambiar(id, !activo) }> { activo ? '||' : '>' }</button>
+      <button onClick={ () => alBorrar(id) }>X</button>
     </li>
   )
 }
