@@ -1,0 +1,38 @@
+ul.lista {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+ul.lista li {
+    padding: 10px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.lista div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+ul.lista button {
+    padding: 5px;
+    border: 1px solid black;
+    background-color: #e13939;
+    color: #fff;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+ul.lista b {
+    font-size: 20px;
+    width: 30px;
+    text-align: right;
+    color: black
+}

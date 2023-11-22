@@ -116,3 +116,19 @@ Clase 7°
 
 * 126 - Martes 20 - 10 a 12
 [Ver video](https://utn.zoom.us/rec/share/UngWq3u5WwITerZ2csCTKR4saPpQ068E2l67cqjexG0B-XpQ8NU2c_5uo5jMqrHH.jgnmo0bjJXyMJOH6)
+
+
+Clase 8°
+-
+
+* 132 - Miercoles 22 - 10 a 12
+[Ver video](https://utn.zoom.us/rec/share/tqLFRnP-VK2hM00JEJun1MVybgv3BklKwI8_KDvV_Ngs_JtCn6dEQbTCFd3iPUI9.1v3yIER7qig1PP3_)
+
+* 133 - Miercoles 22 - 15 a 17
+[Ver video]()
+
+* 134 - Miercoles 22 - 19 a 21
+[Ver video]()
+
+* 126 - Jueves 23 - 10 a 12
+[Ver video]()

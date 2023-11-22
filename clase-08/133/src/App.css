@@ -3,3 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main {
+    margin: 0 auto;
+    max-width: 300px;
+    background-color: aquamarine;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    background-color: #e13939;
+    color: #fff;
+    font-size: 24px;
+}
+
