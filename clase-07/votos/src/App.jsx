@@ -7,9 +7,8 @@ function App() {
     <>
       <main>
         <h1>Boca de Urna</h1>
-        <Contador candidato="Pedro" />
-        <Contador candidato="Juan" />
-
+        <Contador candidato='Pedro' />
+        <Contador candidato='Juan' />
       </main>
     </>
   )
@@ -18,19 +17,16 @@ function App() {
 function Contador({ candidato }) {
   const [votos, setVotos] = useState(0)
 
-  function incrementar() {
-    setVotos(votos + 1)
-    alCambiar(candidato + " tiene " + (votos + 1))
-  }
-  const decrementar = () => setVotos(votos - 1);
-
+  const incrementar = () => setVotos(votos + 1)
+  const decrementar = () => setVotos(votos > 0 ? votos - 1 : 0)
+  
   return (
-    <div className="contador">
+    <div className='contador'>
       <h2>{candidato}</h2>
-      <div className="numero">{votos}</div>
-      <div>
-        <button onClick={incrementar}><IoIosAddCircle /></button>
-        <button onClick={decrementar}><IoIosRemoveCircle /></button>
+      <div className='valor'>{votos}</div>
+      <div className='botones'>
+        <button onClick={incrementar}>+</button>
+        <button onClick={decrementar}>-</button>
       </div>
     </div>
   )

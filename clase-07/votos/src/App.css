@@ -1,60 +1,65 @@
-* {
+* {                        /* Reset de estilos */       
     margin: 0;
-    font-family: 'Lucida Sans', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(315deg, rgb(0, 150, 255) 10%, rgba(0,0,255,1) 90%);
+    font-family: 'Lucida Sans', sans-serif;
+    background: linear-gradient(315deg, cyan, blue);
     height: 100vh;
 }
 
-#root {
+main {
+    margin: 0 auto;             /* Centrado horizontal del contendor  */
     width: 500px;
-    margin: 0 auto;
+
+    display: flex;              /* Centra los componentes */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-h2 {
-    text-align: center;
-    margin: auto;
-    padding: 50px;
+.contador h1, .contador h2 {    /* Titulos centrados */
+    padding: 10px;
 }
 
-.contador {
-    border: 3px solid black;
-    margin: auto;
-    margin-bottom: 10px;
-    border-radius: 12px;
-    width: 200px;
-    background-color: whitesmoke;
+h1 {                            /* Titulo principal */
+    color: white;
+    font-size: 30px;    
+    padding: 10px;
 }
 
-h2 {
-    text-align: center;
-    font-size: 30px;
-    padding: 6px;
-}
-
-.votos {
-    text-align: center;
-    font-size: 40px;
-    color: blue;
-}
-
-.botones {
+.contador {                     /* Hacemos la caja del contador */
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px gray;
+    
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-button {
-    border: 1px solid black;
-    font-size: 45px;
-    font-weight: bold;
-    margin: 10px;
-    height: 50px;
-    width: 80px;
-    background-color: #51d1f6;
+.valor {                        /* destacamos el valor del contador */
+    color: blue;
+    font-size: 64px;
+}
 
-    text-align: center;
-    border-radius: 8px;
+.botones {                    /* Hacemos la caja de los botones */      
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.botones button {                    /* Estilo de los botones */
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 3px 0px gray;
+    
+    background-color: lightblue;
+    border-radius: 10px;
+
+    font-size: 50px;
+    width: 80px;
 }

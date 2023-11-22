@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Librería REACT -->       
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        
+        <!-- Librería Babel para convertir JSX -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <title>Título</title>
+        <style>
+            * {                        /* Reset de estilos */       
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Lucida Sans', sans-serif;
+                background: linear-gradient(315deg, cyan, blue);
+                height: 100vh;
+            }
+
+            main {
+                margin: 0 auto;             /* Centrado horizontal del contendor  */
+                width: 500px;
+
+                display: flex;              /* Centra los componentes */
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .contador h1, .contador h2 {    /* Titulos centrados */
+                padding: 10px;
+            }
+
+            h1 {                            /* Titulo principal */
+                color: white;
+                font-size: 30px;    
+                padding: 10px;
+            }
+
+            .contador {                     
+                border-radius: 20px;
+                background-color: white;
+                box-shadow: 0px 0px 10px 0px gray;
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .valor {
+                color: blue;
+                font-size: 64px;
+            }
+
+            .botones {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                margin: 10px;
+            }
+
+            button {
+                border: 1px solid transparent;
+                box-shadow: 0px 0px 3px 0px gray;
+                background-color: lightblue;
+                border-radius: 10px;
+
+                font-size: 50px;
+                width: 80px;
+            }
+        </style>
+
+        <script type="text/babel">
+            const { useState } = React        
+
+            function App() {
+                return (
+                    <>
+                    <main>
+                        <h1>Boca de Urna</h1>
+                        <Contador candidato='Pedro' />
+                        <Contador candidato='Juan' />
+                    </main>
+                    </>
+                )
+                }
+
+                const Contador = ({ candidato }) => {
+                const [votos, setVotos] = useState(0)
+
+                const incrementar = () => setVotos(votos + 1)
+                const decrementar = () => setVotos(votos > 0 ? votos - 1 : 0)
+                
+                return (
+                    <div className='contador'>
+                    <h2>{candidato}</h2>
+                    <div className='valor'>{votos}</div>
+                    <div className='botones'>
+                        <button onClick={incrementar}>+</button>
+                        <button onClick={decrementar}>-</button>
+                    </div>
+                    </div>
+                )
+            }
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

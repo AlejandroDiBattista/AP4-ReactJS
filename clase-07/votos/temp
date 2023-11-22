@@ -1,8 +1,0 @@
-<div className="contador">
-    <h2>{nombre}</h2>
-    <div className="votos">{contador}</div>
-    <div className="botones">
-        <button className="boton" onClick={Mas}>+</button>
-        <button className="boton" onClick={Menos}>-</button>
-    </div>
-</div >

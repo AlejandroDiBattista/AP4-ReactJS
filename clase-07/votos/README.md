@@ -1,8 +1,11 @@
-# React + Vite
+## Resolución del trabajo práctico 1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto muestra una versión ideal de la resolución del trabajo práctico 1
 
-Currently, two official plugins are available:
+Si bien hay muchas formas de implementar esta aplicación nos concentramos en hacer las mas simple y clara posible en donde se use correctamente las caracteristicas de react.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La funcionalidad está encapsula en un componente que reutilizamos para cada uno de los candidatos. 
+
+Pueden ver como se implementó las funcionalidad en App.jsx y luego como queda integrado todo en un único archivo HTML en boca_de_urna.html 
+
+
