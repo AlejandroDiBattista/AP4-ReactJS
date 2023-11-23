@@ -1,0 +1,37 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 10px;
+}
+
+li {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #888;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+li b {
+    font-size: 20px;
+    width: 30px;
+    text-align: right;
+}
+li button {
+    background-color: rgb(198, 85, 85);
+    border: 1px solid transparent;
+    color: white;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+}
