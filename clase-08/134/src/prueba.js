@@ -11,6 +11,7 @@ let nuevos = [...contadores, nuevo]
 let id = 2 
 let borrados = contadores.filter(contador => contador.id !== id)
 
+// Cambiar un elemento sin modificar el original
 let cambiar = { id: 2, cantidad: 100 }
 let cambiados = contadores.map(contador => contador.id === cambiar.id ? cambiar : contador)
     

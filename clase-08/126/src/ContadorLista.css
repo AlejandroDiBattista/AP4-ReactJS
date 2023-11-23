@@ -1,0 +1,34 @@
+ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+
+.lista button {
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+.cantidad {
+    font-size: 20px;
+    font-weight: bold;
+    width: 20px;
+    text-align: right;
+}

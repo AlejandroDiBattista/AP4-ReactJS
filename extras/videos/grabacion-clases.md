@@ -128,7 +128,7 @@ Clase 8°
 [Ver video](https://utn.zoom.us/rec/share/RIzlRvrqGEmgwJIMEjU9F6zihyohxXLEgnU1T2gweJFak2A5HQquMCqWqpesFL3r.fnNNXZiD7WDLxW_p)
 
 * 134 - Miercoles 22 - 19 a 21
-[Ver video]()
+[Ver video](https://utn.zoom.us/rec/share/3syBGQvKWXZ_LC9j0bFs4InGnpl8fduY3xpzqDi5oPSp9Chd3YfraICi6vWdsyu5.Q8JbDvTjM7nzW2f1)
 
 * 126 - Jueves 23 - 10 a 12
 [Ver video]()

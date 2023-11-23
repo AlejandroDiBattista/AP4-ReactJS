@@ -13,88 +13,89 @@
         <title>Título</title>
         <style>
             /* App.css */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
 
-main {
-    margin: 0 auto;
-    max-width: 300px;
-    background-color: aquamarine;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
+            main {
+                margin: 0 auto;
+                max-width: 300px;
+                background-color: aquamarine;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            }
 
-h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #222;
-    padding: 10px;
-    background-color: rgb(198, 85, 85);
-    color: white
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                color: #222;
+                padding: 10px;
+                background-color: rgb(198, 85, 85);
+                color: white
 
-}
-            /* ContadorFormulario.css */
-form {
-    width: 280px;
-    padding: 10px;
-    display: flex;
-    gap: 10px;
-    margin: 5px;
-}
-form input {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-}
+            }
+                        /* ContadorFormulario.css */
+            form {
+                width: 280px;
+                padding: 10px;
+                display: flex;
+                gap: 10px;
+                margin: 5px;
+            }
+            form input {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid #ccc;
+            }
 
-form button {
-    width: 80px;
-    background-color: rgb(198, 85, 85);
-    border: 1px solid transparent;
-    color: white;
-    border-radius: 5px;
-}
+            form button {
+                width: 80px;
+                background-color: rgb(198, 85, 85);
+                border: 1px solid transparent;
+                color: white;
+                border-radius: 5px;
+            }
 
-            /* ContadorLista.css */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    padding: 10px;
-}
+                        /* ContadorLista.css */
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                padding: 10px;
+            }
 
-li {
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    border: 1px solid #888;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
+            li {
+                padding: 10px;
+                margin: 5px;
+                border-radius: 5px;
+                border: 1px solid #888;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+            }
 
-.botones {
-    display: flex;
-    gap: 10px;
-}
+            .botones {
+                display: flex;
+                gap: 10px;
+            }
 
-li b {
-    font-size: 20px;
-    width: 30px;
-    text-align: right;
-}
-li button {
-    background-color: rgb(198, 85, 85);
-    border: 1px solid transparent;
-    color: white;
-    border-radius: 15px;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-}
+            li b {
+                font-size: 20px;
+                width: 30px;
+                text-align: right;
+            }
+            
+            li button {
+                background-color: rgb(198, 85, 85);
+                border: 1px solid transparent;
+                color: white;
+                border-radius: 15px;
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+            }
         </style>
 
         <script type="text/babel">
@@ -197,12 +198,12 @@ li button {
 
             return (
                 <li><b>{cantidad}</b> {nombre}
-                <div className='botones'>
-                    <button onClick={incrementar}>+</button>
-                    <button onClick={borrar}>x</button>
-                </div>
+                    <div className='botones'>
+                        <button onClick={incrementar}>+</button>
+                        <button onClick={borrar}>x</button>
+                    </div>
                 </li>
-            )
+                )
             }
 
             ReactDOM.render(<App />, document.getElementById('root'));

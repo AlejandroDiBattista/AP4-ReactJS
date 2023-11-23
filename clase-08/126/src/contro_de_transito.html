@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Librería REACT -->       
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        
+        <!-- Librería Babel para convertir JSX -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <title>Título</title>
+        <style>
+            /* App.CSS */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            main {
+                margin: 0 auto;
+                width: 300px;
+                background-color: aquamarine;
+                padding: 10px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            h1 {
+                font-size: 20px;
+                padding: 10px;
+                text-align: center;
+            }
+            /* ContadorFormulario.css */
+            form {
+                /* background-color: red; */
+                padding: 10px;
+                display:flex;
+                gap: 10px;
+            }
+
+            form input {
+                width: 180px;
+                border: none;
+                border-radius: 10px;
+                padding: 0 10px;
+                font-size: 15px;
+            }
+
+            form button {
+                width: 80px;
+                border: none;
+                border-radius: 10px;
+                padding: 0 10px;
+            }
+            /* ContadorLista.css */
+            ul {
+                list-style: none;
+                padding: 10px;
+                margin: 0;
+            }
+
+            ul li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 10px;
+                background-color: #f1f1f1;
+            }
+
+            .lista button {
+                border-radius: 20px;
+                padding: 5px 10px;
+                background-color: #f1f1f1;
+                cursor: pointer;
+            }
+
+            .botones {
+                display: flex;
+                gap: 10px;
+            }
+
+            .cantidad {
+                font-size: 20px;
+                font-weight: bold;
+                width: 20px;
+                text-align: right;
+            }
+        </style>
+
+        <script type="text/babel">
+            const { useState, useEffect } = React        
+
+            // App.jsx
+            const datosIniciales = [
+                { id: 1, nombre: 'Automovil', cantidad: 0 },
+                { id: 2, nombre: 'Camioneta', cantidad: 0 },
+                { id: 3, nombre: 'Moto', cantidad: 0 },
+                { id: 4, nombre: 'Bicicleta', cantidad: 0 },
+            ]
+
+            function App() {
+            const [proximoId, setProximoId] = useState(5)
+            const [contadores, setContadores] = useState(datosIniciales)
+
+            function agregar(nombre) {
+                const nuevo = { id: proximoId, nombre: nombre, cantidad: 0 }
+                const copia = [...contadores, nuevo]
+                setContadores(copia)
+                console.log(copia)
+                setProximoId(proximoId+1)
+            }
+            
+            function incrementar(id) {
+                const actual = contadores.find(contador => contador.id === id)
+                const nuevo = { ...actual, cantidad: actual.cantidad + 1 }
+                const copia = contadores.map(contador => contador.id === id ? nuevo : contador)
+
+                setContadores(copia)
+            }
+
+            function borrar(id) {
+                const copia = contadores.filter(contador => contador.id !== id)
+                setContadores(copia)
+            }
+            
+            function limpiar() {
+                setContadores([])
+            }
+
+            useEffect(() => {
+                const datos = localStorage.getItem('contadores')
+                if (datos) {
+                setContadores(JSON.parse(datos))
+                }
+            }, [])
+
+            useEffect(() => {
+                localStorage.setItem('contadores', JSON.stringify(contadores))
+                console.log('Contadores actualizados', contadores)
+            })
+            
+            useEffect(() => {
+                console.log('Proximo ID actualizado', proximoId)
+            }, [proximoId])
+
+                
+            return (
+                <>
+                <main>
+                    <h1>Control de Tránsito</h1>
+                    <ContadorFormulario alAgregar={agregar} />
+                    <ContadorLista contadores={contadores} alIncrementar={incrementar} alBorrar={borrar} />
+                </main>
+                </>
+            )
+            }
+            // ContadorFormulario.jsx
+            function ContadorFormulario({ alAgregar }) {
+            const [nombre, setNombre] = useState('');
+
+            function enviar(e) {
+                e.preventDefault();
+
+                if (nombre === '') return;
+                alAgregar(nombre);
+                setNombre('');
+            }
+
+            return (
+                <form onSubmit={enviar}>
+                <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                <button type="submit">Agregar</button>
+                </form>
+            );
+            }
+
+            // ContadorLista.jsx
+            function ContadorLista({ contadores, alIncrementar, alBorrar }) {
+            return (
+                <ul>
+                {contadores.map(contador => <ContadorItem key={contador.id} contador={contador} alIncrementar={alIncrementar} alBorrar={alBorrar} />)}
+                </ul>
+            );
+            }
+
+            function ContadorItem({ contador, alIncrementar, alBorrar }) {
+            const { id, cantidad, nombre } = contador
+
+            function incrementar() {
+                console.log('Incrementando ' + id)
+                alIncrementar(id)
+            }
+
+            function borrar() {
+                console.log('Borrando ' + id)
+                alBorrar(id)
+            }
+            const estilo = { color: cantidad > 15 ? "red" : "black" }
+
+            return (
+                <li className='lista'>
+                <span className='cantidad' style={estilo}>{cantidad}</span> 
+                <span>{nombre}</span>
+                <div className='botones'>
+                    <button onClick={incrementar}>+</button>
+                    <button onClick={borrar}>x</button>
+                </div>
+                </li>
+            )
+            }
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>
