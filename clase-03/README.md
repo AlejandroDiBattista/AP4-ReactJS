@@ -18,7 +18,7 @@
 
 *Babel*
 
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
 
 ### Cuando escribes el script debe agregar type="text/babel"
 
@@ -39,7 +39,7 @@
             <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
             <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
 
-            <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+            <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
 
             <script type="text/babel">
                 // Codigo JSX
