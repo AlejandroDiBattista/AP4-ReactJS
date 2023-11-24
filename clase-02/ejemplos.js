@@ -14,10 +14,9 @@ let a0 = 100            // Numeros enteros
 let a1 = 100.1          // Numeros decimales
 let a2 = 0xA0B1C2       // Incluso numeros Hexadecimal (pe. para poner un color)
 
-
-
 mostrar(a1)
 mostrar(a2)
+
 
 seccion('Ejemplos uso de "string"')
 let b0 = "Juan"         // Se puede unsar comillas dobles, simples o backticks
@@ -35,6 +34,7 @@ mostrar(b2)
 mostrar(b3)
 mostrar(b4)
 
+
 seccion('Ejemplos uso de "Boolean"')
 let c0 = true
 let c1 = false
@@ -50,6 +50,7 @@ if (12 > 10) mostrar("12 es mayor que 10")
 
 let c4 = 12 > 10 
 if (c4) mostrar("12 es mayor que 10")    
+
 let c5 = -1
 if (c5) mostrar("c5 es verdadero") // Cualquier numero diferente de 0 es verdadero
 
@@ -64,9 +65,8 @@ mostrar(d0)
 mostrar(d1)
 mostrar(d1 == null)
 
-// ARRAY : Colección de valores homogeneos
 
-seccion('Ejemplos uso de "Array"')
+seccion('Ejemplos uso de "Array (Colección de valores homogeneos)"')
 
 let e0 = [1, 2, 3, 4]           // Colección de números
 let e1 = ['a', 'b', 'c', 'd']   // Colección de cadenas
@@ -82,7 +82,7 @@ mostrar(e1)
 mostrar(e2)
 mostrar(e3)
 
-// Leer valores
+
 seccion('Acceso a los elementos de un "Array"')
 
 let e4 = e0[0]  // A la derecha del = se leer el valor
@@ -91,39 +91,40 @@ mostrar(e4)
 e0[1] = 1000    // A la izquierda del = se asigna el valor
 mostrar(e0)
 
-// Propiedad length
+
 seccion('Propiedad length de un "Array"')
 mostrar(e0.length)   // Propiedad de un array que indica la cantidad de elementos que tiene
 
-seccion('Metodos de un "Array" para manipular el contenido' )
-e0.push(5)           // Metodo de un array que agrega un elemento al final
+
+seccion('métodos de un "Array" para manipular el contenido')
+e0.push(5)           // método de un array que agrega un elemento al final
 mostrar(e0)
 
-e0.unshift(100)        // Metodo de un array que agrega un elemento al principio
+e0.unshift(100)        // método de un array que agrega un elemento al principio
 mostrar(e0)
 
-let e5 = e0.pop()     // Metodo de un array que elimina el ultimo elemento y lo devuelve
+let e5 = e0.pop()     // método de un array que elimina el ultimo elemento y lo devuelve
 mostrar(e5)             // Ultimo elemento eliminado
 mostrar(e0)             // Array modificado
 
-let e6 = e0.shift()   // Metodo de un array que elimina el primer elemento y lo devuelve
+let e6 = e0.shift()   // método de un array que elimina el primer elemento y lo devuelve
 mostrar(e6)             // Primer elemento eliminado
 mostrar(e0)             // Array modificado
 
 
-// Recorrer un array
 seccion('Recorrer un "Array"')
 for (let i = 0; i < e0.length; i++) {
     mostrar(e0[i])
 }
 
-e0.forEach((elemento) => mostrar(elemento)) // Metodo de un array que recorre todos los elementos
+e0.forEach((elemento) => mostrar(elemento)) // método de un array que recorre todos los elementos
 
-// OBJETOS : Colección de valores 
-seccion('Ejemplos uso de "Object"')
+
+seccion('Ejemplos uso de "Object (Colección de valores heterogeneos)"')
 
 let f0 = { nombre: 'Juan', edad: 20 }  // Objeto (coleccion de valores heterogeneos)
 mostrar(f0)
+
 
 seccion('Objetos anidados')
 let f1 = {  // Objetos anidados
@@ -135,6 +136,7 @@ let f1 = {  // Objetos anidados
     }
 }
 mostrar(f1)
+
 
 seccion('Formas de declarar un objeto')
 let f2 = { 'nombre': 'Juan', 'edad': 20 }   // Forma normal
@@ -149,6 +151,7 @@ let f5 = { nombre, edad }                   // Forma super corta cuando el nombr
 
 mostrar(f4) // Los dos objetos son iguales
 mostrar(f5)
+
 
 seccion('Los objetos pueden ser muy complejos')
 let gerente = { // OBJETO que contiene ARRAY que contiene OBJETOS
@@ -182,6 +185,7 @@ let gerenteJson = { // JSON (JavaScript Object Notation) es un formato de interc
 mostrar(gerente)        // Los dos son lo mismo
 mostrar(gerenteJson)
 
+
 seccion('Acceso a los elementos de un objeto')
 let f6 = f0.nombre      // Acceso con sintexis de punto
 let f7 = f0['nombre']   // Acceso con sintexis de corchetes
@@ -189,13 +193,16 @@ let f7 = f0['nombre']   // Acceso con sintexis de corchetes
 mostrar(f6) // Los dos son lo mismo
 mostrar(f7)
 
+
 seccion('Modificar un objeto')
 mostrar(f0) // Objeto original
 f0.nombre = 'Pedro' // Modificar una propiedad
 mostrar(f0) // Objeto modificado
 
+
 seccion('Modificar un objeto anidado')
 mostrar(gerente.empleados[0].nombre) // Acceso a un objeto anidado
+
 gerente.empleados[0].nombre = 'Nuevo nombre' // Modificar un objeto anidado
 mostrar(gerente)
 
@@ -206,16 +213,14 @@ let persona = {
 }
 mostrar(persona)
 
-let claves = Object.keys(persona) // Metodo de un objeto que devuelve las propiedades
+let claves = Object.keys(persona) // método de un objeto que devuelve las propiedades
 mostrar(claves) 
 
-let valores = Object.values(persona) // Metodo de un objeto que devuelve los valores
+let valores = Object.values(persona) // método de un objeto que devuelve los valores
 mostrar(valores) 
 
 
-// DECONSTRUCCION
-
-seccion('Descontruccion de Arrays')
+seccion('Descontrucción de Arrays')
 // Cuando se usa la sintexis de un array en la declaracion de la variable, se llama descontruccion de array
 
 let g0 = [101, 102, 103, 104, 105]
@@ -241,6 +246,7 @@ g3[1] = 2000
 mostrar(g0)
 mostrar(g3)
 
+
 seccion('Descontruccion de Objetos')
 // Cuando se usa la sintexis de un objeto en la declaracion de la variable, se llama descontruccion de objeto
 let { nombre: n, apellido: a, edad: e } = persona // Descontruccion de un objeto
@@ -265,11 +271,13 @@ mostrar(anio)
 let h1 = auto           // No copia los datos, es una referencia
 let h2 = { ...auto }    // Truco con '...' para copiar un objeto (no es una referencia)
 
+
 seccion('Los objetos son pasados por referencia')
 mostrar(h1)                 // Antes de modificar
 h1.marca = 'Fiat'
 mostrar(h1)                 // Despues de modificar
 mostrar(auto)               // El objeto original se modifica (porque es una referencia)
+
 
 seccion(' Cuando se copiar un objeto con ...')
 mostrar(h2)                 // Antes de modificar
@@ -297,7 +305,6 @@ i3[10] = 10             // Las posiciones i3[3] al i3[9] son undefined
 mostrar(i3)             // Los arrays son objetos (cuando las propiedades son números)
 
 // FUNCIONES
-
 // Como usar '...' para copiar array y objetos
 
 let j1 = [1, 2, 3, 4]
@@ -306,6 +313,7 @@ let j2 = { nombre: 'Juan', edad: 20 }
 mostrar(j1)
 mostrar(j2)
 
+
 seccion('Copiar un array u objeto')
 let j3 = [...j1]        // Copia un array
 mostrar(j3)              // j3 es una copia de j1
@@ -313,9 +321,11 @@ mostrar(j3)              // j3 es una copia de j1
 let j4 = { ...j2 }      // 
 mostrar(j4)             // j4 es una copia de j2
 
+
 seccion('Agregar un elemento a un array u objeto')
 let j5 = [...j1, 100]   // Copia un array y agrega un elemento
 let j6 = { ...j2, sueldo: 10000 } // Copia un objeto y agrega una propiedad
+
 
 seccion('Concatenar un array u objeto')
 let j7 = [...j1, ...j1] // Copia un array y concatena con otro array
@@ -371,8 +381,8 @@ mostrar(sumar5(par))
 
 mostrar(sumar5({ a: 10, b: 20 })) // Se puede usar la desestructuración en la llamada a la función
 
-// FUNCIONES | Formas de declarar una función
 
+// FUNCIONES | Formas de declarar una función
 function incrementar1(n) {      // Funcion normal
     return n + 1
 }
@@ -388,8 +398,8 @@ let incrementar3 = (n) => {      // Funcion flecha
 let incrementar4 = (n) => n + 1 // Funcion flecha con una sola linea
 let incrementar5 = n => n + 1   // Funcion flecha con un solo parámetro
 
-seccion('Diferentes formas de declarar una función')
 
+seccion('Diferentes formas de declarar una función')
 mostrar(incrementar1(10))   // Las 5 funciones son equivalentes
 mostrar(incrementar2(10))
 mostrar(incrementar3(10))
@@ -430,21 +440,20 @@ mostrar(nombreCompleto4(persona))
 mostrar(nombreCompleto4({ nombre: 'Juan', apellido: 'Perez' })) // Usar la desestructuración en la llamada a la función
 
 
-
 // Las funciones son objetos de primer nivel en JavaScript
 // es decir... pueden ser pasadas como parámetros y devueltas como resultado
 
 // Podemos usarla para hacer funciones genericas
 
-function operar(a, b, operacion) {
+function operar(operacion, a, b) {
     return operacion(a, b)
 }   
 
 function multiplicar(a,b){ return a * b}
 let dividir = (a, b) => a / b
 
-mostrar(operar(20, 10, multiplicar))  // Cuando se pasa una función como parámetro, no se ponen los paréntesis
-mostrar(operar(20, 10, dividir)) 
+mostrar(operar(multiplicar, 20, 10))  // Cuando se pasa una función como parámetro, no se ponen los paréntesis
+mostrar(operar(dividir, 20, 10 )) 
 
 // Funciones de orden superior.
 
@@ -487,7 +496,7 @@ function mapear(lista, fn) {
 }
 
 // duplicar y mayusculas son identicas excepto por la operacion que se hace en cada iteracion
-function doblar(item) {
+function doble(item) {
     return item * 2
 }
 
@@ -495,7 +504,7 @@ function mayuscula(item) {
     return item.toUpperCase()
 }
 
-mostrar(mapear(numeros, doblar))        // Le pasamos la funcion definida arriba
+mostrar(mapear(numeros, doble))        // Le pasamos la funcion definida arriba
 mostrar(mapear(nombres, mayuscula))
 
 mostrar(mapear(numeros, item => item * 2))           // Definimos la funcion en el momento
@@ -505,7 +514,7 @@ mostrar(mapear(numeros, item => item * 3))
 mostrar(mapear(nombres, item => item.toLowerCase()))
 
 // Funciones de orden superior.
-// Los array tienen un metodo map que hace lo mismo que la funcion mapear
+// Los array tienen un método map que hace lo mismo que la funcion mapear
 
 mostrar(numeros.map(item => item * 2))
 mostrar(nombres.map(item => item.toUpperCase()))
@@ -520,13 +529,16 @@ mostrar(nombres.map(item => item.toUpperCase()))
 
 // Ejemplo de uso de forEach
 //      Recorrer un array
+
 seccion('forEach')
 nombres.forEach((item,i) => mostrar(`${i+1} ${item}`))
+
 
 // Ejemplo de uso de filter
 //      Filtrar los nombres que tienen mas de 4 caracteres
 seccion('filter')
 mostrar(nombres.filter(item => item.length > 4))
+
 
 // Ejemplo de uso de reduce
 //      Sumar todos los elementos de un array
@@ -534,10 +546,12 @@ seccion('reduce')
 mostrar(numeros.reduce((acumulador, item) => acumulador + item), 0)         // 0 es valor inicial
 mostrar(numeros.reduce((multiplicador, item) => multiplicador * item), 1)   // 1 es valor inicial
 
+
 // Ejemplo de uso de find
 //      Buscar un elemento en un array
 seccion('find')
 mostrar(nombres.find(item => item === 'maria'))
+
 
 // Se pueden encadenar
 seccion('Encadenar')
@@ -548,6 +562,7 @@ let nombreCortoEnMayusculas = nombres
 
 mostrar(nombreCortoEnMayusculas)
 
+
 // Ejemplo de uso de sort
 //      Ordenar un array
 seccion('sort')
@@ -555,28 +570,29 @@ mostrar(nombres.sort()) // Ordena alfabeticamente
 mostrar(numeros.sort()) // Ordena alfabeticamente
 mostrar(nombres.sort((a, b) => a.length - b.length)) // Ordena por longitud
 
-// Clases y objetos
 
+// Clases y objetos
 let punto = {
     x: 10,
     y: 20,
     moverEnX(dx) { this.x += dx },
-    moverEnY: function (dy) { return this.y += dy } // No usar arrow function en metodos
+    moverEnY: function (dy) { return this.y += dy } // No usar arrow function en métodos
 }
-// Al declarar un metodo dentro de un objeto puede acceder a las propiedad con la palabra reservada this
+// Al declarar un método dentro de un objeto puede acceder a las propiedad con la palabra reservada this
 
 seccion('Objeto = instancia de una clase (prototipo)')
 mostrar(punto)
 
-punto.moverEnX(10)  // Llama al metodo moverEnX con la sintaxis de punto
+punto.moverEnX(10)  // Llama al método moverEnX con la sintaxis de punto
 mostrar(punto)
 
 punto.moverEnY(20)
 mostrar(punto)
 
-// Clases : Son funciones constructoras de objetos
 
+// Clases : Son funciones constructoras de objetos
 seccion('Clases = funciones constructoras de objetos')
+
 class Punto {
     constructor(x, y) {
         this.x = x
@@ -597,9 +613,9 @@ p2.moverEnX(200)
 mostrar(p1)
 mostrar(p2)
 
-// JSON: JavaScript Object Notation (Notación de Objetos de JavaScript)
-//// Se puede usar para intercambiar datos entre aplicaciones
 
+// JSON: JavaScript Object Notation (Notación de Objetos de JavaScript)
+//   Se puede usar para intercambiar datos entre aplicaciones
 seccion('JSON')
 let personaJson = {
     "nombre": 'Juan',
@@ -618,6 +634,8 @@ mostrar(jsonConvertidoEnTexto)  // Observe que el tipo de dato es string
 
 mostrar(personaJson)
 mostrar(textoConvertidoEnJson)
+
+
 
 
 
@@ -642,7 +660,7 @@ function mostrar(datos) {   // Muestra el valor indicando el tipo de dato y el n
 
     // Truco para mostrar objetos 
     datos = `${datos instanceof Object ? JSON.stringify(datos) : datos}`
-    datos = datos.padEnd(120) // Añade espacios al final de la cadena hasta que tenga 100 caracteres
+    datos = datos.padEnd(120) // Añade espacios al final de la cadena hasta que tenga 120 caracteres
 
     console.info(` ${datos} ${tipo} | Línea ${linea}`);
 }
