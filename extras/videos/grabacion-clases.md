@@ -131,4 +131,4 @@ Clase 8°
 [Ver video](https://utn.zoom.us/rec/share/3syBGQvKWXZ_LC9j0bFs4InGnpl8fduY3xpzqDi5oPSp9Chd3YfraICi6vWdsyu5.Q8JbDvTjM7nzW2f1)
 
 * 126 - Jueves 23 - 10 a 12
-[Ver video]()
+[Ver video](https://utn.zoom.us/rec/share/doNTi8HedOXWcgFjIMWTBhesALSDoezTmLy-Od9LMq3T9_aJbdB3nUCCIV-r46Sv.zx5F06ZIb-m_G1rx)

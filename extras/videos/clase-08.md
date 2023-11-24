@@ -43,6 +43,22 @@ https://utn.zoom.us/rec/share/3syBGQvKWXZ_LC9j0bFs4InGnpl8fduY3xpzqDi5oPSp9Chd3Y
 
 El código fuente generado en la clase lo puede ver en: 
 
-https://github.com/AlejandroDiBattista/AP4-ReactJS/tree/main/clase-08/134
+https://github.com/AlejandroDiBattista/AP4-ReactJS/tree/main/clase-08
+---
+
+## Clase 08 - Curso 126
+
+  Cambiar en https://campus.argentinaprograma.utn.edu.ar/course/view.php?id=715&section=8
+
+---
+Clase 8 | Jueves 23 de 10 a 12 | Curso 126
+
+Puede ver el video en:
+
+https://utn.zoom.us/rec/share/doNTi8HedOXWcgFjIMWTBhesALSDoezTmLy-Od9LMq3T9_aJbdB3nUCCIV-r46Sv.zx5F06ZIb-m_G1rx
+
+El código fuente generado en la clase lo puede ver en: 
+
+https://github.com/AlejandroDiBattista/AP4-ReactJS/tree/main/clase-08
 ---
 
