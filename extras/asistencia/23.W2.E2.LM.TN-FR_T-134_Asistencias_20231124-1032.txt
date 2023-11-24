@@ -1,0 +1,80 @@
+Curso	DESARROLLADOR WEB CON REACT JS - Lunes y Miércoles - 19 a 21 ::: 134
+Grupo	Todos los participantes
+
+Apellido(s)	Nombre	ID de estudiante	Nombre de usuario	Dirección de correo	30 Oct 2023 7.00PM Todos los estudiantes	1 Nov 2023 7.00PM Todos los estudiantes	6 Nov 2023 7.00PM Todos los estudiantes	8 Nov 2023 7.00PM Todos los estudiantes	13 Nov 2023 7.00PM Todos los estudiantes	15 Nov 2023 7.00PM Todos los estudiantes	20 Nov 2023 7.00PM Todos los estudiantes	22 Nov 2023 7.00PM Todos los estudiantes	P	A	Sesiones tomadas	Puntuación	Porcentaje
+ALEJANDRA EDITH	GAUNA	25765	24997860	aegagranea@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	7	1	8	7 / 8	87,5
+ALONZO	SANDRA DEL VALLE	19047	24836529	salonzo50@gmail.com	P (1/1)	A (0/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	7	1	8	7 / 8	87,5
+AMADO	GUSTAVO FABIAN	21496	21670449	gustavofab@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+ANDRES	ALEGRE	25782	23995110	andresarielalegre@gmail.com	P (1/1)	A (0/1)	A (0/1)	P (1/1)	A (0/1)	P (1/1)	A (0/1)	P (1/1)	4	4	8	4 / 8	50,0
+ANTONIO	LEIVA	25788	13510492	Antonioleiva909@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+ARIAS	ALFONSO JOSE	1332	18383939	alfonsojosearias@gmail.com	P (1/1)	A (0/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	5	3	8	5 / 8	62,5
+ARTEIJO CALDERON	ANTONIO EMANUEL	2035	18808705	antonio.arteijo@gmail.com	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	1	7	8	1 / 8	12,5
+BERTOLI	EDUARDO FABIÁN	5189	22737305	efbertoli@gmail.com	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	1	7	8	1 / 8	12,5
+BIANCHETTI	GERARDO HORACIO	8072	18258700	gbianchetti@msn.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+BORDA	VICTOR	20617	17168120	victtoriob@yahoo.com.ar	A (0/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	7	1	8	7 / 8	87,5
+BRUNO	CLAUDIO	3750	20784683	cdbruno10@hotmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+CADONA	ANDREA ROXANA	1675	23997439	andreacadona3@gmail.com	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	2	6	8	2 / 8	25,0
+CARDINALE	CLAUDIA	3692	17315674	ccardinale2004@yahoo.com.ar	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	4	4	8	4 / 8	50,0
+CARRERAS	JOSE	10502	17985878	josecarrerasfilms@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+CASANELLA MOZZI	PEDRO	18002	17132583	pcasanell2@alumno.uned.es	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+CASTILLO	ALEXANDER GUSTAVO	24456	34190400	alxander89@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+CHILLÓN	20561786	23987	20571786	juan_pablo_chillon@hotmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+CIRO	PUIG	25822	18367300	ciropuig1@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+CLAUDIO	GIMENEZ	25824	23390597	claudio.gimenez.666@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+D'AGOSTINO	ENRIQUE	5663	18388935	dagostinoenrique@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	6	2	8	6 / 8	75,0
+DFSFSD	CZXCZXC	23931	12345678	fsdf@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+DILEO	JUAN CARLOS	10668	14568996	bdileo35@gmail.com	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	P (1/1)	A (0/1)	A (0/1)	3	5	8	3 / 8	37,5
+EDUARDO JOSÉ	RIERA	25918	17626756	juanpe752@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+FEMIA	CINTIA	24048	24909032	femiacintia@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	8	0	8	8 / 8	100,0
+FERNANDEZ	JAVIER	23918	2846385	javierfernandez3f@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+FERNANDO DARÍO	TULA	25853	12700995	fedatu@hotmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	8	0	8	8 / 8	100,0
+GAYÁ	NANCY LORENA	16557	24717738	nanchu_lore@hotmail.com	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	1	7	8	1 / 8	12,5
+GLORIA SALAS	DIEGO LEONARDO	4997	18877611	dlgloriasalas@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+GRECO	JUAN MANUEL	10882	23196253	grecoarqui@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	5	3	8	5 / 8	62,5
+HERRERA	JUAN ADOLFO	23963	18454726	juanherrera545@hotmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	6	2	8	6 / 8	75,0
+HERRERA	RICARDO	18273	24634910	h_rc@hotmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+ILLANES	LUIS HECTOR	23926	10537291	lh.illanes@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	8	0	8	8 / 8	100,0
+JHON DEYVID	AJORURO CONDORI	25903	13494441	jhoni.keih@gmail.com	A (0/1)	P (1/1)	A (0/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	5	3	8	5 / 8	62,5
+JOSE LUIS	RAMOS LIMA	25916	9974525	joseluisramoslima@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+JOSÉ MARÍA	PERCÍNCULA	25841	21974569	doctorpc.liebig@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	A (0/1)	A (0/1)	5	3	8	5 / 8	62,5
+JUAN CARLOS	GALAN	10657	23805016	juancgalan47@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+LAUDELINO	ALEJANDRA	22523	24572588	aleenmercadolibre2@protonmail.ch	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+LUCENA	NAYARIT	16744	17247704	zoraidamarinacardenasduque@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+LUNA	JUAN MARCELO	10929	24234578	elpocitano@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	4	4	8	4 / 8	50,0
+MAHMUD	ADRIÁN	376	21418801	mahmudpaa@gmail.com	P (1/1)	P (1/1)	A (0/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	6	2	8	6 / 8	75,0
+MANERA	CARLOS FEDERICO	3164	20948507	charlymanera@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	8	0	8	8 / 8	100,0
+MARISOL	SANABRIA	25966	24220385	marsanab@yahoo.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	P (1/1)	5	3	8	5 / 8	62,5
+MAROGLIO	FLAVIO OSCAR	23982	20310540	fmaroglio@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+MARTINEZ	MARIANA	14450	20796343	marian1810@hotmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+MAZZAGLIA	ALEJANDRO DELFOR	1141	14797420	admazzaglia@gmail.com	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	2	6	8	2 / 8	25,0
+MEDRAN	RODOLFO	18531	23744404	danmedran@hotmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+MEMA	MIGUEL ANGEL	16145	23687562	miguelamema@gmail.com	P (1/1)	A (0/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	A (0/1)	P (1/1)	5	3	8	5 / 8	62,5
+MESSINA RAMOS	RAFAEL ATILIO	18085	22234890	messina.rafael@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	6	2	8	6 / 8	75,0
+MIGUEL ANGEL	TARABINE	25982	25256244	migueltarabine76@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	4	4	8	4 / 8	50,0
+MONTENEGRO	FABIAN	6194	20521480	fabymontenegro@gmail.com	P (1/1)	A (0/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	3	5	8	3 / 8	37,5
+MOURAD	ADRIAN	358	22639502	adrmou@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	8	0	8	8 / 8	100,0
+NIVEYRO	LUIS EDUARDO	25729	20607892	luisniveyro@live.com.ar	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+NOGUEROL	MARIA MARCELA	23986	20561094	marcelnoguerol@yahoo.com.ar	P (1/1)	P (1/1)	A (0/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	7	1	8	7 / 8	87,5
+OCHOA	FABIÁN ANDRÉS	6212	24192661	ochoafabian2020@gmail.com	P (1/1)	A (0/1)	P (1/1)	A (0/1)	A (0/1)	P (1/1)	A (0/1)	A (0/1)	3	5	8	3 / 8	37,5
+OJEDA	MIRIAM BEATRIZ	16293	20644779	estrellita.figueroa@gmail.com	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	5	3	8	5 / 8	62,5
+ONDARRA	MARCELO	23999	21634979	mrondarra@hotmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+ONSARI	VANESA	20476	24111284	vaonsari@hotmail.com	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	1	7	8	1 / 8	12,5
+OSCAR ALBERTO	MACIEL	24042	24600911	grafis.dg@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	8	0	8	8 / 8	100,0
+PABLO GERMÁN	FALABELLA	26011	24390071	pfalabel@gmail.com	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	3	5	8	3 / 8	37,5
+PASTRANA	CLAUDIA GABRIELA	3709	24456849	gabrielapastranapoesia@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+PERRIERE	MARIANO	25722	25307768	mariiiiiiano@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	A (0/1)	A (0/1)	5	3	8	5 / 8	62,5
+RATTI	ANALIA	1621	22092359	analia.v.ratti@gmail.com	P (1/1)	P (1/1)	A (0/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	5	3	8	5 / 8	62,5
+REBRIJ	ARNALDO VICTOR	2194	13212842	arnireb@hotmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+REGALADO MANAY	TOMAS	22050	19054345	andersonedlp_10@hotmail.com	P (1/1)	A (0/1)	A (0/1)	A (0/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	4	4	8	4 / 8	50,0
+SALINAS SALINAS	LILIANA ELIZABETH DE	23922	4358203	lilianasalinas_s02@fpuna.edu.py	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+SEGUÍ	NICOLÁS	17060	23248493	nicosegui@hotmail.com	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	2	6	8	2 / 8	25,0
+SISTI	KARINA	11426	25072309	karisisti@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	5	3	8	5 / 8	62,5
+SOLIZ	VIVIANA	23967	18880363	vivianasolizosinaga@gmail.com	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	5	3	8	5 / 8	62,5
+SPECTERMAN	LUIS OMAR	23940	14620696	lspecte@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+SUÁREZ	GUILLERMO	8606	20635719	guillesuarez68@gmail.com	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	3	5	8	3 / 8	37,5
+TISSERA	CRISTIAN ANDRES	3936	22491855	cristian_tissera@yahoo.com.ar	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+UCELAY	HECTOR R	26359	16778627	ucelayh@gmail.com	A (0/1)	A (0/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	5	3	8	5 / 8	62,5
+VALENZUELA	MARTIN	14874	17223917	mevalenzuela@yahoo.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
+VEGA	JUAN LEANDRO	10831	25319269	vegajuanleandro@gmail.com	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	P (1/1)	A (0/1)	A (0/1)	4	4	8	4 / 8	50,0
+WAELKENS	VERÓNICA MARÍA	20597	25262567	verowaelkens@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	6	2	8	6 / 8	75,0
+ZUJEW	CRISTIAN ALEJO	3874	16875503	czujew@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	5	3	8	5 / 8	62,5
