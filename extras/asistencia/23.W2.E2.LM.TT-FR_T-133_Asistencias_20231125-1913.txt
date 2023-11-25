@@ -71,7 +71,7 @@ MORTOLA	ANA FLORENCIA	1515	25198353	afmortola@gmail.com	A (0/1)	A (0/1)	A (0/1)	
 OLIVIERI ALBERTI	ALFREDO HORACIO	1353	18149366	alfredo.olivieri@gmail.com	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	1	7	8	1 / 8	12,5
 OMAR AUGUSTO JOSÉ	MIEREZ	25793	29035524	augustomierez@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
 ORTIZ	JUAN PABLO	10998	27016688	guaranicazador@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	8	0	8	8 / 8	100,0
-ORTIZ	OSCAR ALEJANDRO	21495	21307211	okyformosa@gmail.com	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	6	2	8	6 / 8	75,0
+ORTIZ	OSCAR ALEJANDRO	21495	21307211	okyformosa@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	7	1	8	7 / 8	87,5
 OTEGUI	LUCIANO JESÚS	24083	26321091	luciano_otegui@hotmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	7	1	8	7 / 8	87,5
 PABLO DANIEL	ARRAIZA	17532	18077559	pablo.arraiza@bue.edu.ar	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	1	7	8	1 / 8	12,5
 PANNO	DIEGO MAURICIO	5013	26703609	diegompanno@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	8	0	8	8 / 8	100,0
