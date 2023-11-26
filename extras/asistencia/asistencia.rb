@@ -17,6 +17,7 @@ def leer(origen)
             nombre: "#{x[0].nombre}, #{x[1].nombre}", 
             dni: x[3].to_i, email: x[4],
             asistencias: x[3..-1].count{|y| y["P"]},
+            dias: x[3..-1].map{|y| y["P"] ? "P" : "A"},
             id: x[2],
         }
     end
@@ -93,7 +94,6 @@ def leer_asistencias
     salida 
 end 
 
-require 'json'
 
 def guardar_asistencias(asistencias)
     File.open("asistencias.json", "w") do |f|
@@ -114,8 +114,8 @@ def leer_grupos()
     salida 
 end
 
-grupos = leer_grupos()
-pp grupos.select{|k,v| v[:curso] == 133}
+# grupos = leer_grupos()
+# pp grupos.select{|k,v| v[:curso] == 133}
 asistencias = leer_asistencias()
 nunca = asistencias.select{|x| x[:asistencias] == 0}
 una = asistencias.select{|x| x[:asistencias] == 1}
@@ -123,13 +123,14 @@ dos = asistencias.select{|x| x[:asistencias] == 2}
 tres = asistencias.select{|x| x[:asistencias] == 3}
 
 puts "- ESTADISTICAS --------------------------------------"
-puts "  Hay #{grupos.size} alumnos en grupos"
+# puts "  Hay #{grupos.size} alumnos en grupos"
 puts "  Hay #{asistencias.size} alumnos en asistencias"
 puts "  Hay #{nunca.size} alumnos que nunca asistieron"	
 puts "  Hay #{una.size} alumnos que asistieron una vez"
 puts "  Hay #{dos.size} alumnos que asistieron dos veces"
 puts "  Hay #{tres.size} alumnos que asistieron tres veces"
 puts 
+return
 
 n = 0
 asistencias.each do |asistencia|
