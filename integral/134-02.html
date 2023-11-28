@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+
+    <title>To Do List-ReactJS</title>
+    <!-- 
+      Curso 134 - Grupo 02 -> aegagranea@gmail.com
+        24997860; Alejandra Edith, Gauna
+        18877611; Gloria Salas, Diego Leonardo
+        10537291; llanes, Luis Hector
+        23687562; Mema, Miguel Angel
+        18880363; Soliz, Viviana
+        17223917; Valenzuela, Martin
+    -->
+    <style>
+      body {
+        background-color: rgb(67, 113, 173);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      app {
+        margin: 0 auto;
+        max-width: 450px;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+      }
+      .task-form {
+        display: flex;
+        justify-content: center;
+      }
+
+      .task-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      input {
+        width: 490px;
+        height: 50px;
+        margin: 5px;
+        padding: 0px 20px 0px 20px;
+        border-radius: 10px;
+        background-color: white;
+        font-size: 18px;
+        border: 0;
+      }
+      .button-submit {
+        width: 60px;
+        height: 50px;
+        margin: 5px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(255, 6, 46);
+        color: white;
+        font-weight: bold;
+      }
+
+      .button-submit:hover {
+        opacity: 0.9;
+      }
+
+      .task-item {
+        width: 520px;
+        height: 50px;
+        padding: 0px 20px 0px 20px;
+        border: solid white 1px;
+        border-radius: 10px;
+        font-size: 18px;
+        color: white;
+        background: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .task-item p {
+        flex: 1;
+        margin-right: 10px;
+      }
+
+      .task-item button {
+        margin-right: 10px;
+      }
+
+      .completed-button {
+        margin: 0px 5px 0px 5px;
+        border: none;
+        background: none;
+        font-family: Montserrat, sans-serif;
+        color: #62d0ff;
+        font-size: 1.4rem;
+      }
+
+      .remove-button {
+        margin: 0px 5px 0px 5px;
+        border: none;
+        background: none;
+        font-family: Montserrat, sans-serif;
+        color: #62d0ff;
+        font-size: 1.4rem;
+      }
+    </style>
+
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+      const App = () => {
+        const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        const [tasks, setTasks] = useState(savedTasks);
+
+        useEffect(() => {
+          console.log("El estado de la lista de tareas ha cambiado");
+          localStorage.setItem("tasks", JSON.stringify(tasks));
+        }, [tasks]);
+
+        const handleAddTask = (newTask) => {
+          setTasks([...tasks, newTask]);
+        };
+
+        const handleCompleteTask = (id) => {
+          const updatedTasks = tasks.map((task) =>
+            task.id === id ? { ...task, completed: !task.completed } : task
+          );
+          setTasks(updatedTasks);
+        };
+
+        const handleDeleteTask = (id) => {
+          const filteredTasks = tasks.filter((task) => task.id !== id);
+          setTasks(filteredTasks);
+        };
+
+        return (
+          <div className="app">
+            <h1>Lista de Tareas</h1>
+            <TaskForm onAddTask={handleAddTask} />
+            <TaskList
+              tasks={tasks}
+              onCompleteTask={handleCompleteTask}
+              onDeleteTask={handleDeleteTask}
+            />
+          </div>
+        );
+      };
+      const TaskForm = ({ onAddTask }) => {
+        const [newTask, setNewTask] = useState("");
+
+        const handleInputChange = (event) => {
+          setNewTask(event.target.value);
+        };
+
+        const handleSubmit = (event) => {
+          event.preventDefault();
+          if (newTask.trim()) {
+            onAddTask({
+              id: Number(Date.now()),
+              name: newTask,
+              completed: false,
+            });
+            setNewTask("");
+          }
+        };
+
+        return (
+          <form onSubmit={handleSubmit} className="task-form">
+            <input
+              type="search"
+              value={newTask}
+              onChange={handleInputChange}
+              placeholder="Agregar nueva tarea"
+            />
+            <button className="button-submit" type="submit">
+              Agregar
+            </button>
+          </form>
+        );
+      };
+      const TaskList = ({ tasks, onCompleteTask, onDeleteTask }) => {
+        return (
+          <div className="task-list">
+            {tasks.map((task) => (
+              <TaskItem
+                key={task.id}
+                task={task}
+                onCompleteTask={onCompleteTask}
+                onDeleteTask={onDeleteTask}
+              />
+            ))}
+          </div>
+        );
+      };
+
+      const TaskItem = ({ task, onCompleteTask, onDeleteTask }) => {
+        const [completed, setCompleted] = useState(task.completed);
+
+        const handleComplete = () => {
+          setCompleted(!completed);
+          onCompleteTask(task.id);
+        };
+
+        return (
+          <div className="task-item">
+            <p
+              style={{
+                textDecoration: completed ? "line-through green" : "none",
+              }}
+            >
+              {task.name}
+            </p>
+            <button className="completed-button" onClick={handleComplete}>
+              {completed ? "Restaurar" : "Completado"}
+            </button>
+            <button
+              className="remove-button"
+              onClick={() => onDeleteTask(task.id)}
+            >
+              Quitar
+            </button>
+          </div>
+        );
+      };
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

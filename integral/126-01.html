@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas</title>
+    
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 
+      Curso 126 - Grupo 1 -> wendyzubiaga@gmail.com
+    
+        27190813; Zubiaga, Wendy 
+        27678855; Lofiego, Marcelo Alejandro 
+        27584437; Mauricio, Tolosa 
+    
+        funciona: 
+        diseño: 
+    
+    -->
+
+    <style>
+        * { margin: 0;
+            font-family: 'YellowTail', sans-serif;     
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 5%;
+            background-color: pink;
+        }
+
+        .Container{
+            width: 800px;
+            border-bottom-style: dotted;
+            border-style:solid;
+            border-radius: 2%;
+            /*border-color: #42383B;*/
+            border-color: pink;
+            display: block;
+            align-content: center;
+            background-color: pink;
+
+        }
+
+        .title {
+            padding: 5px;
+            margin-top: 2%;
+            width:auto;
+            text-align:center;
+            font-size: 32pt;
+            color: #42383B;    
+        }
+
+        .task-done {
+            padding-left:  10px;
+            width: 100%;
+            text-decoration: line-through;
+        }
+
+        .task{
+            padding-left:  10px;
+            width: 100%;}
+
+        form {
+            display: flex;
+            padding: 5%  5% 1.5% 5% ;
+        }
+
+        input[type="text"] {
+            height: 40px;
+            width:100%;
+            border: 1px solid #ccc;
+            border-radius: 10px 0 0 10px;
+            padding: 5px 5px 5px 20px;
+            outline-color: #42383B;
+            font-size: 15pt;
+            align-items: start;
+            
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #42383B;
+            color: #fff;
+            border: 0;
+            padding: 0 20px;
+            border-radius: 0 10px 10px 0;
+            font-size: 15pt;
+            align-items: end;
+        }
+    
+        .buttonItem{
+	        padding: 0;
+            width: 35px;
+            height:40px;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        .buttonDeleteAll{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            padding: 5px 20px 5px 20px;
+            border-radius: 20px 20px 20px 20px;
+            font-size: 10pt;
+        }
+        table {
+            padding: 0 5% 2%  5% ;
+            display:block;
+            font-size: 15pt;  
+        }
+      
+        tbody{ display:block; }
+        
+        tr  {
+            display: block;  
+	        caret-color: transparent;
+	        margin-top: 1%;
+	        margin-bottom: 1%;
+            background-color:#dda0dd7d;
+            border-radius: 10px 10px 10px 10px;
+	    }
+      
+        tr:nth-child(even) {width: auto;
+            background-color: #f79bb966;
+
+        }
+    
+        .tdcheckbox {
+            height: 50px;
+            width:50px;
+            padding-left: 15px;
+            table-layout: auto;
+        }
+
+        .checkboxPink {
+            align-content: center;
+            position: relative;
+            padding: 2%;
+            accent-color:  purple;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border: 2px black solid;
+          }
+
+        .checkboxPink:checked::before {
+            content: " ";     
+        }
+    </style>
+
+    <script type="text/babel">
+        
+        const { useState, useEffect } = React
+
+        function recuperarTareas() {
+            const tareas = localStorage.getItem('taskList')
+            return tareas ? JSON.parse(tareas) : []
+        }
+
+        function recuperarID(){
+            const id = localStorage.getItem('proximoId')
+            return id ? JSON.parse(id) : 1
+
+        }
+        function usePersistedState(key,valorRecuperar) {
+            const [valor, setValor] = useState(valorRecuperar)
+            useEffect(() => {
+            localStorage.setItem(key, JSON.stringify(valor))
+            }, [key, valor])  
+
+            return [valor, setValor ]
+        }
+
+        function TaskItem ({ item, alBorrar,alActualizar} ) {
+            const { id, taskname, complete } = item;
+            const [isChecked, setIsChecked] =  useState(complete);
+
+            function actualizar() {
+                setIsChecked(!isChecked);
+                alActualizar(id)
+            }
+            
+            function borrar() {
+                alBorrar(item.id);
+            }
+
+            return (
+                <tr>
+                    <td className='tdcheckbox'><input className='checkboxPink' type="checkbox" checked={isChecked} onChange={actualizar} /></td>
+                    <td className={ complete ? 'task-done' : 'task' }>{ taskname }</td>
+                    <td><button className='buttonItem' onClick={borrar}>X</button></td>
+                </tr>
+            );
+        };
+
+
+        function TaskList ({ taskList, alBorrar ,alActualizar,alBorrarTodo}) {
+
+            function borrarLista(taskList){
+                alBorrarTodo()
+            }
+            return (
+                <>
+                <table> 
+                    <tbody>
+                        {taskList.map(item => <TaskItem key={item.id} item={item} alBorrar={alBorrar} alActualizar={alActualizar}/> )} 
+        
+                    </tbody>
+                </table>
+                <button className='buttonDeleteAll' onClick={borrarLista}>Borrar Todo</button> 
+                </>
+            );
+        };
+
+        function TaskForm({alAgregar}) {
+            const [nombre, setNombre] = useState("");
+            function actualizar(e) { setNombre(e.target.value); }
+            function agregar(e) {
+                e.preventDefault();
+                alAgregar(nombre);
+                setNombre('');
+            }
+        
+            return (
+                <form >
+                    <input type="text" value={nombre} onChange={actualizar} placeholder="tarea..." />
+                    <button onClick={agregar}>Agregar</button>
+              
+                </form>
+            );
+        };
+
+       
+        function App() {
+            const [proximoId, setProximoId] = usePersistedState('proximoId',recuperarID) 
+            const [taskList, setTasks] = usePersistedState('taskList',recuperarTareas)  
+
+            function addTask (newTask){
+                if (newTask!=''){   
+                    setTasks([...taskList, {  id: proximoId, taskname: newTask, complete: false }])
+                    setProximoId(proximoId+1)
+                }//else{alert('Debe ingresar una tarea')}
+            }
+
+            function setStatusTask (id){
+                setTasks(taskList.map(t => t.id === id ? {...t, complete: !t.complete} : t))
+            }
+
+            function removeTask(id) {
+                setTasks(taskList.filter(itemToBeDeleted => itemToBeDeleted.id !== id))
+            }
+
+            function removeAll(taskList) {
+                setTasks( [] )
+                setProximoId(1);
+            }
+
+            return (
+                <div className="Container">
+                    <h1 className="title">Todo List</h1>
+                    <TaskForm alAgregar={addTask} /> 
+                    <TaskList taskList={taskList} alBorrar={removeTask} alActualizar={setStatusTask} alBorrarTodo={removeAll}/>
+                </div>
+            );
+        }
+
+        const rootElement = document.getElementById('root')
+        ReactDOM.render(<App />, rootElement)
+
+    </script>
+    </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

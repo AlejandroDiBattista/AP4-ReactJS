@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajo Integrador Final</title>
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- 
+    Curso 126 - Grupo 12 -> hugobenitez31@hotmail.com
+  
+      26282939; Benitez, Hugo 
+  
+      funciona: 
+      diseño: 
+  
+  -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 300px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .button-group {
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+
+    .button-group button {
+      width: 90px;
+      padding: 5px 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .button-group .delete {
+      background-color: red;
+    }
+
+    .button-group .finished {
+      background-color: green;
+    }
+
+    .completed {
+      text-decoration: line-through;
+    }
+
+    .task-form {
+      display: flex;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+
+    .task-form input {
+      flex: 1;
+      padding: 5px;
+      margin-right: 10px;
+    }
+
+    .task-form button {
+      padding: 5px 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    function TaskItem({ task, onComplete, onDelete }) {
+      const [completed, setCompleted] = useState(false);
+
+      const toggleCompleted = () => {
+        setCompleted(!completed);
+        onComplete(task.id);
+      };
+
+      const handleDelete = () => {
+        onDelete(task.id);
+      };
+
+      return (
+        <div className={`task-item ${completed ? 'completed' : ''}`}>
+          <span>{task.name}</span>
+          <div className="buttons-container">
+            <div className="button-group">
+              <button className={completed ? 'finished' : ''} onClick={toggleCompleted}>
+                {completed ? 'Completado' : 'Completar'}
+              </button>
+            </div>
+            <div className="button-group">
+              <button className="delete" onClick={handleDelete}>Eliminar</button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function TaskList({ tasks, onComplete, onDelete }) {
+      return (
+        <div>
+          {tasks.map(task => (
+            <TaskItem
+              key={task.id}
+              task={task}
+              onComplete={onComplete}
+              onDelete={onDelete}
+            />
+          ))}
+        </div>
+      );
+    }
+
+    function TaskForm({ addTask }) {
+      const [taskName, setTaskName] = useState('');
+
+      const handleSubmit = e => {
+        e.preventDefault();
+        if (taskName.trim()) {
+          addTask({ id: Date.now(), name: taskName });
+          setTaskName('');
+        }
+      };
+
+      return (
+        <form className="task-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={taskName}
+            onChange={e => setTaskName(e.target.value)}
+            placeholder="Escribe nueva tarea..."
+          />
+          <button type="submit">Agregar</button>
+        </form>
+      );
+    }
+
+    function App() {
+      const [tasks, setTasks] = useState(() => {
+        const savedTasks = localStorage.getItem('tasks');
+        return savedTasks ? JSON.parse(savedTasks) : [];
+      });
+
+      useEffect(() => {
+
+        const savedTasks = localStorage.getItem('tasks');
+        if (savedTasks) {
+          setTasks(JSON.parse(savedTasks));
+        }
+      }, []);
+
+      useEffect(() => {
+
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        console.log('Tareas guardadas en localStorage:', tasks);
+      }, [tasks]);
+
+
+      const handleComplete = taskId => {
+        const updatedTasks = tasks.map(task =>
+          task.id === taskId ? { ...task, completed: !task.completed } : task
+        );
+        setTasks(updatedTasks);
+      };
+
+      const handleAddTask = newTask => {
+        setTasks([...tasks, newTask]);
+      };
+
+      const handleDelete = taskId => {
+        const updatedTasks = tasks.filter(task => task.id !== taskId);
+        setTasks(updatedTasks);
+      };
+
+      return (
+        <div>
+          <h1>Lista de Tareas</h1>
+          <TaskForm addTask={handleAddTask} />
+          <TaskList tasks={tasks} onComplete={handleComplete} onDelete={handleDelete} />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+    );
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Aplicación React</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+  <!-- 
+    Curso 133 - Grupo 03 -> tsade@live.com.ar
+      21992626; Adriana Villafañe 
+      18445270; Viviana Lopez 
+      17219543; Edmundo Molina  
+      18123292; Angel Aberbach  
+
+      funciona: 
+      diseño: 
+  -->
+  </head>
+
+<body>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: rgb(16, 43, 177);
+        background: linear-gradient(
+            90deg,
+            rgba(16, 43, 177, 1) 0%,
+            rgba(48, 219, 228, 0.9173525223820846) 100%
+        );
+    }
+
+    main {
+        width: 100vw;
+        height: 40vw;
+    }
+    nav {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 20px;
+        color: white;
+    }
+    .candidato {
+        width: 18vw;
+        height: 17vw;
+        border: 3px solid goldenrod;
+        border-radius: 10px;
+        margin: 20px auto;
+        background-color: antiquewhite;
+        text-align: center;
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .numero {
+        width: 8vw;
+        height: 6vw;
+        margin: 20px auto;
+        color: blue;
+        font-size: 50px;
+    }
+
+    button {
+        width: 7vw;
+        height: 4vw;
+        background-color: #27a8d5;
+        border-radius: 10px;
+        font-size: 30px;
+        margin: 3px;
+        -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    </style>
+    <script type="text/babel">
+        import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  const [contador1, setContador1] = useState(0);
+  const [contador2, setContador2] = useState(0);
+
+  const incrementar1 = () => {
+    setContador1(contador1 + 1);
+  };
+
+  const decrementar1 = () => {
+    if (contador1 > 0) {
+      setContador1(contador1 - 1);
+    }
+  };
+
+  const incrementar2 = () => {
+    setContador2(contador2 + 1);
+  };
+
+  const decrementar2 = () => {
+    if (contador2 > 0) {
+      setContador2(contador2 - 1);
+    }
+  };
+
+  return (
+    <div className="App">
+      <div>
+        <h2>Boca de Urnas</h2>
+      </div>
+      <div class="candidato">
+        <h2>Candidato1:</h2>
+        <h1> {contador1}</h1>
+        <button onClick={incrementar1}>+</button>
+        <button onClick={decrementar1}>-</button>
+      </div>
+      <div class="candidato">
+        <h2>Candidato2: </h2>
+        <h1>{contador2}</h1>
+        <button onClick={incrementar2}>+</button>
+        <button onClick={decrementar2}>-</button>
+      </div>
+      <footer>
+        <samp>Grupo 3:Adriana Villafañe(21992626), Viviana Lopez(18445270),Edmundo Molina(17219543), Angel Aberbach(18123292) UTN 2023</samp>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
+
+
+    </script>
+    
+</body>
+</html>

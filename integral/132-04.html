@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Trabajo Integrador - To Do List | Grupo 4">
+
+  <!-- 
+    Curso 132 - Grupo 04 -> hablaconwafle@gmail.com
+      26141170; D Julio, Fabian
+      26165883; Mariano, Mello
+      25131771; Matricardi, Mario Andres
+      18306509; Rochetti, Mónica Viviana
+      25772960; Scaltritti, Edgar
+      17318955; Stella Maris, Loreto
+  
+      funciona: 
+      diseño: 
+  -->
+  <title>To Do List | TP INTEGRADOR | Grupo 4</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #ddd;
+      font-family: sans-serif;
+      text-align: center;
+      margin: 0;
+    }
+
+    .todo-list {
+      background: #fff;
+      font-size: 15px;
+      max-width: 300px;
+      width: 100%;
+      margin: auto;
+      margin-bottom: 20px;
+      padding: 14px 14px;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+
+    .button {
+      outline: none;
+      padding: 8px;
+      font-size: 15px;
+      border: 0px solid;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .button-container {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .button[disabled] {
+      opacity: 0.3;
+    }
+
+    .button.pink {
+      background: #e95678;
+    }
+
+    .button.pink:hover {
+      background: #c23455;
+    }
+
+    .button.pink:active {
+      background: #e95678;
+    }
+
+    .button.blue {
+      background: #25b0bc;
+    }
+
+    .button.blue:hover {
+      background: #166b72;
+    }
+
+    .button.blue:active {
+      background: #25b0bc;
+    }
+
+    .file-input {
+      display: flex;
+      align-items: center;
+    }
+
+    .text {
+      flex: 1;
+      padding: 8px;
+      margin-right: 10px;
+      background: #f8f8f8;
+    }
+
+    .file-input>.text {
+      outline: none;
+      padding: 0px 10px;
+      font-size: 15px;
+      width: 230px;
+      height: 36px;
+      background: #f2f2f2;
+      border: 0px solid;
+      border-radius: 6px;
+    }
+
+    .todo {
+      display: flex;
+      align-items: center;
+      padding: 1em;
+      margin: 0 auto;
+      cursor: pointer;
+      border: solid 2px #f2f2f2;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .todo__state {
+      opacity: 1;
+      margin-right: 10px;
+      position: relative;
+    }
+
+    .todo:last-child {
+      border-bottom: none;
+    }
+
+    .todo.new-item {
+      opacity: 0;
+      transform: translateX(100px);
+      animation: fadeIn 0.3s linear forwards;
+    }
+
+    .todo__text {
+      color: #076b74;
+      text-align: left;
+      transition: all 0.2s linear 0.2s;
+    }
+
+    .todo__icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      margin: auto;
+      fill: none;
+      stroke: #42d7e4;
+      stroke-width: 2;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+
+    .todo__line,
+    .todo__box,
+    .todo__check {
+      transition: stroke-dashoffset 0.4s cubic-bezier(0.9, 0.0, 0.5, 1);
+    }
+
+    .todo__circle {
+      stroke: #42d7e4;
+      stroke-dasharray: 1 6;
+      stroke-width: 0;
+      transform-origin: 13.5px 12.5px;
+      transform: scale(0.4) rotate(0deg);
+      animation: none 0.4s linear;
+    }
+
+    .todo__text.done {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    .todo__text {
+      flex: 1;
+      cursor: pointer;
+    }
+
+    .todo-list:empty::before {
+      content: "Sin Tareas";
+      color: #076b74;
+      text-align: center;
+      display: block;
+      padding: 8px;
+    }
+  </style>
+  
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    const TaskList = (props) => {
+      const { list, setList } = props;
+
+      const onChangeStatus = (e) => {
+        const { name, checked } = e.target;
+        const updateList = list.map((item) => ({
+          ...item,
+          done: item.id === name ? checked : item.done,
+        }));
+        setList(updateList);
+      };
+
+      const onClickRemoveItem = () => {
+        const updateList = list.filter((item) => !item.done);
+        setList(updateList);
+      };
+
+      const chk = list.map((item) => (
+        <div key={item.id} className={`todo ${item.done ? "done" : ""}`}>
+          <div
+            className="todo__text"
+            onClick={() =>
+              onChangeStatus({ target: { name: item.id, checked: !item.done } })
+            }
+          >
+            {item.description}
+          </div>
+          <input
+            className="todo__state"
+            name={item.id}
+            type="checkbox"
+            checked={item.done}
+            onChange={onChangeStatus}
+          />
+        </div>
+      ));
+
+      return (
+        <div className="todo-list">
+          {list.length ? chk : "Sin Tareas"}
+          {list.length ? (
+            <p>
+              <button className="button blue" onClick={onClickRemoveItem}>
+                Borrar tareas cumplidas
+              </button>
+            </p>
+          ) : null}
+        </div>
+      );
+    };
+
+    const FormTodo = (props) => {
+      const { handleAddItem } = props;
+      const [description, setDescription] = useState("");
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        handleAddItem({
+          done: false,
+          id: (+new Date()).toString(),
+          description,
+        });
+        setDescription("");
+      };
+
+      return (
+        <form onSubmit={handleSubmit}>
+          <div className="todo-list">
+            <div className="file-input">
+              <input
+                type="text"
+                className="text"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                placeholder="Agregar tarea..."
+              />
+              <button
+                className="button pink"
+                disabled={description ? "" : "disabled"}
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </form>
+      );
+    };
+
+    const Container = () => {
+      const [list, setList] = useState([]);
+
+      const handleAddItem = (addItem) => {
+        setList([...list, addItem]);
+      };
+
+      return (
+        <div>
+          <FormTodo handleAddItem={handleAddItem} />
+          <TaskList list={list} setList={setList} />
+        </div>
+      );
+    };
+
+    function App() {
+      return (
+        <div className="App">
+          <Container />
+        </div>
+      );
+    }
+
+    const rootElement = document.getElementById('root');
+    ReactDOM.render(<Container />, rootElement);
+
+  </script>
+</head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+
+</html>

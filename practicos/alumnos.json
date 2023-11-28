@@ -5,9 +5,11 @@
     "nombre": "Acevedo, Gabriel",
     "dni": 16070863,
     "email": "acegabriel62@gmail.com",
-    "asistencias": 4,
+    "asistencias": 5,
+    "dias": "PPAAPPAP",
     "id": "7663",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -16,8 +18,10 @@
     "dni": 27070913,
     "email": "tomas.villarruel@mi.unc.edu.ar",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "26055",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -25,9 +29,11 @@
     "nombre": "Agretti, Irina",
     "dni": 25254895,
     "email": "irinagretti@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "9197",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -35,9 +41,11 @@
     "nombre": "Aguerregaray, Javier",
     "dni": 22962605,
     "email": "aguerregarayja@yahoo.com.ar",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "9489",
-    "practico": "no"
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -45,9 +53,11 @@
     "nombre": "Alegre, Cristina",
     "dni": 20387275,
     "email": "alegretinita@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PAPPPPPP",
     "id": "4034",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -55,9 +65,11 @@
     "nombre": "Alfieri, Carlos Roque",
     "dni": 23979860,
     "email": "alfiericarlos@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "24031",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -66,8 +78,10 @@
     "dni": 24334174,
     "email": "herdanoe1@outlook.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "16645",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -75,9 +89,11 @@
     "nombre": "Andrea Lujan, Alonso",
     "dni": 26627727,
     "email": "andreaalonso727@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "25778",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -86,8 +102,10 @@
     "dni": 18226488,
     "email": "feransotegui@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "6975",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -96,8 +114,10 @@
     "dni": 27029838,
     "email": "valeriaaragon@gmail.com",
     "asistencias": 3,
+    "dias": "PPPAAAAA",
     "id": "3415",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -106,8 +126,10 @@
     "dni": 23274538,
     "email": "sergiolq2050@gmail.com",
     "asistencias": 4,
+    "dias": "APPAPPAA",
     "id": "19500",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -116,8 +138,10 @@
     "dni": 27386100,
     "email": "lore_ar@hotmail.com",
     "asistencias": 6,
+    "dias": "PPPPPPAA",
     "id": "12266",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -125,9 +149,11 @@
     "nombre": "Aste, Nicolas Matias",
     "dni": 25430546,
     "email": "astenicolasmati@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "16941",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -136,8 +162,10 @@
     "dni": 26555662,
     "email": "juanhoracio93@gmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "21532",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -145,9 +173,11 @@
     "nombre": "Balestri, Sebastian Gabriel",
     "dni": 26673161,
     "email": "balestri@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "19416",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -155,9 +185,11 @@
     "nombre": "Bamba, Mariela",
     "dni": 27247889,
     "email": "marielab_017@hotmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPAPPPAP",
     "id": "24115",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -166,8 +198,10 @@
     "dni": 22952954,
     "email": "edgardoberestain@gmail.com",
     "asistencias": 2,
+    "dias": "PAAAPAAA",
     "id": "5124",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -176,8 +210,10 @@
     "dni": 24572639,
     "email": "fermibi@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "21572",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -185,9 +221,11 @@
     "nombre": "Blanc, Solange",
     "dni": 26739987,
     "email": "solangeblanc@yahoo.com.ar",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPPAPP",
     "id": "19862",
-    "practico": "no"
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -196,8 +234,10 @@
     "dni": 17158631,
     "email": "lulubel@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "1021",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -205,9 +245,11 @@
     "nombre": "Brizuela, Jorge Daniel",
     "dni": 23730805,
     "email": "danibrizu@yahoo.com.ar",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "10228",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -216,8 +258,10 @@
     "dni": 28294031,
     "email": "j.c.cabrera2015@gmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "10664",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -225,9 +269,11 @@
     "nombre": "Camaño, Ivan Alejandro",
     "dni": 2575419,
     "email": "ivan192ar@yahoo.com.ar",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "23916",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -236,8 +282,10 @@
     "dni": 12971573,
     "email": "gerardocaplan@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "8064",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -245,9 +293,11 @@
     "nombre": "Copte, Fernando David",
     "dni": 26231942,
     "email": "ferdacop@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPAPPPAP",
     "id": "21527",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -255,9 +305,11 @@
     "nombre": "Cruz, Laura Patricia",
     "dni": 26641479,
     "email": "lalicruguer1@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "APPPPPPA",
     "id": "22668",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -265,9 +317,11 @@
     "nombre": "D'acchille, Leonardo Gabriel",
     "dni": 22326063,
     "email": "leonardogabriel@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "12060",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -275,9 +329,11 @@
     "nombre": "D Angelo, Maximiliano",
     "dni": 26061287,
     "email": "maximilianorey@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPAPPPPP",
     "id": "22117",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -285,9 +341,11 @@
     "nombre": "David, Moreira",
     "dni": 25724439,
     "email": "daviddmoreira77@gmail.com",
-    "asistencias": 2,
+    "asistencias": 3,
+    "dias": "AAAAPPPA",
     "id": "25835",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -296,8 +354,10 @@
     "dni": 27580917,
     "email": "madelucia80@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "13919",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -306,8 +366,10 @@
     "dni": 22198073,
     "email": "adademitropulos@hotmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "325",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -316,8 +378,10 @@
     "dni": 26141170,
     "email": "fabiandjulio@gmail.com",
     "asistencias": 6,
+    "dias": "PPPPPPAA",
     "id": "6201",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -325,9 +389,11 @@
     "nombre": "Domenico, Alejandro Gabriel",
     "dni": 26098677,
     "email": "domenico_alejandro@yahoo.com.ar",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "1152",
-    "practico": "no"
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -336,8 +402,10 @@
     "dni": 16227509,
     "email": "duranjoge7@gmail.com",
     "asistencias": 1,
+    "dias": "APAAAAAA",
     "id": "10207",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -346,8 +414,10 @@
     "dni": 27878888,
     "email": "alejandra.dann@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "4461",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -356,8 +426,10 @@
     "dni": 13417289,
     "email": "bomplandeustaquia@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "5995",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -366,8 +438,10 @@
     "dni": 27048420,
     "email": "gonza79@gmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "16836",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -376,8 +450,10 @@
     "dni": 26937977,
     "email": "matiasfabro@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "24100",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -386,8 +462,10 @@
     "dni": 27759143,
     "email": "profedavidelias09@gmail.com",
     "asistencias": 3,
+    "dias": "PPAPAAAA",
     "id": "4656",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -396,8 +474,10 @@
     "dni": 22303960,
     "email": "marcelofer@outlook.com",
     "asistencias": 2,
+    "dias": "AAAPAPAA",
     "id": "13550",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -406,8 +486,10 @@
     "dni": 20298589,
     "email": "insumos_y_servicios@yahoo.com.ar",
     "asistencias": 4,
+    "dias": "AAPPPPAA",
     "id": "23981",
-    "practico": "no"
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -415,9 +497,11 @@
     "nombre": "Fernández Gasc, Agustín",
     "dni": 27792195,
     "email": "agustiiin@yahoo.com.ar",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PAPPPPPP",
     "id": "24126",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -426,8 +510,10 @@
     "dni": 18750590,
     "email": "eliferpon@hotmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "5256",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -435,9 +521,11 @@
     "nombre": "Feyling, Elbio Adalberto",
     "dni": 21744970,
     "email": "elbfey@yahoo.com.ar",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "5229",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -445,9 +533,11 @@
     "nombre": "Forcadell, María Gabriela",
     "dni": 20665292,
     "email": "gabrielaforcadell@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPPAPPA",
     "id": "14113",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -456,8 +546,10 @@
     "dni": 17331753,
     "email": "mbfraise@gmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "13802",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -465,9 +557,11 @@
     "nombre": "Furrer, Gustavo Omar",
     "dni": 20984165,
     "email": "gustavofurrer1@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPPAPP",
     "id": "8789",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -475,9 +569,11 @@
     "nombre": "Gaitan, Silvina",
     "dni": 25519623,
     "email": "dragonrosadito@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "19678",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -485,9 +581,11 @@
     "nombre": "Galvan, Adriana Del Valle",
     "dni": 27351505,
     "email": "adridvgalvangonzalez@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "25720",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -495,9 +593,11 @@
     "nombre": "Gamarra, Vanesa Roxana",
     "dni": 23408851,
     "email": "vanesaroshanajgamarra@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPPPAPA",
     "id": "20505",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -505,9 +605,11 @@
     "nombre": "Garay, Pablo",
     "dni": 28293485,
     "email": "p.garay@yahoo.com.ar",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "21556",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -515,9 +617,11 @@
     "nombre": "Gaso, Marcos Leonardo",
     "dni": 25748773,
     "email": "marcos_gaso@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "13706",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -525,9 +629,11 @@
     "nombre": "Gigena Parola, Fernando Gastón",
     "dni": 26815349,
     "email": "liongigena@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "6992",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -536,8 +642,10 @@
     "dni": 28089601,
     "email": "fadago1@gmail.com",
     "asistencias": 5,
+    "dias": "PPPPAPAA",
     "id": "6214",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -546,8 +654,10 @@
     "dni": 28118621,
     "email": "anahigonzalezbustos@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "1611",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -555,9 +665,11 @@
     "nombre": "Gordillo, Gaston",
     "dni": 23190956,
     "email": "gastonmgordillo@gmail.com",
-    "asistencias": 3,
+    "asistencias": 4,
+    "dias": "PPPAAAAP",
     "id": "8005",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -565,9 +677,11 @@
     "nombre": "Gutierrez, Matias Sebastian",
     "dni": 27479190,
     "email": "matias_paternal04@hotmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPAPPP",
     "id": "15439",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -576,8 +690,10 @@
     "dni": 17046828,
     "email": "guillermohechem@hotmail.com",
     "asistencias": 5,
+    "dias": "PPPPPAAA",
     "id": "8614",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -586,8 +702,10 @@
     "dni": 23698221,
     "email": "carolinahenain74@gmail.com",
     "asistencias": 4,
+    "dias": "PPPPAAAA",
     "id": "25718",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -596,8 +714,10 @@
     "dni": 22887116,
     "email": "adrianituarte@gmail.com",
     "asistencias": 3,
+    "dias": "APPAPAAA",
     "id": "363",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -606,8 +726,10 @@
     "dni": 19027818,
     "email": "katherineyrugoyen@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25922",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -615,9 +737,11 @@
     "nombre": "Latrecchiana, Guillermo",
     "dni": 20879501,
     "email": "glatrecchiana@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PAPPPPAP",
     "id": "8618",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -626,8 +750,10 @@
     "dni": 26056809,
     "email": "juanlavayen@hotmail.com",
     "asistencias": 5,
+    "dias": "PPPPPAAA",
     "id": "10734",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -635,9 +761,11 @@
     "nombre": "Lavigna, Lorena",
     "dni": 21476196,
     "email": "lorena.lavigna@consultoriosurquiza.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "12258",
-    "practico": "no"
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -646,8 +774,10 @@
     "dni": 27046144,
     "email": "llammoglia@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25935",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -655,9 +785,11 @@
     "nombre": "Lignini, Sergio Darío Duilio",
     "dni": 13538353,
     "email": "sergiolignini@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "19526",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -665,9 +797,11 @@
     "nombre": "Linares, Pablo",
     "dni": 26954194,
     "email": "pablovictorlinares@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "17540",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -676,8 +810,10 @@
     "dni": 23379670,
     "email": "gerardomarcelolopez019@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "24021",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -686,8 +822,10 @@
     "dni": 11266094,
     "email": "lopezrubenleonardo@gmail.com",
     "asistencias": 5,
+    "dias": "PPPPAPAA",
     "id": "18938",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -696,8 +834,10 @@
     "dni": 18002113,
     "email": "ghlucax@yahoo.com.ar",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "8657",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -706,8 +846,10 @@
     "dni": 27896360,
     "email": "gluduena@gmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "14114",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -716,8 +858,10 @@
     "dni": 27522838,
     "email": "sydgi4@gmail.com",
     "asistencias": 4,
+    "dias": "PPPPAAAA",
     "id": "8219",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -726,8 +870,10 @@
     "dni": 27587010,
     "email": "maldonadocesarfabian@gmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "3496",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -735,9 +881,11 @@
     "nombre": "Maldonado, Leonardo",
     "dni": 23665179,
     "email": "leo.tango.arg@gmail.com",
-    "asistencias": 4,
+    "asistencias": 5,
+    "dias": "APAPPPPA",
     "id": "21503",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -746,8 +894,10 @@
     "dni": 10758491,
     "email": "marcelo.mdeoca@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25953",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -756,8 +906,10 @@
     "dni": 25283578,
     "email": "angie_caprarulo@hotmail.com",
     "asistencias": 5,
+    "dias": "PPPPPAAA",
     "id": "25785",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -765,9 +917,11 @@
     "nombre": "Mariano, Mello",
     "dni": 26165883,
     "email": "hablaconwafle@gmail.com",
-    "asistencias": 4,
+    "asistencias": 6,
+    "dias": "PPAAPPPP",
     "id": "24079",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -776,8 +930,10 @@
     "dni": 27411188,
     "email": "marinlourdes@gmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "1374",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -786,8 +942,10 @@
     "dni": 28414888,
     "email": "rojama888@hotmail.com",
     "asistencias": 3,
+    "dias": "APAPPAAA",
     "id": "22614",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -795,9 +953,11 @@
     "nombre": "Matías, Lorenzo",
     "dni": 27547856,
     "email": "matete@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "25967",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -805,9 +965,11 @@
     "nombre": "Matricardi, Mario Andres",
     "dni": 25131771,
     "email": "mariojs9265@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "21514",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -815,9 +977,11 @@
     "nombre": "Mauricio Aurelio Nicolas, Colina",
     "dni": 26054685,
     "email": "mcolina77@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "APPPPPPP",
     "id": "25971",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -826,8 +990,10 @@
     "dni": 27177414,
     "email": "julianmeraviglia@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "11158",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -835,9 +1001,11 @@
     "nombre": "Molina, Julio",
     "dni": 25893714,
     "email": "juliomolina17@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "11287",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -845,9 +1013,11 @@
     "nombre": "Moltoni, Andres Fernando",
     "dni": 25636445,
     "email": "amoltoni@yahoo.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PAPPPPPA",
     "id": "1773",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -856,8 +1026,10 @@
     "dni": 19018934,
     "email": "lucilamonzon96@gmail.com",
     "asistencias": 5,
+    "dias": "PPPPPAAA",
     "id": "23969",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -865,9 +1037,11 @@
     "nombre": "Muñoz, Santiago",
     "dni": 18846213,
     "email": "santiago.munoz.chi@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPAPPPA",
     "id": "22553",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -875,9 +1049,11 @@
     "nombre": "Núñez Fornaroli, Eduardo Daniel",
     "dni": 28109573,
     "email": "eduardodnf@gmail.com",
-    "asistencias": 4,
+    "asistencias": 5,
+    "dias": "PPPAPAAP",
     "id": "21552",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -885,9 +1061,11 @@
     "nombre": "Ordoñez, Noelia",
     "dni": 28544777,
     "email": "ordoneznoeliap@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PAPPPPAP",
     "id": "17197",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -895,9 +1073,11 @@
     "nombre": "Ortiz Flores, Marisa",
     "dni": 27042272,
     "email": "mare.ortizflores@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "14796",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -906,8 +1086,10 @@
     "dni": 25542841,
     "email": "aleousset@gmail.com",
     "asistencias": 6,
+    "dias": "PPPPPPAA",
     "id": "1038",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -916,8 +1098,10 @@
     "dni": 27879997,
     "email": "giannipasquinelli@gmail.com",
     "asistencias": 6,
+    "dias": "PPPPPPAA",
     "id": "25759",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -926,8 +1110,10 @@
     "dni": 22372475,
     "email": "patomedinasalas@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "17866",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -935,9 +1121,11 @@
     "nombre": "Pereyra, Dionisio Osvaldo",
     "dni": 11917681,
     "email": "compusur04@gmail.com",
-    "asistencias": 3,
+    "asistencias": 4,
+    "dias": "APAPPAAP",
     "id": "5044",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -945,9 +1133,11 @@
     "nombre": "Perez, Esteban Alejandro",
     "dni": 24271970,
     "email": "estalej@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPPPAAP",
     "id": "22820",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -956,8 +1146,10 @@
     "dni": 23764860,
     "email": "alejandraperulero@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25730",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -966,8 +1158,10 @@
     "dni": 25020992,
     "email": "sebapitta@gmail.com",
     "asistencias": 1,
+    "dias": "AAAPAAAA",
     "id": "19324",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -975,9 +1169,11 @@
     "nombre": "Quiroga, Romina",
     "dni": 24605998,
     "email": "quirogaro@hotmail.com",
-    "asistencias": 3,
+    "asistencias": 4,
+    "dias": "AAAPPPAP",
     "id": "18721",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -985,9 +1181,11 @@
     "nombre": "Ramírez, Ernesto",
     "dni": 28013926,
     "email": "ernesto.luis.ramirez@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPAPPPPP",
     "id": "5855",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -996,8 +1194,10 @@
     "dni": 18248964,
     "email": "estudioregueira@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "13777",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1005,9 +1205,11 @@
     "nombre": "Rochetti, Mónica Viviana",
     "dni": 18306509,
     "email": "mo.dottori@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "16362",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1016,8 +1218,10 @@
     "dni": 19051340,
     "email": "t.rodriz95@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "20054",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1025,9 +1229,11 @@
     "nombre": "Rodríguez, Maria Isabel",
     "dni": 22433454,
     "email": "mariia813@hotmail.com.ar",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "APPPPPAP",
     "id": "14144",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1035,9 +1241,11 @@
     "nombre": "Roldán, Natalia",
     "dni": 24820797,
     "email": "roldannatysol@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "APPPPPPA",
     "id": "16605",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1046,8 +1254,10 @@
     "dni": 26737589,
     "email": "rei_dg@hotmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "26021",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1056,8 +1266,10 @@
     "dni": 27648040,
     "email": "merkanomgr@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "15585",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1065,9 +1277,11 @@
     "nombre": "Sandoval, Waldo David",
     "dni": 24780479,
     "email": "sandovaly@yahoo.com",
-    "asistencias": 4,
+    "asistencias": 5,
+    "dias": "PPPPAAAP",
     "id": "20794",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1076,8 +1290,10 @@
     "dni": 23327737,
     "email": "lcscali@gmail.com",
     "asistencias": 5,
+    "dias": "APPPPPAA",
     "id": "12165",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1086,8 +1302,10 @@
     "dni": 25772960,
     "email": "edgarscal@gmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "24065",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1096,8 +1314,10 @@
     "dni": 25418073,
     "email": "cacoar2002@yahoo.com.ar",
     "asistencias": 1,
+    "dias": "AAPAAAAA",
     "id": "3029",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1106,8 +1326,10 @@
     "dni": 26690663,
     "email": "andressidi@gmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "1794",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1116,8 +1338,10 @@
     "dni": 27118364,
     "email": "yanina-silva@hotmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "7918",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1126,8 +1350,10 @@
     "dni": 26670634,
     "email": "veromsolis1978@gmail.com",
     "asistencias": 5,
+    "dias": "PPPPPAAA",
     "id": "20558",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1135,9 +1361,11 @@
     "nombre": "Sosa, Ignacio",
     "dni": 28079719,
     "email": "satrianoignacio@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "9097",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1145,9 +1373,11 @@
     "nombre": "Stella Maris, Loreto",
     "dni": 17318955,
     "email": "sml65ar@yahoo.com.ar",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPPAPPA",
     "id": "26040",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1156,8 +1386,10 @@
     "dni": 22205633,
     "email": "guille1tapia@yahoo.es",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "22188",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1165,9 +1397,11 @@
     "nombre": "Tapia Suarez, Andrea Lorena",
     "dni": 27972561,
     "email": "andrealorenasuarez9@gmail.com",
-    "asistencias": 4,
+    "asistencias": 5,
+    "dias": "APPAPPAP",
     "id": "1722",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1176,8 +1410,10 @@
     "dni": 23766082,
     "email": "leomtome@gmail.com",
     "asistencias": 4,
+    "dias": "PPAPPAAA",
     "id": "25721",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1186,8 +1422,10 @@
     "dni": 26551446,
     "email": "alejandradecarlos@hotmail.com",
     "asistencias": 3,
+    "dias": "AAAPPPAA",
     "id": "987",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1196,8 +1434,10 @@
     "dni": 25647344,
     "email": "carolinavergelin@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "3263",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1205,9 +1445,11 @@
     "nombre": "Volonté, Analia",
     "dni": 24859318,
     "email": "analiavolonte@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "21511",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 132,
@@ -1216,8 +1458,10 @@
     "dni": 16168865,
     "email": "marianazelaschi@yahoo.com.ar",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "23944",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1226,8 +1470,10 @@
     "dni": 22948947,
     "email": "susanazimmer1903@gmail.com",
     "asistencias": 3,
+    "dias": "PAPPAAAA",
     "id": "19952",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 132,
@@ -1236,8 +1482,10 @@
     "dni": 26101547,
     "email": "gabrielzuccarini@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "7709",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1245,9 +1493,11 @@
     "nombre": "Alejandra Edith, Gauna",
     "dni": 24997860,
     "email": "aegagranea@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "25765",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1255,9 +1505,11 @@
     "nombre": "Alonzo, Sandra Del Valle",
     "dni": 24836529,
     "email": "salonzo50@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PAPPPPPP",
     "id": "19047",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1265,9 +1517,11 @@
     "nombre": "Amado, Gustavo Fabian",
     "dni": 21670449,
     "email": "gustavofab@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "21496",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1275,9 +1529,11 @@
     "nombre": "Andres, Alegre",
     "dni": 23995110,
     "email": "andresarielalegre@gmail.com",
-    "asistencias": 3,
+    "asistencias": 4,
+    "dias": "PAAPAPAP",
     "id": "25782",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1285,9 +1541,11 @@
     "nombre": "Antonio, Leiva",
     "dni": 13510492,
     "email": "Antonioleiva909@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "25788",
-    "practico": "no"
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1296,8 +1554,10 @@
     "dni": 18383939,
     "email": "alfonsojosearias@gmail.com",
     "asistencias": 5,
+    "dias": "PAPPPPAA",
     "id": "1332",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1306,8 +1566,10 @@
     "dni": 18808705,
     "email": "antonio.arteijo@gmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "2035",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1316,8 +1578,10 @@
     "dni": 22737305,
     "email": "efbertoli@gmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "5189",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1325,9 +1589,11 @@
     "nombre": "Bianchetti, Gerardo Horacio",
     "dni": 18258700,
     "email": "gbianchetti@msn.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "8072",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1335,9 +1601,11 @@
     "nombre": "Borda, Victor",
     "dni": 17168120,
     "email": "victtoriob@yahoo.com.ar",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "APPPPPPP",
     "id": "20617",
-    "practico": "no"
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1345,9 +1613,11 @@
     "nombre": "Bruno, Claudio",
     "dni": 20784683,
     "email": "cdbruno10@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "3750",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1356,8 +1626,10 @@
     "dni": 23997439,
     "email": "andreacadona3@gmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "1675",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1366,8 +1638,10 @@
     "dni": 17315674,
     "email": "ccardinale2004@yahoo.com.ar",
     "asistencias": 4,
+    "dias": "PPPAPAAA",
     "id": "3692",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1376,8 +1650,10 @@
     "dni": 17985878,
     "email": "josecarrerasfilms@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "10502",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1386,8 +1662,10 @@
     "dni": 17132583,
     "email": "pcasanell2@alumno.uned.es",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "18002",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1395,9 +1673,11 @@
     "nombre": "Castillo, Alexander Gustavo",
     "dni": 34190400,
     "email": "alxander89@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "24456",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1406,8 +1686,10 @@
     "dni": 20571786,
     "email": "juan_pablo_chillon@hotmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "23987",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1415,9 +1697,11 @@
     "nombre": "Ciro, Puig",
     "dni": 18367300,
     "email": "ciropuig1@gmail.com",
-    "asistencias": 3,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "25822",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1426,8 +1710,10 @@
     "dni": 23390597,
     "email": "claudio.gimenez.666@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25824",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1436,8 +1722,10 @@
     "dni": 18388935,
     "email": "dagostinoenrique@gmail.com",
     "asistencias": 6,
+    "dias": "PPPPPPAA",
     "id": "5663",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1446,8 +1734,10 @@
     "dni": 12345678,
     "email": "fsdf@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "23931",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1456,8 +1746,10 @@
     "dni": 14568996,
     "email": "bdileo35@gmail.com",
     "asistencias": 3,
+    "dias": "PPAAAPAA",
     "id": "10668",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1465,9 +1757,11 @@
     "nombre": "Eduardo José, Riera",
     "dni": 17626756,
     "email": "juanpe752@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "25918",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1475,9 +1769,11 @@
     "nombre": "Femia, Cintia",
     "dni": 24909032,
     "email": "femiacintia@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "24048",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1486,8 +1782,10 @@
     "dni": 2846385,
     "email": "javierfernandez3f@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "23918",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1495,9 +1793,11 @@
     "nombre": "Fernando Darío, Tula",
     "dni": 12700995,
     "email": "fedatu@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "25853",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1506,8 +1806,10 @@
     "dni": 24717738,
     "email": "nanchu_lore@hotmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "16557",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1515,9 +1817,11 @@
     "nombre": "Gloria Salas, Diego Leonardo",
     "dni": 18877611,
     "email": "dlgloriasalas@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "4997",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1526,8 +1830,10 @@
     "dni": 23196253,
     "email": "grecoarqui@gmail.com",
     "asistencias": 5,
+    "dias": "PPPPPAAA",
     "id": "10882",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1536,8 +1842,10 @@
     "dni": 18454726,
     "email": "juanherrera545@hotmail.com",
     "asistencias": 6,
+    "dias": "PPPPPPAA",
     "id": "23963",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1546,8 +1854,10 @@
     "dni": 24634910,
     "email": "h_rc@hotmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "18273",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1555,9 +1865,11 @@
     "nombre": "Illanes, Luis Hector",
     "dni": 10537291,
     "email": "lh.illanes@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "23926",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1565,9 +1877,11 @@
     "nombre": "Jhon Deyvid, Ajoruro Condori",
     "dni": 13494441,
     "email": "jhoni.keih@gmail.com",
-    "asistencias": 4,
+    "asistencias": 5,
+    "dias": "APAPPPAP",
     "id": "25903",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1576,8 +1890,10 @@
     "dni": 9974525,
     "email": "joseluisramoslima@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25916",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1586,8 +1902,10 @@
     "dni": 21974569,
     "email": "doctorpc.liebig@gmail.com",
     "asistencias": 5,
+    "dias": "PPPPAPAA",
     "id": "25841",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1595,9 +1913,11 @@
     "nombre": "Juan Carlos, Galan",
     "dni": 23805016,
     "email": "juancgalan47@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "10657",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1605,9 +1925,11 @@
     "nombre": "Laudelino, Alejandra",
     "dni": 24572588,
     "email": "aleenmercadolibre2@protonmail.ch",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "22523",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1616,8 +1938,10 @@
     "dni": 17247704,
     "email": "zoraidamarinacardenasduque@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "16744",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1626,8 +1950,10 @@
     "dni": 24234578,
     "email": "elpocitano@gmail.com",
     "asistencias": 4,
+    "dias": "PPPPAAAA",
     "id": "10929",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1635,9 +1961,11 @@
     "nombre": "Mahmud, Adrián",
     "dni": 21418801,
     "email": "mahmudpaa@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPAPPPAP",
     "id": "376",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1645,9 +1973,11 @@
     "nombre": "Manera, Carlos Federico",
     "dni": 20948507,
     "email": "charlymanera@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "3164",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1655,9 +1985,11 @@
     "nombre": "Marisol, Sanabria",
     "dni": 24220385,
     "email": "marsanab@yahoo.com",
-    "asistencias": 4,
+    "asistencias": 5,
+    "dias": "PPPPAAAP",
     "id": "25966",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1666,8 +1998,10 @@
     "dni": 20310540,
     "email": "fmaroglio@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "23982",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1675,9 +2009,11 @@
     "nombre": "Martinez, Mariana",
     "dni": 20796343,
     "email": "marian1810@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "14450",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1686,8 +2022,10 @@
     "dni": 14797420,
     "email": "admazzaglia@gmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "1141",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1696,8 +2034,10 @@
     "dni": 23744404,
     "email": "danmedran@hotmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "18531",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1705,9 +2045,11 @@
     "nombre": "Mema, Miguel Angel",
     "dni": 23687562,
     "email": "miguelamema@gmail.com",
-    "asistencias": 4,
+    "asistencias": 5,
+    "dias": "PAPPAPAP",
     "id": "16145",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1716,8 +2058,10 @@
     "dni": 22234890,
     "email": "messina.rafael@gmail.com",
     "asistencias": 6,
+    "dias": "PPPPPPAA",
     "id": "18085",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1726,8 +2070,10 @@
     "dni": 25256244,
     "email": "migueltarabine76@gmail.com",
     "asistencias": 4,
+    "dias": "PPPPAAAA",
     "id": "25982",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1736,8 +2082,10 @@
     "dni": 20521480,
     "email": "fabymontenegro@gmail.com",
     "asistencias": 3,
+    "dias": "PAPPAAAA",
     "id": "6194",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1745,9 +2093,11 @@
     "nombre": "Mourad, Adrian",
     "dni": 22639502,
     "email": "adrmou@gmail.com",
-    "asistencias": 4,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "358",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1756,8 +2106,10 @@
     "dni": 20607892,
     "email": "luisniveyro@live.com.ar",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25729",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1765,9 +2117,11 @@
     "nombre": "Noguerol, Maria Marcela",
     "dni": 20561094,
     "email": "marcelnoguerol@yahoo.com.ar",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPAPPPPP",
     "id": "23986",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1776,8 +2130,10 @@
     "dni": 24192661,
     "email": "ochoafabian2020@gmail.com",
     "asistencias": 3,
+    "dias": "PAPAAPAA",
     "id": "6212",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1786,8 +2142,10 @@
     "dni": 20644779,
     "email": "estrellita.figueroa@gmail.com",
     "asistencias": 5,
+    "dias": "PPPAPPAA",
     "id": "16293",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1795,9 +2153,11 @@
     "nombre": "Ondarra, Marcelo",
     "dni": 21634979,
     "email": "mrondarra@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "23999",
-    "practico": "no"
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1806,8 +2166,10 @@
     "dni": 24111284,
     "email": "vaonsari@hotmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "20476",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1815,9 +2177,11 @@
     "nombre": "Oscar Alberto, Maciel",
     "dni": 24600911,
     "email": "grafis.dg@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "24042",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1826,8 +2190,10 @@
     "dni": 24390071,
     "email": "pfalabel@gmail.com",
     "asistencias": 3,
+    "dias": "PPPAAAAA",
     "id": "26011",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1836,8 +2202,10 @@
     "dni": 24456849,
     "email": "gabrielapastranapoesia@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "3709",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1846,8 +2214,10 @@
     "dni": 25307768,
     "email": "mariiiiiiano@gmail.com",
     "asistencias": 5,
+    "dias": "PPPPAPAA",
     "id": "25722",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1856,8 +2226,10 @@
     "dni": 22092359,
     "email": "analia.v.ratti@gmail.com",
     "asistencias": 5,
+    "dias": "PPAPPPAA",
     "id": "1621",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1866,8 +2238,10 @@
     "dni": 13212842,
     "email": "arnireb@hotmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "2194",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1875,9 +2249,11 @@
     "nombre": "Regalado Manay, Tomas",
     "dni": 19054345,
     "email": "andersonedlp_10@hotmail.com",
-    "asistencias": 3,
+    "asistencias": 4,
+    "dias": "PAAAPPAP",
     "id": "22050",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1886,8 +2262,10 @@
     "dni": 4358203,
     "email": "lilianasalinas_s02@fpuna.edu.py",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "23922",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1896,8 +2274,10 @@
     "dni": 23248493,
     "email": "nicosegui@hotmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "17060",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1906,8 +2286,10 @@
     "dni": 25072309,
     "email": "karisisti@gmail.com",
     "asistencias": 5,
+    "dias": "PPPPPAAA",
     "id": "11426",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1916,8 +2298,10 @@
     "dni": 18880363,
     "email": "vivianasolizosinaga@gmail.com",
     "asistencias": 5,
+    "dias": "PPPAPPAA",
     "id": "23967",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1925,9 +2309,11 @@
     "nombre": "Specterman, Luis Omar",
     "dni": 14620696,
     "email": "lspecte@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "23940",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1936,8 +2322,10 @@
     "dni": 20635719,
     "email": "guillesuarez68@gmail.com",
     "asistencias": 3,
+    "dias": "PPPAAAAA",
     "id": "8606",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1946,8 +2334,10 @@
     "dni": 22491855,
     "email": "cristian_tissera@yahoo.com.ar",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "3936",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 134,
@@ -1955,9 +2345,11 @@
     "nombre": "Ucelay, Hector R",
     "dni": 16778627,
     "email": "ucelayh@gmail.com",
-    "asistencias": 4,
+    "asistencias": 5,
+    "dias": "AAPPPPAP",
     "id": "26359",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1965,9 +2357,11 @@
     "nombre": "Valenzuela, Martin",
     "dni": 17223917,
     "email": "mevalenzuela@yahoo.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "14874",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1976,8 +2370,10 @@
     "dni": 25319269,
     "email": "vegajuanleandro@gmail.com",
     "asistencias": 4,
+    "dias": "PPPAAPAA",
     "id": "10831",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1986,8 +2382,10 @@
     "dni": 25262567,
     "email": "verowaelkens@gmail.com",
     "asistencias": 6,
+    "dias": "PPPPPPAA",
     "id": "20597",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 134,
@@ -1996,8 +2394,10 @@
     "dni": 16875503,
     "email": "czujew@gmail.com",
     "asistencias": 5,
+    "dias": "PPPPPAAA",
     "id": "3874",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2006,8 +2406,10 @@
     "dni": 18123292,
     "email": "aberbacha@gmail.com",
     "asistencias": 4,
+    "dias": "PPAAPPAA",
     "id": "1904",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2015,9 +2417,11 @@
     "nombre": "Affatati, Jorge Omar",
     "dni": 11704906,
     "email": "j.o.affatati@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "10294",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2026,8 +2430,10 @@
     "dni": 24684875,
     "email": "bettu3254@gmail.com",
     "asistencias": 2,
+    "dias": "AAPPAAAA",
     "id": "2468",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2036,8 +2442,10 @@
     "dni": 29321745,
     "email": "bas19822009@hotmail.com",
     "asistencias": 2,
+    "dias": "APPAAAAA",
     "id": "975",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2046,8 +2454,10 @@
     "dni": 24661359,
     "email": "carlosdaniel40@hotmail.com.ar",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "3060",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2055,9 +2465,11 @@
     "nombre": "Alegre, Fernando",
     "dni": 23011166,
     "email": "alegrefer@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPAPPPPP",
     "id": "5412",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2066,8 +2478,10 @@
     "dni": 27872276,
     "email": "tobiasalvarez@yahoo.com.ar",
     "asistencias": 5,
+    "dias": "PPPAPPAA",
     "id": "20115",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2075,9 +2489,11 @@
     "nombre": "Amaya, Jesica Elizabeth",
     "dni": 27660701,
     "email": "jesicaeamaya@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "APPPPPPP",
     "id": "9696",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2086,8 +2502,10 @@
     "dni": 26144929,
     "email": "sfandress.prog@gmail.com",
     "asistencias": 4,
+    "dias": "PPPPAAAA",
     "id": "19413",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2096,8 +2514,10 @@
     "dni": 28496461,
     "email": "jjeaa461@yahoo.com.ar",
     "asistencias": 5,
+    "dias": "PPPPPAAA",
     "id": "10422",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2105,9 +2525,11 @@
     "nombre": "Aranda, Ricardo Mauro",
     "dni": 27803086,
     "email": "maurosaxaranda@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "18311",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2115,9 +2537,11 @@
     "nombre": "Arias, María De Los Ángeles",
     "dni": 25226833,
     "email": "mariadelosangelesarias@hotmail.com",
-    "asistencias": 2,
+    "asistencias": 3,
+    "dias": "APPAAAAP",
     "id": "13923",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2125,9 +2549,11 @@
     "nombre": "Avendaño, Maria Jose",
     "dni": 21669385,
     "email": "mariajoseavendanio774@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPAPPPP",
     "id": "14166",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2136,8 +2562,10 @@
     "dni": 28602971,
     "email": "estebanadrianayala@gmail.com",
     "asistencias": 4,
+    "dias": "PPAPAPAA",
     "id": "5902",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2146,8 +2574,10 @@
     "dni": 27650866,
     "email": "claudioakd@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "10224",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2155,9 +2585,11 @@
     "nombre": "Bazyluk, Samuel",
     "dni": 26922514,
     "email": "samu201233@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPAPPP",
     "id": "24099",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2166,8 +2598,10 @@
     "dni": 27488211,
     "email": "ferbogado59@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "6913",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2175,9 +2609,11 @@
     "nombre": "Borda, Mariana Beatriz",
     "dni": 28335534,
     "email": "marianaborda80@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "24149",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2186,8 +2622,10 @@
     "dni": 28462348,
     "email": "federicomatiasbordon@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "6779",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2196,8 +2634,10 @@
     "dni": 29155815,
     "email": "pablobrito1@hotmail.com",
     "asistencias": 3,
+    "dias": "PPAAAPAA",
     "id": "17601",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2206,8 +2646,10 @@
     "dni": 26793663,
     "email": "eebv241178@gmail.com",
     "asistencias": 1,
+    "dias": "AAPAAAAA",
     "id": "5185",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2216,8 +2658,10 @@
     "dni": 27454463,
     "email": "lcardozo130@gmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "11969",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2225,9 +2669,11 @@
     "nombre": "Carrión, Sergio",
     "dni": 16995968,
     "email": "sec.carrion@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPPPAAP",
     "id": "19466",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2235,9 +2681,11 @@
     "nombre": "Castañar Petarcich, Juan Martin",
     "dni": 28788914,
     "email": "juanpetarcich@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "24160",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2246,8 +2694,10 @@
     "dni": 22304731,
     "email": "agustinluna2011@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25767",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2255,9 +2705,11 @@
     "nombre": "Cejas, Oscar Orlando",
     "dni": 28038634,
     "email": "oscarcejas80@gmail.com",
-    "asistencias": 3,
+    "asistencias": 4,
+    "dias": "PAPAAPPA",
     "id": "17406",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2266,8 +2718,10 @@
     "dni": 23166335,
     "email": "jorgecristi1@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "10167",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2275,9 +2729,11 @@
     "nombre": "Climente, Carlos Matías",
     "dni": 28693607,
     "email": "matiasclimente@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "24158",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2286,8 +2742,10 @@
     "dni": 29337879,
     "email": "acollavino@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "1166",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2296,8 +2754,10 @@
     "dni": 26949681,
     "email": "yazelly@yahoo.com.ar",
     "asistencias": 6,
+    "dias": "PPPPPPAA",
     "id": "16781",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2305,9 +2765,11 @@
     "nombre": "Cristian, Portales",
     "dni": 28072807,
     "email": "CRISDAMIANPORTALES@HOTMAIL.COM",
-    "asistencias": 1,
+    "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25830",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2316,8 +2778,10 @@
     "dni": 26371019,
     "email": "dm121014@zohomail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "3959",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2326,8 +2790,10 @@
     "dni": 27400268,
     "email": "diazdiegohoracio01@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "4981",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2335,9 +2801,11 @@
     "nombre": "Edmundo, Molina",
     "dni": 17219543,
     "email": "padreedmundo@yahoo.com.ar",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPAPPPPP",
     "id": "26007",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2345,9 +2813,11 @@
     "nombre": "Escudero, Sergio Javier",
     "dni": 23988040,
     "email": "sergioescudero@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "19547",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2356,8 +2826,10 @@
     "dni": 25485756,
     "email": "nacrismo@yahoo.com.ar",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "16611",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2366,8 +2838,10 @@
     "dni": 27649885,
     "email": "ferpa567@gmail.com",
     "asistencias": 4,
+    "dias": "PAPAPPAA",
     "id": "17496",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2375,9 +2849,11 @@
     "nombre": "Flores, Néstor",
     "dni": 20566779,
     "email": "ngfreyes@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPAPPPPA",
     "id": "16817",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2385,9 +2861,11 @@
     "nombre": "Garcia, Dante Marcelo",
     "dni": 24803332,
     "email": "dante.m.garcia.75@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "24046",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2395,9 +2873,11 @@
     "nombre": "German Fabio, Lequio",
     "dni": 22395460,
     "email": "germanlequio@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPPAPP",
     "id": "25872",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2406,8 +2886,10 @@
     "dni": 23108691,
     "email": "amadeoraulgiannantonio@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "22468",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2415,9 +2897,11 @@
     "nombre": "Gonzalez, Armando",
     "dni": 26216892,
     "email": "vampirulo10@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "22034",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2425,9 +2909,11 @@
     "nombre": "Gonzalez, Mirian Yolanda",
     "dni": 17675854,
     "email": "miriany.gonzalez@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "23955",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2435,9 +2921,11 @@
     "nombre": "Guardia, Natalia",
     "dni": 24271308,
     "email": "natalialeticiaguardia@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPAPPP",
     "id": "16685",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2446,8 +2934,10 @@
     "dni": 23644604,
     "email": "virginia1612@gmail.com",
     "asistencias": 3,
+    "dias": "PPPAAAAA",
     "id": "20752",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2455,9 +2945,11 @@
     "nombre": "Herrera, Elvira",
     "dni": 24830411,
     "email": "herrerae034@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "5414",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2465,9 +2957,11 @@
     "nombre": "Hortal Toribio, Vanila Isabel",
     "dni": 17546258,
     "email": "vanihortaltoribio@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PAPPPPPA",
     "id": "20515",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2476,8 +2970,10 @@
     "dni": 28864590,
     "email": "imarcelasolange486@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "24164",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2486,8 +2982,10 @@
     "dni": 26236186,
     "email": "josefiora@yahoo.com.ar",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25915",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2495,9 +2993,11 @@
     "nombre": "Juarez, Maria Soledad",
     "dni": 28299300,
     "email": "solej1980@yahoo.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "22862",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2506,8 +3006,10 @@
     "dni": 23857715,
     "email": "pjuarez3001@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "17809",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2515,9 +3017,11 @@
     "nombre": "Juárez, Raul",
     "dni": 28139432,
     "email": "raul.juarez.ar@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPAPPPPP",
     "id": "22184",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2526,8 +3030,10 @@
     "dni": 22781140,
     "email": "adrian.latorre@gmail.com",
     "asistencias": 2,
+    "dias": "PAPAAAAA",
     "id": "341",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2536,8 +3042,10 @@
     "dni": 17350661,
     "email": "lopezja2005@yahoo.com.ar",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "10637",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2545,9 +3053,11 @@
     "nombre": "López, Viviana",
     "dni": 18445270,
     "email": "viviana.lopez.design@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "20782",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2556,8 +3066,10 @@
     "dni": 28582894,
     "email": "anitagl09@outlook.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "1636",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2565,9 +3077,11 @@
     "nombre": "Marchesini, Ramón Ricardo",
     "dni": 29322781,
     "email": "marchesiniramonricardo@gmail.com",
-    "asistencias": 4,
+    "asistencias": 5,
+    "dias": "PPPAAPPA",
     "id": "22651",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2575,9 +3089,11 @@
     "nombre": "Markus, Laura",
     "dni": 20213119,
     "email": "lauratgo@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPPAPAP",
     "id": "11649",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2585,9 +3101,11 @@
     "nombre": "Medina, Oscar Alejandro",
     "dni": 27238487,
     "email": "alejandro.medina.ar@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "17388",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2596,8 +3114,10 @@
     "dni": 25386064,
     "email": "gloria.miguel@hotmail.com",
     "asistencias": 4,
+    "dias": "PPAPPAAA",
     "id": "8321",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2605,9 +3125,11 @@
     "nombre": "Milan, Luciana",
     "dni": 22252000,
     "email": "lucianadelfin@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "24009",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2615,9 +3137,11 @@
     "nombre": "Milano, Cristian Andrés",
     "dni": 26631150,
     "email": "cristianmilano25@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "3916",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2625,9 +3149,11 @@
     "nombre": "Miranda, Maria Grisel",
     "dni": 28860847,
     "email": "kasumita@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "24163",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2635,9 +3161,11 @@
     "nombre": "Molina, Leonardo",
     "dni": 20505136,
     "email": "leonardomariomolina@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "12073",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2645,9 +3173,11 @@
     "nombre": "Morleo, Yesica Alejandra",
     "dni": 27295145,
     "email": "yesikmor26@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "21542",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2656,8 +3186,10 @@
     "dni": 25198353,
     "email": "afmortola@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "1515",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2666,8 +3198,10 @@
     "dni": 18149366,
     "email": "alfredo.olivieri@gmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "1353",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2676,8 +3210,10 @@
     "dni": 29035524,
     "email": "augustomierez@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25793",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2685,9 +3221,11 @@
     "nombre": "Ortiz, Juan Pablo",
     "dni": 27016688,
     "email": "guaranicazador@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "10998",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2695,9 +3233,11 @@
     "nombre": "Ortiz, Oscar Alejandro",
     "dni": 21307211,
     "email": "okyformosa@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "21495",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2705,9 +3245,11 @@
     "nombre": "Otegui, Luciano Jesús",
     "dni": 26321091,
     "email": "luciano_otegui@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "24083",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2716,8 +3258,10 @@
     "dni": 18077559,
     "email": "pablo.arraiza@bue.edu.ar",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "17532",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2725,9 +3269,11 @@
     "nombre": "Panno, Diego Mauricio",
     "dni": 26703609,
     "email": "diegompanno@gmail.com",
-    "asistencias": 5,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "5013",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2735,9 +3281,11 @@
     "nombre": "Pauluzzi, Maria",
     "dni": 25873616,
     "email": "elipauluzzi077@gmail.com",
-    "asistencias": 4,
+    "asistencias": 6,
+    "dias": "AAPPPPPP",
     "id": "21518",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2745,9 +3293,11 @@
     "nombre": "Pedraza, Jose Maria",
     "dni": 21328822,
     "email": "jose_maria71@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "10504",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2755,9 +3305,11 @@
     "nombre": "Peredo, Isabel",
     "dni": 23697935,
     "email": "peredoisabel839@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "9221",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2766,8 +3318,10 @@
     "dni": 27969320,
     "email": "marianper543@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "14441",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2775,9 +3329,11 @@
     "nombre": "Quipildor, Matias",
     "dni": 28492517,
     "email": "mhquipildor@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPAPPAP",
     "id": "22148",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2785,9 +3341,11 @@
     "nombre": "Quiroga, Rafael Antonio",
     "dni": 27721196,
     "email": "quiroga.rafael@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPPAPP",
     "id": "18084",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2796,8 +3354,10 @@
     "dni": 24766716,
     "email": "rafavicencio_766@hotmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "26017",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2806,18 +3366,22 @@
     "dni": 23903344,
     "email": "mtraffo@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "15737",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
-    "grupo": 0,
+    "grupo": 12,
     "nombre": "Rebeca Analia, Pla",
     "dni": 27683493,
     "email": "rebepla40@gmail.com",
-    "asistencias": 3,
+    "asistencias": 5,
+    "dias": "AAAPPPPP",
     "id": "26020",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2825,9 +3389,11 @@
     "nombre": "Rios, Natalia Soledad",
     "dni": 28706770,
     "email": "nasori29@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "16714",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2836,8 +3402,10 @@
     "dni": 23978613,
     "email": "rivas.marine07@gmail.comr",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "14734",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2845,9 +3413,11 @@
     "nombre": "Rodriguez, Dario Fernando",
     "dni": 21669584,
     "email": "dariorodriguez2907@gmail.com",
-    "asistencias": 4,
+    "asistencias": 5,
+    "dias": "PPPAAPPA",
     "id": "4575",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2855,9 +3425,11 @@
     "nombre": "Rodríguez, María Paula",
     "dni": 26107345,
     "email": "mariapaularodriguezmontes@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPAPPAP",
     "id": "14319",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2866,8 +3438,10 @@
     "dni": 27295203,
     "email": "matiasrheinze@gmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "6387",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2875,9 +3449,11 @@
     "nombre": "Rolt, Cristián",
     "dni": 23623908,
     "email": "crolt24374@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "3846",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2886,8 +3462,10 @@
     "dni": 25106719,
     "email": "betianar76@gmail.com",
     "asistencias": 5,
+    "dias": "PPAPPPAA",
     "id": "2479",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2895,9 +3473,11 @@
     "nombre": "Russo, Javier",
     "dni": 17606845,
     "email": "javier.osvaldo.russo@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPAPPPP",
     "id": "9557",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2906,8 +3486,10 @@
     "dni": 25166985,
     "email": "saezfernando@gmail.com",
     "asistencias": 1,
+    "dias": "AAPAAAAA",
     "id": "6968",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2916,8 +3498,10 @@
     "dni": 28476143,
     "email": "marianasanchez1@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "14461",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2925,9 +3509,11 @@
     "nombre": "Santana, Patricia Isabel",
     "dni": 20654068,
     "email": "casadealma_terapia@live.com",
-    "asistencias": 4,
+    "asistencias": 6,
+    "dias": "PAPPAPPP",
     "id": "17818",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2936,8 +3522,10 @@
     "dni": 26150032,
     "email": "fmjsch@gmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "6221",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2945,9 +3533,11 @@
     "nombre": "Siccardi, Javier",
     "dni": 23543250,
     "email": "javisic@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "9490",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -2956,8 +3546,10 @@
     "dni": 22776836,
     "email": "mg_sierra@yahoo.com.ar",
     "asistencias": 4,
+    "dias": "PPPPAAAA",
     "id": "13277",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2966,8 +3558,10 @@
     "dni": 20714091,
     "email": "nexosrl@outlook.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "23990",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2976,8 +3570,10 @@
     "dni": 25123134,
     "email": "cesarterra1975@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "4864",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2986,8 +3582,10 @@
     "dni": 27319013,
     "email": "tobionatalia1@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "16629",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -2996,8 +3594,10 @@
     "dni": 21992626,
     "email": "tsade@live.com.ar",
     "asistencias": 5,
+    "dias": "PPPPPAAA",
     "id": "419",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -3006,8 +3606,10 @@
     "dni": 26793708,
     "email": "valevil78@gmail.com",
     "asistencias": 4,
+    "dias": "PPPPAAAA",
     "id": "20412",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -3016,8 +3618,10 @@
     "dni": 19091457,
     "email": "joan.ignacio@hotmail.com",
     "asistencias": 5,
+    "dias": "PPPPAPAA",
     "id": "9839",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 133,
@@ -3026,8 +3630,10 @@
     "dni": 21164296,
     "email": "dmyahari@yahoo.com.ar",
     "asistencias": 4,
+    "dias": "PPPPAAAA",
     "id": "4389",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -3036,8 +3642,10 @@
     "dni": 27481529,
     "email": "veronikzuleta@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "3417",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 133,
@@ -3045,9 +3653,11 @@
     "nombre": "Zurita, Gladis",
     "dni": 24519014,
     "email": "glad_zur@hotmail.com.ar",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "8311",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3056,8 +3666,10 @@
     "dni": 25954988,
     "email": "agostini_anto@yahoo.com.ar",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "2033",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3066,8 +3678,10 @@
     "dni": 26700128,
     "email": "oveja70@live.com",
     "asistencias": 4,
+    "dias": "PPPPAAAA",
     "id": "8616",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3076,8 +3690,10 @@
     "dni": 28255234,
     "email": "elizabet.c.alarcon1981@gmail.com",
     "asistencias": 3,
+    "dias": "APPPAAAA",
     "id": "24147",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3085,9 +3701,11 @@
     "nombre": "Aldeco, Inés",
     "dni": 25549334,
     "email": "maldeco16@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "24059",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3095,9 +3713,11 @@
     "nombre": "Alegre, Ramiro Alejandro",
     "dni": 25387571,
     "email": "ramiroalegre1976@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPPPAPA",
     "id": "21623",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3106,8 +3726,10 @@
     "dni": 17623291,
     "email": "aliciablopez@vivaldi.net",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "25774",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3116,8 +3738,10 @@
     "dni": 24873083,
     "email": "natalia.humanista@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "22548",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3126,8 +3750,10 @@
     "dni": 17846564,
     "email": "maarabito@gmail.com",
     "asistencias": 2,
+    "dias": "PAPAAAAA",
     "id": "21945",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3135,9 +3761,11 @@
     "nombre": "Aranda, Marcelo",
     "dni": 20746139,
     "email": "maranda.gm@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "22018",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3145,9 +3773,11 @@
     "nombre": "Arguello, Alejandro Esteban",
     "dni": 25427798,
     "email": "alejandroestebanarguello@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPPAPP",
     "id": "1145",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3156,8 +3786,10 @@
     "dni": 28127040,
     "email": "nattyarrascaeta@hotmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "7903",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3165,9 +3797,11 @@
     "nombre": "Benitez, Hugo",
     "dni": 26282939,
     "email": "hugobenitez31@hotmail.com",
-    "asistencias": 4,
+    "asistencias": 6,
+    "dias": "APPPPAPP",
     "id": "22126",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3176,8 +3810,10 @@
     "dni": 27112882,
     "email": "cbentos87@hotmail.com",
     "asistencias": 3,
+    "dias": "PPPAAAAA",
     "id": "3670",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3185,9 +3821,11 @@
     "nombre": "Bergalo, Laura Isabel",
     "dni": 26622005,
     "email": "bergalolaura.programacion@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPPPAPA",
     "id": "11626",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3195,9 +3833,11 @@
     "nombre": "Berretta, Marcelo",
     "dni": 16770894,
     "email": "marcelo.berretta@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "21485",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3206,8 +3846,10 @@
     "dni": 25478945,
     "email": "marcelo.blanco1@gmail.com",
     "asistencias": 4,
+    "dias": "APPPPAAA",
     "id": "24058",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3216,8 +3858,10 @@
     "dni": 28361935,
     "email": "diegonqn@gmail.com",
     "asistencias": 3,
+    "dias": "PPPAAAAA",
     "id": "4883",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3226,8 +3870,10 @@
     "dni": 23689403,
     "email": "maximilianobrina@gmail.com",
     "asistencias": 5,
+    "dias": "PPAPPPAA",
     "id": "15606",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3235,9 +3881,11 @@
     "nombre": "Capobianco, Veronica",
     "dni": 28411719,
     "email": "veritocapito@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "21560",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3246,8 +3894,10 @@
     "dni": 18262096,
     "email": "adrianfranciscocarbone@gmail.com",
     "asistencias": 4,
+    "dias": "PPPAPAAA",
     "id": "340",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3255,9 +3905,11 @@
     "nombre": "Castellani, Leticia Laura",
     "dni": 22467143,
     "email": "castellanileticia2@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPPPAAP",
     "id": "12141",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3266,8 +3918,10 @@
     "dni": 22124929,
     "email": "fcfbcastelo11@gmail.com",
     "asistencias": 5,
+    "dias": "PPPPAPAA",
     "id": "6901",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3276,8 +3930,10 @@
     "dni": 27942294,
     "email": "elgranrube@hotmail.com",
     "asistencias": 1,
+    "dias": "PAAAAAAA",
     "id": "18914",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3285,9 +3941,11 @@
     "nombre": "Cernada, Miguel Angel",
     "dni": 16415069,
     "email": "mikicerny@yahoo.com.ar",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "16126",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3295,9 +3953,11 @@
     "nombre": "Coronel, Juan José",
     "dni": 23486429,
     "email": "juanjocoronel1j@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "21949",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3305,9 +3965,11 @@
     "nombre": "Costilla Rozzi, Esteban",
     "dni": 27173739,
     "email": "rozziesteban@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "21538",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3315,9 +3977,11 @@
     "nombre": "Delaunay, Julio",
     "dni": 24242777,
     "email": "juliodelaunay72@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPAPPPPP",
     "id": "11281",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3326,8 +3990,10 @@
     "dni": 24270785,
     "email": "sergio.echevarne1@gmail.com",
     "asistencias": 2,
+    "dias": "PAPAAAAA",
     "id": "19531",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3336,8 +4002,10 @@
     "dni": 23470268,
     "email": "roxanaescola@hotmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "18886",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3346,8 +4014,10 @@
     "dni": 26672744,
     "email": "ruben@falcon.com.ar",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "18903",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3356,8 +4026,10 @@
     "dni": 27078732,
     "email": "emiferna79@hotmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "5593",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3366,8 +4038,10 @@
     "dni": 20520745,
     "email": "eliasmail0745@gmail.com",
     "asistencias": 5,
+    "dias": "PPPPAPAA",
     "id": "5312",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3376,8 +4050,10 @@
     "dni": 28469810,
     "email": "juliocesarfloreslopez@hotmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "11278",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3386,8 +4062,10 @@
     "dni": 27181465,
     "email": "matias_anubis@hotmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "12496",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3396,8 +4074,10 @@
     "dni": 26287879,
     "email": "patriciagggalvez@gmail.com",
     "asistencias": 1,
+    "dias": "AAAAPAAA",
     "id": "17819",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3405,9 +4085,11 @@
     "nombre": "Gamboa, Rene",
     "dni": 23231981,
     "email": "marlop02_@hotmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPAPPPPP",
     "id": "8489",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3416,8 +4098,10 @@
     "dni": 20572856,
     "email": "luisgentile@live.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "23988",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3425,9 +4109,11 @@
     "nombre": "Gómez, Vanesa Gisela",
     "dni": 28430341,
     "email": "agusbenja1@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "20494",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3435,9 +4121,11 @@
     "nombre": "Gonard, Matias",
     "dni": 26057002,
     "email": "matiasgonard@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "24077",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3446,8 +4134,10 @@
     "dni": 28449465,
     "email": "griseldavanina@hotmail.es",
     "asistencias": 4,
+    "dias": "APPAPPAA",
     "id": "22799",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3456,8 +4146,10 @@
     "dni": 26864744,
     "email": "roagonzalez@yahoo.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "18535",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3466,8 +4158,10 @@
     "dni": 20399217,
     "email": "heredia.luisa@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "13159",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3475,9 +4169,11 @@
     "nombre": "Hugo Dante, Diaz",
     "dni": 16771692,
     "email": "miargentina@hugodiaz.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "25978",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3485,9 +4181,11 @@
     "nombre": "Jerez, María Carola",
     "dni": 22073012,
     "email": "mariacarolaaa@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "13851",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3495,9 +4193,11 @@
     "nombre": "Joandet, Mariela Giselle",
     "dni": 28505602,
     "email": "mari_joandet@hotmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPPAPP",
     "id": "14674",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3505,9 +4205,11 @@
     "nombre": "Jorge Christian, Ponce",
     "dni": 24393561,
     "email": "jorgecponce40@gmail.com",
-    "asistencias": 4,
+    "asistencias": 6,
+    "dias": "PPPAPAPP",
     "id": "25911",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3516,8 +4218,10 @@
     "dni": 24679669,
     "email": "dlirussi@hotmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "4533",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3525,9 +4229,11 @@
     "nombre": "Lofiego, Marcelo Alejandro",
     "dni": 27678855,
     "email": "marceloalejandrolofiego@hotmail.com.ar",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "APPPPPPP",
     "id": "24125",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3535,29 +4241,35 @@
     "nombre": "Lorenzo, Mariela Andrea",
     "dni": 27544892,
     "email": "mariulorenzo@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "14666",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
     "grupo": 0,
     "nombre": "Mao, Nicolas",
     "dni": 41435342,
-    "email": "nicolas_mao@outlook.com",
-    "asistencias": 1,
+    "email": "nicolas_mao@outlook.com             P (1/1)",
+    "asistencias": 3,
+    "dias": "PPPAAAAA",
     "id": "24925",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
     "grupo": 0,
-    "nombre": "Marcela, Carabajal Vega",
-    "dni": 20310629,
-    "email": "marcelavega.mv.3024@gmail.com",
+    "nombre": "Vega, Marcela",
+    "dni": 13430,
+    "email": "20310629",
     "asistencias": 0,
-    "id": "13430",
-    "practico": ""
+    "dias": "AAAAAAAA",
+    "id": "CARABAJAL",
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3566,8 +4278,10 @@
     "dni": 18018838,
     "email": "normamanassero@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "17287",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3575,9 +4289,11 @@
     "nombre": "Martinez, Carlos Daniel",
     "dni": 26412222,
     "email": "carlosdmartinez121@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "3141",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3585,9 +4301,11 @@
     "nombre": "Mauricio, Tolosa",
     "dni": 27584437,
     "email": "tolosamauricio@hotmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPAPPP",
     "id": "26054",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3596,8 +4314,10 @@
     "dni": 7071813,
     "email": "tecmedina@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "7364",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3606,8 +4326,10 @@
     "dni": 17629234,
     "email": "nocambiarla123@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "13429",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3615,9 +4337,11 @@
     "nombre": "Morales, Marcela Yanina",
     "dni": 24255423,
     "email": "farito17@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "13468",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3625,9 +4349,11 @@
     "nombre": "Morón, Patricio",
     "dni": 27536857,
     "email": "patriciomoron@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PAPPPPPP",
     "id": "17876",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3635,9 +4361,11 @@
     "nombre": "Moyano, Leonardo",
     "dni": 27398193,
     "email": "leousogral@gmail.com",
-    "asistencias": 4,
+    "asistencias": 6,
+    "dias": "PAAPPPPP",
     "id": "11998",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3645,9 +4373,11 @@
     "nombre": "Neiman, Rosana",
     "dni": 25851689,
     "email": "rosananeiman77@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "18840",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3655,9 +4385,11 @@
     "nombre": "Osvaldo Adrian, Clavario",
     "dni": 25340610,
     "email": "adrianclavario@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "APPPPPPP",
     "id": "25763",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3666,8 +4398,10 @@
     "dni": 25696470,
     "email": "gabrielpablo091218@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "7801",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3676,8 +4410,10 @@
     "dni": 22195519,
     "email": "mariadelasnievespaez@gmail.com",
     "asistencias": 3,
+    "dias": "AAAPPPAA",
     "id": "13918",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3686,8 +4422,10 @@
     "dni": 25477764,
     "email": "dhpampin@gmail.com",
     "asistencias": 3,
+    "dias": "PPAPAAAA",
     "id": "4978",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3696,8 +4434,10 @@
     "dni": 27124880,
     "email": "lorepass@hotmail.com",
     "asistencias": 2,
+    "dias": "PAAAPAAA",
     "id": "24107",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3705,9 +4445,11 @@
     "nombre": "Perez, Pablo",
     "dni": 27529355,
     "email": "pablo.eluniversoweb@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPAP",
     "id": "21544",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3716,8 +4458,10 @@
     "dni": 28557311,
     "email": "jonatanpetri@gmail.com",
     "asistencias": 6,
+    "dias": "PPPPPPAA",
     "id": "10065",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3725,9 +4469,11 @@
     "nombre": "Ritacco, Gabriel",
     "dni": 24106061,
     "email": "la_casita_libros@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "7752",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3736,8 +4482,10 @@
     "dni": 19094562,
     "email": "jose-julian17@hotmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "10359",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3745,9 +4493,11 @@
     "nombre": "Roberto Carlos, Caniza",
     "dni": 20542289,
     "email": "robcaniza@gmail.com",
-    "asistencias": 4,
+    "asistencias": 6,
+    "dias": "PPPAPAPP",
     "id": "26023",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3756,8 +4506,10 @@
     "dni": 24438294,
     "email": "dalilarodera123@gmail.com",
     "asistencias": 4,
+    "dias": "PPPPAAAA",
     "id": "4174",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3765,9 +4517,11 @@
     "nombre": "Romani, Maria Ximena",
     "dni": 28627630,
     "email": "ximenaromani@hotmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPPPAAP",
     "id": "14425",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3776,8 +4530,10 @@
     "dni": 28060544,
     "email": "laura80rubio@gmail.com",
     "asistencias": 3,
+    "dias": "PPAPAAAA",
     "id": "14210",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3785,9 +4541,11 @@
     "nombre": "Ruiz, Guillermo",
     "dni": 24840635,
     "email": "grupodepracticas2013@gmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPPAPP",
     "id": "21510",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3796,8 +4554,10 @@
     "dni": 25669541,
     "email": "oloduk@yahoo.com.ar",
     "asistencias": 1,
+    "dias": "APAAAAAA",
     "id": "2119",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3805,9 +4565,11 @@
     "nombre": "Serrano, Karina",
     "dni": 27047018,
     "email": "karinaserrano90@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "24105",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3815,9 +4577,11 @@
     "nombre": "Shaya, Julio César",
     "dni": 23631166,
     "email": "julio.shaya@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "11293",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3825,9 +4589,11 @@
     "nombre": "Sorensen, Ariel",
     "dni": 23224868,
     "email": "arielsorensen@hotmail.com",
-    "asistencias": 4,
+    "asistencias": 6,
+    "dias": "PPAPPAPP",
     "id": "2122",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3836,8 +4602,10 @@
     "dni": 28684577,
     "email": "spinozaclaudia@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "3672",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3845,9 +4613,11 @@
     "nombre": "Stegmann, Carlos Ariel",
     "dni": 24020437,
     "email": "arielstegmann74@gmail.com",
-    "asistencias": 5,
+    "asistencias": 6,
+    "dias": "PPPPPAAP",
     "id": "3130",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3856,8 +4626,10 @@
     "dni": 24761200,
     "email": "ivonesarcay@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "8800",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3866,8 +4638,10 @@
     "dni": 20661494,
     "email": "tiradoer69@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "5849",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3876,8 +4650,10 @@
     "dni": 24844811,
     "email": "sandratorretta@hotmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "19042",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3885,9 +4661,11 @@
     "nombre": "Trubiano, Miguel Angel",
     "dni": 10564273,
     "email": "trubiano59@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "21479",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3895,9 +4673,11 @@
     "nombre": "Tula, Miguel Angel",
     "dni": 25761175,
     "email": "matula77@yahoo.com.ar",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "24064",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3906,8 +4686,10 @@
     "dni": 28362944,
     "email": "lvecchio80@gmail.com",
     "asistencias": 2,
+    "dias": "PPAAAAAA",
     "id": "12823",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3915,9 +4697,11 @@
     "nombre": "Vega, Luciano",
     "dni": 28348022,
     "email": "cluciano.vega@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "21936",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3925,9 +4709,11 @@
     "nombre": "Verges, Luis",
     "dni": 17400167,
     "email": "chinoverges@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "13024",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3936,8 +4722,10 @@
     "dni": 23372627,
     "email": "gracielavida1000@gmail.com",
     "asistencias": 0,
+    "dias": "AAAAAAAA",
     "id": "8502",
-    "practico": ""
+    "practico": "no",
+    "asistio": "no"
   },
   {
     "curso": 126,
@@ -3945,9 +4733,11 @@
     "nombre": "Villalba, Raul Orlando",
     "dni": 10853611,
     "email": "vipescri@hotmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "18178",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3955,9 +4745,11 @@
     "nombre": "Villavicencio, Mariana",
     "dni": 22200876,
     "email": "mariana_villavicencio@hotmail.com",
-    "asistencias": 5,
+    "asistencias": 7,
+    "dias": "PPPPAPPP",
     "id": "14444",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3965,9 +4757,11 @@
     "nombre": "Wenner, Gustavo Javier",
     "dni": 22936851,
     "email": "gjwenner@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "22195",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3975,9 +4769,11 @@
     "nombre": "Zubiaga, Wendy",
     "dni": 27190813,
     "email": "wendyzubiaga@gmail.com",
-    "asistencias": 6,
+    "asistencias": 8,
+    "dias": "PPPPPPPP",
     "id": "20861",
-    "practico": "si"
+    "practico": "si",
+    "asistio": "si"
   },
   {
     "curso": 126,
@@ -3985,8 +4781,10 @@
     "nombre": "Zurita Villalonga, Guillermo Jose",
     "dni": 23079217,
     "email": "guillermozu@gmail.com",
-    "asistencias": 6,
+    "asistencias": 7,
+    "dias": "PPPPPPPA",
     "id": "21499",
-    "practico": ""
+    "practico": "no",
+    "asistio": "si"
   }
 ]

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+      Curso 134 - Grupo 08 -> cdbruno10@hotmail.com 
+        20784683; Claudio Bruno
+    
+        funciona: 
+        diseño: 
+    -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      #root {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        flex: 1;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+
+      button[type="submit"] {
+        padding: 8px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      button {
+        padding: 6px 12px;
+        font-size: 14px;
+        margin-left: 5px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      span {
+        margin-right: 10px;
+      }
+    </style>
+
+    <script type="text/babel">
+      const ItemTarea = ({ tarea, completarTarea, eliminarTarea }) => {
+        const [completada, setCompletada] = React.useState(tarea.completada);
+
+        const marcarCompleta = () => {
+          setCompletada(!completada);
+          completarTarea(tarea.id, !completada);
+        };
+
+        const eliminar = () => {
+          eliminarTarea(tarea.id);
+        };
+
+        return (
+          <div>
+            <span>
+              {tarea.nombre}
+              <span>{completada && "  ✔ "}</span>
+            </span>
+            <button onClick={marcarCompleta}>
+              {completada ? "Reabrir" : "Completar"}
+            </button>
+            <button onClick={eliminar}>Eliminar</button>
+          </div>
+        );
+      };
+
+      const ListaTareas = ({ tareas, completarTarea, eliminarTarea }) => {
+        return (
+          <div>
+            {tareas.map((tarea) => (
+              <ItemTarea
+                key={tarea.id}
+                tarea={tarea}
+                completarTarea={completarTarea}
+                eliminarTarea={eliminarTarea}
+              />
+            ))}
+          </div>
+        );
+      };
+
+      const FormularioTareas = ({ agregarTarea }) => {
+        const [nuevaTarea, setNuevaTarea] = React.useState("");
+
+        const enviarFormulario = (e) => {
+          e.preventDefault();
+          if (nuevaTarea.trim() !== "") {
+            agregarTarea(nuevaTarea);
+            setNuevaTarea("");
+          }
+        };
+
+        return (
+          <form onSubmit={enviarFormulario}>
+            <input
+              type="text"
+              value={nuevaTarea}
+              onChange={(e) => setNuevaTarea(e.target.value)}
+              placeholder="Agregar nueva tarea"
+            />
+            <button type="submit">Agregar Tarea</button>
+          </form>
+        );
+      };
+
+      const GestorTareas = () => {
+        const [tareas, setTareas] = React.useState([]);
+
+        const agregarTarea = (nombreTarea) => {
+          const nuevaTarea = {
+            id: tareas.length + 1,
+            nombre: nombreTarea,
+            completada: false,
+          };
+          setTareas([...tareas, nuevaTarea]);
+        };
+
+        const completarTarea = (idTarea, completada) => {
+          const tareasActualizadas = tareas.map((tarea) =>
+            tarea.id === idTarea ? { ...tarea, completada: completada } : tarea
+          );
+          setTareas(tareasActualizadas);
+        };
+
+        const eliminarTarea = (idTarea) => {
+          const tareasFiltradas = tareas.filter(
+            (tarea) => tarea.id !== idTarea
+          );
+          setTareas(tareasFiltradas);
+        };
+
+        return (
+          <div>
+            <h1>Gestor de Tareas</h1>
+            <FormularioTareas agregarTarea={agregarTarea} />
+            <ListaTareas
+              tareas={tareas}
+              completarTarea={completarTarea}
+              eliminarTarea={eliminarTarea}
+            />
+          </div>
+        );
+      };
+
+      ReactDOM.render(<GestorTareas />, document.getElementById("root"));
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+    
+        <!-- 
+            Curso 132 - Grupo 09 -> satrianoignacio@gmail.com
+                28079719; Ignacio Sosa
+
+                funciona: si
+                diseño: si
+        -->
+        <title>Lista de Tarea</title>
+        <style>
+            .App {
+            text-align: center;
+            }
+
+            .App-logo {
+            height: 40vmin;
+            pointer-events: none;
+            }
+
+            @media (prefers-reduced-motion: no-preference) {
+            .App-logo {
+                animation: App-logo-spin infinite 20s linear;
+            }
+            }
+
+            .App-header {
+            background-color: #282c34;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(10px + 2vmin);
+            color: white;
+            }
+
+            .App-link {
+            color: #61dafb;
+            }
+
+            @keyframes App-logo-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                background-color: rgb(225, 225, 225);
+                font-family: Arial, Helvetica, sans-serif;
+
+            }
+
+            .container {
+                text-align: center;
+                margin-top: 1em;
+                padding: 200px;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid rgb(175, 175, 175);
+                border-radius: 5px;
+                padding: 1em;
+                width: 600px;
+            }
+
+            .TaskForm {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .input-container {
+                margin-bottom: 1em;
+                width: 100%;
+            }
+
+            input {
+                font-size: 18px;
+                padding: .6em;
+                width: 90%;
+                border: 1px solid rgb(175, 175, 175);
+                border-radius: 5px;
+
+            }
+
+            .button-container {
+                width: 100%;
+            }
+
+            .custom-button {
+                width: 90px;
+                height: 30px;
+                background-color: rgb(35, 35, 35);
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-bottom: 2em;
+            }
+
+            .custom-button:hover {
+                background-color: cornflowerblue;
+                transition: all 500ms;
+            }
+
+            button {
+                width: 90px;
+                height: 30px;
+                background-color: rgb(35, 35, 35);
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-left: 10px;
+            }
+
+            button:hover {
+                background-color: cornflowerblue;
+                transition: all 500ms;
+            }
+
+            .TaskItem {
+                border: 1px solid rgb(175, 175, 175);
+                width: 90%;
+                margin: 0 auto;
+                margin-bottom: 2em;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                background-color: rgb(225, 225, 225);
+                font-family: Arial, Helvetica, sans-serif;
+
+            }
+
+            .container {
+                text-align: center;
+                margin-top: 1em;
+                padding: 200px;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid rgb(175, 175, 175);
+                border-radius: 5px;
+                padding: 1em;
+                width: 600px;
+            }
+
+            .TaskForm {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .input-container {
+                margin-bottom: 1em;
+                width: 100%;
+            }
+
+            input {
+                font-size: 18px;
+                padding: .6em;
+                width: 90%;
+                border: 1px solid rgb(175, 175, 175);
+                border-radius: 5px;
+
+            }
+
+            .button-container {
+                width: 100%;
+            }
+
+            .custom-button {
+                width: 90px;
+                height: 30px;
+                background-color: rgb(35, 35, 35);
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-bottom: 2em;
+            }
+
+            .custom-button:hover {
+                background-color: cornflowerblue;
+                transition: all 500ms;
+            }
+
+            button {
+                width: 90px;
+                height: 30px;
+                background-color: rgb(35, 35, 35);
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-left: 10px;
+            }
+
+            button:hover {
+                background-color: cornflowerblue;
+                transition: all 500ms;
+            }
+
+            .TaskItem {
+                border: 1px solid rgb(175, 175, 175);
+                width: 90%;
+                margin: 0 auto;
+                margin-bottom: 2em;
+            }
+
+            .TaskItem {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid rgb(175, 175, 175);
+                width: 90%;
+                margin: 0 auto;
+                padding: 5px;
+                margin-bottom: 1.5em;
+            }
+
+            .taskText {
+                flex: 1;
+            }
+
+            .buttonContainer {
+                display: flex;
+                gap: 5px;
+            }
+
+            .completeButton,
+            .deleteButton {
+                width: 100px;
+                height: 30px;
+                cursor: pointer;
+                border: none;
+                border-radius: 4px;
+            }
+
+            .completeButton {
+                background-color: rgb(35, 35, 35);
+                color: #fff;
+            }
+
+            .deleteButton {
+                background-color: rgb(35, 35, 35);
+                color: #fff;
+            }
+        </style>
+
+        <script type="text/babel">
+            const { useState, useEffect } = React        
+            const App = () => {
+            const [tasks, setTasks] = useState([]);
+
+            useEffect(() => {
+                console.log('Lista de tareas actualizada:', tasks);
+            }, [tasks]);
+
+            const handleToggleComplete = (taskId) => {
+                const updatedTasks = tasks.map((task) =>
+                task.id === taskId ? { ...task, completed: !task.completed } : task
+                );
+                setTasks(updatedTasks);
+            };
+
+            const handleDeleteTask = (taskId) => {
+                const updatedTasks = tasks.filter((task) => task.id !== taskId);
+                setTasks(updatedTasks);
+            };
+
+            const handleAddTask = (taskName) => {
+                const newTask = {
+                    id: tasks.length + 1,
+                    name: taskName,
+                    completed: false,
+                };
+                setTasks([...tasks, newTask]);
+            };
+
+            return (
+                <div className="container">
+                    <h1>Lista de Tareas</h1>
+                    <TaskForm onAddTask={handleAddTask} />
+                    <TaskList
+                        tasks={tasks}
+                        onToggleComplete={handleToggleComplete}
+                        onDeleteTask={handleDeleteTask}
+                    />
+                </div>
+            );
+            };
+
+            const TaskForm = ({ onAddTask }) => {
+                const [taskName, setTaskName] = useState('');
+
+                const handleSubmit = (e) => {
+                    e.preventDefault();
+                    if (taskName.trim()) {
+                        onAddTask(taskName);
+                        setTaskName('');
+                    }
+                };
+
+                return (
+                    <form className="TaskForm" onSubmit={handleSubmit}>
+                        <div className="input-container">
+                            <input
+                                type="text"
+                                value={taskName}
+                                onChange={(e) => setTaskName(e.target.value)}
+                                placeholder="Nueva tarea"
+                            />
+                        </div>
+                        <div className="button-container">
+                            <button type="submit" className="custom-button">
+                                Agregar
+                            </button>
+                        </div>
+                    </form>
+                );
+            };
+
+            const TaskItem = ({ task, onToggleComplete, onDeleteTask }) => {
+                return (
+                    <div className='TaskItem'>
+                        <span className='taskText' style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+                            {task.name}
+                        </span>
+                        <div className='buttonContainer'>
+                            <button className='completeButton' onClick={() => onToggleComplete(task.id)}>Completar</button>
+                            <button className='deleteButton' onClick={() => onDeleteTask(task.id)}>Eliminar</button>
+                        </div>
+                    </div>
+                );
+            };
+
+            const TaskList = ({ tasks, onToggleComplete, onDeleteTask }) => {
+                return (
+                    <div>
+                        {tasks.map((task) => (
+                            <TaskItem
+                                key={task.id}
+                                task={task}
+                                onToggleComplete={onToggleComplete}
+                                onDeleteTask={onDeleteTask}
+                            />
+                        ))}
+                    </div>
+                );
+            };
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+      Curso 126 - Grupo 08 -> rozziesteban@gmail.com
+        27173739; Esteban Costilla Rozzi
+        24106061; Gabriel Ritacco
+        28627630; Ximena Romani
+
+        funciona: 
+        diseño: 
+    -->
+
+    <style>
+        body {
+        background-color: #17181f;
+        color: #aaa;
+        font-family: Verdana,  Tahoma, sans-serif;
+        font-size: .9em;
+        }
+
+        *{
+        box-sizing: border-box;
+        }
+
+        .main-tareas {
+        max-width: 460px;
+        margin: 4em auto;
+        }
+
+        h1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 300;
+        font-size: 3.4em;
+        color: white;
+        text-align: center;
+        margin-bottom: 1.2em;
+        }
+
+        form {
+        border: 0.2em solid #30313d;
+        border-radius: 1em;
+        padding-left: 5px;
+        display: flex;
+        margin-bottom: 2em;
+        }
+
+        form input[type="text"] {
+        background: none;
+        border: 0;
+        text-align: center;
+        padding: 0.7em 0.6em;
+        display: block;
+        width: 100%;
+
+        }
+
+        form button {
+        background-color: #61dafb;
+        border-radius: 0.4em;
+        border: 0;
+        margin: .2em;
+        padding: 0.2em 0.6em;
+        font-size: 1.7em;
+        font-weight: 700;
+        cursor: pointer;
+        }
+
+        form button:hover {
+        background-color: rgb(0, 255, 119);
+        }
+
+        form input {
+        color: white;
+        font-size: 1.2em;
+        }
+
+        form input:focus {
+        transition: ease-in-out, width .35s ease-in-out;
+        border-radius: 1em;
+        }
+
+        form ::placeholder {
+        font-style: italic;
+        font-size: 1em;
+        
+        }
+
+        #checkbox {
+        cursor: pointer;
+        }
+
+
+
+        .task-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #30313d ;
+        border-radius: 0.6em;
+        padding: .9em;
+        margin-top: .5em;
+        }
+
+        .task-item span {
+        padding-left: 1em;
+        padding-right: 1em;
+        }
+
+        .boton-borrar {
+        background-color: #61dafb;
+        border-radius: 0.4em;
+        color: black;
+        font-size: .9em;
+        padding: .2em;
+        padding-left: .3em;
+        padding-right: .3em;
+        cursor: pointer;  
+        font-weight: 600;
+        } 
+
+        .boton-borrar:hover {
+        background-color: red;
+        color: white;
+        transition: ease-in-out;
+
+        }
+
+        .botonera {
+        margin-top: 0.6em;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        }
+
+        .botonera button {
+        background-color: #61dafb;
+        border-radius: 0.4em;
+        border: 0;
+        margin: .2em;
+        padding: 0.7em 0.9em;
+        font-weight: 500;
+        font-size: 1.1em;
+        cursor: pointer;
+        }
+
+        #limpiar-completadas {
+        background-color: aquamarine;
+        }
+        #limpiar-completadas:hover {
+        background-color: rgb(0, 255, 119);
+        }
+        #borrar-tareas {
+        background-color: rgba(216, 119, 119, 0.335);
+        color:#aaa;
+        }
+        #borrar-tareas:hover {
+        background-color: rgba(255, 0, 0, 0.335);
+        }
+
+
+    </style>
+    <script type="text/babel">
+        const { useState, useEffect } = React
+        const tareasIniciales = [
+            {id: 1, tarea: 'comprar para el asado del domingo', completed: false},
+            {id: 2, tarea: 'Llevar el auto al taller por el aceite', completed: false},
+            {id: 3, tarea: 'Comprar Espinaca', completed: false},
+            {id: 4, tarea: 'Salir en bicicleta 3 veces por semana', completed: false},
+            ]
+
+        function App() {
+            
+            const [proximoId, setProximoId] = useState(5)
+            const [tareas, setTareas] = useState(tareasIniciales)
+            const [tienesTareas, setTienesTareas] = useState(true);
+
+            //----funciones
+            function agregar(tarea){
+                const nuevo = {id: proximoId +1 , tarea: tarea, completed: false}
+                const copia = [...tareas, nuevo]
+                setTareas(copia)
+                setProximoId(proximoId +1)
+            }
+
+            function borrar(id) {
+                const copia = tareas.filter(tarea => tarea.id !== id)
+                setTareas(copia)
+            }
+
+            function modificar(id,) {
+                const actual = tareas.find(tarea => tarea.id === id)
+                const nueva = {...actual, tarea: actual.value}
+                const copia = tareas.map(tarea => tarea.id === id ? nueva: tarea)
+                setTareas(copia)
+            }
+
+            function estaCompletada(id) {
+                const actualizadasTareas = tareas.map(
+                tarea => tarea.id === id ? { ... tarea, completed: ! tarea.completed} : tarea
+                )
+                setTareas(actualizadasTareas)
+            }
+
+            function borrarTodas() {
+                setTareas([])
+            }
+
+            function limpiarCompletadas(completed){
+                const listaLimpiada = tareas.filter(tarea => !tarea.completed)
+                setTareas(listaLimpiada)
+            }
+
+            useEffect(() => {
+                localStorage.setItem('tareas', JSON.stringify(tareas));
+            }, [tareas]);
+
+            useEffect(() => {
+                setTienesTareas(tareas.length > 0);
+            }, [tareas]);
+
+            useEffect(() => {
+                setTienesTareas(tareas.length > 0); 
+            }, []); 
+
+            return (
+                <>
+                <main className='main-tareas'>
+                    <h1>{tienesTareas ? 'Lista de Tareas' : 'No hay más tareas !'}</h1>
+                    <div className="container">
+                    <TaskForm alAgregar={agregar}/>
+                    <TaskList tareas={tareas} alBorrar={borrar} alModificar={modificar}cambiarCompletada={estaCompletada} />
+                    <div className='botonera'>
+                    <button id="limpiar-completadas" onClick={limpiarCompletadas}>Limpiar completadas</button>
+                        <button id="borrar-tareas" onClick={borrarTodas}>Borrar Tareas</button>
+                    </div>
+                    </div>
+                </main>
+                </>
+            );
+            }
+
+            //TASKLIST
+            const TaskList = ({ tareas, cambiarCompletada, alBorrar }) => {
+            return ( 
+                <div>
+                {tareas.map(tarea => (
+                    <TaskItem
+                    key={tarea.id}
+                    tarea={tarea}
+                    cambiarCompletada={cambiarCompletada}
+                    alBorrar={alBorrar}
+                    />
+                ))}
+                </div>
+            )   
+            }
+
+            //TASKITEM
+            function TaskItem({tarea, alBorrar, cambiarCompletada}) {
+            function borrar() {
+                alBorrar(tarea.id)
+            }
+
+            function estaCompletada() {
+                cambiarCompletada(tarea.id)
+            }
+
+            return (
+                <div className='task-item' >
+                <input
+                type="checkbox"
+                id='checkbox'
+                checked={tarea.completed}
+                onChange={estaCompletada}     
+                />
+                <span style={{ textDecoration: tarea.completed ? 'line-through' : 'none'}}>{tarea.tarea}</span>
+                <button className='boton-borrar' onClick={borrar}>X</button>
+            </div>
+            )
+            }
+
+            //TASKFORM
+            function TaskForm({ alAgregar }) {
+            const [tarea, setTarea] = useState('');
+            function agregaNomas(e) {
+                e.preventDefault();
+            if (tarea === '') return;
+                alAgregar(tarea);
+                setTarea('');
+            }
+
+            return (
+                <form onSubmit={agregaNomas}>
+                <input id="proxima-tarea"placeholder="¿Cuál es tu próxima misión?"autoFocus type="text" value={tarea} onChange={(e) => setTarea(e.target.value)} />
+                <button id="agregar-tarea"type='submit'>+</button>
+                </form>
+            );
+            }
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+</head>
+<body>
+    <div id="root"></div>   
+</body>
+</html>

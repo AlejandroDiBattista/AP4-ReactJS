@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Lista de Tareas</title>
+  <!-- 
+    Curso 126 - Grupo 02 -> jonatanpetri@gmail.com
+      28557311; Petri, Jonatan 
+      17400167; Verges, Luis
+  
+      funciona: 
+      diseño: 
+  
+  -->
+  <style>
+    /* Aca los Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      background-image: url('https://i.pinimg.com/736x/b8/21/8f/b8218f2e133298f1ba3b960c1ebb605a.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      
+    }
+
+    .app {
+      width: 90%;
+      /*max-width: 800px;*/
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-image: url('https://images.unsplash.com/photo-1454117096348-e4abbeba002c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9uZG8lMjBkZWwlMjBzaXRpbyUyMHdlYnxlbnwwfHwwfHx8MA%3D%3D');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .tarea {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 8px 0;
+      
+      
+    }
+
+    .completada {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-right: 8px;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      margin-right: 8px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+    .fecha-hora {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 5px;
+}
+
+.contenido-tarea {
+  margin-bottom: 10px;
+  
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+h1 {
+   text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+   
+
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <script type="text/javascript">
+
+    // funciones y impresion de datos para la lista de tareas
+    function ItemTarea({ tarea, completarTarea, eliminarTarea }) {
+      const [completada, setCompletada] = React.useState(tarea.completada);
+
+      const manejarCompletado = () => {
+        setCompletada(!completada);
+        completarTarea(tarea.id);
+      };
+
+      return (
+        React.createElement("div", { className: `tarea` },
+        React.createElement("div", { className: "fecha-hora" },
+        tarea.fechaCreacion, " ", tarea.horaCreacion
+      ),
+        React.createElement("div", { className: `contenido-tarea ${completada ? 'completada' : ''}` },
+        React.createElement("span", null, tarea.nombre)
+      ),
+        React.createElement("div", { className: "botones" },
+        React.createElement("button", { onClick: manejarCompletado }, completada ? 'Deshacer' : 'Completar'),
+        React.createElement("button", { onClick: () => eliminarTarea(tarea.id) }, 'Eliminar')
+    )
+  )
+      );
+    }
+
+    function ListaTareas({ tareas, completarTarea, eliminarTarea }) {
+      return (
+        React.createElement("div", { className: "lista-tareas" },
+          tareas.map((tarea) =>
+            React.createElement(ItemTarea, { key: tarea.id, tarea: tarea, completarTarea: completarTarea, eliminarTarea: eliminarTarea })
+          )
+        )
+      );
+    }
+//funcion principal de carga
+    function App() {
+      const [tareas, setTareas] = React.useState([]);
+      const [nombreTarea, setNombreTarea] = React.useState('');
+// lectura de datos persistentes
+      React.useEffect(() => {
+        const tareasGuardadas = JSON.parse(localStorage.getItem('tareas'));
+        if (tareasGuardadas) {
+          setTareas(tareasGuardadas);
+        }
+      }, []);
+// grabacion de datos persistentes
+      React.useEffect(() => {
+        localStorage.setItem('tareas', JSON.stringify(tareas));
+      }, [tareas]);
+// se graba la tarea , si no se ingreso texto no la realiza, se formatea fecha para agregarla a la lista
+      const agregarTarea = (nombre,fechaCreacion,horaCreacion) => {
+        if (nombre.trim() !== '') {
+          const fechaActual = new Date(); 
+          const fechaFormateada = fechaActual.toLocaleDateString();
+          const horaFormateada = fechaActual.toLocaleTimeString();
+          const nuevaTarea = {
+            id: Date.now(),
+            nombre,
+            completada: false,
+            fechaCreacion: fechaFormateada,
+            horaCreacion: horaFormateada
+          };
+          setTareas([...tareas, nuevaTarea]);
+          setNombreTarea('');
+          //alerta emergente de confirmacion de tarea
+          alert(`¡La tarea "${nombreTarea}" ha sido agregada correctamente!`);
+        }
+      };
+
+      const completarTarea = (idTarea) => {
+        const tareasActualizadas = tareas.map((tarea) =>
+          tarea.id === idTarea ? { ...tarea, completada: !tarea.completada } : tarea
+        );
+        setTareas(tareasActualizadas);
+      };
+
+      const eliminarTarea = (idTarea) => {
+        const tareasFiltradas = tareas.filter((tarea) => tarea.id !== idTarea);
+        setTareas(tareasFiltradas);
+      };
+// funcion de descarga de tareas en archivo txt
+      const descargarTareas = () => {
+        const textoTareas = tareas.map(tarea => `${tarea.nombre}${tarea.completada ? ' - Completada' : ''}`).join('\n');
+        const elemento = document.createElement('a');
+        const archivo = new Blob([textoTareas], { type: 'text/plain' });
+        elemento.href = URL.createObjectURL(archivo);
+        elemento.download = 'lista_tareas.txt';
+        document.body.appendChild(elemento);
+        elemento.click();
+        document.body.removeChild(elemento);
+      };
+//funciones de manipulacion de datos
+      return (
+        React.createElement("div", { className: "app" },
+          React.createElement("h1", null, "Lista de Tareas"),
+          React.createElement(ListaTareas, { tareas: tareas, completarTarea: completarTarea, eliminarTarea: eliminarTarea }),
+          React.createElement("input", { type: "text", placeholder: "Ingrese una tarea...", value: nombreTarea, onChange: (e) => setNombreTarea(e.target.value) }),
+          React.createElement("button", { onClick: () => agregarTarea(nombreTarea) }, "Agregar Tarea"),
+          React.createElement("button", { onClick: descargarTareas }, "Descargar Tareas")
+          
+        )
+      );
+    }
+
+    ReactDOM.render(React.createElement(App), document.getElementById('root'));
+  </script>
+</body>
+</html>

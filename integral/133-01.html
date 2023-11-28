@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+      Curso 133 - Grupo 01 -> yesikmor26@gmail.com
+        27295145; Morleo, Yesica Alejandra
+        23988040; Escudero, Sergio Javier
+        28860847; Miranda, Maria Grisel
+        21307211; Ortiz, Oscar Alejandro
+        24519014; Zurita, Gladis
+    
+        funciona: 
+        diseño: 
+    
+    -->
+
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+  background-image: linear-gradient(to right bottom, rgb(129, 48, 106), rgb(165, 74, 184));
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  }
+  
+  .contenedorapp{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    
+  }
+
+.task-container {
+  width: 480px;
+  height: 50px;
+  background-color: rgba(240, 184, 184, 0.3);
+  margin: 5px 0;
+  padding: 8px 15px 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  cursor: pointer;    
+}
+
+
+.taskText {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+
+.task-container.completed {
+  text-decoration: line-through double rgb(249, 250, 248);
+  background-color: rgba(11, 1, 14, 0.5);
+ 
+}
+
+h2{
+  text-align:center;
+  color: white;
+  margin-bottom: 18px;
+  }
+
+   
+  .taskinput {
+    width: 350px;
+    font-size: 15px;
+    background-color: white;
+    padding: 14px 32px 14px 16px;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    color: black;
+  }
+  
+  .buttont {
+    padding: 16px;
+    font-size: 15px;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    outline: none;
+    height: 52px;
+    background: #d32097;
+    color: #fff;
+    text-transform: capitalize;
+
+
+  }
+
+@media (max-width: 900px) {
+  .taskinput {
+    width: 200px;
+    font-size: 18px;
+  }
+  .buttont {
+    width: 140px;
+    height: 50px;
+    font-size: 15px;
+
+  }
+  .task-container {
+    width: 345px;
+    height: 50px;
+  }
+  h2{
+  text-align:center;}
+}
+
+  @media (max-width: 564px) {
+
+    
+.taskinput {
+    width: 200px;
+    font-size: 18px;
+    border-radius: 6px 6px 6px 6px;
+  }
+  .buttont {
+    margin-left: 30px;
+    width: 140px;
+    height: 50px;
+    border-radius: 6px 6px 6px 6px;
+    font-size: 15px;
+
+  }
+  .task-container {
+    width: 200px;
+    height: 50px;
+
+  }
+
+  h2{
+    text-align:left;
+    margin: 20px;
+
+}
+.taskText {
+    font-size: 12px;
+  }
+}
+  
+
+</style>
+
+<script type="text/babel">
+
+  const { useState, useEffect } = React;
+ 
+  
+  function App() {
+      const [count, setCount] = useState(0)
+      return (
+          <div className='contenedorapp'>
+              <TaskList />
+          </div>
+      )
+  }
+  
+  const TaskList = () => {
+      const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
+      const [taskEditing, setTaskEditing] = useState({ id: null, text: '' });
+  
+      useEffect(() => {
+          localStorage.setItem("tasks", JSON.stringify(tasks));
+      }, [tasks]);
+  
+      const addTask = task => {
+          if (task.text.trim()) {
+              task.text = task.text.trim();
+              const updatedTasks = [task, ...tasks];
+              setTasks(updatedTasks);
+              alert('Tarea Creada'); 
+          }
+      };
+  
+      const deleteTask = (id, text) => {
+          const confirmDelete = window.confirm(
+              `¿Quieres eliminar la tarea?, recuerde que no podra recuperarla`
+          );
+  
+          if (confirmDelete) {
+              const updatedTasks = tasks.filter((task) => task.id !== id);
+              setTasks(updatedTasks);
+              alert('Tarea Eliminada'); 
+          }
+      };
+  
+      const completeTask = (id, text) => {
+          const updatedTasks = tasks.map((task) => {
+              if (task.id === id) {
+                  task.completed = !task.completed;
+                  if (task.completed) {
+                      alert(`Tarea Completada`); 
+                  }
+              }
+              return task;
+          });
+          setTasks(updatedTasks);
+      };
+  
+      const editTask = (id, text) => {
+          const newText = prompt('Editar Tarea', text);
+          if (newText !== null) {
+              const taskIndex = tasks.findIndex((task) => task.id === id);
+              if (taskIndex !== -1) {
+                  const updatedTasks = [...tasks];
+                  updatedTasks[taskIndex].text = newText;
+                  setTasks(updatedTasks);
+                  alert('La tarea fue modificada'); 
+              }
+          }
+      };
+  
+      return (
+          <div className='task-list'>
+              <h2>Lista de Tareas</h2>
+              <TaskForm onSubmit={addTask} />
+              <div className='contLTareas'>
+                  {tasks.map(task => (
+                      <Task
+                          key={task.id}
+                          id={task.id}
+                          text={task.text}
+                          completed={task.completed}
+                          completeTask={completeTask}
+                          deleteTask={deleteTask}
+                          editTask={editTask}
+                      />
+                  ))}
+              </div>
+          </div>
+      );
+  }
+  
+  function TaskForm(props) {
+      const [input, setInput] = useState('');
+      const [nextId, setNextId] = useState(1);
+  
+      const handleChange = e => {
+          setInput(e.target.value);
+      };
+  
+      const handleSubmit = e => {
+          e.preventDefault();
+  
+          const newTask = {
+              id: nextId,
+              text: input,
+              completed: false
+          }
+  
+          setNextId(nextId + 1);
+          props.onSubmit(newTask);
+          setInput('');
+      }
+  
+      return (
+          <div className='taskform'>
+              <form
+                  className=''
+                  onSubmit={handleSubmit}
+              >
+                  <input
+                      className='taskinput'
+                      type='text'
+                      placeholder='Escriba la Tarea'
+                      name='text'
+                      value={input}
+                      onChange={handleChange}
+                  />
+                  <button className='buttont'>
+                      Crear Tarea
+                  </button>
+              </form>
+          </div>
+      );
+  }
+  
+  function Task({ id, text, completed, completeTask, deleteTask, editTask }) {
+    
+      return (
+          <div className={completed ? 'task-container completed' : 'task-container'}>
+              <div className='taskText' onClick={() => completeTask(id)}>
+                  {text}
+              </div>
+              <div className='taskIcons' onClick={() => deleteTask(id)}>
+                  <span className='Icon'><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 7l16 0" />
+  <path d="M10 11l0 6" />
+  <path d="M14 11l0 6" />
+  <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+  <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+</svg></span>
+              </div>
+              <div className='Icon' onClick={() => editTask(id, text)}><svg 
+                xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil-minus" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+  <path d="M13.5 6.5l4 4" />
+  <path d="M16 19h6" />
+</svg>
+              </div>
+          </div>
+      );
+  }
+  
+  ReactDOM.render(<App />, document.getElementById("root"));
+  </script>
+   </head>
+
+   <body>
+     <div id="root"></div>
+   </body>
+ </html>

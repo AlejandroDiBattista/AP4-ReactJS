@@ -1,23 +1,19 @@
 require 'csv'
 require 'json'
 
-class String
-    def nombre
-        self.split(" ").map{|x| x.capitalize}.join(" ")
-    end
-end
 
 def leer(origen)
     texto = File.open(origen, 'r')
     data = texto.readlines[4..-1].map{|linea| linea.split("\t")}
     # data = data.select{|x| x.size > 5}
     data = data.map do |x|
-        {   curso: 0, 
+        {   
+            curso: 0, 
             grupo: 0,
             nombre: "#{x[0].nombre}, #{x[1].nombre}", 
             dni: x[3].to_i, email: x[4],
-            asistencias: x[3..-1].count{|y| y["P"]},
-            dias: x[3..-1].map{|y| y["P"] ? "P" : "A"},
+            asistencias: x.count{|y| y["P ("]},
+            dias: x.filter{|y| y[/\(\d\/1\)/]}.map{|z|z["(0/1)"] ? "A" : "P"}.join(""),
             id: x[2],
         }
     end
@@ -94,7 +90,6 @@ def leer_asistencias
     salida 
 end 
 
-
 def guardar_asistencias(asistencias)
     File.open("asistencias.json", "w") do |f|
         f.write(JSON.pretty_generate(asistencias))
@@ -105,7 +100,7 @@ def leer_grupos()
     salida = {}
     Dir["*.csv"].each do |file|
         # grupo,nombre,dni,email,asistencias,id
-
+        puts file
         curso = file.split("_")[1].split(".")[0].to_i
         grupos = CSV.read(file)
         grupos = grupos.select{|x| !x[0][/^\s*grupo/i]}
@@ -114,13 +109,42 @@ def leer_grupos()
     salida 
 end
 
-# grupos = leer_grupos()
-# pp grupos.select{|k,v| v[:curso] == 133}
+def aplicar_grupos(asistencias, grupos)
+    asistencias.each do |asistencia|
+        grupo = grupos[asistencia[:dni]]
+        if grupo
+            asistencia[:grupo] = grupo[:grupo]
+            if asistencia[:curso] != grupo[:curso]
+                puts "ERROR: #{asistencia[:dni]} está en el curso #{asistencia[:curso]} y en el grupo #{asistencia[:grupo]} (grupo #{grupo[:curso]}))"
+            end
+        # elsif asistencia[:asistencias] > 1
+        #     print "%4i - " % (n += 1)
+        #     puts "#{asistencia[:dni]} - #{asistencia[:nombre].ljust(40)} | #{asistencia[:asistencias]} | Curso: #{asistencia[:curso]} "
+        end
+        # asistencia[:curso] = grupos[asistencia[:dni]][:curso]
+    end
+end
+
+def listar_detalle_alumnos(asistencias)
+    n = 0
+    asistencias.each do |asistencia|
+        falto = asistencia[:dias][/.*AAAA$/] ? "❌" : " "
+        raro  = asistencia[:dias][/.*AAAA/] && falto == " "? "😯" : " "
+        n = n + 1 if falto == "❌"
+        dias = asistencia[:dias].gsub("A", " 🔴").gsub("P", " 🟢")
+        puts "%8i - %-50s | %2i | Curso: %3i | Grupo: %2i  | %2i | %s  | %s %s" % [asistencia[:dni], asistencia[:nombre], asistencia[:asistencias], asistencia[:curso], asistencia[:grupo], asistencia[:dias].size, dias, falto, raro]
+    end
+    puts "Hay #{n} alumnos que no completaron el curso (faltaron al 4 ultimas clases)"
+end 
+
+grupos = leer_grupos()
 asistencias = leer_asistencias()
+
 nunca = asistencias.select{|x| x[:asistencias] == 0}
 una = asistencias.select{|x| x[:asistencias] == 1}
 dos = asistencias.select{|x| x[:asistencias] == 2}
 tres = asistencias.select{|x| x[:asistencias] == 3}
+fuera = asistencias.select{|x| x[:dias][/.*AAAA$/]}
 
 puts "- ESTADISTICAS --------------------------------------"
 # puts "  Hay #{grupos.size} alumnos en grupos"
@@ -129,24 +153,11 @@ puts "  Hay #{nunca.size} alumnos que nunca asistieron"
 puts "  Hay #{una.size} alumnos que asistieron una vez"
 puts "  Hay #{dos.size} alumnos que asistieron dos veces"
 puts "  Hay #{tres.size} alumnos que asistieron tres veces"
+puts "  Hay #{fuera.size} alumnos que no asistieron a las ultimas 4 clases"
 puts 
-return
 
-n = 0
-asistencias.each do |asistencia|
-    grupo = grupos[asistencia[:dni]]
-    if grupo
-        asistencia[:grupo] = grupo[:grupo]
-        if asistencia[:curso] != grupo[:curso]
-            puts "ERROR: #{asistencia[:dni]} está en el curso #{asistencia[:curso]} y en el grupo #{asistencia[:grupo]} (grupo #{grupo[:curso]}))"
-        end
-    # elsif asistencia[:asistencias] > 1
-    #     print "%4i - " % (n += 1)
-    #     puts "#{asistencia[:dni]} - #{asistencia[:nombre].ljust(40)} | #{asistencia[:asistencias]} | Curso: #{asistencia[:curso]} "
-    end
-    # asistencia[:curso] = grupos[asistencia[:dni]][:curso]
-end
+
+aplicar_grupos(asistencias, grupos)
 guardar_asistencias(asistencias)
-
 
 # guardar asistencias en JSON 

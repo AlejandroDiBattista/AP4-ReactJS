@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Tareas</title>
+
+  <!-- 
+    Curso 132 - Grupo 1 -> balestri@gmail.com
+  
+      26673161; Balestri, Sebastian Gabriel 
+      26627727; Andrea Lujan, Alonso 
+      27247889; Bamba, Mariela 
+      26061287; D Angelo, Maximiliano 
+      11266094; Lopez, Ruben Leonardo 
+      25283578; María Angélica, Caprarulo 
+
+ 
+      funciona: 
+      diseño: 
+  
+  -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    #root {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #008080;
+    }
+
+    h2 {
+      color: #008080;
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+    }
+
+    input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 8px 12px;
+      background-color: #008080;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #006666;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    div[style] {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    div[style] button {
+      background-color: #f44336;
+    }
+
+    div[style] button:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+
+const { useState, useEffect } = React;
+
+const TaskItem = ({ task, onTaskComplete, onTaskDelete }) => {
+  const handleComplete = () => {
+    onTaskComplete(task.id);
+  };
+
+  return (
+    <div style={{ textDecoration: task.completada ? 'line-through' : 'none' }}>
+      <span>{task.nombre}</span>
+      <button onClick={handleComplete}>Completada</button>
+      <button onClick={() => onTaskDelete(task.id)}>Eliminar</button>
+    </div>
+  );
+};
+
+const TaskList = ({ tasks, onTaskComplete, onTaskDelete }) => {
+  return (
+    <div>
+      <h2>Lista de Tareas</h2>
+      <ul>
+        {tasks.map((task) => (
+          <li key={task.id}>
+            <TaskItem
+              task={task}
+              onTaskComplete={onTaskComplete}
+              onTaskDelete={onTaskDelete}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const TaskForm = ({ addTask }) => {
+  const [newTask, setNewTask] = useState('');
+
+  const handleInputChange = (e) => {
+    setNewTask(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (newTask.trim() !== '') {
+      addTask({
+        id: new Date().getTime(),
+        nombre: newTask,
+        completada: false,
+      });
+      setNewTask('');
+    }
+  };
+
+  return (
+    <div>
+      <h2>Agregar Tarea</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Nueva tarea"
+          value={newTask}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Agregar</button>
+      </form>
+    </div>
+  );
+};
+
+const App = () => {
+  const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    setTasks(storedTasks);
+  }, []);
+
+  useEffect(() => {
+    // Actualizar el almacenamiento local cuando cambia el estado de tasks
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    // Realizar una acción (por ejemplo, mostrar un mensaje) cuando cambia el estado de tasks
+    console.log('Lista de tareas actualizada:', tasks);
+  }, [tasks]);
+
+  const addTask = (newTask) => {
+    setTasks([...tasks, newTask]);
+  };
+
+  const completeTask = (taskId) => {
+    const updatedTasks = tasks.map((task) =>
+      task.id === taskId ? { ...task, completada: !task.completada } : task
+    );
+    setTasks(updatedTasks);
+  };
+
+  const deleteTask = (taskId) => {
+    const updatedTasks = tasks.filter((task) => task.id !== taskId);
+    setTasks(updatedTasks);
+  };
+
+  return (
+    <div>
+      <h1>Gestión de Tareas</h1>
+      <TaskForm addTask={addTask} />
+      <TaskList
+        tasks={tasks}
+        onTaskComplete={completeTask}
+        onTaskDelete={deleteTask}
+      />
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://i.postimg.cc/ZqZS36q8/list.png" type="image/x-icon">    
+    <title>Tasks List</title>
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- 
+  Curso 126 - Grupo 07 -> veritocapito@gmail.com
+
+        28411719; Capobianco Veronica     
+        24020437; Stegmann Carlos Ariel    
+        22200876; Villavicencio Mariana     
+
+    funciona: 
+    diseño: 
+
+-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', monospace;
+        }
+
+        #root {
+            min-height: 100vh;
+            background: rgb(164, 230, 253);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h1 {
+            color: navy;
+            font-size: 44px;
+            padding: 1rem 0;
+        }
+
+        form {
+            display: flex;
+            gap: 5px;
+            width: 500px;
+            justify-content: space-between;
+        }
+
+        input {
+            width: 80%;
+            border-radius: 5px;
+            border: 0.2px solid navy;
+            padding: 5px 10px;
+            font-size: 18px;
+        }
+
+        input:focus {
+            outline-style: none;
+        }
+
+        .add-btn {
+            width: 120px;
+            height: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: #000080;
+            color: whitesmoke;
+            border: 0.2px solid navy;
+        }
+
+        .add-btn:hover {
+            cursor: pointer;
+            opacity: 0.7;
+            color: #000080;
+            background-color: rgb(164, 230, 253);
+        }
+
+        .icon-btn {
+            border: none;
+            background-color: transparent;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            min-height: 60vh;
+            align-items: center;
+            gap: 10px;
+            background-color: whitesmoke;
+            padding: 1rem;
+            border-radius: 5px;
+            border: 1px solid navy;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 1px solid navy;
+            padding: 0.5rem 1rem ;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        function App() {
+            const [nextId, setNextId] = useState(1);
+            const [taskList, setTaskList] = useState([]);
+
+            function addTask(name) {
+                const newTask = { id: nextId, name: name, completed: false };
+                const copy = [...taskList, newTask]
+
+                setTaskList(copy)
+                setNextId(Number(new Date()))
+            }
+
+            function completeTask(id) {
+                const updatedTaskList = taskList.map(task => {
+                    if (task.id === id) {
+                        return { ...task, completed: !task.completed }; 
+                    }
+                    return task;
+                });
+
+                setTaskList(updatedTaskList);
+            }
+
+            function deleteTask(id) {
+                const copy = taskList.filter(task => task.id !== id)
+                setTaskList(copy)
+            }
+
+            useEffect(() => {
+                const data = localStorage.getItem('Task List')
+                if (data) {
+                    setTaskList(JSON.parse(data))
+                }
+            }, [])
+
+            useEffect(() => {
+                localStorage.setItem('Task List', JSON.stringify(taskList))
+            })
+
+            useEffect(() => {
+                console.log('Next ID updated', nextId)
+            }, [nextId])
+
+
+            return (
+                <>
+                    <h1>TASK LIST</h1>
+                    <TaskForm onAdd={addTask} />
+                    <TaskList taskList={taskList} onCompleteTask={completeTask} onDeleteTask={deleteTask} />
+                </>
+            )
+        }
+
+        function TaskForm({ onAdd }) {
+            const [name, setName] = useState('');
+
+            const handleAdd = (e) => {
+                e.preventDefault();
+
+                if (name === '') return;
+                onAdd(name.toUpperCase());
+                setName('');
+            }
+
+
+            return (
+
+                <form onSubmit={handleAdd}>
+                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                    <button type="submit" className="add-btn" >Add Task</button>
+                </form>
+            )
+        }
+
+
+        const TaskList = ({ taskList, onCompleteTask, onDeleteTask }) => {
+            return (
+                <ul>
+                    {
+                        taskList?.map(task => (<TaskItem key={task.id} task={task} onCompleteTask={onCompleteTask} onDeleteTask={onDeleteTask} />))
+                    }
+                </ul>
+            )
+        }
+
+
+
+        const TaskItem = ({ task, onCompleteTask, onDeleteTask }) => {
+            const { id, name, completed } = task;
+
+            function completeItem() {
+                onCompleteTask(id)
+            }
+
+            function deleteItem() {
+                onDeleteTask(id)
+            }
+
+            return (
+                <li style={{ textDecoration: completed ? 'line-through' : 'none', color: completed && 'green' }}>
+                    <span>{task.name}</span>
+                    <div className="buttons">
+                        <button onClick={completeItem} className="icon-btn"><img width="30" height="30" src={"https://img.icons8.com/ios-filled/30/000080/checkmark--v1.png"} alt={"checkmark--v1"} /></button>
+                        <button onClick={deleteItem} className="icon-btn"><img width="30" height="30" src={"https://img.icons8.com/ios-glyphs/30/000080/trash--v1.png"} alt={"trash--v1"} /></button>
+                    </div>
+                </li>
+            )
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+
+    </script>
+
+</body>
+
+</html>

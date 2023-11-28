@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!-- 
+            Curso 132 - Grupo 02 -> juliomolina17@gmail.com
+                25748773; Gaso, Marcos Leonardo 
+                26056809; Lavayen, Juan Entiqur 
+                27522838; Maggiolo, Gisela 
+                25893714; Molina, Julio 
+                19018934; Monzon Fernandez, Lucila Emilce 
+                26690663; Sidi, Andres 
+
+                funciona: 
+                diseño: 
+        -->
+        
+        <title>To do List</title>
+        <style>
+            /* App.css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main{
+            width: 70%;
+            margin: auto;
+            padding-top: 20px;
+        }
+
+        #root{
+            width: 70%;
+            margin: auto;
+        }
+
+        .tarea{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px;
+        }
+
+        form{
+            width: 80%;
+        }
+
+        .tarea input{
+            width: 70%;
+            height: 30px;
+        }
+
+        .titulo{
+            margin: auto;
+            width: 80%;
+            height: 70px;
+            border: 2px solid black;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .btn-tarea{
+            width: 70px;
+            height: 20px;
+            margin-left: 10px;
+        }
+
+        .items{
+            display: flex;
+            width: 80%;
+            height: 40px;
+            border: 2px solid lightslategrey;
+            border-radius: 10px;
+            margin: 10px;
+            
+        }
+
+        span{
+            width: 70%;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        li{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+
+        li input, button{
+            width: 70px;
+        }
+
+        button{
+            margin: 10px;
+            background-color: papayawhip;
+            border-radius: 5px;
+        }
+
+        p{
+            font-size: 18px;
+        }
+
+        </style>
+
+        <script type="text/babel">
+            const { useState, useEffect } = React
+            // const datosIniciales = [
+            //         { id: 1, nombre: 'Autos', completada: true },
+            //         { id: 2, nombre: 'Motos', completada: false },
+            //         { id: 3, nombre: 'Bicicletas', completada: true },
+            //     ];
+                const generarId = () => Number(new Date());
+                // App.jsx
+                function App() {
+                    //const [tareas, setTareas] = useState(datosIniciales);
+                    //const [proximoID, setProximoID] = useState(0);
+                    const [tareas, setTareas] = useLocalStorate('tareas', [])
+
+                    function agregarTarea(nombre) {
+                        const nuevoTask = { id: generarId(), nombre, completada: false };
+                        setTareas([...tareas, nuevoTask]);
+                        console.log(nombre);
+                    };
+
+                    function borrarTarea(id) {
+                        const sinBorrados = tareas.filter(tarea => tarea.id !== id);
+                        setTareas(sinBorrados);
+                    };
+
+                    function completarTarea(id, marcada) {
+                        const actualTarea = tareas.find(tarea => tarea.id === id)
+                        const nuevaTarea = { id: actualTarea.id, nombre: actualTarea.nombre, completada: marcada };
+                        const nuevos = tareas.map(tarea => tarea.id === id ? nuevaTarea : tarea)
+                        setTareas(nuevos)
+                    };
+
+                    //Hook personalizado para Almacenar Tareas en el LocalStorage
+                    function useLocalStorate(key, initialValue = []) {
+                        const [value, setValue] = useState(initialValue)
+    
+                        useEffect( () => {
+                            const initial = localStorage.getItem(key)
+                            if (initial) {
+                                setValue(JSON.parse(initial))
+                            }
+                        }, [])
+  
+                        useEffect(() => {
+                        localStorage.setItem(key, JSON.stringify(value))
+                        }, [key, value])
+  
+                        return [value, setValue]
+                    }
+
+                    useEffect(() => {
+                        console.log("la tarea se modifico");
+                    }, [tareas]);
+
+                    return (
+                            <main>
+                                <div className="titulo">
+                                    <h1>TO DO LIST</h1>
+                                </div>
+                                <TaskForm agregar={agregarTarea}/>
+                                <TaskList tareas={tareas} borrar={borrarTarea} completar={completarTarea}/>  
+                            </main>
+                    )
+                }
+                
+                //TaskForm
+                function TaskForm({agregar}) {
+                    const [nombre, setNombre] = useState('');
+
+                    function ingresoTarea(e){
+                        setNombre(e.target.value);
+                    };
+                    
+                    function nuevaTarea(e){
+                        if(nombre != ''){
+                            agregar(nombre);
+                            setNombre('');
+                        }
+                        e.preventDefault();
+                    };
+                    return (
+                        <div className="tarea">
+                            <form>
+                                <input type="text" value={nombre} name="nombre" onChange={ingresoTarea}/>
+                                <button className="btn-tarea" onClick={nuevaTarea} >Agregar</button>
+                            </form>
+                        </div>
+                    )
+                }
+
+                //TaskList
+                function TaskList({ tareas, borrar, completar }) {
+                    return (
+                        <ul>
+                            {tareas.map(tarea => <TaskItem
+                            key={tarea.id}
+                            tarea={tarea}
+                            borrar={borrar}
+                            completar={completar}  />
+                            )}
+                        </ul>
+                    )
+                }
+
+                //TaskItem
+                function TaskItem({tarea, borrar, completar}) {
+                    const {id,nombre, completada} = tarea;
+                    const color = {color:completada?'red':'black'};
+    
+                    function completarTarea(e){
+                        const marcada = e.target.checked;
+                        completar(id,marcada);
+                        console.log(checked);
+                    }
+                    return (
+                        <div className="items">
+                            <li>
+                                <input type="checkbox" name="completada" onChange = {completarTarea} />
+                                <span ><p style= {color} >{nombre}</p></span>
+                                <button onClick={() => borrar(id)}>Borrar</button>
+                            </li>
+                        </div>
+                    )
+                }
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>  
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Tareas</title>
+  
+    <!-- 
+      Curso 132 - Grupo 05 -> santiago.munoz.chi@gmail.com
+          18846213; Muñoz, Santiago  
+          27386100; Arditi, Lorena 
+          28293485; Garay, Pablo  
+          26815349; Gigena Parola, Fernando Gastón  
+          27879997; Pasquinelli, Gianni  
+          24820797; Roldán, Natalia 
+
+          funciona: 
+          diseño: 
+  -->
+
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #0D1305;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    #root {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+    
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 16px;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+    
+    button:hover {
+      background-color: #176B1C;
+    }
+    
+    div > div {
+      margin-bottom: 100px;
+      margin-top: 20px;
+      border-radius: 10px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+      align-items: center;
+      width: 100%;
+    }
+    
+    span {
+      flex-grow: 1;
+      color: #333;
+      font-weight: bold;
+    }
+    
+    button.delete {
+      background-color: #F44336;
+    }
+    
+    button.delete:hover {
+      background-color: #D32F2F;
+    }
+    
+    button.edit {
+      background-color: #2196F3;
+      color: #fff;
+    }
+    
+    button.edit:hover {
+      background-color: #0B5B9E;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    const TaskItem = ({ task, onToggleComplete, onDelete, onEdit }) => {
+      const { id, name, completed } = task;
+      return (
+        <div key={id}>
+          <div>
+            <span style={{ textDecoration: completed ? "line-through" : "none" }}>
+              {name}
+            </span>
+            <button onClick={() => onToggleComplete(id)}>Completar</button>
+            <button className="edit" onClick={() => onEdit(task)}>Modificar</button>
+            <button className="delete" onClick={() => onDelete(id)}>Eliminar</button>
+          </div>
+        </div>
+      );
+    };
+
+    const TaskList = ({ tasks, onToggleComplete, onDelete, onEdit, searchTerm }) => {
+      const filteredTasks = tasks.filter((task) =>
+        task.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+
+      return (
+        <div>
+          {filteredTasks.map((task) => (
+            <TaskItem
+              key={task.id}
+              task={task}
+              onToggleComplete={onToggleComplete}
+              onDelete={onDelete}
+              onEdit={onEdit}
+            />
+          ))}
+        </div>
+      );
+    };
+
+    const TaskForm = ({ onAddTask, selectedTask, onEditTask }) => {
+      const [newTask, setNewTask] = React.useState("");
+      const [placeholder, setPlaceholder] = React.useState("Nueva tarea");
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        if (newTask.trim() === '') {
+          return;
+        }
+        if (selectedTask) {
+          onEditTask({ ...selectedTask, name: newTask });
+        } else {
+          onAddTask({ id: Date.now(), name: newTask, completed: false });
+        }
+        setNewTask("");
+      };
+
+      React.useEffect(() => {
+        if (selectedTask) {
+          setNewTask(selectedTask.name);
+          setPlaceholder(`Modificando: ${selectedTask.name}`);
+        } else {
+          setPlaceholder("Nueva tarea");
+        }
+      }, [selectedTask]);
+
+      return (
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={newTask}
+            onChange={(e) => setNewTask(e.target.value)}
+            placeholder={placeholder}
+          />
+          <button type="submit">
+            {selectedTask ? "Modificar Tarea" : "Agregar Tarea"}
+          </button>
+        </form>
+      );
+    };
+
+    const App = () => {
+      const [tasks, setTasks] = React.useState([]);
+      const [selectedTask, setSelectedTask] = React.useState(null);
+      const [searchTerm, setSearchTerm] = React.useState("");
+
+      React.useEffect(() => {
+        const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        setTasks(storedTasks);
+      }, []);
+
+      React.useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        console.log("La lista de tareas se ha actualizado:", tasks);
+      }, [tasks]);
+
+      const handleToggleComplete = (taskId) => {
+        const updatedTasks = tasks.map((task) =>
+          task.id === taskId ? { ...task, completed: !task.completed } : task
+        );
+        setTasks(updatedTasks);
+      };
+
+      const handleDelete = (taskId) => {
+        const updatedTasks = tasks.filter((task) => task.id !== taskId);
+        setTasks(updatedTasks);
+      };
+
+      const handleAddTask = (newTask) => {
+        setTasks([...tasks, newTask]);
+      };
+
+      const handleEditTask = (editedTask) => {
+        const updatedTasks = tasks.map((task) =>
+          task.id === editedTask.id ? editedTask : task
+        );
+        setTasks(updatedTasks);
+        setSelectedTask(null);
+      };
+
+      return (
+        <div id="root">
+          <h1>Lista de Tareas</h1>
+          <TaskForm
+            onAddTask={handleAddTask}
+            selectedTask={selectedTask}
+            onEditTask={handleEditTask}
+          />
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Buscar tarea"
+          />
+          <TaskList
+            tasks={tasks}
+            searchTerm={searchTerm}
+            onToggleComplete={handleToggleComplete}
+            onDelete={handleDelete}
+            onEdit={setSelectedTask}
+          />
+        </div>
+      );
+    };
+
+    ReactDOM.render(<App />, document.getElementById("root"));
+  </script>
+</body>
+</html>

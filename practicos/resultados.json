@@ -578,8 +578,7 @@
       20298589
     ],
     "notas": [
-      "El contador funciona pero solo emplea uno.",
-      "El componente no permite indicar el nombre del candidato."
+      "La gestión de los estilos se hace desde el mismo componente"
     ],
     "resultado": {
       "funciona": "no",

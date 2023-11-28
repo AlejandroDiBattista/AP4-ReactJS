@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./src/assets/img/canasto.ico" type="image/x-icon">
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+    </head>
+  
+    <!-- 
+      Curso 133 - Grupo 08 -> ricardo.aranda@bue.edu.ar
+        27660701; Amaya, Jesica Elizabeth 
+        27803086; Aranda, Ricardo Mauro 
+        21669385; Avendaño, Maria Jose 
+        28299300; Juarez, Maria Soledad 
+        21328822; Pedraza, Jose Maria 
+        20654068; San, Patricia Isabel     
+
+        funciona: 
+        diseño: 
+    -->
+    <title>AppSuper</title>
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #292929; 
+        color: white; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      main {
+        text-align: center;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        color: white; 
+      }
+      
+      h1 {
+        margin-bottom: 20px;
+      }
+      
+      form {
+        margin-bottom: 20px;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      input {
+        padding: 8px;
+        margin-right: 10px;
+      }
+      
+      select {
+        padding: 8px;
+        margin-right: 10px;
+      }
+      
+      .div-inputs {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #e0e0e0;
+        margin-bottom: 8px;
+      }
+      
+  </style>
+  
+  <script type="text/babel">
+    const { useState } = React;
+    const datoIniciales = [];
+
+      function App() {
+        const [proximoID, setProximoID] = useState(4);
+        const [contadores, setContadores] = useState(datoIniciales);
+
+        function agregar(item) {
+          setContadores(prevContadores => [...prevContadores, { id: proximoID, ...item }]);
+          setProximoID(id => id + 1);
+        }
+
+        function sumar(id) {
+          const actual = contadores.find(contador => contador.id === id);
+          const nuevo = { ...actual, cantidad: actual.cantidad + 1 };
+          const nuevos = contadores.map(contador => (contador.id === id ? nuevo : contador));
+          setContadores(nuevos);
+        }
+
+        function restar(id) {
+          const actual = contadores.find(contador => contador.id === id);
+          const nuevo = { ...actual, cantidad: actual.cantidad - 1 };
+          const nuevos = contadores.map(contador => (contador.id === id ? nuevo : contador));
+          setContadores(nuevos);
+        }
+
+        function borrar(id) {
+          const borrados = contadores.filter(contador => contador.id !== id);
+          setContadores(borrados);
+        }
+        
+        function exportPDF() {
+          const input = document.getElementById('pdf-content');
+          window.jsPDF = window.jspdf.jsPDF;
+        html2canvas(input).then((canvas) => {
+            const pdf = new jsPDF('p', 'mm', 'a4');
+                  const fontSize = 12;
+            const lineHeight = 1.5;
+
+            // Configurar la fuente y tamaño
+            pdf.setFont("Arial", "normal");
+            pdf.setFontSize(fontSize);
+
+            // Configurar el tamaño de la página como A4
+            const pageWidth = pdf.internal.pageSize.getWidth();
+            const pageHeight = pdf.internal.pageSize.getHeight();
+
+            contadores.forEach((contador, index) => {
+              const yPosition = (index + 1) * fontSize * lineHeight;
+
+              // Agregar cada ítem como un elemento de lista
+              pdf.text(`${contador.nombre} - ${contador.marca} - ${contador.cantidad} ${contador.unidad}`, 10, yPosition);
+            });
+
+            // Descargar el PDF
+            pdf.save('lista_del_super.pdf');
+          });
+        };
+      //El id='pdf-content´ no imprime la lista, probe pero no encuentro donde capturar los datos//
+        return (
+          <main>
+            <div id='pdf-content'>
+              
+            <h1>LA LISTA DEL SUPER</h1>
+            <ContadorForm alAgregar={agregar} />
+            <ContadorList contadores={contadores} alSumar={sumar} alRestar={restar} alBorrar={borrar} />
+            </div>
+            <button onClick={exportPDF}>Exportar a PDF</button>
+          </main>
+        );
+      }
+
+      //ContadorForm.jsx//
+      function ContadorForm({ alAgregar }) {
+        const [nombre, setNombre] = useState('');
+        const [marca, setMarca] = useState('');
+        const [unidad, setUnidad] = useState('unidad'); // Unidad predeterminada
+
+        const handleNombreChange = (event) => {
+          setNombre(event.target.value);
+        };
+
+        const handleMarcaChange = (event) => {
+          setMarca(event.target.value);
+        };
+
+        const handleUnidadChange = (event) => {
+          setUnidad(event.target.value);
+        };
+
+        const agregar = (evento) => {
+          if (nombre.trim() !== '') {
+            alAgregar({
+              nombre,
+              marca,
+              unidad,
+              cantidad: 0, // Cantidad inicial en 0
+            });
+            setNombre('');
+            setMarca('');
+            setUnidad('unidad'); // Restablecer la unidad predeterminada
+          }
+          evento.preventDefault();
+        };
+
+        return (
+          <form onSubmit={agregar}>
+            <div>
+              <input type="text" value={nombre} onChange={handleNombreChange} placeholder="Nombre" />
+            </div>
+            <div>
+              <input type="text" value={marca} onChange={handleMarcaChange} placeholder="Marca" />
+            </div>
+            <div>
+              <select value={unidad} onChange={handleUnidadChange}>
+                <option value="unidad">Unidad</option>
+                <option value="kilo">Kilo</option>
+                <option value="litro">Litro</option>
+              </select>
+            </div>
+            <button type="submit">Agregar</button>
+          </form>
+        );
+      }
+
+      //ContadorItem.jsx//
+      function ContadorItem({ contador, alSumar, alRestar, alBorrar }) {
+        const { id, nombre, marca, cantidad, unidad } = contador;
+
+        const handleSumar = () => {
+          alSumar(id);
+        };
+
+        const handleRestar = () => {
+          alRestar(id);
+        };
+
+        const handleBorrar = () => {
+          alBorrar(id);
+        };
+
+        return (
+          <li>
+            <div>
+              <span>{nombre}</span>
+              {marca && <span> - {marca}</span>}
+            
+            </div>
+            <div className="botones">
+              <span>{cantidad} {unidad}</span>
+              <button onClick={handleSumar}>+</button>
+              <button onClick={handleRestar}>-</button>
+              <button onClick={handleBorrar}>x</button>
+            </div>
+          </li>
+        );
+      }
+
+      //ContadorList.jsx//
+      function ContadorList({ contadores, alSumar, alRestar, alBorrar }) {
+        return (
+          <ul>
+            {contadores.map(contador => (
+              <ContadorItem
+                key={contador.id}
+                contador={contador}
+                alSumar={alSumar}
+                alRestar={alRestar}
+                alBorrar={alBorrar}
+              />
+            ))}
+          </ul>
+        );
+      }
+
+      let root = document.getElementById('root');
+      ReactDOM.render( <App />, root);
+
+  </script>
+  </head>
+  <body>
+    <div id="root" ></div>
+        
+  </body>
+</html>

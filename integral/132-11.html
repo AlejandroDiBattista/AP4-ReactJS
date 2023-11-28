@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- 
+    Curso 132 - Grupo 11 -> domenico_alejandro@yahoo.com.ar
+      26098677; Domenico, Alejandro Gabriel
+        
+      funciona: 
+      diseño: 
+  -->
+
+  <title>TRABAJO PRACTICO - DOMENICO ALEJANDRO G</title>
+  <style>   
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;    
+      height: 100vh; 
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #4CAF50; 
+      color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+      padding: 10px;
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+    }
+
+    h1 {
+      font-size: 2em; 
+      margin-right: 15px; 
+    }
+
+    form {
+      margin-top: 20px; 
+    }
+
+    input {
+      font-size: 1.2em; 
+      padding: 8px;
+    }
+
+    button {
+      background-color: #fff; 
+      color: #4CAF50;
+      padding: 10px 15px;
+      margin: 5px;
+      border: 2px solid #4CAF50;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }  
+
+    .div-tarea {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 3px;
+      padding: 10px;
+      overflow: hidden;
+      max-width: 1024px; 
+    }
+
+    .botones-container {
+      display: flex;
+    }
+
+    button.tarea-completada {
+      margin-right: 3px; 
+    }
+
+    button.borrar-tarea {
+      margin-left: 3px; 
+    }
+
+    .texto-tachado {
+      text-decoration: line-through;
+      text-decoration-color: red; 
+      text-decoration-thickness: 3px; 
+    }
+  </style>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    // FormularioTarea.jsx
+    const FormularioTarea = ({ onAgregarTarea }) => {
+      const [nuevaTarea, setNuevaTarea] = useState('');
+
+      const manejarCambioInput = (event) => {
+        setNuevaTarea(event.target.value);
+      };
+
+      const manejarAgregarTarea = (event) => {
+        event.preventDefault();
+        onAgregarTarea(nuevaTarea);
+        setNuevaTarea('');
+      };
+
+      return (
+        <form onSubmit={manejarAgregarTarea}>
+          <input
+            type="text"
+            placeholder="Escribi la nueva tarea"
+            value={nuevaTarea}
+            onChange={manejarCambioInput}
+          />
+          <button type="submit">Agregar Tarea</button>
+        </form>
+      );
+    };
+
+    // ItemTarea.jsx
+    const ItemTarea = ({ tarea, onTareaCompleta, onBorrarTarea }) => {
+      const [estaCompletada, setEstaCompletada] = useState(tarea.completada);
+
+      const tareaCompleta = () => {
+        setEstaCompletada(!estaCompletada);
+        onTareaCompleta(tarea.id, !estaCompletada);
+      };
+
+      const borrarTarea = () => {
+        onBorrarTarea(tarea.id);
+      };
+
+      return (
+        <div className="div-tarea">
+          <span className={`tarea ${estaCompletada ? 'span-tarea-completada texto-tachado' : ''}`}>
+            {tarea.nombre}
+          </span>
+          <div className="botones-container">
+            <button className="tarea-completada" onClick={tareaCompleta}>
+              Tarea Completada
+            </button>
+            <button className="borrar-tarea" onClick={borrarTarea}>
+              Borrar Tarea
+            </button>
+          </div>
+        </div>
+      );
+    };
+
+    // ListaDeTareas.jsx
+    const ListaDeTareas = ({ tareas, onTareaCompleta, onBorrarTarea }) => {
+      return (
+        <div>
+          {tareas.map((tarea) => (
+            <ItemTarea
+              key={tarea.id}
+              tarea={tarea}
+              onTareaCompleta={onTareaCompleta}
+              onBorrarTarea={onBorrarTarea}
+            />
+          ))}
+        </div>
+      );
+    };
+
+    // App.jsx
+    const App = () => {
+      const [tareas, setTareas] = useState(() => {
+        const tareasGuardadas = JSON.parse(localStorage.getItem('tareas')) || [];
+        return tareasGuardadas;
+      });
+
+      useEffect(() => {
+        localStorage.setItem('tareas', JSON.stringify(tareas));
+      }, [tareas]);
+
+      const agregarTarea = (nuevaTareaNombre) => {
+        if (!nuevaTareaNombre.trim()) {
+          alert('La tarea no puede estar vacía!!!');
+          return;
+        }
+
+        const nuevaTarea = { id: Date.now(), nombre: nuevaTareaNombre, completada: false };
+        setTareas((prevTareas) => [...prevTareas, nuevaTarea]);
+      };
+
+      const tareaCompleta = (tareaId, estaCompletada) => {
+        const tareasActualizadas = tareas.map((tarea) =>
+          tarea.id === tareaId ? { ...tarea, completada: estaCompletada } : tarea
+        );
+
+        setTareas(tareasActualizadas);
+      };
+
+      const borrarTarea = (tareaId) => {
+        const tareasActualizadas = tareas.filter((tarea) => tarea.id !== tareaId);
+        setTareas(tareasActualizadas);
+      };
+
+      return (
+        <div className="app-container">
+          <div className="header">
+            <h1>Mis Tareas</h1>
+            <FormularioTarea onAgregarTarea={agregarTarea} />
+          </div>
+          <ListaDeTareas
+            tareas={tareas}
+            onTareaCompleta={tareaCompleta}
+            onBorrarTarea={borrarTarea}
+          />
+        </div>
+      );
+    };
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+</html>

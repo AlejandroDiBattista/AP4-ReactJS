@@ -12,3 +12,5 @@ https://react-icons.github.io/react-icons/
 Interface de usuario
 https://mui.com/
 
+Iconos para incrustar
+https://reactsvgicons.com/

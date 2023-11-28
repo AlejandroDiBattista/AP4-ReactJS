@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas - Grupo 4</title>
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<!-- 
+	  Curso 133 - Grupo 04 -> sec.carrion@gmail.com
+		16995968; Carrión, Sergio Eduardo
+		28038634; Cejas, Oscar Orlando
+		20505136; Molina, Leonardo
+		23623908; Rolt, Cristián
+		17606845; Russo, Javier
+		23543250; Siccardi, Javier
+	
+		funciona: 
+		diseño: 
+	
+	-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(180deg, rgba(107,46,227,1) 0%, rgba(69,24,229,1)100%);
+            font-family: 'Poppins', sans-serif;
+            max-width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            padding: 25px;
+            border-radius: 20px;
+            width: 700px;
+            color: #f5f2f2;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .contador-tareas {
+            margin: 40px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .contador-tareas h3 {
+            font-weight: 500;
+        }
+
+        .contador-tareas span {
+            color: orange;
+            font-weight: 700;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        ul {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        ul li {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        ul li span {
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li form {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .input-actualizar {
+            border: none;
+            font-weight: 500;
+            font-size: 18px;
+            color: #555;
+            width: 100%;
+            outline: none;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .container-done {
+            background-color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 20px;
+            border: 2px solid orangered;
+            cursor: pointer;
+        }
+
+        .container-done.active {
+            background-color: orangered;
+        }
+
+        .text-decoration-dashed {
+            text-decoration: line-through;
+        }
+
+        .boton-borrar {
+            background-color: orangered;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 50%;
+            transition: all 0.3s;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .boton-borrar:hover {
+            background-color: orange;
+        }
+
+        .boton-editar {
+            background-color: orange ;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 50%;
+            transition: all 0.3s;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .boton-editar:hover {
+            background-color: orangered;
+        }
+
+        form {
+            display: flex;
+            gap: 20px;
+        }
+
+        .agregar-tarea h3 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
+
+        .input-agregar {
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.30);
+            border-radius: 20px;
+            flex: 1;
+            font-family: inherit;
+            font-size: 17px;
+            color: #555;
+        }
+
+        .boton-agregar {
+            border: none;
+            background-color: orange;
+            color: #f5f2f2;
+            padding: 5px 40px;
+            border-radius: 20px;
+            font-family: inherit;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .boton-agregar:hover {
+            background-color: orangered;
+        }
+
+    </style>
+
+    <script type="text/babel">
+		const { useState, useEffect, useReducer, useRef } = React
+
+        function App() {
+        	const {
+        		tareas,
+        		ContadorTareas,
+        		ContadorTareasPendientes,
+        		agregarTarea,
+        		borrarTarea,
+        		completarTarea,
+        		actualizarTarea,
+        	} = Tarea();
+        
+        	return (
+        		<>
+        			<div className='card'>
+        				<h1>Lista de tareas</h1>
+        				<div className='contador-tareas'>
+        					<h3>
+        						Cantidad de Tareas: <span>{ContadorTareas}</span>
+        					</h3>
+        					<h3>
+        						Pendientes: <span>{ContadorTareasPendientes}</span>
+        					</h3>
+        				</div>
+              
+        				<div className='agregar-tarea'>
+        					<h3>Agregar tarea</h3>
+        					<TareaAgregar agregarTarea={agregarTarea} />
+        				</div>
+              
+        				<ListaTarea
+        					tareas={tareas}
+        					actualizarTarea={actualizarTarea}
+        					borrarTarea={borrarTarea}
+        					completarTarea={completarTarea}
+        				/>
+        			</div>
+        		</>
+        	);
+        }
+
+		//hooks
+		// Manejo del formulario
+
+		function formulario (inicioFormulario = {}) {
+			const [estadoFormulario, setEstadoFormulario] = useState(inicioFormulario);
+
+			const onInputChange = e => {
+				const name = e.target.name;
+				const value = e.target.value;
+			
+				setEstadoFormulario({
+					...estadoFormulario,
+					[name]: value,
+				});
+			};
+		
+			const onResetForm = () => {
+				setEstadoFormulario(inicioFormulario);
+			};
+		
+			return {
+				...estadoFormulario,
+				estadoFormulario,
+				onInputChange,
+				onResetForm,
+			};
+		};
+      
+		// Estados de las tareas y guardado con localStorage
+		function Tarea() {
+			const estadoInicial = [];
+
+		    const inicio = () => {
+		        return JSON.parse(localStorage.getItem('tareas')) || []
+		    }
+		
+			const [tareas, dispatch] = useReducer(
+				tareaReducer,
+				estadoInicial,
+				inicio
+			);
+		
+		    const ContadorTareas = tareas.length
+		    const ContadorTareasPendientes = tareas.filter(tarea => !tarea.done).length
+		
+		    useEffect(() => {
+		        localStorage.setItem('tareas', JSON.stringify(tareas))
+		    }, [tareas])
+				
+			const agregarTarea = tarea => {
+				const accion = {
+					type: 'Agregar Tarea',
+					payload: tarea,
+				};
+			
+				dispatch(accion);
+			};
+		
+			const borrarTarea = id => {
+				const accion = {
+					type: 'Borrar Tarea',
+					payload: id,
+				};
+			
+				dispatch(accion);
+			};
+		
+			const completarTarea = id => {
+				const accion = {
+					type: 'Completar Tarea',
+					payload: id,
+				};
+			
+				dispatch(accion);
+			};
+		
+			const actualizarTarea = (id, nombre) => {
+				const accion = {
+					type: 'Actualizar Tarea',
+					payload: {
+						id,
+						nombre,
+					},
+				};
+			
+				dispatch(accion);
+			};
+		
+		    return{
+		        tareas,
+		        ContadorTareas,
+		        ContadorTareasPendientes,
+		        agregarTarea,
+		        borrarTarea,
+		        completarTarea,
+		        actualizarTarea
+		    }
+		};
+
+		// Seleccionar qué hacer con la tarea
+		function tareaReducer(estadoInicial, accion) {
+			switch (accion.type) {
+				case 'Agregar Tarea':
+					return [...estadoInicial, accion.payload];
+			
+				case 'Borrar Tarea':
+					return estadoInicial.filter(tarea => tarea.id !== accion.payload);
+			
+				case 'Completar Tarea':
+					return estadoInicial.map(tarea => {
+						if (tarea.id === accion.payload) {
+							return {
+								...tarea,
+								done: !tarea.done,
+							};
+						}
+					
+						return tarea;
+					});
+				
+				case 'Actualizar Tarea':
+					return estadoInicial.map(tarea => {
+						if (tarea.id === accion.payload.id) {
+							return {
+								...tarea,
+								nombre: accion.payload.nombre,
+							};
+						}
+					
+						return tarea;
+					});
+				
+				default:
+					return estadoInicial;
+			}
+		};		
+
+		//componentes
+		// Agregar Tarea
+		function TareaAgregar({ agregarTarea }) {
+			const { nombre, onInputChange, onResetForm } = formulario({
+				nombre: '',
+			});
+		
+			const onFormSubmit = e => {
+				e.preventDefault();
+			
+				if (nombre.length <= 1) return;
+			
+				let tareaNueva = {
+					id: new Date().getTime(),
+					nombre: nombre,
+					done: false,
+				};
+
+				console.log(tareaNueva)
+			
+				agregarTarea(tareaNueva);
+				onResetForm();
+			};
+		
+			return (
+				<form onSubmit={onFormSubmit}>
+					<input
+						type='text'
+						className='input-agregar'
+						name='nombre'
+						value={nombre}
+						onChange={onInputChange}
+						placeholder='Ingrese Tarea'
+					/>
+				
+					<button className='boton-agregar' type='submit'>
+						Agregar
+					</button>
+				</form>
+			);
+		};
+
+		// Tarea individual
+		function TareaItem({
+			tarea,
+			actualizarTarea,
+			borrarTarea,
+			completarTarea,
+			}) {
+			return (
+				<li>
+					<span onClick={() => completarTarea(tarea.id)}>
+						<label
+							className={`container-done ${tarea.done ? 'active' : ''}`}
+						></label>
+					</span>
+					<TareaActualizar tarea={tarea} actualizarTarea={actualizarTarea} />
+					<button
+						className='boton-borrar'
+						onClick={() => borrarTarea(tarea.id)}>
+						<i class="fa fa-trash" aria-hidden="true"></i>
+					</button>
+				</li>
+			);
+		};
+
+		// Listar tareas
+		function ListaTarea({
+			tareas,
+			actualizarTarea,
+			borrarTarea,
+			completarTarea,
+		}) {
+			return (
+				<ul>
+					{tareas.map(tarea => (
+						<TareaItem
+							key={tarea.id}
+							tarea={tarea}
+							actualizarTarea={actualizarTarea}
+							borrarTarea={borrarTarea}
+							completarTarea={completarTarea}
+						/>
+					))}
+				</ul>
+			);
+		};
+
+		// Actualizar tarea (modificar contenido)
+		function TareaActualizar({ tarea, actualizarTarea }) {
+			const { actualizarNombre, onInputChange } = formulario({
+				actualizarNombre: tarea.nombre,
+			});
+		
+			const [disabled, setDisabled] = useState(true);
+			const focusInputRef = useRef();
+		
+			const onSubmitUpdate = e => {
+				e.preventDefault();
+			
+				const id = tarea.id;
+				const nombre = actualizarNombre;
+			
+				actualizarTarea(id, nombre);
+			
+				setDisabled(!disabled);
+			
+				focusInputRef.current.focus();
+			};
+		
+			return (
+				<form onSubmit={onSubmitUpdate}>
+					<input
+						type='text'
+						className={`input-actualizar ${
+							tarea.done ? 'text-decoration-dashed' : ''
+						}`}
+						name='actualizarNombre'
+						value={actualizarNombre}
+						onChange={onInputChange}
+						placeholder='Ingrese tarea'
+						readOnly={disabled}
+						ref={focusInputRef}
+					/>
+					
+					<button className='boton-editar' type='submit'>
+						<i class="fa fa-edit" aria-hidden="true"></i>
+					</button>
+				</form>
+			);
+		};
+
+      	ReactDOM.render(<App />, document.getElementById('root'));
+        
+    </script>     
+</head>
+
+<body>
+    <div id="root"></div>    
+</body>
+
+</html>

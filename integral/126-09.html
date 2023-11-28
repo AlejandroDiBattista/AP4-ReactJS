@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+
+        <!-- 
+          Curso 126 - Grupo 09 -> julio.shaya@gmail.com
+            23631166; Julio César Shaya 
+            22467143; Leticia Laura Castellani 
+            27544892; Mariela Andrea Lorenzo 
+            26412222; Carlos Daniel Martínez 
+            24840635; Guillermo Ruiz 
+            25761175; Miguel Ángel Tula 
+        
+            funciona: 
+            diseño: 
+        -->
+        <title>TPF</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                
+                }
+
+                h1 {
+                font-size: 20px;
+                padding: 20px;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                }
+
+                main {
+                margin: 0 auto;
+                width: 400px;
+                background-color:rgb(13, 180, 231);
+                margin-bottom: 5px; 
+                }
+
+                form{
+                padding: 10px;
+                display: flex;
+                gap: 10px;
+                
+                }
+
+                form input {
+                width: 360px;
+                border: 1px;
+                padding: 0 10px;
+                font-size: 15px;
+                }
+
+                form button {
+                    width: 80px;
+                    
+                }
+                ul li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+                margin: 10px;
+                
+                }
+
+                li button {
+                padding: 3px 10px;
+                background-color: white;
+                border-radius: 5px; 
+                
+                }
+
+                span {
+                background-color: white;
+                width: 300px;
+                overflow: hidden;
+                }
+
+        </style>
+
+        <script type="text/babel">
+           
+            const { useState,useEffect } = React        
+            /* Aca va todo el codigo de JSX (sin importación ni exportación) */
+              function App(){ /* Sustituir por tu código */
+                const datosIniciales =[
+                      {id:1,nombre:'Desarrollo APP',completada:false},
+                      {id:2,nombre:'Preparar CSS',completada:false},
+                                    ]
+                const [id, setId] = useState(Date.now()) // Proximo id a asignar
+                const [completa,setCompleta] = useState(false)
+                const [tareas, setTareas] = useState([]);
+            
+                
+            function agregar(nombre) {
+                const nuevo = { id, nombre, completada:false}
+                const copia = [...tareas, nuevo ]
+                setTareas(copia)
+                setId(Date.now())
+            }
+
+            function borrar(id) {
+                const borra = tareas.filter(tarea => tarea.id !== id)
+                setTareas(borra)
+
+            }
+
+            function completar(id) {
+                const actual = tareas.find(tarea => tarea.id === id)
+                if (actual.completada === false) { 
+                    const nuevo = { ...actual, completada: true  }
+                    const copia = tareas.map(tarea => tarea.id === nuevo.id ? nuevo : tarea)
+                    setCompleta(true)
+                    setTareas(copia)
+                } else {
+                    const nuevo = { ...actual, completada: false  }
+                    const copia = tareas.map(tarea => tarea.id === nuevo.id ? nuevo : tarea)
+                    setTareas(copia)
+                }
+            }
+            
+            useEffect(()=> {
+                const datos = localStorage.getItem('tareas');
+                if (datos) {
+                setTareas(JSON.parse(datos));
+                }
+            },[]);
+            
+            useEffect(()=> {
+                localStorage.setItem('tareas',JSON.stringify(tareas))
+            },[tareas]);
+            
+            useEffect(()=> {
+            if (completa){
+                alert ("Tarea Completada" )
+                setCompleta(false)
+                }},[completa]);
+
+            
+            return (
+                <>
+                <main>
+                    <h1>Lista de Tareas</h1>
+                        <TaskForm alAgregar={agregar} />
+                        <TaskList tareas={tareas} alCompletar={completar} alBorrar={borrar} />
+                </main>
+
+                </>
+            )
+            }
+     
+            function TaskList({tareas,alCompletar,alBorrar}){
+
+                    return (
+                    <ul>
+                        {tareas.map(tarea => <TaskItem
+                            key={tarea.id}
+                            tarea={tarea}
+                            alCompletar={alCompletar}
+                            alBorrar={alBorrar} />)}
+
+                    </ul>
+                    )
+                    }
+
+                    function TaskItem({ tarea, alCompletar, alBorrar }) {
+
+                        function completar() {
+                        alCompletar(tarea.id);
+                        }
+                    
+                        function borrar() {
+                        alBorrar(tarea.id);
+                        }
+                    
+                        return (
+                        <li>
+                            <span><b style={{textDecoration:tarea.completada === true ? "line-through red" : "none"}}>{tarea.nombre}</b></span>
+                            <div>
+                                <button  onClick={completar}>+</button>
+                                <button  onClick={borrar}>-</button>
+                            </div>
+                        </li>
+                        );
+                    };
+                    
+            function TaskForm({ alAgregar }) {
+                const [nombre, setNombre] = useState('');
+
+                function actualizar(e) {
+                    setNombre(e.target.value);
+                }
+
+                function agregar(e) {
+                    if (nombre.length < 1) return;
+
+                    alAgregar(nombre);
+                    setNombre('');
+                    e.preventDefault();
+                }
+
+                return (
+                    <form >
+                    <input name="ingreso" type="text" value={nombre} onChange={actualizar} placeholder="" />
+                    <button onClick={agregar}>Agregar</button>
+                    </form>
+                );
+                }
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

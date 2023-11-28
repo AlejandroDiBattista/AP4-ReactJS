@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <!-- 
+            Curso 134 - Grupo 09 -> mrondarra@hotmail.com
+            17168120; Victor Borda
+            21634979; Marcelo Ondarra 
+            
+            funciona: 
+            diseño: 
+        -->
+        
+        <title>TP Final Grupo 9</title>
+        <style>
+           
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            main {
+                margin: 0 auto;
+                max-width: 400px;
+                background-color:orangered;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                color: black;
+                padding: 10px;
+                background-color: white;
+                color: red;
+                border: 1px solid black;
+            }
+
+            p {
+                background-color: white;
+                border: 1px solid black;
+                width: 200px;
+                padding: 10px;
+                gap: 10px; 
+                margin: 5px;
+            }
+            form {
+                width: 300px;
+                padding: 10px;
+                display: flex;
+                gap: 10px;
+                margin: 5px;
+            }
+            form input {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid black;
+            }
+            button {
+                width: 80px;
+                background-color: white;
+                border: 1px solid black;
+                color: red;
+                border-radius: 5px;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                padding: 10px;
+            }
+            li {
+                background-color: yellow;
+                padding: 10px;
+                margin: 5px;
+                border-radius: 5px;
+                border: 1px solid black;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+            }
+            .status {
+                display:flex;
+                align-items: center;
+            }
+
+            .final {
+                display:flex;
+                justify-content: space-between;
+                padding: 10px;
+                margin: 5px;
+            }
+
+        </style>
+
+        <script type="text/babel">
+            const { useState, useEffect } = React        
+            
+            const datosInicial = [
+                { id: 1, nombre: 'Tarea 1', estado: 'No completada' },
+                { id: 2, nombre: 'Tarea 2', estado: 'No completada' },
+                { id: 3, nombre: 'Tarea 3', estado: 'No completada' },
+            ]
+           
+            function App() {
+                const [tareas, setTareas] = useState(datosInicial)
+
+                useEffect(() => {
+                    let datos = localStorage.getItem('tareas')
+                        if (datos) {
+                            setTareas(JSON.parse(datos))
+                        }
+                },[])
+                                             
+                function agregar(nombre) {
+                    const original = { id: Number(Date.now()), nombre, estado: 'No completada' }
+                    const copia = [...tareas, original]
+                    setTareas(copia)
+                    localStorage.setItem('tareas', JSON.stringify(copia))
+                }
+
+                function borrar(id) {
+                    const copia = tareas.filter((tarea) => tarea.id !== id)
+                    setTareas(copia)
+                    localStorage.setItem('tareas', JSON.stringify(copia))
+                }
+                
+                function borrarTodo () {
+                    setTareas([])
+                }
+                return (
+                    <>
+                        <main>
+                            <h1>Lista de Tareas</h1>
+                            <TaskForm alAgregar={agregar} />
+                            <TaskList tareas={tareas} alBorrar={borrar} />
+                            <div className="final">
+                                <p>Tareas totales: <b> {tareas.length} </b></p>
+                                <button onClick={borrarTodo}>Resetear</button>
+                            </div>
+                        </main>
+                    </>
+                )
+            }
+               
+            function TaskForm({ alAgregar }) {
+                const [nombre, setNombre] = useState('')
+
+                function cambiarNombre(event) {
+                    setNombre(event.target.value)
+                }
+            
+                function agregar(event) {
+                    alAgregar(nombre)
+                    setNombre('')
+                    event.preventDefault()
+                }
+
+                return (
+                    <form>
+                        <input type="text" placeholder="Ingrese nombre de tarea" value={nombre} onChange={cambiarNombre}/>
+                        <button onClick={agregar}>Agregar</button>
+                    </form>
+                );
+            }
+
+            function TaskList({ tareas, alBorrar }) {
+                return (
+                    <>
+                        <ul>
+                            {tareas.map((tarea) => <TaskItem
+                                key={tarea.id}
+                                tarea={tarea} 
+                                alBorrar={alBorrar} />)
+                            }
+                        </ul>
+                    </>
+                );
+            }
+
+            function TaskItem({tarea, alBorrar}) {
+                const { id, nombre, estado } = tarea
+                const [tildada, setTildada] = useState(false)
+                const [fuente, setFuente] = useState('')
+                                                                          
+                function cambiarTilde (event) {
+                    setTildada(!tildada)
+                    setFuente(!tildada ? 'yellowgreen' : '')
+                }          
+                
+                function borrar() {
+                    alBorrar(id)
+                }
+              
+                return (
+                    <li style={{ backgroundColor:fuente }} > 
+                        {nombre}
+                        <input type="checkbox" value={estado} checked={tildada} onChange={cambiarTilde}/>
+                        <div className="status"> {tildada ? "Completada" :"No completada"}</div>
+                        <button onClick={borrar}>Borrar</button>
+                    </li>
+                )
+            }
+            
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

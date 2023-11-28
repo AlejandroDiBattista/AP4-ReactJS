@@ -8,34 +8,29 @@
         <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
 
-        <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
-    
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <!-- 
             Curso 134 - Grupo 09 -> mrondarra@hotmail.com
                 17168120; Victor Borda
                 21634979; Marcelo Ondarra 
 
-                funciona: no
+                funciona: si
                 diseño: si
                 implementacion: funcion
                 reutilizacion: si
        
-                - No funciona porque utiliza variables en lugar de setState
+                - No controla valores negativos
          -->
-
-
-         <style>
+        <style>
             body {
                 margin: 0;
                 font-family: Arial, Helvetica, sans-serif;
-                background-color: blue;
+                background: linear-gradient(to right, blue, lightskyblue);
             }
-
             #root {
                 width: 500px;
                 margin: 0 auto;
             }
-
             p {
                 font-size: 60px;
                 text-align: center;
@@ -46,7 +41,6 @@
             ul {
                 padding: 0;
             }
-
             ul li {
                 position: relative;
                 border: 1px solid black;
@@ -66,7 +60,6 @@
                 top: 5;
                 left: 0;
             }
-
             #contador {
                 font-size: 120px;
                 width: 500px;
@@ -74,7 +67,6 @@
                 top: 50px;
                 left: 0;
             }
-
             button {
                 width: 240px;
                 height: 100px;
@@ -86,45 +78,36 @@
                 justify-content: center;
                 align-content: center;
             }
-
             #mas {
                 position: absolute;
                 bottom: 5px;
                 left: 5px;
             }
-
             #menos {
                 position: absolute;
                 bottom: 5px;
                 right: 5px;
             }
-
         </style>
 
         <script type="text/babel">
+              
             let datos = [
                 { nombre: "Candidato 1"},
                 { nombre: "Candidato 2"},
             ];
 
+
             function Candidato({nombre}) {
-                let voto = 0
-
-                function aumentar() {
-                    voto++;
-                }
-
-                function disminuir() {
-                    voto--;
-                }
+                const [voto, setVoto] = React.useState(0)
 
                 return (
                 <>
                     <li>
                         <div id="nombre">{nombre}</div>
                         <div id="contador">{voto}</div>
-                        <button id="mas" onClick={aumentar}>+</button>
-                        <button id="menos" onClick={disminuir}>-</button>
+                        <button id="mas" onClick={() => setVoto(voto+1)}>+</button>
+                        <button id="menos" onClick={() => setVoto(voto-1)}>-</button>
                     </li>
                 </>
                 )

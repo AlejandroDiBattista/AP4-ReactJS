@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Lista de tareas</title>
+
+    <!-- 
+      Curso 134 - Grupo 06 -> fedatu@hotmail.com
+    
+        12700995; Tula, Fernando Darío 
+    
+        funciona: 
+        diseño: 
+    -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgba(23, 78, 187, 0.864);
+            color: white;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            text-shadow: 3px 3px 5px black;
+            font-size: 50px;
+        }
+
+        main {
+            background-color: rgb(96, 97, 97);
+            padding: 10px;
+            border: 2px solid orange;
+            border-radius: 10px;
+            box-shadow: 6px 6px 10px black;
+            width: 400px;
+            text-align: center;
+        }
+
+        .agregarTarea {
+            height: 50px;
+            padding-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .btnTarea {
+            background-color: rgb(49, 49, 49);
+            margin-left: 2px;
+            border: 2px solid orange;
+            border-radius: 5px;
+        }
+
+        .btnTarea:disabled {
+            opacity: 0.4;
+        }
+
+        .cantidadTareas {
+            display: inline-block;
+            border: 3px solid orange;
+            width: 26px;
+            border-radius: 13px;
+            color: whitesmoke;
+            text-align: center;
+            position: relative;
+            top: -13px;
+            left: 175px;
+            opacity: 0.7;
+        }
+
+        .descripcionTarea {
+            width: 84%;
+            color: white;
+            height: 20px;
+            text-align: left;
+        }
+
+        .nuevaBtnTarea {
+            background-color: rgb(49, 49, 49);
+            width: 39%;
+            border: 4px outset orange;
+            border-radius: 8px;
+            color: white;
+            margin-left: 2px;
+            height: 36px;
+        }
+
+        .nuevaBtnTarea:disabled {
+            opacity: 0.3;
+            border: 3px inset black;
+        }
+
+        .nuevaTarea {
+            width: 59%;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 5px;
+            border-radius: 6px;
+            color: black;
+        }
+
+        .tarea {
+            display: flex;
+            align-items: center;
+            background-color: rgb(155, 155, 157);
+            border-top-width: 2px;
+            border-top-color: black;
+            border-top-style: solid;
+            border-bottom-width: 4px;
+            border-bottom-color: black;
+            border-bottom-style: solid;
+            border-radius: 5px;
+            margin-bottom: 4px;
+        }
+
+        /* Iconos google */
+        .material-symbols-outlined {
+            color: white;
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React
+
+        const Tarea = ({ tarea, completada, tareaCompletada, eliminarTarea }) => {
+            return (
+                <div className='tarea'>
+                    <div className='descripcionTarea'>
+                        <span style={{ opacity: completada ? 0.4 : 1 }}>{tarea}</span>
+                    </div>
+                    <div className='btnsTarea'>
+                        <button className="btnTarea" onClick={tareaCompletada}>
+                            {completada ?<span class="material-symbols-outlined">close</span>:<span class="material-symbols-outlined">done</span>} {/* Icono de check */}
+                        </button>
+                        <button className="btnTarea" onClick={eliminarTarea} disabled={completada ? "" : "disabled"}>
+                            <span class="material-symbols-outlined">delete</span> {/* Icono de papelera */}
+                        </button>
+                    </div>
+                </div>
+            );
+        };
+
+        const ListaDeTareas = () => {
+            const [tareas, setTareas] = useState([]);
+            const [nuevaTarea, setNuevaTarea] = useState('');
+
+            const agregarTarea = () => {
+                if (nuevaTarea.trim() !== '') {
+                    setTareas([...tareas, { tarea: nuevaTarea, completada: false }]);
+                    setNuevaTarea('');
+                    document.getElementById("nuevaTarea").focus();
+                }
+            };
+
+            const tareaCompletada = (index) => {
+                const nuevasTareas = [...tareas];
+                nuevasTareas[index].completada = !nuevasTareas[index].completada;
+                setTareas(nuevasTareas);
+                document.getElementById("nuevaTarea").focus();
+            };
+
+            const eliminarTarea = (index) => {
+                const nuevasTareas = tareas.filter((_, i) => i !== index);
+                setTareas(nuevasTareas);
+            };
+
+            const cantidadTareas = <div className="cantidadTareas">{tareas.length}</div>
+
+            useEffect(() => {
+                console.log("Tareas: ", tareas.length);
+            }, [tareas.length]);
+
+            return (
+                <main>
+                    <h1>Lista de Tareas</h1>
+                    {cantidadTareas}
+                    <div className='agregarTarea'>
+                        <input className="nuevaTarea" id="nuevaTarea"
+                            autoFocus
+                            type="text"
+                            value={nuevaTarea}
+                            onChange={(e) => setNuevaTarea(e.target.value)}
+                            placeholder="Nueva tarea"
+                        />
+                        <button className="nuevaBtnTarea" onClick={agregarTarea} disabled={nuevaTarea ? "" : "disabled"}>Agregar tarea</button>
+                    </div>
+
+                    {tareas.map((tarea, index) => (
+                        <Tarea
+                            key={index}
+                            tarea={tarea.tarea}
+                            completada={tarea.completada}
+                            tareaCompletada={() => tareaCompletada(index)}
+                            eliminarTarea={() => eliminarTarea(index)}
+                        />
+                    ))}
+                </main>
+            );
+        };
+
+        ReactDOM.render(<ListaDeTareas />, document.getElementById('root'));
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>

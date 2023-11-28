@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Librería REACT -->
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <!-- Librería Babel para convertir JSX -->
+    <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+
+    <!-- 
+        Curso 132 - Grupo 07 -> sergiolignini@gmail.com
+            16070863; Acevedo, Gabriel, 			  
+            20984165; Furrer, Gustavo Omar, 		  
+            13538353; Lignini, Sergio Darío Duilio, 
+
+            funciona: 
+            diseño: 
+    
+    -->
+
+    
+    <title>ToDoList-132-Grupo7</title>
+    <style>
+        /* Aca va todo los CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        main {
+            margin: 0 auto;
+            width: 500px;
+            padding: 20px;
+            border: 1px solid #227d89;
+            background-color: #d4e7ed;
+            border-radius: 8px;
+
+        }
+
+        nav {
+            display: block;
+            display: flex;
+            padding: 1%;
+            justify-content: right;
+        }
+
+        h1 {
+            text-align: left;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            padding: 10px 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+        }
+
+        form input {
+            font-size: 20px;
+            width: 250px;
+            border-radius: 8px;
+            padding: 5px 10px;
+            border: 1px solid #084c67;
+        }
+
+        form button {
+            font-size: 15px;
+            width: 80px;
+            border-radius: 8px;
+            padding: 7px 10px;
+            border: none;
+            background-color: #227d89;
+            color: whitesmoke;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 8px 0px;
+
+        }
+
+        li {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 3px;
+
+        }
+
+        .tarea {
+            font-weight: bold;
+            font-size: 20px;
+            width: 50px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .botones {
+            height: 30px;
+            width: 80px;
+            padding: 8px;
+            border: none;
+            background-color: #618c92;
+            color: whitesmoke;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        .botones button {
+
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: #ccc;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React
+
+        /* Aca va todo el codigo de JSX (sin importación ni exportación) */
+
+        function App() {
+            const [nextId, setNextId] = useState(1);
+            const [tareas, setTareas] = useState([]);
+
+            // Cargar tareas desde localStorage al iniciar la aplicación
+            useEffect(() => {
+                const storedTareas = JSON.parse(localStorage.getItem('tareas'));
+                if (storedTareas && storedTareas.length > 0) {
+                    setTareas(storedTareas);
+                    setNextId(storedTareas[storedTareas.length - 1].id + 1);
+                }
+            }, []);
+
+
+            useEffect(() => {
+                localStorage.setItem('tareas', JSON.stringify(tareas));
+            }, [tareas]);
+
+            function agregar(nombre) {
+                const nuevo = { id: nextId, nombre, completada: false };
+                setTareas([...tareas, nuevo]);
+                setNextId(nextId + 1);
+            }
+
+            function completar(id) {
+                const actual = tareas.find(tarea => tarea.id === id);
+                const nuevo = { ...actual, completada: !actual.completada };
+                const nuevos = tareas.map(tarea => (tarea.id === id ? nuevo : tarea));
+                setTareas(nuevos);
+
+                const alerta = nuevo.completada
+                    ? `La tarea "${nuevo.nombre}", ha sido completada.`
+                    : `La tarea "${nuevo.nombre}", no está completa aún.`;
+
+                alert(alerta);
+            }
+
+            function borrar(id) {
+                const borrado = tareas.filter(tarea => tarea.id !== id);
+                setTareas(borrado);
+            }
+
+            return (
+                <>
+                    <nav>
+                        <h4>Comisión 132 - Grupo 7</h4>
+                    </nav>
+                    <main>
+                        <h1>Lista de Tareas</h1>
+                        <TareasForm alAgregar={agregar} />
+                        <TareasList tareas={tareas} alBorrar={borrar} alCompletar={completar} />
+                    </main>
+                </>
+            );
+        }
+
+        function TareasForm({ alAgregar }) {
+            const [nombre, setNombre] = useState('');
+
+            function cambiar(evento) {
+                setNombre(evento.target.value);
+            }
+
+            function agregar(evento) {
+                alAgregar(nombre);
+                setNombre('');
+                evento.preventDefault();
+            }
+
+            return (
+                <form>
+                    <input
+                        type="text"
+                        value={nombre}
+                        onChange={cambiar}
+                        placeholder="Ingrese nueva Tarea"
+                    />
+                    <button onClick={agregar}>Agregar</button>
+                </form>
+            );
+        }
+
+        function TareasList({ tareas, alBorrar, alCompletar }) {
+            return (
+                <ul>
+                    {tareas.map(tarea => (
+                        <TareasItem
+                            key={tarea.id}
+                            tarea={tarea}
+                            alCompletar={alCompletar}
+                            alBorrar={alBorrar}
+                        />
+                    ))}
+                </ul>
+            );
+        }
+
+        function TareasItem({ tarea, alCompletar, alBorrar }) {
+            const { id, nombre, completada } = tarea;
+
+            return (
+                <li>
+                    <span
+                        className="tarea"
+                        style={{
+                            textDecoration: completada ? 'line-through' : 'none',
+                            color: completada ? 'gray' : 'black',
+                        }}
+                    >
+                        {nombre}
+                    </span>
+                    <div>
+                        <div>
+                            <button className="botones" onClick={() => alCompletar(id)}>
+                                {completada ? 'Incompleta' : 'Completa'}
+                            </button>
+                        </div>
+                        <div>
+                            <button className="botones" onClick={() => alBorrar(id)}>
+                                Eliminar
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            );
+        }
+
+
+
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>

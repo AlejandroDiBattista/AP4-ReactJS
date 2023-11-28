@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas - Grupo13</title>
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+      Curso 132 - Grupo 13 -> matete@gmail.com
+    
+        26954194; Linares, Pablo 
+        27547856; Lorenzo, Matías 
+        27042272; Ortiz Flores, Marisa 
+        28013926; Ramírez, Ernesto 
+    
+        funciona: 
+        diseño: 
+    
+    -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Sono", sans-serif;
+      }
+
+      *:focus {
+        outline: none;
+      }
+
+      body {
+        background: linear-gradient(to bottom right, black, gray);
+        background-attachment: fixed;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      h1 {
+        color: white;
+        margin: 36px 0;
+        text-align: center;
+      }
+
+      .tareas__contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(250, 250, 250, 0.8);
+        border-radius: 10px;
+        width: 90%;
+        max-width: 500px;
+        padding: 30px;
+      }
+
+      .tareas__formulario {
+        display: flex;
+        width: 100%;
+        min-height: 50px;
+        margin-bottom: 25px;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 2px solid gray;
+        background-color: white;
+      }
+
+      .tareas__formulario:hover {
+        border: 2px solid black;
+      }
+
+      .tareas__formulario input {
+        width: 100%;
+        min-height: 50px;
+        padding-left: 20px;
+        background: white;
+        font-size: 18px;
+        font-weight: 200;
+        border: none;
+        border-radius: 0 0 5px 5px;
+      }
+
+      .tareas__formulario button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        font-weight: 200;
+        border: none;
+        background: black;
+        color: #ffffff;
+        cursor: pointer;
+        font-weight: 900;
+        border-radius: 100%;
+        margin: 5px;
+      }
+
+      .tareas__formulario button:hover {
+        background-color: gray;
+      }
+
+      .tareas__lista {
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .tareas__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px 10px 20px;
+        margin-bottom: 20px;
+        background: #ffffff;
+        font-family: Helvetica;
+        font-weight: 400;
+        border-radius: 4px;
+      }
+
+      .item__opciones {
+        display: flex;
+        justify-content: space-between;
+        min-width: 55px;
+      }
+
+      .item__opciones button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        cursor: pointer;
+        font-size: 14px;
+        background: rgba(#3a7bd5, 0.2);
+        transition: all 0.25s;
+        color: white;
+      }
+
+      .item__opciones button:hover {
+        background-color: gray;
+      }
+
+      .item__boton-completar {
+        background-color: green;
+      }
+
+      .item__boton-borrar {
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const TaskForm = ({ onAgregarTarea }) => {
+        const [nombreTarea, setNombreTarea] = React.useState("");
+
+        const hInputChange = (e) => {
+          setNombreTarea(e.target.value);
+        };
+
+        const hAgregarTarea = () => {
+          if (nombreTarea.trim() !== "") {
+            onAgregarTarea({
+              id: new Date().getTime(),
+              nombre: nombreTarea,
+              completada: false,
+            });
+            setNombreTarea("");
+          }
+        };
+
+        return (
+          <div className="tareas__formulario">
+            <input
+              type="text"
+              placeholder="Escriba una tarea nueva"
+              value={nombreTarea}
+              onChange={hInputChange}
+            />
+            <button onClick={hAgregarTarea}>+</button>
+          </div>
+        );
+      };
+
+      const TaskItem = ({ tarea, onCompletar, onBorrarTarea }) => {
+        const hCompletar = () => {
+          onCompletar(tarea.id);
+        };
+
+        const hBorrarTarea = () => {
+          onBorrarTarea(tarea.id);
+        };
+
+        return (
+          <li className="tareas__item">
+            <div
+              className="item__texto"
+              style={{
+                textDecoration: tarea.completada ? "line-through" : "none",
+              }}
+            >
+              {tarea.nombre}
+            </div>
+            <div className="item__opciones">
+              <button className="item__boton-completar" onClick={hCompletar}>
+                {tarea.completada ? "✓" : " "}
+              </button>
+              <button className="item__boton-borrar" onClick={hBorrarTarea}>
+                X
+              </button>
+            </div>
+          </li>
+        );
+      };
+
+      const TaskList = ({ tareas, onCompletar, onBorrarTarea }) => {
+        return (
+          <ul className="tareas__lista">
+            {tareas.map((tarea) => (
+              <TaskItem
+                key={tarea.id}
+                tarea={tarea}
+                onCompletar={onCompletar}
+                onBorrarTarea={onBorrarTarea}
+              />
+            ))}
+          </ul>
+        );
+      };
+
+      const App = () => {
+        const [tareas, setTareas] = React.useState([]);
+
+        React.useEffect(() => {
+          const tareasAlmacenadas =
+            JSON.parse(localStorage.getItem("tareas")) || [];
+          console.log(tareasAlmacenadas);
+          setTareas(tareasAlmacenadas);
+        }, []);
+
+        React.useEffect(() => {
+          localStorage.setItem("tareas", JSON.stringify(tareas));
+        }, [tareas]);
+
+        const hCompletar = (tareaId) => {
+          setTareas((tareasAnteriores) =>
+            tareasAnteriores.map((tarea) =>
+              tarea.id === tareaId
+                ? { ...tarea, completada: !tarea.completada }
+                : tarea
+            )
+          );
+        };
+
+        const hBorrarTarea = (tareaId) => {
+          setTareas((tareasAnteriores) =>
+            tareasAnteriores.filter((tarea) => tarea.id !== tareaId)
+          );
+        };
+
+        const hAgregarTarea = (tareaNueva) => {
+          console.log(tareaNueva);
+          setTareas((tareasAnteriores) => [tareaNueva, ...tareasAnteriores]);
+        };
+
+        return (
+          <main>
+            <h1>Lista de Tareas</h1>
+            <div className="tareas__contenedor">
+              <TaskForm onAgregarTarea={hAgregarTarea} />
+              <TaskList
+                tareas={tareas}
+                onCompletar={hCompletar}
+                onBorrarTarea={hBorrarTarea}
+              />
+            </div>
+          </main>
+        );
+      };
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

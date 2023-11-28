@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TRABAJO INTEGRADOR - C126 - GRUPO 10</title>
+    
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <!-- 
+            Curso 126 - Grupo 10 -> patriciomoron@gmail.com
+            27536857; Morón, Patricio
+        -->
+    
+        <style>
+            
+        :root {
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            line-height: 0;
+        }
+
+        *,
+        *:before,
+        *:after{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+        }
+        body{
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            height: 100vh;
+            background: red;
+        }
+
+        main {
+            width: 80%;
+            min-width: 450px;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 30px;
+            padding: 30px 40px;
+        }
+
+        h1 {
+            font-size: 25px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        form {
+            display:flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            background-color: blue;
+        }
+
+        form input {
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            display: block;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        form button {
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            width: 80px;
+            border: none;
+            border-radius: 5px;
+            padding: 0 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        ul li {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            background-color: #f1f1f1;
+        }
+
+        .lista {
+            justify-content: space-between;
+        }
+        .lista button {
+            font-size: 20px;
+            border-radius: 5px;
+            padding: 5px 10px;
+            background-color: blue;
+            border: 0;
+            color: white;
+            cursor: pointer;
+        }
+
+        .texto {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .nombre {
+            font-size: 20px;
+            font-weight:300;
+            text-align: left;
+        }
+
+        .botones {
+            display: flex;
+            gap: 10px;
+        }
+
+        </style>
+
+        <script type="text/babel">
+            const { useState, useEffect } = React    
+
+            /* app */
+
+            function App() {
+                
+                const [tareas, setTareas] = useState(() => {
+                    const saved = localStorage.getItem("tareas");
+                    const initialValue = JSON.parse(saved);
+                    return initialValue || [];
+                });
+
+                const [proximoId, setProximoId] = useState( () => tareas.length > 0 ? (tareas[tareas.length-1].id + 1) : 1 )
+
+
+                function agregar(tarea) {
+                    const nuevo = { id: proximoId, nombre: tarea, completada: 'false' }
+                    const copia = [...tareas, nuevo]
+                    setTareas(copia)
+                    setProximoId(proximoId+1)
+                    console.log(`ID: ${tareas.length} ${JSON.stringify(tareas)}`)
+                }
+
+                function alCompletar(id) {
+                    const actual = tareas.find(tarea => tarea.id === id)
+                    const nuevo = { ...actual, completada: actual.completada === 'true' ? actual.completada = 'false' : actual.completada = 'true'}
+                    const copia = tareas.map(tarea => tarea.id === id ? nuevo : tarea)
+                    setTareas(copia)
+                }
+
+                function alBorrar(id) {
+                    const nuevos = tareas.filter((tarea) => tarea.id !== id)
+                    setTareas(nuevos)
+                }
+
+                
+                useEffect(() => {
+                    localStorage.setItem("tareas", JSON.stringify(tareas));
+                    console.log('Tareas actualizadas', tareas)
+                }, [tareas]);
+
+                useEffect(() => {
+                    console.log('Proximo ID actualizado', proximoId)
+                }, [proximoId])
+
+                return (
+                    <>
+                    <main>
+                        <h1>LISTA DE TAREAS</h1>
+                        <TaskForm alAgregar={agregar} />
+                        <TaskList tasks={tareas} alCompletar={alCompletar} alBorrar={alBorrar} />
+                    </main>
+                    </>
+                )
+            }
+
+            /* task form */
+
+            function TaskForm({ alAgregar }){
+
+                const [tareaForm, setTareaForm] = useState('');
+
+                function enviar(e) {
+                    e.preventDefault();
+
+                    if (tareaForm === '') return;
+                    alAgregar(tareaForm);
+                    setTareaForm('');
+                }
+
+                return(
+                    <>
+                        <form onSubmit={enviar}>
+                            <input type="text" value={tareaForm} onChange={(e) => setTareaForm(e.target.value)} />
+                            <button type="submit">Agregar</button>
+                        </form>
+                    </>
+                )
+            }
+
+            /* task list */
+
+            function TaskList ({tasks, alCompletar, alBorrar}) {
+
+                return (
+                    <>
+                        <ul>
+                        {tasks.map((tarea) =>
+                            <TaskItem tarea={tarea} alCompletar={alCompletar} alBorrar={alBorrar} key={tarea.id} />
+                        )}
+                        </ul>
+                    </>
+                )
+
+            }
+
+            /* task item */
+
+            function TaskItem({ tarea , alCompletar, alBorrar }){
+
+                const {id, nombre, completada} = tarea;
+                const borrar = () => alBorrar(id);
+                const completar = () => alCompletar(id);
+
+                const estilo = { textDecoration: completada == 'true' ? "line-through" : "none" }
+                const estiloBoton = { backgroundColor : completada == 'true' ? "red" : "green"}
+
+                return (
+                    <>
+                        <li className='lista'>
+                            <div className='texto'>
+                                <span className='nombre' style={estilo}>{nombre}</span>
+                            </div>
+                            <div className='botones'>
+                                <button onClick={completar} style={estiloBoton}>{completada == 'false' ? "Marcar" : "Desmarcar"}</button>
+                                <button onClick={borrar}>Borrar</button>
+                            </div>
+                        </li>
+                    </>
+                )
+            }
+
+            /* render App */
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+
+</html>

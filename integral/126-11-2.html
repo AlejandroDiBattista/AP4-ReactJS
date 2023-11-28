@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Librería REACT -->       
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        
+        <!-- Librería Babel para convertir JSX -->
+        <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+        
+        <!-- Librería de Iconos React -->
+        <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+        <title>Lista de Tareas - Grupo 11</title>
+<!-- 
+Curso 126 - Grupo 11 -> miargentina@hugodiaz.com
+    16771692; Hugo Dante, Diaz 
+    20746139; Aranda, Marcelo 
+    28127040; Arrascaeta, Gabriela Natalia 
+    20520745; Figueira Perez, Elias 
+    28348022; Vega, Luciano 
+-->        
+        <style>
+            /* Aca va todo los CSS */
+            .contenedor {
+                margin-top: 20px;
+            }
+
+            main {
+                margin: auto;
+                width: 500px;
+                background-color: darksalmon;
+                padding: 20px;
+                border-radius: 30px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            h1 {
+                font-size: 25px;
+                padding: 12px;
+                text-align: center;
+            }
+
+            form {
+                padding: 10px;
+                display:inline-flex;
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            form input {
+                width: 250px;
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+                font-size: 15px;
+            }
+
+            form button {
+                width: 100px;
+                border: none;
+                border-radius: 10px;
+                padding: 0 10px;
+                cursor: pointer;
+            }
+
+            .botones {
+                display: flex;
+                gap: 10px;
+            }
+
+            .botonborrarall {
+                
+                width: 90px;
+                height: 37px;
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            .botones button {
+                background-color: bisque;
+                border: none;
+                cursor: pointer;
+            }
+
+            ion-icon {
+                color: red;
+                font-size: 15px;
+            }
+
+            #listo ion-icon {
+                color: green;
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 10px;
+                margin: 0;
+            }
+
+            ul li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 10px;
+                background-color: bisque;       
+            }
+        </style>
+
+        <script type="text/babel">
+            const { useState, useEffect } = React        
+
+            /* Aca va todo el codigo de JSX (sin importación ni exportación) */
+            const datosIniciales = [
+            ]
+
+            function App() {
+                const [nextId, setNextId] = useState(1)
+                const [tareas, setTareas] = useState(datosIniciales)
+
+                function agregar(nombre) {
+                    const nueva = {id: nextId, nombre: nombre, completada: false}
+                    const copia = [ ... tareas, nueva]
+                    
+                    setTareas(copia)
+                    setNextId(nextId+1)
+                }
+
+                function completar(id) {
+                    const actual = tareas.find(tarea => tarea.id == id)
+                    const nuevo = {... actual, completada: true }
+                    const copia = tareas.map(tarea => tarea.id == id ? nuevo: tarea)
+                    setTareas(copia)
+                }
+
+                function borrar(id) {
+                    const copia = tareas.filter(tarea => tarea.id != id)
+                    setTareas(copia)
+                }
+
+                function clearAll(){
+                    setTareas([])
+                }
+
+                useEffect(() => {
+                    const prox = Number(localStorage.getItem('nextid'))
+                    const datos = localStorage.getItem('tareas')
+                    if (datos) {
+                    setTareas(JSON.parse(datos))
+                    setNextId(prox)
+                    }
+                }, [])
+
+                useEffect(() => {
+                    localStorage.setItem('nextid',nextId)
+                    localStorage.setItem('tareas', JSON.stringify(tareas))
+                    console.log('Tareas actualizadas', tareas)
+                })
+
+                useEffect(()=>{
+                    localStorage.setItem('nextid',nextId)
+                    console.log('Proximo ID actualizado',nextId)
+                }, [nextId])
+
+                return (
+                    <div className='contenedor'>
+                    <main>
+                        <h1>Lista de Tareas</h1>
+                        <TaskForm alAgregar={agregar} />
+                        <button className='botonborrarall' onClick={()=>clearAll()}>Borrar todo</button>        
+                        <TaskList tareas={tareas} alCompletar={completar} alBorrar={borrar} />
+                    </main>
+                    </div>
+                )
+            }
+
+            function TaskForm({alAgregar}) {
+                const [nombre, setNombre] = useState('')
+
+                function manejarEnvio(e) {
+                    e.preventDefault()
+
+                    if (nombre == '') return
+                    alAgregar(nombre)
+                    setNombre('')
+                }
+
+                return (
+                    <form onSubmit={manejarEnvio}>
+                    <input type='text' value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                    <button type='submit'>Agregar</button>
+                    </form>
+                )
+            }
+
+            function TaskList({tareas, alCompletar, alBorrar}) {
+                return (
+                    <ul>
+                    {tareas.map(tarea => <TaskItem key={tarea.id} tarea={tarea} alCompletar={alCompletar} alBorrar={alBorrar} />)}
+                    </ul>
+                )
+            }
+
+            function TaskItem({tarea, alCompletar, alBorrar}) {
+                const {id,nombre,completada} = tarea
+
+                function completar() {
+                    console.log('completar' + id)
+                    alCompletar(id)
+                }
+
+                function borrar() {
+                    console.log('borrar ' + id)
+                    alBorrar(id)
+                }
+
+                return (
+                    <li>
+                    <span style={{textDecoration:completada ? "line-through": ""}}>{nombre}</span>
+                    <div className='botones'>
+                        <button onClick={completar}><ion-icon name="checkmark-outline"></ion-icon></button>
+                        <button onClick={borrar}><ion-icon name="trash-bin-outline"></ion-icon></button>
+                    </div>
+                    </li>
+                )
+            }
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

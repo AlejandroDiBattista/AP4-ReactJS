@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocas de Urna</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!--
+      Curso 134 - Grupo 01 -> marsanab@yahoo.com
+        13510492; Antonio, Leiva 
+        24909032; Femia, Cintia 
+        24220385; Marisol, Sanabria 
+        20644779; Ojeda, Miriam Beatriz 
+        25307768; Perriere, Mariano 
+        20635719; Suárez, Guillermo 
+        23995110; Alegre, Andres 
+
+        funciona: 
+        diseño: 
+
+    -->
+
+<style>
+body{
+margin: 0;
+font-family: 'Lucida Sans', sans-serif;
+display: flex;
+flex-direction:column;
+align-items: center;
+justify-content: center;
+height: 100%;
+background: linear-gradient(to bottom right,#1317f5, #eeeeed);
+}
+
+
+#contenedor{
+    width: 100%;
+    height: 100%;
+    
+}
+h1{
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+}
+h2{
+  font-size: 40px;
+  color: #000;
+  text-align: center;
+  padding-top: 5px;
+}
+button{
+  background-color: #47b3fa;
+  width: 150px;
+  height: 70px;
+  border-radius: 5px;
+  border: 2px solid #3070d8;
+  color: #fff;
+  font-size: 45px;
+  font-weight: 900;
+  margin: 5px;
+  align-items: center;
+  cursor:pointer;
+  }
+p{
+  color: blue;
+  font-size: 82px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5px;
+}
+#contador{
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+
+
+}  
+    </style>
+</head>
+<script type="text/babel">
+
+function App() {
+  return (
+    <>
+    <div id="contenedor">
+    <h1>Boca de urnas</h1>
+        <Contador candidato="Candidato 1"/>
+        <Contador candidato="Candidato 2"/>
+    </div>
+    </>
+  )
+}
+
+function Contador({ candidato}) {
+  const [votos, setVotos] = React.useState(0)
+
+  const incremento = () => setVotos(votos + 1)
+  const decremento = () => {
+    if (votos > 0) {
+        setVotos(votos - 1);
+    }
+  };
+
+ return (
+    <>
+      <div id='contador'>
+        <h2>{candidato}</h2>
+        <p>{votos}</p>
+        <button onClick={incremento}>+</button>
+        <button onClick={decremento}>-</button>
+      </div>
+    </>
+  );
+}
+
+  const root = document.getElementById('root');
+  ReactDOM.render(<App/>, root);
+</script>
+
+
+<body>
+    <div id="root"></div>
+</body>
+</html>
