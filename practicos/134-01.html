@@ -1,186 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contador</title>
-   
-        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocas de Urna</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-        <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
-        <!-- 
-            Curso 134 - Grupo 01 -> Antonioleiva909@gmail.com
-                13510492; Antonio, Leiva
+    <!--
+      Curso 134 - Grupo 01 -> marsanab@yahoo.com
+        13510492; Antonio, Leiva 
+        24909032; Femia, Cintia 
+        24220385; Marisol, Sanabria 
+        20644779; Ojeda, Miriam Beatriz 
+        25307768; Perriere, Mariano 
+        20635719; Suárez, Guillermo 
+        23995110; Alegre, Andres 
 
-                funciona: no
-                diseño: si
-                implementacion: funcion
-                reutilizacion: si
-                
-                - Avisó que no funcionaba
-                - No usa los eventos de react, intenga usar eventos de JavaScript
-                - Dejo el componente Agenda y Contactos del ejemplo de donde tomaron el código
-        -->
+        funciona: si
+        diseño: si
+        implementacion: funcion
+        reutilizacion: si
 
-        <style>
-            * {
-                margin: 0;
-                font-family: 'Lucida Sans', sans-serif;
-            }
+    -->
 
-            body {
-                background-color: rgb(14, 172, 235);
-            }
+<style>
+body{
+margin: 0;
+font-family: 'Lucida Sans', sans-serif;
+display: flex;
+flex-direction:column;
+align-items: center;
+justify-content: center;
+height: 100%;
+background: linear-gradient(to bottom right,#1317f5, #eeeeed);
+}
 
-            #root {
-                width: 200px;
-                margin: 0 auto;
-                text-align: center;
-                height: 300px;
-               
-            }
 
-   
-            h2 {
-                text-align: center;
-                padding: 10px;
-            }
+#contenedor{
+    width: 100%;
+    height: 100%;
+    
+}
+h1{
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+}
+h2{
+  font-size: 40px;
+  color: #000;
+  text-align: center;
+  padding-top: 5px;
+}
+button{
+  background-color: #47b3fa;
+  width: 150px;
+  height: 70px;
+  border-radius: 5px;
+  border: 2px solid #3070d8;
+  color: #fff;
+  font-size: 45px;
+  font-weight: 900;
+  margin: 5px;
+  align-items: center;
+  cursor:pointer;
+  }
+p{
+  color: blue;
+  font-size: 82px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5px;
+}
+#contador{
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
 
-            ul {
-                padding: 0;
-            }
 
-            ul li {
-                border: 1px solid gray;
-                background-color: white;
-                border-radius: 8px;
-                padding: 8px;
-                list-style: none;
-                margin-bottom: 5px;
-            }
+}  
+    </style>
+</head>
+<script type="text/babel">
 
-            ul li div {
-                margin-bottom: 50px;
-                font-size: 20px;
-            }
+function App() {
+  return (
+    <>
+    <div id="contenedor">
+    <h1>Boca de urnas</h1>
+        <Contador candidato="Candidato 1"/>
+        <Contador candidato="Candidato 2"/>
+    </div>
+    </>
+  )
+}
 
-            h2 {
-                text-align: center;
-                margin-top: 30px;
-                color: white;
-            }
-           
-            ul li p {
-                color:blue ;
-                font-size: 15px;
-            }
+function Contador({ candidato}) {
+  const [votos, setVotos] = React.useState(0)
 
-            input {
-                width: 100%;
-                padding: 5px 15px;
-                border-radius: 20px;
-                border: 1px solid gray;
-                margin: 10px 0;
-                font-size: 20px;
-            }
-       
-            ol li {
-                margin: 5px;
-                padding: 10px;
-                border-radius: 5px;
-            }
+  const incremento = () => setVotos(votos + 1)
+  const decremento = () => {
+    if (votos > 0) {
+        setVotos(votos - 1);
+    }
+  };
 
-            ol li:hover {
-                cursor: pointer;
-                background-color: antiquewhite;
-            }
+ return (
+    <>
+      <div id='contador'>
+        <h2>{candidato}</h2>
+        <p>{votos}</p>
+        <button onClick={incremento}>+</button>
+        <button onClick={decremento}>-</button>
+      </div>
+    </>
+  );
+}
 
-            ol li a {
-                font-size: 20px;
-            }
+  const root = document.getElementById('root');
+  ReactDOM.render(<App/>, root);
+</script>
 
-            span {
-                font-size: 1cm;
-                align-items: center;
-                margin: 0;
-                text-align: center;
-            }
 
-            .btn{
-                margin-top: 10px;
-                font-size: 1.5rem;
-                flex-direction: column;  
-                align-items: center;
-                background-color: skyblue;
-                color: white;
-                cursor: pointer;
-                padding: 5px;
-                width: 70px;
-                height: 40px;
-            }
-           
-        </style>
-        <script type="text/babel">
-            let datos = [
-                { nombre: "Candidato ", apellido: "1",},
-                { nombre: "Candidato",  apellido: "2",},
-            ];
-                     
-            function Contador({nombre, apellido}) {
-                return (
-                <li>
-                    <div>{nombre} <b>{apellido}</b></div>
-                    <p>
-                        <span id="valor">0</span>
-                        <div class="contenedor-botones">
-                            <button class="btn" id="incrementar"> + </button>
-                            <button class="btn" id="decrementar"> - </button>
-                        </div>
-                    </p>
-                </li>
-                )}
-
-            function Votancion({ candidatos }) {
-                return (
-                <>
-                    <h2>Boca de urna</h2>
-                    <ul>
-                        { candidatos.map( (candidato) => <Contador {...candidato} />) }
-                    </ul>
-                </>
-                )}
-
-                /* 
-            const contador = document.getElementById("contar");
-            const sumar = document.getElementById("incrementar");
-            const restar = document.getElementById("decrementar");
-        
-            let número = 0;
-        
-            sumar.addEventListener("click", ()=>{
-                número++;
-                Contador.innerHTML = número;
-            });
-        
-            restar.addEventListener("click", ()=>{
-                if(número==0){}
-                else{
-                    número--;
-                    contador.innerHTML = número;
-                }
-            
-            });
-
-            */
-            
-            ReactDOM.render(<Votancion candidatos={datos} />, document.getElementById('root'));
-
-        </script>
-
-    </head>
-
-    <body>
-        <div id="root"></div>
-    </body>
+<body>
+    <div id="root"></div>
+</body>
 </html>

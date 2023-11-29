@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas</title>
     <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
+    
     <!-- 
-      Curso 126 - Grupo 08 -> rozziesteban@gmail.com
+        Curso 126 - Grupo 08 -> rozziesteban@gmail.com
         27173739; Esteban Costilla Rozzi
         24106061; Gabriel Ritacco
         28627630; Ximena Romani
-
-        funciona: 
-        diseño: 
+        
+        funciona: si 
+        diseño: si
+        nombre: si
+        
+        - tienesTareas: es innecesario, se puede usar tareas.length > 0
     -->
+    <title>Lista de Tareas</title>
 
     <style>
         body {
@@ -97,8 +100,6 @@
         cursor: pointer;
         }
 
-
-
         .task-item {
         display: flex;
         flex-direction: row;
@@ -152,17 +153,17 @@
         }
 
         #limpiar-completadas {
-        background-color: aquamarine;
+            background-color: aquamarine;
         }
         #limpiar-completadas:hover {
-        background-color: rgb(0, 255, 119);
+            background-color: rgb(0, 255, 119);
         }
         #borrar-tareas {
-        background-color: rgba(216, 119, 119, 0.335);
-        color:#aaa;
+            background-color: rgba(216, 119, 119, 0.335);
+            color:#aaa;
         }
         #borrar-tareas:hover {
-        background-color: rgba(255, 0, 0, 0.335);
+            background-color: rgba(255, 0, 0, 0.335);
         }
 
 

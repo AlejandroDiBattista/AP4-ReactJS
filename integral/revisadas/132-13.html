@@ -17,9 +17,11 @@
         27042272; Ortiz Flores, Marisa 
         28013926; Ramírez, Ernesto 
     
-        funciona: 
-        diseño: 
-    
+        funciona: si
+        diseño: si
+        nombre: si
+
+        - Agrega una tarea al comienzo en lugar de al final. 
     -->
     <style>
       * {
@@ -163,10 +165,7 @@
         background-color: red;
       }
     </style>
-  </head>
-
-  <body>
-    <div id="root"></div>
+  
     <script type="text/babel">
       const TaskForm = ({ onAgregarTarea }) => {
         const [nombreTarea, setNombreTarea] = React.useState("");
@@ -212,10 +211,7 @@
           <li className="tareas__item">
             <div
               className="item__texto"
-              style={{
-                textDecoration: tarea.completada ? "line-through" : "none",
-              }}
-            >
+              style={{textDecoration: tarea.completada ? "line-through" : "none"}} >
               {tarea.nombre}
             </div>
             <div className="item__opciones">
@@ -297,5 +293,7 @@
 
       ReactDOM.render(<App />, document.getElementById("root"));
     </script>
-  </body>
+</head>
+  <body>
+    <div id="root"></div>  </body>
 </html>

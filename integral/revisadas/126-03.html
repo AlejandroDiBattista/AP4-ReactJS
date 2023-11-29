@@ -7,14 +7,19 @@
     <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
 
-    <title>Título</title>
     <!-- 
       Curso 126 - Grupo 03 -> matiasgonard@hotmail.com
-        26057002; Matías Gonard 
-    
-        funciona: 
-        diseño: 
+      26057002; Matías Gonard 
+      
+      funciona: si
+      diseño: si
+      nombres: si
+
+      - Realiza persistencia de datos en el localStorage.
+      - Deberia cargar el estado desde el localStorage en el useEffect.
+
     -->
+    <title>Título</title>
     <style>
       body {
         font-family: "Arial", sans-serif;
@@ -177,6 +182,7 @@
           </form>
         );
       };
+
       const TaskItem = ({ task, completeTask, deleteTask }) => (
         <li>
           <span
@@ -188,6 +194,7 @@
           <button onClick={() => deleteTask(task.id)}>Eliminar</button>
         </li>
       );
+
       const TaskList = ({ tasks, completeTask, deleteTask }) => (
         <ul>
           {tasks.map((task) => (

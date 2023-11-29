@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- 
+      Curso 132 - Grupo 08 -> analiavolonte@gmail.com
+      
+      20387275; Alegre, Cristina Mabel   
+      23979860; Alfieri, Carlos Roque      
+      24859318; Volonté, Analia Verónica  
+      
+      funciona: si
+      diseño: si
+
+      - El mensaje de alerta solo deberia aparecer cuando hay alguna operacion peligrosa y para confirmar la operacion como en el borrado.
+      - La generación del ID es poco segura. Genera un numnero al alzar entre 1 y 1000 pero puede repetirse.
+    -->
+    
+    <title>TP Final To Do List</title>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        width: 650px;
+        margin: 0 auto;
+        background-color: rgb(164, 253, 224);
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 40px;
+      }
+
+      ul {
+        font-size: 26px;
+        list-style: none;
+        padding: 0;
+      }
+
+      .task-item {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+
+      .task-item.completed {
+        text-decoration: line-through;
+        color: gray;
+      }
+
+      .task-name {
+        flex: 1;
+      }
+
+      form {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        outline: none;
+      }
+
+      button {
+        padding: 10px;
+        margin: 3px;
+        background-color: #00a0d2;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 22px;
+      }
+
+      .task-item.completed button{
+        text-decoration: none;
+      }
+    </style>
+    <script type="text/babel">
+      function App() {
+        // estado de la lista de tareas
+        const [tasks, setTasks] = React.useState([
+          { id: 1, name: "Caminata", completed: false },
+          { id: 2, name: "Vianda", completed: true },
+          { id: 3, name: "Consumo de agua", completed: false },
+        ]);
+
+        // acción cuando las tareas cambien
+        React.useEffect(() => {
+          alert("La lista de tareas cambió");
+        }, [tasks]);
+
+        // eventos relacionados con las tareas
+        const sumar = (name) => {
+          const newTask = {
+            id: Math.floor(Math.random() * 1000),
+            name: name,
+            completed: false,
+          };
+          setTasks([...tasks, newTask]);
+        };
+
+        const completar = (id) => {
+          const updatedTasks = tasks.map((task) =>
+            task.id === id ? { ...task, completed: !task.completed } : task
+          );
+          setTasks(updatedTasks);
+        };
+
+        const borrar = (id) => {
+          const filteredTasks = tasks.filter((task) => task.id !== id);
+          setTasks(filteredTasks);
+        };
+        // Renderiza la aplicación
+        return (
+          <div className="container">
+            <h1>Lista de Tareas</h1>
+            <TaskList tasks={tasks} completar={completar} borrar={borrar} />
+            <TaskForm sumar={sumar} />
+          </div>
+        );
+      }
+
+      function TaskList(props) {
+        const { tasks, completar, borrar } = props;
+
+        return (
+          <ul>
+            {tasks.map((task) => (
+              <TaskItem
+                key={task.id}
+                task={task}
+                completar={completar}
+                borrar={borrar}
+              />
+            ))}
+          </ul>
+        );
+      }
+      function TaskItem(props) {
+        const { task, completar, borrar } = props;
+        const [completed, setCompleted] = React.useState(task.completed);
+
+        // cambio la apariencia de la tarea
+        const alternarCompletado = () => {
+          setCompleted(!completed);
+          completar(task.id);
+        };
+
+        return (
+          <li className={`task-item ${completed ? "completed" : ""}`}>
+            <span className="task-name">{task.name}</span>
+            <button onClick={alternarCompletado}>
+              {completed ? "Desmarcar" : "Completada"}
+            </button>
+            <button onClick={() => borrar(task.id)}>Eliminar</button>
+          </li>
+        );
+      }
+      function TaskForm(props) {
+        const { sumar } = props;
+        const [input, setInput] = React.useState("");
+
+        // entrada del usuario
+        const cambiar = (event) => {
+          setInput(event.target.value);
+        };
+
+        const agregar = (event) => {
+          event.preventDefault();
+          if (input.trim()) {
+            sumar(input);
+            setInput("");
+          }
+        };
+
+        return (
+          <form onSubmit={agregar}>
+            <input
+              type="text"
+              value={input}
+              onChange={cambiar}
+              placeholder="Agregar tarea"
+            />
+            <button type="submit">Agregar</button>
+          </form>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

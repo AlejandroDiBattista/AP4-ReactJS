@@ -110,9 +110,9 @@ end
 
 # --- Resultados ---
 
-def leer_resultados()
+def leer_resultados(base=:practicos)
     resultados = []
-    Dir["./*.html"].sort.each do |file|
+    Dir["../#{base}/*.html"].sort.each do |file|
 
         lineas = File.read(file).split("\n").map{|l| l.chomp.strip}
         lineas = lineas.select{|l| l.size > 0}
@@ -227,6 +227,9 @@ def resumir_resultados(resultados)
 end
 
 
+pp integral = leer_resultados(:integral)
+return
+
 asistencias = leer_asistencias()
 puts "Hay #{asistencias.size} alumnos en asistencias"
 
@@ -236,6 +239,7 @@ puts "Hay #{grupos.size} alumnos en grupos"
 resultados = leer_resultados()
 puts "Hay #{resultados.size} resultados"
 
+integral = leer_resultados(:integral)
 registrar_grupos(asistencias, grupos)
 registrar_resultados(asistencias, resultados)
 registrar_ausentes(asistencias, resultados)

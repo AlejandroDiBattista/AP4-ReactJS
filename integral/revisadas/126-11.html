@@ -3,28 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Librería REACT -->       
         <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
         
-        <!-- Librería Babel para convertir JSX -->
         <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
         
-        <!-- Librería de Iconos React -->
         <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     
         <title>Lista de Tareas - Grupo 11</title>
-<!-- 
-Curso 126 - Grupo 11 -> miargentina@hugodiaz.com
-    16771692; Hugo Dante, Diaz 
-    20746139; Aranda, Marcelo 
-    28127040; Arrascaeta, Gabriela Natalia 
-    20520745; Figueira Perez, Elias 
-    28348022; Vega, Luciano 
--->        
+        <!-- 
+            Curso 126 - Grupo 11 -> miargentina@hugodiaz.com
+                16771692; Hugo Dante, Diaz 
+                20746139; Aranda, Marcelo 
+                28127040; Arrascaeta, Gabriela Natalia 
+                20520745; Figueira Perez, Elias 
+                28348022; Vega, Luciano 
+
+                funciona: si
+                diseño: si
+                nombre: si
+
+                - no permite desmarcar las tareas completadas
+        -->        
+
         <style>
-            /* Aca va todo los CSS */
             .contenedor {
                 margin-top: 20px;
             }
@@ -119,9 +122,7 @@ Curso 126 - Grupo 11 -> miargentina@hugodiaz.com
         <script type="text/babel">
             const { useState, useEffect } = React        
 
-            /* Aca va todo el codigo de JSX (sin importación ni exportación) */
-            const datosIniciales = [
-            ]
+            const datosIniciales = [            ]
 
             function App() {
                 const [nextId, setNextId] = useState(1)

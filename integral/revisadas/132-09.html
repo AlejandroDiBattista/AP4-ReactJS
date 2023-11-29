@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
-        <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
-    
-        <!-- 
-            Curso 132 - Grupo 09 -> satrianoignacio@gmail.com
-                28079719; Ignacio Sosa
 
-                funciona: si
-                diseño: si
-        -->
-        <title>Lista de Tarea</title>
-        <style>
-            .App {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+
+    <!-- 
+        Curso 132 - Grupo 09 -> satrianoignacio@gmail.com
+            28079719; Ignacio Sosa
+
+            funciona: si
+            diseño: si
+            nombre: si
+
+            - el boton completar deberia cambiar el estado de la tarea es completada
+    -->
+
+    <title>Lista de Tarea</title>
+    <style>
+        .App {
             text-align: center;
             }
 
@@ -258,11 +263,17 @@
                 background-color: rgb(35, 35, 35);
                 color: #fff;
             }
-        </style>
 
-        <script type="text/babel">
-            const { useState, useEffect } = React        
-            const App = () => {
+        .deleteButton {
+            background-color: rgb(35, 35, 35);
+            color: #fff;
+        }
+    </style>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const App = () => {
             const [tasks, setTasks] = useState([]);
 
             useEffect(() => {
@@ -271,7 +282,7 @@
 
             const handleToggleComplete = (taskId) => {
                 const updatedTasks = tasks.map((task) =>
-                task.id === taskId ? { ...task, completed: !task.completed } : task
+                    task.id === taskId ? { ...task, completed: !task.completed } : task
                 );
                 setTasks(updatedTasks);
             };
@@ -281,12 +292,19 @@
                 setTasks(updatedTasks);
             };
 
+            
+            //
+            // Función Reduce
+            //
             const handleAddTask = (taskName) => {
+                const nextId = tasks.reduce((max, { id }) => id > max ? id : max, 0) + 1;
+
                 const newTask = {
-                    id: tasks.length + 1,
+                    id: nextId,
                     name: taskName,
                     completed: false,
                 };
+
                 setTasks([...tasks, newTask]);
             };
 
@@ -301,72 +319,73 @@
                     />
                 </div>
             );
+        };
+
+        const TaskForm = ({ onAddTask }) => {
+            const [taskName, setTaskName] = useState('');
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                if (taskName.trim()) {
+                    onAddTask(taskName);
+                    setTaskName('');
+                }
             };
 
-            const TaskForm = ({ onAddTask }) => {
-                const [taskName, setTaskName] = useState('');
-
-                const handleSubmit = (e) => {
-                    e.preventDefault();
-                    if (taskName.trim()) {
-                        onAddTask(taskName);
-                        setTaskName('');
-                    }
-                };
-
-                return (
-                    <form className="TaskForm" onSubmit={handleSubmit}>
-                        <div className="input-container">
-                            <input
-                                type="text"
-                                value={taskName}
-                                onChange={(e) => setTaskName(e.target.value)}
-                                placeholder="Nueva tarea"
-                            />
-                        </div>
-                        <div className="button-container">
-                            <button type="submit" className="custom-button">
-                                Agregar
-                            </button>
-                        </div>
-                    </form>
-                );
-            };
-
-            const TaskItem = ({ task, onToggleComplete, onDeleteTask }) => {
-                return (
-                    <div className='TaskItem'>
-                        <span className='taskText' style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
-                            {task.name}
-                        </span>
-                        <div className='buttonContainer'>
-                            <button className='completeButton' onClick={() => onToggleComplete(task.id)}>Completar</button>
-                            <button className='deleteButton' onClick={() => onDeleteTask(task.id)}>Eliminar</button>
-                        </div>
+            return (
+                <form className="TaskForm" onSubmit={handleSubmit}>
+                    <div className="input-container">
+                        <input
+                            type="text"
+                            value={taskName}
+                            onChange={(e) => setTaskName(e.target.value)}
+                            placeholder="Nueva tarea"
+                        />
                     </div>
-                );
-            };
-
-            const TaskList = ({ tasks, onToggleComplete, onDeleteTask }) => {
-                return (
-                    <div>
-                        {tasks.map((task) => (
-                            <TaskItem
-                                key={task.id}
-                                task={task}
-                                onToggleComplete={onToggleComplete}
-                                onDeleteTask={onDeleteTask}
-                            />
-                        ))}
+                    <div className="button-container">
+                        <button type="submit" className="custom-button">
+                            Agregar
+                        </button>
                     </div>
-                );
-            };
+                </form>
+            );
+        };
 
-            ReactDOM.render(<App />, document.getElementById('root'));
-        </script>
-    </head>
+        const TaskItem = ({ task, onToggleComplete, onDeleteTask }) => {
+            return (
+                <div className='TaskItem'>
+                    <span className='taskText' style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+                        {task.name}
+                    </span>
+                    <div className='buttonContainer'>
+                        <button className='completeButton' onClick={() => onToggleComplete(task.id)}>Completar</button>
+                        <button className='deleteButton' onClick={() => onDeleteTask(task.id)}>Eliminar</button>
+                    </div>
+                </div>
+            );
+        };
 
-    <body>
-        <div id="root"></div>
-    </body>
+        const TaskList = ({ tasks, onToggleComplete, onDeleteTask }) => {
+            return (
+                <div>
+                    {tasks.map((task) => (
+                        <TaskItem
+                            key={task.id}
+                            task={task}
+                            onToggleComplete={onToggleComplete}
+                            onDeleteTask={onDeleteTask}
+                        />
+                    ))}
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
 </html>

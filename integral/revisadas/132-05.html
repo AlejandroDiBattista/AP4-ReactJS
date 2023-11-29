@@ -3,21 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lista de Tareas</title>
   
-    <!-- 
-      Curso 132 - Grupo 05 -> santiago.munoz.chi@gmail.com
-          18846213; Muñoz, Santiago  
-          27386100; Arditi, Lorena 
-          28293485; Garay, Pablo  
-          26815349; Gigena Parola, Fernando Gastón  
-          27879997; Pasquinelli, Gianni  
-          24820797; Roldán, Natalia 
+  <!-- 
+    Curso 132 - Grupo 05 -> santiago.munoz.chi@gmail.com
+      18846213; Muñoz, Santiago  
+      27386100; Arditi, Lorena 
+      28293485; Garay, Pablo  
+      26815349; Gigena Parola, Fernando Gastón  
+      27879997; Pasquinelli, Gianni  
+      24820797; Roldán, Natalia 
 
-          funciona: 
-          diseño: 
+      funciona: si
+      diseño: si
+      nombre: si
+
+      - Agregaron busqueda de tareas y persistencia de datos
+      - Agregaron la edición de las tareas 
+
   -->
-
+  <title>Lista de Tareas</title>
+        
   <style>
     body {
       font-family: "Arial", sans-serif;
@@ -135,7 +140,7 @@
           </div>
         </div>
       );
-    };
+    }
 
     const TaskList = ({ tasks, onToggleComplete, onDelete, onEdit, searchTerm }) => {
       const filteredTasks = tasks.filter((task) =>

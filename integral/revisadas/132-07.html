@@ -17,13 +17,16 @@
             20984165; Furrer, Gustavo Omar, 		  
             13538353; Lignini, Sergio Darío Duilio, 
 
-            funciona: 
-            diseño: 
-    
-    -->
+            funciona: si
+            diseño: no
+            nombre: no
 
-    
+            - Hacer persistente la lista de tareas en el localStorage.
+            - La inicialización del nextId funciona, pero no es la mejor forma de hacerlo
+    -->
+   
     <title>ToDoList-132-Grupo7</title>
+
     <style>
         /* Aca va todo los CSS */
         * {
@@ -144,17 +147,16 @@
     <script type="text/babel">
         const { useState, useEffect } = React
 
-        /* Aca va todo el codigo de JSX (sin importación ni exportación) */
-
         function App() {
             const [nextId, setNextId] = useState(1);
             const [tareas, setTareas] = useState([]);
 
-            // Cargar tareas desde localStorage al iniciar la aplicación
             useEffect(() => {
                 const storedTareas = JSON.parse(localStorage.getItem('tareas'));
                 if (storedTareas && storedTareas.length > 0) {
                     setTareas(storedTareas);
+                    // const maxId = storedTareas.reduce((max, tarea) => (tarea.id > max ? tarea.id : max), 0);
+                    // setNextId(maxId + 1);
                     setNextId(storedTareas[storedTareas.length - 1].id + 1);
                 }
             }, []);
@@ -272,9 +274,6 @@
                 </li>
             );
         }
-
-
-
 
         ReactDOM.render(<App />, document.getElementById('root'));
     </script>

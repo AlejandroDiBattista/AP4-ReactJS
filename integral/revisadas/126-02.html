@@ -4,16 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Lista de Tareas</title>
   <!-- 
     Curso 126 - Grupo 02 -> jonatanpetri@gmail.com
-      28557311; Petri, Jonatan 
+    28557311; Petri, Jonatan 
       17400167; Verges, Luis
   
-      funciona: 
-      diseño: 
+      funciona: si  
+      diseño: si
+      nombres: no
+      
+      - no usa JSX 
+      - baja las tareas como un archivo de texto
+
+    -->
   
-  -->
+    <title>Lista de Tareas</title>
   <style>
     /* Aca los Estilos CSS */
     body {
@@ -24,7 +29,6 @@
       background-image: url('https://i.pinimg.com/736x/b8/21/8f/b8218f2e133298f1ba3b960c1ebb605a.jpg');
       background-size: cover;
       background-repeat: no-repeat;
-      
     }
 
     .app {
@@ -45,9 +49,7 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #eee;
-      padding: 8px 0;
-      
-      
+      padding: 8px 0;      
     }
 
     .completada {
@@ -77,36 +79,37 @@
     button:hover {
       background-color: #0056b3;
     }
-    .fecha-hora {
-  font-size: 12px;
-  color: #666666;
-  margin-bottom: 5px;
-}
-
-.contenido-tarea {
-  margin-bottom: 10px;
   
-}
+    .fecha-hora {
+      font-size: 12px;
+      color: #666666;
+      margin-bottom: 5px;
+    }
 
-.botones {
-  display: flex;
-  justify-content: space-between;
-  border-radius: 10px;
-}
-h1 {
-   text-align: center;
-  }
+    .contenido-tarea {
+      margin-bottom: 10px;
+      
+    }
+
+    .botones {
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
   <div id="root"></div>
-   
 
   <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
   <script type="text/javascript">
-
     // funciones y impresion de datos para la lista de tareas
     function ItemTarea({ tarea, completarTarea, eliminarTarea }) {
       const [completada, setCompletada] = React.useState(tarea.completada);

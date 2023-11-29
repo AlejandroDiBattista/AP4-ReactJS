@@ -18,8 +18,11 @@
         24020437; Stegmann Carlos Ariel    
         22200876; Villavicencio Mariana     
 
-    funciona: 
-    diseño: 
+    funciona: si
+    diseño: si
+    nombres: si
+
+    - el uso de NextID esta bien, pero no es necesario usarlo en este caso. Al usar el Date.now() como ID no hace falta mantener el nextId como estado.
 
 -->
     <style>
@@ -187,7 +190,6 @@
                 setName('');
             }
 
-
             return (
 
                 <form onSubmit={handleAdd}>
@@ -196,7 +198,6 @@
                 </form>
             )
         }
-
 
         const TaskList = ({ taskList, onCompleteTask, onDeleteTask }) => {
             return (
@@ -207,8 +208,6 @@
                 </ul>
             )
         }
-
-
 
         const TaskItem = ({ task, onCompleteTask, onDeleteTask }) => {
             const { id, name, completed } = task;

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Aplicación React</title>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Librería REACT -->
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+  <!-- Librería Babel para convertir JSX -->
+  <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
 
   <!-- 
     Curso 133 - Grupo 03 -> tsade@live.com.ar
@@ -18,128 +21,247 @@
       funciona: 
       diseño: 
   -->
-  </head>
 
-<body>
-    <style>
-        * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
+  <title>Título</title>
+  <style>
     body {
-        background: rgb(16, 43, 177);
-        background: linear-gradient(
-            90deg,
-            rgba(16, 43, 177, 1) 0%,
-            rgba(48, 219, 228, 0.9173525223820846) 100%
-        );
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: rgb(118, 138, 238);
+      background: linear-gradient(90deg,
+          rgba(118, 138, 238, 1) 0%,
+          rgba(39, 213, 131, 1) 100%,
+          rgba(50, 190, 198, 0.9173525223820846) 100%);
+      background-image: url(".//components/sol.jpg");
     }
 
-    main {
-        width: 100vw;
-        height: 40vw;
-    }
-    nav {
-        text-align: center;
-        padding-top: 30px;
-        font-size: 20px;
-        color: white;
-    }
-    .candidato {
-        width: 18vw;
-        height: 17vw;
-        border: 3px solid goldenrod;
-        border-radius: 10px;
-        margin: 20px auto;
-        background-color: antiquewhite;
-        text-align: center;
-        padding: 5px;
-        font-size: 20px;
+    code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
     }
 
-    .numero {
-        width: 8vw;
-        height: 6vw;
-        margin: 20px auto;
-        color: blue;
-        font-size: 50px;
+    .app {
+
+      width: 40vw;
+      height: 50vw;
+      padding: 10px 20px;
+      margin: 10px auto;
+      border: 3px solid goldenrod;
+      border-radius: 10px;
+      text-align: center;
+      background-color: rgba(118, 138, 238, 1);
+      display: flex;
+      flex-direction: column;
     }
 
-    button {
-        width: 7vw;
-        height: 4vw;
-        background-color: #27a8d5;
-        border-radius: 10px;
-        font-size: 30px;
-        margin: 3px;
-        -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
-        box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    .task-item,
+    form {
+      border: 2px solid goldenrod;
+      padding: 5px;
+      margin: 3px auto;
+      border-radius: 5px;
+      width: 90%;
+      height: 2rem;
+      background-color: rgb(62, 202, 137);
+      text-align: end;
     }
+
 
     footer {
-        text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 30vw;
+      background-color: #f0f0f0;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      margin-left: 50px;
+      font-size: 10px;
     }
 
-    </style>
-    <script type="text/babel">
-        import React, { useState } from 'react';
-import './App.css';
+    .button {
+      padding: 3px;
+      margin: 3px;
+      padding: 4px 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f0f0f0;
+      color: #333;
+      cursor: pointer;
+      align-items: end;
 
-function App() {
-  const [contador1, setContador1] = useState(0);
-  const [contador2, setContador2] = useState(0);
-
-  const incrementar1 = () => {
-    setContador1(contador1 + 1);
-  };
-
-  const decrementar1 = () => {
-    if (contador1 > 0) {
-      setContador1(contador1 - 1);
     }
-  };
 
-  const incrementar2 = () => {
-    setContador2(contador2 + 1);
-  };
-
-  const decrementar2 = () => {
-    if (contador2 > 0) {
-      setContador2(contador2 - 1);
+    .button:hover {
+      background-color: rgba(39, 213, 131, 1);
+      color: #000;
     }
-  };
 
-  return (
-    <div className="App">
-      <div>
-        <h2>Boca de Urnas</h2>
-      </div>
-      <div class="candidato">
-        <h2>Candidato1:</h2>
-        <h1> {contador1}</h1>
-        <button onClick={incrementar1}>+</button>
-        <button onClick={decrementar1}>-</button>
-      </div>
-      <div class="candidato">
-        <h2>Candidato2: </h2>
-        <h1>{contador2}</h1>
-        <button onClick={incrementar2}>+</button>
-        <button onClick={decrementar2}>-</button>
-      </div>
-      <footer>
-        <samp>Grupo 3:Adriana Villafañe(21992626), Viviana Lopez(18445270),Edmundo Molina(17219543), Angel Aberbach(18123292) UTN 2023</samp>
-      </footer>
-    </div>
-  );
-}
-
-export default App;
+    .submit-button {
+      background-color: #007bff;
+      color: #fff;
+      border-color: #007bff;
+    }
 
 
-    </script>
-    
+    .completed {
+      /* Estilos para tareas completadas */
+      background-color: #dff0d8;
+      /* Ejemplo de color de fondo para tareas completadas */
+      text-decoration: line-through;
+      /* Ejemplo de tachado para tareas completadas */
+    }
+
+
+    @media (max-width: 583px)and (min-width: 310px) {
+      .app {
+        width: 80%;
+        height: 400px;
+      }
+
+      footer {
+        width: 60%;
+        margin-left: 40px;
+      }
+    }
+  </style>
+
+  <script type="text/babel">
+
+    const { useState, useEffect } = React;
+
+    const App = () => {
+      const [tasks, setTasks] = useState([]);
+
+      useEffect(() => {
+
+        const storedTasks = JSON.parse(localStorage.getItem('tasks'));
+        setTasks(storedTasks || []);
+      }, []);
+
+      const addTask = (name) => {
+        const newTask = {
+          id: tasks.length + 1,
+          name,
+          completed: false,
+        };
+        setTasks([...tasks, newTask]);
+
+        localStorage.setItem('tasks', JSON.stringify([...tasks, newTask]));
+      };
+
+      const completeTask = (id) => {
+        const updatedTasks = tasks.map((task) =>
+          task.id === id ? { ...task, completed: !task.completed } : task
+        );
+        setTasks(updatedTasks);
+      };
+
+      const deleteTask = (id) => {
+        const updatedTasks = tasks.filter((task) => task.id !== id);
+        setTasks(updatedTasks);
+      };
+
+      return (
+
+        <div className="app">
+          <h1>Task Manager</h1>
+          <TaskForm addTask={addTask} />
+          <div className="taskList"> <TaskList
+            tasks={tasks}
+            completeTask={completeTask}
+            deleteTask={deleteTask}
+          /></div>
+
+          <footer className="footer">
+            <div className="multiline-text">
+              Grupo 3: Adriana Villafañe(21992626),
+              <br />
+              Viviana Lopez(18445270),
+              <br />
+              Edmundo Molina(17219543),
+              <br />
+              Angel Aberbach(18123292) UTN 2023
+            </div>
+          </footer>
+        </div>
+      );
+    };
+    // hasta aca app.jsx
+    //
+    //taskForm.js
+    const TaskForm = ({ addTask }) => {
+      const [newTask, setNewTask] = useState('');
+
+      const handleChange = event => {
+        setNewTask(event.target.value);
+      };
+
+      const handleSubmit = event => {
+        event.preventDefault();
+        if (newTask.trim() !== '') {
+          addTask(newTask);
+          setNewTask('');
+        }
+      };
+
+      return (
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={newTask}
+            onChange={handleChange}
+            placeholder="Add a new task"
+          />
+          <button type="submit" className="button submit-button">Add Task</button>
+        </form>
+      );
+    };
+    //hasta aca taskForm.js
+    //
+    //taskItem.js
+    const TaskItem = ({ task, completeTask, deleteTask }) => {
+      const handleComplete = () => {
+        completeTask(task.id);
+      };
+
+      const handleDelete = () => {
+        deleteTask(task.id);
+      };
+
+      return (
+        <div className={`task-item ${task.completed ? 'completed' : ''}`}>
+          <span>{task.name}</span>
+          <button className="button" onClick={handleComplete}>Complete</button>
+          <button className="button" onClick={handleDelete}>Delete</button>
+        </div>
+      );
+    };
+    //hasta aca taskItem.js
+    //
+    //task.List.js
+    const TaskList = ({ tasks, completeTask, deleteTask }) => {
+      return (
+        <div className="task-list">
+          {tasks.map((task) => (
+            <TaskItem
+              key={task.id}
+              task={task}
+              completeTask={completeTask}
+              deleteTask={deleteTask}
+            />
+          ))}
+        </div>
+      );
+    };
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
 </body>
-</html>

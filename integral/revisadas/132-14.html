@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Task React - Group 14</title>
+    
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 
+      Curso 132 - Grupo 14 -> leo.tango.arg@gmail.com
+        23665179; Leonardo Gabriel Maldonado
+    
+        funciona: si
+        diseño: si
+        nombre: si
+
+        - Agrega caja de dialogo para confirmar el borrado de una tarea.
+    
+    -->
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            #root {
+                width: 800px;
+                margin: 0 auto;
+            }
+            .header {
+                font-size: 35px;
+            }
+    
+            form {
+                margin-left: 40px;
+                margin-bottom: 20px;                
+            }
+            #description {
+                margin-left: 30px;
+                + button {
+                    margin: 0 15px;
+                }
+            }
+            span > button {
+                width: 90px;
+                margin-left: 10px;
+            }
+    
+            .task {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid #ccc;
+                margin-bottom: 10px;
+            }
+    
+            .completed {
+                text-decoration: line-through;
+            }
+    
+            .delete-button {
+                background-color: #ff6347;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+            dialog {
+                flex-direction: column;                
+                width: 190px;
+                height: 120px;
+                border-radius: 10px;
+                & button {
+                    width: 90px;
+                    padding: 10px;
+                    margin-left: 50px;
+                    display: inline-block;
+                                     
+                }
+            }
+        </style>
+
+
+    <script type="text/babel">
+        const App = () => {
+            const [tasks, setTasks] = React.useState(JSON.parse(localStorage.getItem('tasks')) || [
+                { id: 1, description: 'Task 1', status: 'pending' },
+                { id: 2, description: 'Task 2', status: 'completed' },
+                { id: 3, description: 'Task 3', status: 'pending' },
+                { id: 4, description: 'Task 4', status: 'completed' },
+                { id: 5, description: 'Task 5', status: 'pending' },
+            ]);
+            const defaultState = {action:'Delete', message:'Sure? Esc to cancel'}
+
+            const [showConfirmModal, setShowConfirmModal] = React.useState(0)
+            const [modalParams, setModalParams] = React.useState(defaultState)
+
+            const { useEffect } = React
+
+            let deleteDialog
+            let delButton = document.querySelector('dialog button')
+
+            const handleAddTask = (description) => {
+                const newTask = {
+                    id: Number(new Date()),
+                    description,
+                    status: 'pending',
+                };
+
+                setTasks([...tasks, newTask]);
+                saveTasks([...tasks, newTask]);
+            };
+
+            const handleDeleteTask = (id) => {
+                deleteDialog = document.querySelector('dialog')
+                setShowConfirmModal(id)
+                deleteDialog.showModal()
+
+            };
+            
+            const handleConfirmDialog = ()=>{
+                const id = showConfirmModal
+                const params = {message: "Task Deleted", action:'Accept'}
+                setModalParams(params)
+                delButton.hidden = true
+                const updatedTasks = tasks.filter(task => task.id !== id);
+                setTasks(updatedTasks);
+                saveTasks(updatedTasks);
+            }
+
+            useEffect(()=>{
+                delButton = document.querySelector('dialog button')
+                deleteDialog = document.querySelector('dialog')
+                if (modalParams.action != defaultState.action){
+                setTimeout(() => {                    
+                    delButton.hidden = false
+                    setShowConfirmModal(0)                    
+                    deleteDialog.close()
+                    setModalParams(defaultState)
+                }, 500);}
+                
+                return (() => {
+                    console.log("Clear effect...")
+                },[modalParams])
+            })
+
+            const handleToggleStatus = (id) => {
+                const updatedTasks = tasks.map(task => {
+                    if (task.id === id) {
+                        return { ...task, status: task.status === 'pending' ? 'completed' : 'pending' };
+                    }
+                    return task;
+                });
+
+                setTasks(updatedTasks);
+                saveTasks(updatedTasks);
+            };
+
+            const saveTasks = (tasks) => {
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+            };
+
+            function TaskItem({ task }) {
+                return (
+                    <div key={task.id} className={`task ${task.status === 'completed' ? 'completed' : ''}`}>
+                        <span>{task.description}</span>
+                        <span>
+                            <button onClick={() => handleToggleStatus(task.id)}>
+                                {task.status === 'pending' ? 'Complete' : 'Reopen'}
+                            </button>
+                            <button className="delete-button" onClick={() => handleDeleteTask(task.id)}>
+                                Delete
+                            </button>
+                        </span>
+                    </div>
+                )
+            }
+
+            function TaskList({ taskList }) {
+                return taskList.map(task => <TaskItem task={task} />)
+            }
+
+            function TaskForm({handleAddTask}){
+                return (
+                <form
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            const description = e.target.elements.description.value;
+                            if (description.trim() !== '') {
+                                handleAddTask(description);
+                                e.target.reset();
+                            }
+                        }}>
+                        <label htmlFor="description">Task Description:</label>
+                        <input type="text" id="description" name="description" required />
+                        <button type="submit">Add Task</button>
+                    </form>
+                )
+            }             
+
+            return (
+                <div>   
+                    <h1 className="header">Task Manager</h1>                                    
+                    <dialog>
+                        <p>{modalParams.message}</p>
+                        <button autoFocus onClick={ handleConfirmDialog }>{modalParams.action}</button>                        
+                    </dialog>
+                    <TaskForm handleAddTask={handleAddTask}/>
+                    {tasks.length ? 
+                        <TaskList taskList={tasks}/> :             
+                        <h2>Let's add some tasks!</h2>}
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>    
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

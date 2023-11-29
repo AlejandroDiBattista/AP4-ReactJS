@@ -16,8 +16,12 @@
         27678855; Lofiego, Marcelo Alejandro 
         27584437; Mauricio, Tolosa 
     
-        funciona: 
-        diseño: 
+        funciona: si   
+        diseño: si
+        nombres: si
+
+        - Excelente trabajo, muy prolijo y ordenado.
+        - Usa la prersistencia de datos en el localStorage.
     
     -->
 
@@ -109,6 +113,7 @@
             border-radius: 20px 20px 20px 20px;
             font-size: 10pt;
         }
+
         table {
             padding: 0 5% 2%  5% ;
             display:block;
@@ -170,16 +175,18 @@
             return id ? JSON.parse(id) : 1
 
         }
-        function usePersistedState(key,valorRecuperar) {
+
+        function usePersistedState(key, valorRecuperar) {
             const [valor, setValor] = useState(valorRecuperar)
+
             useEffect(() => {
-            localStorage.setItem(key, JSON.stringify(valor))
+                localStorage.setItem(key, JSON.stringify(valor))
             }, [key, valor])  
 
             return [valor, setValor ]
         }
 
-        function TaskItem ({ item, alBorrar,alActualizar} ) {
+        function TaskItem({ item, alBorrar,alActualizar} ) {
             const { id, taskname, complete } = item;
             const [isChecked, setIsChecked] =  useState(complete);
 
@@ -202,17 +209,17 @@
         };
 
 
-        function TaskList ({ taskList, alBorrar ,alActualizar,alBorrarTodo}) {
+        function TaskList({ taskList, alBorrar ,alActualizar,alBorrarTodo}) {
 
             function borrarLista(taskList){
                 alBorrarTodo()
             }
+
             return (
                 <>
                 <table> 
                     <tbody>
                         {taskList.map(item => <TaskItem key={item.id} item={item} alBorrar={alBorrar} alActualizar={alActualizar}/> )} 
-        
                     </tbody>
                 </table>
                 <button className='buttonDeleteAll' onClick={borrarLista}>Borrar Todo</button> 
@@ -222,6 +229,7 @@
 
         function TaskForm({alAgregar}) {
             const [nombre, setNombre] = useState("");
+
             function actualizar(e) { setNombre(e.target.value); }
             function agregar(e) {
                 e.preventDefault();
@@ -233,15 +241,13 @@
                 <form >
                     <input type="text" value={nombre} onChange={actualizar} placeholder="tarea..." />
                     <button onClick={agregar}>Agregar</button>
-              
                 </form>
             );
         };
 
-       
         function App() {
-            const [proximoId, setProximoId] = usePersistedState('proximoId',recuperarID) 
-            const [taskList, setTasks] = usePersistedState('taskList',recuperarTareas)  
+            const [proximoId, setProximoId] = usePersistedState('proximoId', recuperarID) 
+            const [taskList, setTasks] = usePersistedState('taskList', recuperarTareas)  
 
             function addTask (newTask){
                 if (newTask!=''){   
