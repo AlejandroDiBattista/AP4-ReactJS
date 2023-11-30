@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+            <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+            <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+            <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+            
+            <!-- 
+                Curso 132 - Grupo 06 -> lalicruguer1@gmail.com
+                25254895; Agretti, Irina
+                25430546; Aste, Nicolas Matias        
+                26641479; Cruz, Laura Patricia        
+                20665292; Forcadell, María Gabriela    
+                23408851; Gamarra, Vanesa Roxana      
+                27479190; Gutierrez, Matias Sebastian  */
+                
+                funciona: si
+                diseño: si
+                nombre: si
+                
+                - Realiza la persistencia de datos en localStorage
+            -->
+
+            <title>Titulo</title>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+                body {
+                font-family: 'Poppins', sans-serif;
+                background-color: #003359;
+                color: #333;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                }
+
+                .app {
+                text-align: center;
+                }
+
+                .app-container {
+                max-width: 800px; 
+                margin: 0 auto; 
+                padding: 20px;
+                background-color: #f0f0f0;
+                border-radius: 4px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+
+                .task-form {
+                margin-bottom: 20px;
+                }
+
+                .task-form input {
+                padding: 10px;
+                outline: none;
+                border-radius: 4px;
+                border: 1px solid #ddd;
+                font-family: 'Poppins', sans-serif;
+                }
+
+                .task-list {
+                list-style: none;
+                padding: 0;
+                }
+
+                .task-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #fff;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                }
+
+                .task-item.completed {
+                text-decoration: line-through;
+                opacity: 0.7;
+                }
+
+                button.add {
+                cursor: pointer;
+                padding: 5px 10px;
+                margin-left: 5px;
+                border: none;
+                border-radius: 4px;
+                background-color: #003359;
+                color: #fff;
+                font-family: 'Poppins', sans-serif;
+                }
+
+                button.add:hover {
+                background-color: #569556;
+                }
+
+                .buttons-container button.delete {
+                cursor: pointer;
+                padding: 5px 10px;
+                margin-left: 5px;
+                border: none;
+                border-radius: 4px;
+                background-color: #003359;
+                color: #fff;
+                font-family: 'Poppins', sans-serif;
+                }
+
+                .buttons-container button.delete:hover {
+                background-color: #F12C3E;
+                }
+
+                .buttons-container button.complete {
+                cursor: pointer;
+                padding: 5px 10px;
+                margin-left: 5px;
+                border: none;
+                border-radius: 4px;
+                background-color: #003359;
+                color: #fff;
+                font-family: 'Poppins', sans-serif;
+                }
+
+                .buttons-container button.complete:hover {
+                background-color: #569556; 
+                }
+
+            </style>
+
+            <script type="text/babel">
+                const {useState, useEffect} = React
+                
+                // TaskForm
+                const TaskForm = ({ addTask }) => {
+                const [taskName, setTaskName] = useState('');
+
+                const handleSubmit = (e) => {
+                    e.preventDefault();
+                    if (taskName.trim() !== '') {
+                        const newTask = { id: Date.now(), name: taskName, completed: false };
+                        addTask(newTask);
+                        setTaskName('');
+                        }
+                };
+
+                return (
+                    <form onSubmit={handleSubmit} className="task-form">
+                    <input
+                        type="text"
+                        placeholder="Nueva tarea"
+                        value={taskName}
+                        onChange={(e) => setTaskName(e.target.value)}
+                    />
+                    <button className="add" type="submit">Agregar</button>
+                    </form>
+                );
+            };
+
+            // TaskItem
+            const TaskItem = ({ task, toggleComplete, deleteTask }) => {
+                return (
+                    <li className={`task-item ${task.completed ? 'completed' : ''}`}>
+                    <span>{task.name}</span>
+                    <div className="buttons-container">
+                        <button className="complete" onClick={() => toggleComplete(task.id)}>Completada</button>
+                        <button className="delete" onClick={() => deleteTask(task.id)}>Eliminar</button>
+                    </div>
+                    </li>
+                );
+            };
+
+            // TaskList
+            const TaskList = ({ tasks, toggleComplete, deleteTask }) => {
+                return (
+                    <ul className="task-list">
+                    {tasks.map((task) => (
+                        <TaskItem key={task.id} task={task} toggleComplete={toggleComplete} deleteTask={deleteTask} />
+                    ))}
+                    </ul>
+                );
+            };
+
+            // App
+            const App = () => {
+                const [tasks, setTasks] = useState([]);
+
+                // useEffect para la persistencia en localStorage
+                useEffect(() => {
+                    const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                    setTasks(storedTasks);
+                }, []);
+
+                useEffect(() => {
+                    localStorage.setItem('tasks', JSON.stringify(tasks));
+                }, [tasks]);
+
+                const addTask = (task) => {
+                    setTasks([...tasks, task]);
+                };
+
+                const toggleComplete = (taskId) => {
+                    setTasks(tasks.map((task) => (task.id === taskId ? { ...task, completed: !task.completed } : task)));
+                };
+
+                const deleteTask = (taskId) => {
+                    setTasks(tasks.filter((task) => task.id !== taskId));
+                };
+
+                return (
+                    <div className="app-container">
+                        <div className="app">
+                            <h1>Lista de Tareas</h1>
+                            <TaskForm addTask={addTask} />
+                            <TaskList tasks={tasks} toggleComplete={toggleComplete} deleteTask={deleteTask} />
+                        </div>
+                    </div>
+                );
+            };
+
+            ReactDOM.render(<App/>, document.getElementById('root'));
+
+            </script>
+        </head>
+        <body>
+            <div id="root"></div>
+            
+            
+        </body>
+    </html>

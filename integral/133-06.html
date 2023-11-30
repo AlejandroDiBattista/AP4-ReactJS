@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
@@ -14,8 +13,10 @@
         11704906; Affatati, Jorge Omar
         28693607; Climente, Carlos Matías
     
-        funciona: 
-        diseño: 
+        funciona: si
+        diseño: si
+
+        - Hay mezcla de estilo al definir las funciones.
     -->
     <style>
 
@@ -67,142 +68,126 @@
     </style>
     <script type="text/babel">
 
-        const App = () => {
-          const [todos, setTodos] = React.useState(
-          [{
-            id: 1,
-            task: "Formatear Disco",
-            complete: false
-          }, {
-            id: 2,
-            task: "Particionar Disco",
-            complete: false
-          }, {
-            id: 3,
-            task: "Instalar Sistema Operativo",
-            complete: true
-          }]
+      const App = () => {
+        const [todos, setTodos] = React.useState([
+          { id: 1, task: "Formatear Disco", complete: false}, 
+          { id: 2, task: "Particionar Disco", complete: false }, 
+          { id: 3, task: "Instalar Sistema Operativo", complete: true }
+        ]);
+        
+        React.useEffect(()=>{
+          const data = window.localStorage.getItem('todoLista')
+          if (data != null) setTodos(JSON.parse(data)) 
+        }, [])
+        
+        React.useEffect(()=>{ 
+          const data = JSON.stringify(todos)
+          window.localStorage.setItem('todoLista', data)
+        }, [todos])
+
+        const onMarkComplete = (id) => {
+          setTodos(
+            todos.map((todo) => {
+              return todo.id === Number(id)
+                ? { ...todo, completed: !todo.completed }
+                : { ...todo };
+            })
           );
-          
-          React.useEffect(()=>{
-            const data = window.localStorage.getItem('todoLista')
-            if (data != null) setTodos(JSON.parse(data)) 
-          }, [])
-          
-          React.useEffect(()=>{ 
-            const data = JSON.stringify(todos)
-            window.localStorage.setItem('todoLista', data)
-          }, [todos])
+        };
 
-          const onMarkComplete = (id) => {
+        const addTodo = (newTodo) => {
+          console.log("newTodo", newTodo);
+          let newItem = { id: new Date().getTime(), task: newTodo, completed: false };
+          setTodos([...todos, newItem]);
+        };
 
-            setTodos(
-              todos.map((todo) => {
-                return todo.id === Number(id)
-                  ? { ...todo, completed: !todo.completed }
-                  : { ...todo };
-              })
-            );
-          };
+        const onDeleteItem = (id) => {
+          setTodos([...todos].filter((item) => item.id !== id));
+        };
 
-          const addTodo = (newTodo) => {
-            console.log("newTodo", newTodo);
-            let newItem = { id: new Date().getTime(), task: newTodo, completed: false };
+        return (
+          <div className="container">
+            <TodoForm addTodo={addTodo} />
+            <Todo
+              todos={todos}
+              onMarkComplete={onMarkComplete}
+              onDeleteItem={onDeleteItem}
+            />
+          </div>
+        );
+      };
 
-            setTodos([...todos, newItem]);
-          };
+      function TodoForm({ addTodo }) {
+        const [userInput, setUserInput] = React.useState("");
 
-          const onDeleteItem = (id) => {
-            setTodos([...todos].filter((item) => item.id !== id));
-          };
+        const handleChange = (e) => {
+          setUserInput(e.currentTarget.value);
+        };
 
-          return (
-            <div className="container">
-              <TodoForm addTodo={addTodo} />
-              <Todo
-                todos={todos}
+        const handleSubmit = (e) => {
+          e.preventDefault();
+          if (userInput.trim() !== "") {
+            addTodo(userInput);
+            setUserInput("");
+          }
+        };
+
+        return (
+          <div style={{ margin: 5 }}>
+            <form  onSubmit={handleSubmit}>
+              <input className = "input" type="text" placeholder="Ingresar Nueva Tarea" value={userInput} onChange={handleChange} />
+              <button className="boton">Guardar</button>
+            </form>
+          </div>
+        );
+      }
+
+      function Todo({ todos, onMarkComplete, onDeleteItem }) {
+        return (
+          <div className="items">
+            {todos.map((item, index) => (
+              <TodoItem
+                key={`todo-${index}`}
+                todo={item}
                 onMarkComplete={onMarkComplete}
                 onDeleteItem={onDeleteItem}
               />
-            </div>
-          );
+            ))}
+          </div>
+        );
+      }
+
+      const TodoItem = ({ todo, onMarkComplete, onDeleteItem }) => {
+        const getStyle = () => {
+          return {
+            textDecoration: todo.completed ? "line-through" : "none",
+            margin: "5px",
+            padding: "5px",
+            marginBottom: "-4px",
+          };
         };
 
+        return (
+          <div style={getStyle()} className="box">
+            <input
+              type="checkbox"
+              checked={todo.completed}
+              onChange={() => onMarkComplete(todo.id)}
+            />{" "}
+            {todo.task}
+            <button className="add-btn" onClick={() => onDeleteItem(todo.id)}>
+              X
+            </button>
+          </div>
+        );
+      };
 
-        function TodoForm({ addTodo }) {
-          const [userInput, setUserInput] = React.useState("");
-
-          const handleChange = (e) => {
-            setUserInput(e.currentTarget.value);
-          };
-
-          const handleSubmit = (e) => {
-            e.preventDefault();
-            if (userInput.trim() !== "") {
-              addTodo(userInput);
-              setUserInput("");
-            }
-          };
-
-          return (
-            <div style={{ margin: 5 }}>
-              <form  onSubmit={handleSubmit}>
-                <input className = "input" type="text" placeholder="Ingresar Nueva Tarea" value={userInput} onChange={handleChange} />
-                <button className="boton">Guardar</button>
-              </form>
-            </div>
-          );
-        }
-
-
-        function Todo({ todos, onMarkComplete, onDeleteItem }) {
-
-          return (
-            <div className="items">
-              {todos.map((item, index) => (
-                <TodoItem
-                  key={`todo-${index}`}
-                  todo={item}
-                  onMarkComplete={onMarkComplete}
-                  onDeleteItem={onDeleteItem}
-                />
-              ))}
-            </div>
-          );
-        }
-
-        const TodoItem = ({ todo, onMarkComplete, onDeleteItem }) => {
-          const getStyle = () => {
-            return {
-              textDecoration: todo.completed ? "line-through" : "none",
-              margin: "5px",
-              padding: "5px",
-              marginBottom: "-4px",
-            };
-          };
-
-          return (
-            <div style={getStyle()} className="box">
-              <input
-                type="checkbox"
-                checked={todo.completed}
-                onChange={() => onMarkComplete(todo.id)}
-              />{" "}
-              {todo.task}
-              <button className="add-btn" onClick={() => onDeleteItem(todo.id)}>
-                X
-              </button>
-            </div>
-          );
-        };
-
-        ReactDOM.render(<> <App />  </>, document.getElementById('root'))
+      ReactDOM.render(<> <App />  </>, document.getElementById('root'))
     </script>
-</head>
+  </head>
 
-<body>
-  <h2>LISTA DE TAREAS</h2>
+  <body>
+    <h2>LISTA DE TAREAS</h2>
     <div id="root"></div>
-</body>
-
+  </body>
 </html>

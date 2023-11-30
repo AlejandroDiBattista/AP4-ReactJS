@@ -1,344 +1,336 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- 
-      Curso 134 - Grupo 03.01 -> lspecte@gmail.com
-        14620696; Specterman, Luis Omar
-    
-        funciona: 
-        diseño: 
-    
-    -->
-    <title>UTN - TP-02 - Lista de Tareas</title>
-    <style>
+        <!-- 
+        Curso 134 - Grupo 03.01 -> lspecte@gmail.com
+            14620696; Specterman, Luis Omar
         
-        * { margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            funciona: si
+            diseño: si
+            nombre: si
 
-        main {
-            margin: 0 auto;
-            max-width: 500px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva,Verdana,sans-serif';
-            padding: 20px;
-            margin-top: 40px;
-
-            background-color: #e0d5d5;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-        }
-
-        .contadores {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .contador {
-            display: inline;
-            margin-right: 10px;
-        }
-
-
-        form {
-            width: 450px;
-            padding: 10px;
-            display: flex;
-            gap: 10px;
-            margin: 5px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-
-        form input {
-            width: 100%;
-            padding: 5px;
-            border: 1px solid #ccc;
-        }
-
-        form button {
-            width: 80px;
-            border: 1px solid;
-            color: black;
-            border-radius: 5px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            padding: 10px;
-        }
-
-        li {
-            padding: 10px;
-            margin: 5px;
-            border-radius: 5px;
-            border: 1px solid #888;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .botones {
-            display: flex;
-            gap: 10px;
-        }
-
-        li b {
-            font-size: 20px;
-            width: 30px;
-            text-align: right;
-        }
-
-        li button {
-            background-color: rgb(198, 85, 85);
-            border: 1px solid transparent;
-            color: white;
-            border-radius: 15px;
-            width: 30px;
-            height: 30px;
-            font-size: 20px;
-        }
-    
-    .boton_individual {
-            width: 280px;
-            border: 1px solid;
-            color: black;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            - No es necesario guardar en un estado los contadores de tareas totales, activas y completadas. Menos aun guardarlos en localStorage.
         
-        }
-
-</style>
-
-    <script type="text/babel">
-        const { useState, useEffect } = React
-
-        const generarId = () => Number(new Date()); // Timestamp
-
-        
-
-        
-        function App() {
+        -->
+        <title>UTN - TP-02 - Lista de Tareas</title>
+        <style>
             
-            const [tareas, setTareas] = useState([]);
-            const [contarTareasTotal, setContarTareasTotal] = useState(0);
-            const [contarTareasActivas, setContarTareasActivas] = useState(0);
-            const [contarTareasCompletadas, setContarTareasCompletadas] = useState(0);
+            * { margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-            const [showMessage, setShowMessage] = useState(false);
-            const [message, setMessage] = useState('');
+            main {
+                margin: 0 auto;
+                max-width: 500px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva,Verdana,sans-serif';
+                padding: 20px;
+                margin-top: 40px;
 
-            useEffect(() => {
-                // Cargamos los datos de localStorage al cargar la aplicación
-                const localStorageTareas                    = JSON.parse(localStorage.getItem('tareas'));
-                const localStorageContadorTareasTotal       = JSON.parse(localStorage.getItem('contarTareasTotal'));
-                const localStorageContadorTareasActivas     = JSON.parse(localStorage.getItem('contarTareasActivas'));
-                const localStorageContadorTareasCompletadas = JSON.parse(localStorage.getItem('contarTareasCompletadas'));
+                background-color: #e0d5d5;
+                border-radius: 10px;
+                border: 1px solid #ccc;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-                if (localStorageTareas && localStorageTareas.length > 0) {
-                    setTareas(localStorageTareas);
-                }
+            }
 
-                if (localStorageContadorTareasTotal !== null) {
-                    setContarTareasTotal(localStorageContadorTareasTotal);
-                }
+            .contadores {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
 
-                if (localStorageContadorTareasActivas !== null) {
-                    setContarTareasActivas(localStorageContadorTareasActivas);
-                }
-
-                if (localStorageContadorTareasCompletadas !== null) {
-                    setContarTareasCompletadas(localStorageContadorTareasCompletadas);
-                }
-            }, []);
-
-            useEffect(() => {
-                // Actualizamos los contadores cada vez que la lista de tareas cambia
-                const contadorActivas     = tareas.filter(tarea => !tarea.completada).length;
-                const contadorCompletadas = tareas.filter(tarea => tarea.completada).length;
-
-                setContarTareasTotal(tareas.length);
-                setContarTareasActivas(contadorActivas);
-                setContarTareasCompletadas(contadorCompletadas);
-
-                // Guardamos los datos en localStorage
-                localStorage.setItem('tareas', JSON.stringify(tareas));
-                localStorage.setItem('contarTareasTotal', JSON.stringify(tareas.length));
-                localStorage.setItem('contarTareasActivas', JSON.stringify(contadorActivas));
-                localStorage.setItem('contarTareasCompletadas', JSON.stringify(contadorCompletadas));
-            }, [tareas]);
+            .contador {
+                display: inline;
+                margin-right: 10px;
+            }
 
 
-            // Función para mostrar un mensaje 
-            function mostrarMensaje(text, duration) {
-                setMessage(text);
-                setShowMessage(true);
+            form {
+                width: 450px;
+                padding: 10px;
+                display: flex;
+                gap: 10px;
+                margin: 5px;
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
 
-                setTimeout(() => {
-                    setShowMessage(false);
-                }, duration);
-            };
+            form input {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid #ccc;
+            }
+
+            form button {
+                width: 80px;
+                border: 1px solid;
+                color: black;
+                border-radius: 5px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                padding: 10px;
+            }
+
+            li {
+                padding: 10px;
+                margin: 5px;
+                border-radius: 5px;
+                border: 1px solid #888;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .botones {
+                display: flex;
+                gap: 10px;
+            }
+
+            li b {
+                font-size: 20px;
+                width: 30px;
+                text-align: right;
+            }
+
+            li button {
+                background-color: rgb(198, 85, 85);
+                border: 1px solid transparent;
+                color: white;
+                border-radius: 15px;
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+            }
+        
+        .boton_individual {
+                width: 280px;
+                border: 1px solid;
+                color: black;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            
+            }
+
+    </style>
+
+        <script type="text/babel">
+            const { useState, useEffect } = React
+
+            const generarId = () => Number(new Date()); // Timestamp
+
+            function App() {
+                
+                const [tareas, setTareas] = useState([]);
+                const [contarTareasTotal, setContarTareasTotal] = useState(0);
+                const [contarTareasActivas, setContarTareasActivas] = useState(0);
+                const [contarTareasCompletadas, setContarTareasCompletadas] = useState(0);
+
+                const [showMessage, setShowMessage] = useState(false);
+                const [message, setMessage] = useState('');
+
+                useEffect(() => {
+                    // Cargamos los datos de localStorage al cargar la aplicación
+                    const localStorageTareas                    = JSON.parse(localStorage.getItem('tareas'));
+                    const localStorageContadorTareasTotal       = JSON.parse(localStorage.getItem('contarTareasTotal'));
+                    const localStorageContadorTareasActivas     = JSON.parse(localStorage.getItem('contarTareasActivas'));
+                    const localStorageContadorTareasCompletadas = JSON.parse(localStorage.getItem('contarTareasCompletadas'));
+
+                    if (localStorageTareas && localStorageTareas.length > 0) {
+                        setTareas(localStorageTareas);
+                    }
+
+                    if (localStorageContadorTareasTotal !== null) {
+                        setContarTareasTotal(localStorageContadorTareasTotal);
+                    }
+
+                    if (localStorageContadorTareasActivas !== null) {
+                        setContarTareasActivas(localStorageContadorTareasActivas);
+                    }
+
+                    if (localStorageContadorTareasCompletadas !== null) {
+                        setContarTareasCompletadas(localStorageContadorTareasCompletadas);
+                    }
+                }, []);
+
+                useEffect(() => {
+                    // Actualizamos los contadores cada vez que la lista de tareas cambia
+                    const contadorActivas     = tareas.filter(tarea => !tarea.completada).length;
+                    const contadorCompletadas = tareas.filter(tarea => tarea.completada).length;
+
+                    setContarTareasTotal(tareas.length);
+                    setContarTareasActivas(contadorActivas);
+                    setContarTareasCompletadas(contadorCompletadas);
+
+                    // Guardamos los datos en localStorage
+                    localStorage.setItem('tareas', JSON.stringify(tareas));
+                    localStorage.setItem('contarTareasTotal', JSON.stringify(tareas.length));
+                    localStorage.setItem('contarTareasActivas', JSON.stringify(contadorActivas));
+                    localStorage.setItem('contarTareasCompletadas', JSON.stringify(contadorCompletadas));
+                }, [tareas]);
 
 
-            function borrarTodasTareasCompletadas() {
-                const tareasFiltradas = tareas.filter(tarea => !tarea.completada);
-                setTareas(tareasFiltradas);
+                // Función para mostrar un mensaje 
+                function mostrarMensaje(text, duration) {
+                    setMessage(text);
+                    setShowMessage(true);
 
-                mostrarMensaje('Todas las tareas completadas se han eliminado.', 1200);
-            };
-
-
-            function marcarTareaCompletada(taskId) {
-                const tareasActualizadas = tareas.map(tarea =>
-                tarea.id === taskId ? { ...tarea, completada: !tarea.completada } : tarea
-                );
-                setTareas(tareasActualizadas);
-                mostrarMensaje('La tarea se completó correctamente.', 1200);
-            };
-
-            function borrarTarea(taskId){
-                const tareasFiltradas = tareas.filter(tarea => tarea.id !== taskId);
-                setTareas(tareasFiltradas);
-                mostrarMensaje('La tarea se elimino correctamente.', 1200);
-            };
-
-            function agregarTarea(nombreTarea) {
-                const nuevaTarea = {
-                    id: generarId(),
-                    nombre: nombreTarea,
-                    completada: false,
+                    setTimeout(() => {
+                        setShowMessage(false);
+                    }, duration);
                 };
-                setTareas([...tareas, nuevaTarea]);
-                mostrarMensaje('Nueva tarea agregada correctamente.', 1200);
-            };
 
-            return (
-                <>
-                    <main>
-                        <div className="contadores">
-                            <div className="contador">
-                                <strong>Tareas Totales: </strong>
-                                {contarTareasTotal}
+                function borrarTodasTareasCompletadas() {
+                    const tareasFiltradas = tareas.filter(tarea => !tarea.completada);
+                    setTareas(tareasFiltradas);
+
+                    mostrarMensaje('Todas las tareas completadas se han eliminado.', 1200);
+                };
+
+                function marcarTareaCompletada(taskId) {
+                    const tareasActualizadas = tareas.map(tarea =>
+                    tarea.id === taskId ? { ...tarea, completada: !tarea.completada } : tarea
+                    );
+                    setTareas(tareasActualizadas);
+                    mostrarMensaje('La tarea se completó correctamente.', 1200);
+                };
+
+                function borrarTarea(taskId){
+                    const tareasFiltradas = tareas.filter(tarea => tarea.id !== taskId);
+                    setTareas(tareasFiltradas);
+                    mostrarMensaje('La tarea se elimino correctamente.', 1200);
+                };
+
+                function agregarTarea(nombreTarea) {
+                    const nuevaTarea = {
+                        id: generarId(),
+                        nombre: nombreTarea,
+                        completada: false,
+                    };
+                    setTareas([...tareas, nuevaTarea]);
+                    mostrarMensaje('Nueva tarea agregada correctamente.', 1200);
+                };
+
+                return (
+                    <>
+                        <main>
+                            <div className="contadores">
+                                <div className="contador">
+                                    <strong>Tareas Totales: </strong>
+                                    {contarTareasTotal}
+                                </div>
+                                <div className="contador">
+                                    <strong>Tareas Activas: </strong>
+                                    {contarTareasActivas}
+                                </div>
+                                <div className="contador">
+                                    <strong>Tareas Completadas: </strong>
+                                    {contarTareasCompletadas}
+                                </div>
+
                             </div>
-                            <div className="contador">
-                                <strong>Tareas Activas: </strong>
-                                {contarTareasActivas}
-                            </div>
-                            <div className="contador">
-                                <strong>Tareas Completadas: </strong>
-                                {contarTareasCompletadas}
-                            </div>
 
-                        </div>
-
-                        <TaskForm agregarTarea={agregarTarea} />
-                        <TaskList
-                            tareas={tareas}
-                            marcarTareaCompletada={marcarTareaCompletada}
-                            borrarTarea={borrarTarea}
-                        />
-                        {showMessage && <p>{message}</p>}
-                        <button className='boton_individual' onClick={borrarTodasTareasCompletadas}><i className="material-icons">delete_sweep</i> Borrar tareas completadas</button>
-                    </main>
-                </>
-            );
-        };
-
-        
-
-
-        
-        function TaskForm({ agregarTarea }) {
-            const [nombreTarea, setNombreTarea] = useState('');
-
-            const handleSubmit = (e) => {
-                e.preventDefault();
-                if (nombreTarea.trim() !== '') {
-                    agregarTarea(nombreTarea);
-                    setNombreTarea('');
-                }
-            };
-
-            return (
-                <div>
-                    <form onSubmit={handleSubmit}>
-                        <input
-                            type="text"
-                            value={nombreTarea}
-                            onChange={(e) => setNombreTarea(e.target.value)}
-                            placeholder="Nueva tarea"
-                        />
-                        <button type="submit"><i className="material-icons">add</i></button>
-                    </form>
-                </div>
-            );
-        };
-
-        
-        function TaskItem({ tarea, marcarTareaCompletada, borrarTarea }) {
-            const { id, nombre, completada } = tarea;
-
-            const completar = () => {
-                marcarTareaCompletada(id);
-            };
-
-            const borrar = () => {
-                borrarTarea(id);
-            };
-
-            return (
-                <li style={{ textDecoration: completada ? 'line-through' : 'none' }}>
-                    {nombre}
-                    <div className='botones'>
-                        <button onClick={completar}><i className="material-icons">done</i></button>
-                        <button onClick={borrar}><i className="material-icons">delete</i></button>
-                    </div>
-                </li>
-            );
-        };
-
-        function TaskList({ tareas, marcarTareaCompletada, borrarTarea }) {
-            return (
-                <div>
-                    <h2>Lista de Tareas</h2>
-                    <ul>
-                        {tareas.map((tarea) => (
-                            <TaskItem
-                                key={tarea.id}
-                                tarea={tarea}
+                            <TaskForm agregarTarea={agregarTarea} />
+                            <TaskList
+                                tareas={tareas}
                                 marcarTareaCompletada={marcarTareaCompletada}
                                 borrarTarea={borrarTarea}
                             />
-                        ))}
-                    </ul>
-                </div>
-            );
-        };
+                            {showMessage && <p>{message}</p>}
+                            <button className='boton_individual' onClick={borrarTodasTareasCompletadas}><i className="material-icons">delete_sweep</i> Borrar tareas completadas</button>
+                        </main>
+                    </>
+                );
+            };
+            
+            function TaskForm({ agregarTarea }) {
+                const [nombreTarea, setNombreTarea] = useState('');
 
-        ReactDOM.render(<App />, document.getElementById('root'));
-    </script>
-</head>
+                const handleSubmit = (e) => {
+                    e.preventDefault();
+                    if (nombreTarea.trim() !== '') {
+                        agregarTarea(nombreTarea);
+                        setNombreTarea('');
+                    }
+                };
 
-<body>
-    <div id="root"></div>
-</body>
+                return (
+                    <div>
+                        <form onSubmit={handleSubmit}>
+                            <input
+                                type="text"
+                                value={nombreTarea}
+                                onChange={(e) => setNombreTarea(e.target.value)}
+                                placeholder="Nueva tarea"
+                            />
+                            <button type="submit"><i className="material-icons">add</i></button>
+                        </form>
+                    </div>
+                );
+            };
+            
+            function TaskItem({ tarea, marcarTareaCompletada, borrarTarea }) {
+                const { id, nombre, completada } = tarea;
 
+                const completar = () => {
+                    marcarTareaCompletada(id);
+                };
+
+                const borrar = () => {
+                    borrarTarea(id);
+                };
+
+                return (
+                    <li style={{ textDecoration: completada ? 'line-through' : 'none' }}>
+                        {nombre}
+                        <div className='botones'>
+                            <button onClick={completar}><i className="material-icons">done</i></button>
+                            <button onClick={borrar}><i className="material-icons">delete</i></button>
+                        </div>
+                    </li>
+                );
+            };
+
+            function TaskList({ tareas, marcarTareaCompletada, borrarTarea }) {
+                return (
+                    <div>
+                        <h2>Lista de Tareas</h2>
+                        <ul>
+                            {tareas.map((tarea) => (
+                                <TaskItem
+                                    key={tarea.id}
+                                    tarea={tarea}
+                                    marcarTareaCompletada={marcarTareaCompletada}
+                                    borrarTarea={borrarTarea}
+                                />
+                            ))}
+                        </ul>
+                    </div>
+                );
+            };
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
 </html>

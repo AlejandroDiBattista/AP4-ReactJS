@@ -1,471 +1,373 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <!-- 
+        Curso 134 - Grupo 04 -> adrmou@gmail.com
+            22639502; Adrian Mourad
+        
+            funciona: si
+            diseño: si
+            nombre: si
 
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+            - Es innecesario preservar en un estado el total de tareas completas y pendientes, ya que se puede calcular en el momento que se necesite.
+        -->
+        
+        <title>Todo - List</title>
 
-    <!-- 
-      Curso 134 - Grupo 04 -> adrmou@gmail.com
-    
-        22639502; Adrian Mourad
-    
-        funciona: 
-        diseño: 
-    -->
-    
-    <title>Todo - List</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
 
+            /*- App.css -*/
 
+            :root {
+                --rojo: #ba181b;
+                --azul: #00b4d8;
+                --azul-hover: #48cae4;
+                --rojo-hover: #e5383b;
+                --verde: #09a129;
+                --fondo: rgb(235, 240, 228);
 
-        }
+                max-width: 1280px;
+                margin: 0 auto;
+                padding: 2rem;
+                text-align: center;
+            }
 
-        /*- App.css -*/
+            .flex-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
 
-        :root {
-            --rojo: #ba181b;
-            --azul: #00b4d8;
-            --azul-hover: #48cae4;
-            --rojo-hover: #e5383b;
-            --verde: #09a129;
-            --fondo: rgb(235, 240, 228);
 
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 2rem;
-            text-align: center;
-        }
+            }
 
-        .flex-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
+            body {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                max-width: 1200px;
+                margin: 40px auto;
+                display: flex;
+                justify-content: center;
+                color: rgb(97, 95, 95);
+            }
 
 
-        }
+            .tarjeta {
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+                padding: 25px;
+                border-radius: 20px;
+                width: 700px;
+            }
 
-        body {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            max-width: 1200px;
-            margin: 40px auto;
-            display: flex;
-            justify-content: center;
-            color: rgb(97, 95, 95);
-        }
+            .contadores {
+                margin: 40px 0;
+                display: flex;
+                justify-content: space-around;
+            }
 
 
-        .tarjeta {
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-            padding: 25px;
-            border-radius: 20px;
-            width: 700px;
-        }
+            .agregar-todo h3 {
+                text-align: center;
+                margin-bottom: 40px;
+                font-size: 24px;
+            }
 
-        .contadores {
-            margin: 40px 0;
-            display: flex;
-            justify-content: space-around;
-        }
 
 
-        .agregar-todo h3 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 24px;
-        }
 
+            h1 {
+                text-align: center;
+                font-size: 2em;
 
+            }
 
+            h3 {
+                text-align: center;
+                font-size: 1em;
 
-        h1 {
-            text-align: center;
-            font-size: 2em;
+            }
 
-        }
 
-        h3 {
-            text-align: center;
-            font-size: 1em;
+            form {
+                display: flex;
+                gap: 20px;
+            }
 
-        }
 
+            .derechos {
 
-        form {
-            display: flex;
-            gap: 20px;
-        }
+                font-size: 0.5em;
+                text-align: center;
+            }
 
 
-        .derechos {
+            /*- TaskForm.css -*/
 
-            font-size: 0.5em;
-            text-align: center;
-        }
 
+            form {
+                display: flex;
+                gap: 20px;
 
-        /*- TaskForm.css -*/
+            }
 
 
-        form {
-            display: flex;
-            gap: 20px;
+            .input-add {
+                border: none;
+                outline: none;
+                padding: 10px 20px;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+                border-radius: 20px;
+                flex: 1;
+                font-family: inherit;
+                font-size: 17px;
+                color: #555;
 
-        }
+            }
 
+            .input-add:focus {
 
-        .input-add {
-            border: none;
-            outline: none;
-            padding: 10px 20px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-            border-radius: 20px;
-            flex: 1;
-            font-family: inherit;
-            font-size: 17px;
-            color: #555;
+                box-shadow: 6px 6px 10px #333;
 
-        }
+            }
 
-        .input-add:focus {
+            .btn-add {
+                border: none;
+                background-color: var(--verde);
+                color: #fefcfc;
+                padding: 5px 40px;
+                border-radius: 20px;
+                font-family: inherit;
+                cursor: pointer;
+                font-size: 17px;
+            }
 
-            box-shadow: 6px 6px 10px #333;
+            .btn-add:hover {
+                background-color: var(--azul-hover);
+            }
 
-        }
 
-        .btn-add {
-            border: none;
-            background-color: var(--verde);
-            color: #fefcfc;
-            padding: 5px 40px;
-            border-radius: 20px;
-            font-family: inherit;
-            cursor: pointer;
-            font-size: 17px;
-        }
+            /*- TaskList - */
 
-        .btn-add:hover {
-            background-color: var(--azul-hover);
-        }
 
+            .botones {
+                display: flex;
+                gap: 10px;
+            }
 
-        /*- TaskList - */
+            .main-task li input[type="checkbox"]:checked+label {
+                text-decoration: line-through;
+                text-align: left;
+                color: #D14D72;
+            
 
+            }
 
-        .botones {
-            display: flex;
-            gap: 10px;
-        }
+            input[type="checkbox"] {
+                transform: scale(1.5);
+            }
 
-        .main-task li input[type="checkbox"]:checked+label {
-            text-decoration: line-through;
-            text-align: left;
-            color: #D14D72;
-           
 
-        }
+            .main-task li:hover {
+                background-color: #fef2f2;
+            }
 
-        input[type="checkbox"] {
-            transform: scale(1.5);
-        }
+            .main-task li {
+                padding: 10px;
+                margin: 5px;
+                border-radius: 15px;
+                border: 1px solid #888;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+            }
 
+            .main-task li button {
+                background-color: rgb(198, 85, 85);
+                border: 1px solid transparent;
+                color: white;
+                border-radius: 15px;
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+            }
 
-        .main-task li:hover {
-            background-color: #fef2f2;
-        }
+            .main-task li button:hover {
+                background-color: rgb(111, 5, 5);
+            }
+        </style>
 
-        .main-task li {
-            padding: 10px;
-            margin: 5px;
-            border-radius: 15px;
-            border: 1px solid #888;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-        }
+        <script type="text/babel">
+            const { useState, useEffect } = React
+            const datosIniciales = []
 
-        .main-task li button {
-            background-color: rgb(198, 85, 85);
-            border: 1px solid transparent;
-            color: white;
-            border-radius: 15px;
-            width: 30px;
-            height: 30px;
-            font-size: 20px;
-        }
+            function App() {
+                const [tareas, setTareas] = useLocalStorage('tareas', datosIniciales)
+                const [tareasTodos, setTareaTodos] = useState(0)
+                const [tareasCompletas, setTareasCompletas] = useState(0)
+                const [tareasPendientes, setTareasPendientes] = useState(0)
 
-        .main-task li button:hover {
-            background-color: rgb(111, 5, 5);
-        }
-    </style>
-
-    <script type="text/babel">
-        const { useState, useEffect } = React
-
-        const datosIniciales = []
-
-        /* App.jsx */
-        function App() {
-
-            //const [tareas, setTareas] = useState([])
-
-            const [tareas, setTareas] = useLocalStorage('tareas', datosIniciales)
-            const [tareastodos, setTareaTodos] = useState(0)
-            const [tareasCompletas, setTareasCompletas] = useState(0)
-            const [tareasPendientes, setTareasPendientes] = useState(0)
-
-
-
-
-
-            // agrego nueva tarea
-            function agregarTarea(nombreTarea) {
-                const tarea = {
-                    id: Number(Date.now()),
-                    nombreTarea,
-                    completada: false,
-
+                // agrego nueva tarea
+                function agregarTarea(nombreTarea) {
+                    const tarea = {
+                        id: Number(Date.now()),
+                        nombreTarea,
+                        completada: false,
+                    }
+                    setTareas([...tareas, tarea])
                 }
-                setTareas([...tareas, tarea])
 
-
-
-            }
-
-            // borro tarea
-            function borrarTask(id) {
-
-                const newTareas = tareas.filter((tarea) => tarea.id != id)
-                setTareas(newTareas)
-
-            }
-
-
-            function cambiarEstadoTarea(id) {
-                // cambio el estado de la tarea a completada o no completada    
-                const newTarea = tareas.map(t => t.id == id ? { ...t, completada: !t.completada } : t)
-                setTareas(newTarea)
-
-
-            }
-
-
-
-            // contador de tareas
-            useEffect(() => {
-                // todas las tareas
-                setTareaTodos(tareas.length)
-                // solo pendientes
-                setTareasPendientes(tareas.filter(tareas => !tareas.completada).length)
-                // solo completadas
-                setTareasCompletas(tareas.filter(tareas => tareas.completada).length)
-            }, [tareas])
-
-
-
-
-
-
-            return (
-                <>
-                    <div className=".flex-container">
-                        <div className='tarjeta'>
-
-                            <h1>Lista de Tareas</h1>
-                            <div className='contadores'>
-                                <h3>
-                                    Nº tareas totales: <span>{tareastodos}</span>
-                                </h3>
-                                <h3>
-                                    Nº tareas completadas: <span>{tareasCompletas}</span>
-                                </h3>
-                                <h3>
-                                    Nº tareas pendientes: <span>{tareasPendientes}</span>
-                                </h3>
-
-                            </div>
-                            <div className='agregar-todo'>
-
-                                <TaskForm nuevaTarea={agregarTarea} />
-                                <TaskList tareas={tareas} cambiarEstadoTarea={cambiarEstadoTarea} borrarTarea={borrarTask} />
-                            </div>
-
-
-
-                        </div>
-                        <br></br>
-                        <br></br>
-                        <div>
-                            <p className="derechos"> &#169; 2023 Adrián Mourad - Comisión 134 - Trabajo integrador final - Argentina Programa 4.0.</p>
-                        </div>
-                    </div >
-
-                </>
-            )
-
-
-        }
-
-
-        function useLocalStorage(key, initialValue = []) {
-
-            const [value, setValue] = useState(() => {
-
-                const initial = localStorage.getItem(key)
-                return initial ? JSON.parse(initial) : initialValue
-
-            })
-
-            useEffect(() => {
-                localStorage.setItem(key, JSON.stringify(value))
-            }, [key, value])
-            return [value, setValue]
-        }
-
-        /* TaskForm.jsx   */
-
-        function TaskForm({ nuevaTarea }) {
-            const [tarea, setTarea] = useState('')
-
-            function actualizarNombreTarea(event) {
-                setTarea(event.target.value)
-            }
-
-            // agrego nueva tarea
-            function agregarTarea(event) {
-                event.preventDefault()
-                if (tarea.trim() === '') {
-                    alert("No puede ingresar una tarea en blanco.")
-                    return
+                // borro tarea
+                function borrarTask(id) {
+                    const newTareas = tareas.filter((tarea) => tarea.id != id)
+                    setTareas(newTareas)
                 }
-                nuevaTarea(tarea)
-                setTarea('')
 
+                function cambiarEstadoTarea(id) {
+                    // cambio el estado de la tarea a completada o no completada    
+                    const newTarea = tareas.map(t => t.id == id ? { ...t, completada: !t.completada } : t)
+                    setTareas(newTarea)
+                }
 
+                // contador de tareas
+                useEffect(() => {
+                    // todas las tareas
+                    setTareaTodos(tareas.length)
+                    // solo pendientes
+                    setTareasPendientes(tareas.filter(tareas => !tareas.completada).length)
+                    // solo completadas
+                    setTareasCompletas(tareas.filter(tareas => tareas.completada).length)
+                }, [tareas])
+
+                return (
+                    <>
+                        <div className=".flex-container">
+                            <div className='tarjeta'>
+
+                                <h1>Lista de Tareas</h1>
+                                <div className='contadores'>
+                                    <h3>Nº tareas totales: <span>{tareasTodos}</span></h3>
+                                    <h3>Nº tareas completadas: <span>{tareasCompletas}</span></h3>
+                                    <h3>Nº tareas pendientes: <span>{tareasPendientes}</span></h3>
+                                </div>
+                                <div className='agregar-todo'>
+                                    <TaskForm nuevaTarea={agregarTarea} />
+                                    <TaskList tareas={tareas} cambiarEstadoTarea={cambiarEstadoTarea} borrarTarea={borrarTask} />
+                                </div>
+                            </div>
+                            <br></br>
+                            <br></br>
+                            <div>
+                                <p className="derechos"> &#169; 2023 Adrián Mourad - Comisión 134 - Trabajo integrador final - Argentina Programa 4.0.</p>
+                            </div>
+                        </div >
+                    </>
+                )
             }
 
-            return (
-                <>
-                    <form>
+            function useLocalStorage(key, initialValue = []) {
+                const [value, setValue] = useState(() => {
+                    const initial = localStorage.getItem(key)
+                    return initial ? JSON.parse(initial) : initialValue
+                })
 
-                        <input
-                            type="search"
-                            className="input-add"
-                            value={tarea}
-                            onChange={actualizarNombreTarea}
-                            placeholder="Agregar item"
-                        />
-                        <button className="btn-add" onClick={agregarTarea}>+</button>
-
-                    </form>
-
-                </>
-
-
-            );
-        }
-
-
-
-        /* TaskList.jsx   */
-
-
-
-        function TaskList({ tareas, cambiarEstadoTarea, borrarTarea }) {
-            return (
-                <>
-
-                    <ul className="main-task">
-                        {tareas.map((tarea) => <TaskItem
-                            key={tarea.id}
-                            tarea={tarea}
-                            borrarTarea={borrarTarea}
-                            cambiarEstadoTarea={cambiarEstadoTarea}
-
-                        />
-
-
-                        )
-                        }
-
-
-
-
-                    </ul>
-                </>
-
-            );
-        }
-
-        function TaskItem({ tarea, cambiarEstadoTarea, borrarTarea }) {
-
-            const { id, nombreTarea, completada } = tarea
-
-
-
-            function borrar() {
-                borrarTarea(id)
-
+                useEffect(() => {
+                    localStorage.setItem(key, JSON.stringify(value))
+                }, [key, value])
+                return [value, setValue]
             }
 
+            function TaskForm({ nuevaTarea }) {
+                const [tarea, setTarea] = useState('')
 
-            function cambioTarea() {
+                function actualizarNombreTarea(event) {
+                    setTarea(event.target.value)
+                }
 
-                cambiarEstadoTarea(id)
+                function agregarTarea(event) {
+                    event.preventDefault()
+                    if (tarea.trim() === '') {
+                        alert("No puede ingresar una tarea en blanco.")
+                        return
+                    }
+                    nuevaTarea(tarea)
+                    setTarea('')
+                }
 
+                return (
+                    <>
+                        <form>
+                            <input
+                                type="search"
+                                className="input-add"
+                                value={tarea}
+                                onChange={actualizarNombreTarea}
+                                placeholder="Agregar item"
+                            />
+                            <button className="btn-add" onClick={agregarTarea}>+</button>
+                        </form>
+                    </>
+                );
             }
 
+            function TaskList({ tareas, cambiarEstadoTarea, borrarTarea }) {
+                return (
+                    <>
+                        <ul className="main-task">
+                            { tareas.map((tarea) => <TaskItem
+                                key={tarea.id}
+                                tarea={tarea}
+                                borrarTarea={borrarTarea}
+                                cambiarEstadoTarea={cambiarEstadoTarea}/>)
+                            }
+                        </ul>
+                    </>
+                );
+            }
 
+            function TaskItem({ tarea, cambiarEstadoTarea, borrarTarea }) {
+                const { id, nombreTarea, completada } = tarea
 
+                function borrar() {
+                    borrarTarea(id)
+                }
 
-            return (
+                function cambioTarea() {
+                    cambiarEstadoTarea(id)
+                }
 
-                <li key={tarea.id}>
+                return (
+                    <li key={tarea.id}>
+                        <input type="checkbox" checked={tarea.completada} onChange={() => cambioTarea()} />
+                        <label>
+                            {nombreTarea}
+                        </label>
+                        <div className='botones'>
+                            <button className="btn-delete" onClick={borrar}>⨯</button>
+                        </div>
+                    </li>
+                );
+            }
 
-                    <input type="checkbox" checked={tarea.completada} onChange={() => cambioTarea()} />
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
 
-                    <label>
-
-                        {nombreTarea}
-                    </label>
-
-
-                    <div className='botones'>
-
-                        <button className="btn-delete" onClick={borrar}>⨯</button>
-                    </div>
-
-                </li>
-
-
-            );
-
-        }
-
-
-
-
-
-        ReactDOM.render(<App />, document.getElementById('root'));
-    </script>
-</head>
-
-<body>
-    <div id="root"></div>
-</body>
-
+    <body>
+        <div id="root"></div>
+    </body>
 </html>

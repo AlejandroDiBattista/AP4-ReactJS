@@ -1,430 +1,433 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas App</title>
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <!-- 
       Curso 133 - Grupo 07 -> alejandro.medina.ar@gmail.com
         27238487; Medina, Oscar Alejandro
         28492517; Quipildor, Matias
         28706770; Rios, Natalia Soledad
         27721196; Quiroga, Rafael Antonio
-    
-        funciona: 
-        diseño: 
-    
+        
+        funciona: si
+        diseño: si
+        nombre: no
+
+        - Implementa la edicion inline de las tareas
     -->
-</head>
+
+    <title>Lista de Tareas App</title>
     <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0px;
-      padding: 0px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #303048;
-     
-    }
-    
-    .listaDeTareas-app {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border-radius: 8px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      margin-top: 10%;
-      padding-top: 2%;
-      padding: 2% 4%;
-      width: 90%;
-      height: 80%;
-      max-width: 90%;
-      max-height: 90%;
-      background-color: #505080;
-      border-bottom: 2px solid #000000;
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #303048;
       
-    }
-    
-    .titulo {
-      font-size: 34px;
-      font-weight: bold;
-      padding-top: 0px;
-      margin-top: 8px;
-      margin-bottom: 10px;
-      text-align: center;
-      color: #fff
-    }
-
-    .lista-tareas {
-      background-color: #cbdef5;
-      list-style: none;
-      padding: 0;
-      padding-left: 4px;
-      font-size: 20px;
-      font-weight: bold;
-      color: rgb(36, 36, 160);
-      width: 95%;
-      height: 55vh;
-      border-radius: 15px;
-      overflow-y: auto; 
-
-    }
-
-    .listaTarea-conteiner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: -30px;
-      padding-top: 0px;
-    }
-
-    .item-tarea {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px;
-      border-bottom: 2px solid #000000;
-    }
-
-    .item-tarea:last-child {
-      border-bottom: none;
-    }
-    
-    .item-tarea.completada {
-      font-size: 20px;
-      font-weight: bold;
-      color: #008000;
-    }
-
-    .botones-item button {
-      font-size: 16px;
-      font-weight: bold;
-      color: #fff;
-      padding: 0px;
-    }
-
-    .boton-eliminar {
-      width: 35px;
-      height: 35px;
-      background-color: red;
-      border-radius: 50%;
-      margin-right: 5px;
-    }
-
-    .boton-eliminar:hover {
-      background-color: #8c0815;
-      cursor: pointer;
-    }
-
-    .boton-editar {
-      width: 65px;
-      height: 35px;
-      background-color: blue;
-      border-radius: 8px;
-      margin-right: 10px;
-
-    }
-
-    .boton-editar:hover {
-      background-color: #0e5197;
-      cursor: pointer;
-    }
-
-    .boton-guardar {
-      width: 90px;
-      height: 35px;
-      background-color: rgb(8, 164, 8);
-      border-radius: 8px;
-      margin-right: 10px;
-
-    }
-
-    .boton-guardar:hover {
-      background-color: rgb(1, 78, 1);
-      cursor: pointer;
-    }
-
-    .checkmark {
-      font-size: 20px;
-      text-decoration: none;
-      color: #008000;
-      margin-right: 10px;
-    }
-
-    .checkmark {
-      display: none; 
-    }
-  
-    .item-tarea.completada .checkmark {
-      display: inline; 
-    }
-
-    .formulario-tarea {
-      display: flex;
-      margin-bottom: 16px;
-    }
-
-    .formulario-tarea input[type="text"] {
-      flex: 1;
-      padding: 8px;
-      font-size: 18px;
-      border-radius: 6px;
-      border: 2px solid blue;
-      margin-right: 10px;
-    }
-
-    .formulario-tarea button {
-      padding: 8px 12px;
-      font-size: 18px;
-      background-color: blue;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .formulario-tarea button:hover {
-      background-color: #054891;
-      cursor: pointer;
-    }
-
-    .formEditar {
-      flex: 1;
-      padding: 8px;
-      font-size: 18px;
-      border-radius: 6px;
-      border: 2px solid #e50f0f;
-      margin-right: 10px;
-    }
-
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 4px solid #fe0000;
-      padding-top: 1px;
-      margin-top: 1px;
-    }
-
-    .footer button {
-      background-color: red;
-      color: #fff;
-      border: none;
-      padding: 10px 5px;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .footer button:hover {
-      background-color: #8c0815;
-      cursor: pointer;
-    }
-    
-    .contador-tareas {
-      color: #fff;
-      font-size: 20px;
-      font-weight: bold;
-      padding-left: 10px;
+      }
       
-    }
+      .listaDeTareas-app {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 10%;
+        padding-top: 2%;
+        padding: 2% 4%;
+        width: 90%;
+        height: 80%;
+        max-width: 90%;
+        max-height: 90%;
+        background-color: #505080;
+        border-bottom: 2px solid #000000;
+        
+      }
+      
+      .titulo {
+        font-size: 34px;
+        font-weight: bold;
+        padding-top: 0px;
+        margin-top: 8px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #fff
+      }
 
-    .devs-conteinter {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      padding: 2px;
-      padding-left: 10px;
-      padding-top: 10px;
-      width: 680px;
-     
-    }
+      .lista-tareas {
+        background-color: #cbdef5;
+        list-style: none;
+        padding: 0;
+        padding-left: 4px;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(36, 36, 160);
+        width: 95%;
+        height: 55vh;
+        border-radius: 15px;
+        overflow-y: auto; 
 
-    .devs-conteinter p {
-      padding:0px;
-      margin: 2px;
-      text-align: center;
-      color: #fff; 
-      font-size: 14px;
-    }
+      }
 
-  </style>
-</head>
-<body>
-  <div id="root"></div>
+      .listaTarea-conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -30px;
+        padding-top: 0px;
+      }
 
-  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      .item-tarea {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 2px solid #000000;
+      }
 
-  <script type="text/babel">
-    const obtenerTareasGuardadas = () => {
-      const tareasGuardadas = localStorage.getItem('tareas');
-      return tareasGuardadas ? JSON.parse(tareasGuardadas) : [];
-    };
+      .item-tarea:last-child {
+        border-bottom: none;
+      }
+      
+      .item-tarea.completada {
+        font-size: 20px;
+        font-weight: bold;
+        color: #008000;
+      }
 
-    const ItemTarea = ({ tarea, alternarTarea, borrarTarea, editarTarea }) => {
-      const [editando, setEditando] = React.useState(false);
-      const [textoEditado, setTextoEditado] = React.useState(tarea.texto);
+      .botones-item button {
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        padding: 0px;
+      }
 
-      const manejarEditar = () => {
-        setEditando(!editando);
+      .boton-eliminar {
+        width: 35px;
+        height: 35px;
+        background-color: red;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+
+      .boton-eliminar:hover {
+        background-color: #8c0815;
+        cursor: pointer;
+      }
+
+      .boton-editar {
+        width: 65px;
+        height: 35px;
+        background-color: blue;
+        border-radius: 8px;
+        margin-right: 10px;
+
+      }
+
+      .boton-editar:hover {
+        background-color: #0e5197;
+        cursor: pointer;
+      }
+
+      .boton-guardar {
+        width: 90px;
+        height: 35px;
+        background-color: rgb(8, 164, 8);
+        border-radius: 8px;
+        margin-right: 10px;
+
+      }
+
+      .boton-guardar:hover {
+        background-color: rgb(1, 78, 1);
+        cursor: pointer;
+      }
+
+      .checkmark {
+        font-size: 20px;
+        text-decoration: none;
+        color: #008000;
+        margin-right: 10px;
+      }
+
+      .checkmark {
+        display: none; 
+      }
+    
+      .item-tarea.completada .checkmark {
+        display: inline; 
+      }
+
+      .formulario-tarea {
+        display: flex;
+        margin-bottom: 16px;
+      }
+
+      .formulario-tarea input[type="text"] {
+        flex: 1;
+        padding: 8px;
+        font-size: 18px;
+        border-radius: 6px;
+        border: 2px solid blue;
+        margin-right: 10px;
+      }
+
+      .formulario-tarea button {
+        padding: 8px 12px;
+        font-size: 18px;
+        background-color: blue;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .formulario-tarea button:hover {
+        background-color: #054891;
+        cursor: pointer;
+      }
+
+      .formEditar {
+        flex: 1;
+        padding: 8px;
+        font-size: 18px;
+        border-radius: 6px;
+        border: 2px solid #e50f0f;
+        margin-right: 10px;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 4px solid #fe0000;
+        padding-top: 1px;
+        margin-top: 1px;
+      }
+
+      .footer button {
+        background-color: red;
+        color: #fff;
+        border: none;
+        padding: 10px 5px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .footer button:hover {
+        background-color: #8c0815;
+        cursor: pointer;
+      }
+      
+      .contador-tareas {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 10px;
+        
+      }
+
+      .devs-conteinter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 2px;
+        padding-left: 10px;
+        padding-top: 10px;
+        width: 680px;
+      
+      }
+
+      .devs-conteinter p {
+        padding:0px;
+        margin: 2px;
+        text-align: center;
+        color: #fff; 
+        font-size: 14px;
+      }
+
+    </style>
+    <script type="text/babel">
+      const obtenerTareasGuardadas = () => {
+        const tareasGuardadas = localStorage.getItem('tareas');
+        return tareasGuardadas ? JSON.parse(tareasGuardadas) : [];
       };
 
-      const manejarGuardar = () => {
-        editarTarea(tarea.id, textoEditado);
-        setEditando(false);
-      };
+      const ItemTarea = ({ tarea, alternarTarea, borrarTarea, editarTarea }) => {
+        const [editando, setEditando] = React.useState(false);
+        const [textoEditado, setTextoEditado] = React.useState(tarea.texto);
 
-      return (
-        <li className={`item-tarea ${tarea.completada ? 'completada' : ''}`}>
-          <span className="checkmark">&#10003;</span> {/* tilde de tarea completada */}
-          {editando ? (
-            <>
-              <input className="formEditar"
-                type="text"
-                value={textoEditado}
-                onChange={(e) => setTextoEditado(e.target.value)}
-              />
+        const manejarEditar = () => {
+          setEditando(!editando);
+        };
+
+        const manejarGuardar = () => {
+          editarTarea(tarea.id, textoEditado);
+          setEditando(false);
+        };
+
+        return (
+          <li className={`item-tarea ${tarea.completada ? 'completada' : ''}`}>
+            <span className="checkmark">&#10003;</span> {/* tilde de tarea completada */}
+            {editando ? (
+              <>
+                <input className="formEditar"
+                  type="text"
+                  value={textoEditado}
+                  onChange={(e) => setTextoEditado(e.target.value)}
+                />
+                <div className="botones-item">
+                <button className="boton-guardar" onClick={manejarGuardar}>Guardar</button>
+                </div>
+              </>
+            ) : (
+              <>
+              <span onClick={() => alternarTarea(tarea.id)}>{tarea.texto}</span>
               <div className="botones-item">
-              <button className="boton-guardar" onClick={manejarGuardar}>Guardar</button>
+                <button className="boton-editar"   onClick={manejarEditar}>Editar</button>
+                <button className="boton-eliminar" onClick={() => borrarTarea(tarea.id)}> X </button>
               </div>
-            </>
-          ) : (
-            <>
-            <span onClick={() => alternarTarea(tarea.id)}>{tarea.texto}</span>
-            <div className="botones-item">
-              <button className="boton-editar" onClick={manejarEditar}>Editar</button>
-              <button className="boton-eliminar" onClick={() => borrarTarea(tarea.id)}> X </button>
-            </div>
-            </>
-          )}
-        </li>
-      );
-    };
+              </>
+            )}
+          </li>
+        );
+      };
 
-    const ListaTareas = ({ tareas, alternarTarea, borrarTarea, editarTarea }) => {
-      return (
-        <ul className="lista-tareas">
-          {tareas.map(tarea => (
-            <ItemTarea
-              key={tarea.id}
-              tarea={tarea}
+      const ListaTareas = ({ tareas, alternarTarea, borrarTarea, editarTarea }) => {
+        return (
+          <ul className="lista-tareas">
+            {tareas.map(tarea => (
+              <ItemTarea
+                key={tarea.id}
+                tarea={tarea}
+                alternarTarea={alternarTarea}
+                borrarTarea={borrarTarea}
+                editarTarea={editarTarea}
+              />
+            ))}
+          </ul>
+        );
+      };
+
+      const FormularioTarea = ({ agregarTarea }) => {
+        const [nuevaTarea, setNuevaTarea] = React.useState('');
+
+        const manejarEnvio = (e) => {
+          e.preventDefault();
+          if (nuevaTarea.trim() !== '') {
+            agregarTarea(nuevaTarea);
+            setNuevaTarea('');
+          }
+        };
+
+        return (
+          <form className="formulario-tarea" onSubmit={manejarEnvio}>
+            <input
+              type="text"
+              value={nuevaTarea}
+              onChange={(e) => setNuevaTarea(e.target.value)}
+              placeholder="Agregar tarea"
+            />
+            <button type="submit">Agregar</button>
+          </form>
+        );
+      };
+
+      const App = () => {
+        const [tareas, setTareas] = React.useState(obtenerTareasGuardadas());
+
+        const agregarTarea = (texto) => {
+          const nuevaTarea = {
+            id: Date.now(),
+            texto,
+            completada: false
+          };
+          const nuevasTareas = [...tareas, nuevaTarea];
+          setTareas(nuevasTareas);
+          guardarTareas(nuevasTareas);
+        };
+
+        const borrarTarea = (idTarea) => {
+          const tareasActualizadas = tareas.filter(tarea => tarea.id !== idTarea);
+          setTareas(tareasActualizadas);
+          guardarTareas(tareasActualizadas);
+        };
+
+        const alternarTarea = (idTarea) => {
+          const tareasActualizadas = tareas.map(tarea =>
+            tarea.id === idTarea ? { ...tarea, completada: !tarea.completada } : tarea
+          );
+          setTareas(tareasActualizadas);
+          guardarTareas(tareasActualizadas);
+        };
+
+        const editarTarea = (idTarea, textoEditado) => {
+          const tareasActualizadas = tareas.map(tarea =>
+            tarea.id === idTarea ? { ...tarea, texto: textoEditado } : tarea
+          );
+          setTareas(tareasActualizadas);
+          guardarTareas(tareasActualizadas);
+        };
+
+        const borrarTodasLasTareas = () => {
+          localStorage.removeItem('tareas');
+          setTareas([]);
+        };
+
+        const guardarTareas = (tareas) => {
+          localStorage.setItem('tareas', JSON.stringify(tareas));
+        };
+
+        return (
+          <>
+          <div className="listaDeTareas-app">
+            <h1 className="titulo" >LISTA DE TAREAS</h1>
+            <FormularioTarea agregarTarea={agregarTarea} />
+            <div className="listaTarea-conteiner">
+            <ListaTareas
+              tareas={tareas}
               alternarTarea={alternarTarea}
               borrarTarea={borrarTarea}
               editarTarea={editarTarea}
             />
-          ))}
-        </ul>
-      );
-    };
-
-    const FormularioTarea = ({ agregarTarea }) => {
-      const [nuevaTarea, setNuevaTarea] = React.useState('');
-
-      const manejarEnvio = (e) => {
-        e.preventDefault();
-        if (nuevaTarea.trim() !== '') {
-          agregarTarea(nuevaTarea);
-          setNuevaTarea('');
-        }
-      };
-
-      return (
-        <form className="formulario-tarea" onSubmit={manejarEnvio}>
-          <input
-            type="text"
-            value={nuevaTarea}
-            onChange={(e) => setNuevaTarea(e.target.value)}
-            placeholder="Agregar tarea"
-          />
-          <button type="submit">Agregar</button>
-        </form>
-      );
-    };
-
-    const App = () => {
-      const [tareas, setTareas] = React.useState(obtenerTareasGuardadas());
-
-      const agregarTarea = (texto) => {
-        const nuevaTarea = {
-          id: Date.now(),
-          texto,
-          completada: false
-        };
-        const nuevasTareas = [...tareas, nuevaTarea];
-        setTareas(nuevasTareas);
-        guardarTareas(nuevasTareas);
-      };
-
-      const borrarTarea = (idTarea) => {
-        const tareasActualizadas = tareas.filter(tarea => tarea.id !== idTarea);
-        setTareas(tareasActualizadas);
-        guardarTareas(tareasActualizadas);
-      };
-
-      const alternarTarea = (idTarea) => {
-        const tareasActualizadas = tareas.map(tarea =>
-          tarea.id === idTarea ? { ...tarea, completada: !tarea.completada } : tarea
+            </div>
+            <div className="footer">
+              <p className="contador-tareas" >Total de tareas:     {tareas.length}</p>
+              <button onClick={borrarTodasLasTareas}>Borrar todas las tareas</button>
+            </div>        
+            </div>
+            <div className="devs-conteinter">
+              <p className="devs-persona"> Desarrollado por: Grupo Nº: 7, Comisión Nº: 133 | Desarrollador Web Con React JS - UTN </p>
+              <p className="devs-persona"> Integrantes: Medina Oscar Alejandro, Rios Natalia Soledad, Quipildor Matias, Quiroga Rafael Antonio </p>
+              <p className="devs-persona"> 25/11/2023 </p>
+            </div>
+          </>
         );
-        setTareas(tareasActualizadas);
-        guardarTareas(tareasActualizadas);
       };
 
-      const editarTarea = (idTarea, textoEditado) => {
-        const tareasActualizadas = tareas.map(tarea =>
-          tarea.id === idTarea ? { ...tarea, texto: textoEditado } : tarea
-        );
-        setTareas(tareasActualizadas);
-        guardarTareas(tareasActualizadas);
-      };
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </head>
 
-      const borrarTodasLasTareas = () => {
-        localStorage.removeItem('tareas');
-        setTareas([]);
-      };
-
-      const guardarTareas = (tareas) => {
-        localStorage.setItem('tareas', JSON.stringify(tareas));
-      };
-
-      return (
-        <>
-        <div className="listaDeTareas-app">
-          <h1 className="titulo" >LISTA DE TAREAS</h1>
-          <FormularioTarea agregarTarea={agregarTarea} />
-          <div className="listaTarea-conteiner">
-          <ListaTareas
-            tareas={tareas}
-            alternarTarea={alternarTarea}
-            borrarTarea={borrarTarea}
-            editarTarea={editarTarea}
-          />
-          </div>
-          <div className="footer">
-            <p className="contador-tareas" >Total de tareas:     {tareas.length}</p>
-            <button onClick={borrarTodasLasTareas}>Borrar todas las tareas</button>
-          </div>        
-          </div>
-          <div className="devs-conteinter">
-            <p className="devs-persona"> Desarrollado por: Grupo Nº: 7, Comisión Nº: 133 | Desarrollador Web Con React JS - UTN </p>
-            <p className="devs-persona"> Integrantes: Medina Oscar Alejandro, Rios Natalia Soledad, Quipildor Matias, Quiroga Rafael Antonio </p>
-            <p className="devs-persona"> 25/11/2023 </p>
-          </div>
-        </>
-      );
-    };
-
-    ReactDOM.render(<App />, document.getElementById('root'));
-  </script>
-</body>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

@@ -1,259 +1,263 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
-        <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
-        
-        <!-- 
-          Curso 134 - Grupo 05 -> oscarmaciel.dg@gmail.com
-            24836529; Alonzo, Sandra Del Valle
-            23805016; Juan Carlos, Galan
-            22092359; Ratti, Analia
-            24600911; Oscar Alberto, Maciel
-        
-            funciona: 
-            diseño: 
-        -->
-        <title>Lista de Tareas</title>
-        
-        <style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+      
+      <!-- 
+        Curso 134 - Grupo 05 -> oscarmaciel.dg@gmail.com
+          24836529; Alonzo, Sandra Del Valle
+          23805016; Juan Carlos, Galan
+          22092359; Ratti, Analia
+          24600911; Oscar Alberto, Maciel
+      
+          funciona: si
+          diseño: si
+          nombre: si
 
-            body{
-                background-color: rgb(38, 3, 59);
-                color: #ddd;
-                margin: 0;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-                sans-serif;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-            }
+          - Realiza la persistencia de datos en el localStorage
+          - Usa animacion al marcar las tareas
+      -->
+      
+      <title>Lista de Tareas</title>
+      
+      <style>
+          body{
+              background-color: rgb(38, 3, 59);
+              color: #ddd;
+              margin: 0;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+              'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+              sans-serif;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+          }
 
-            *{
-                box-sizing: border-box;
-            }
-            main{
-                max-width: 300px;
-                margin: 20px auto;
-            }
-            form{
-                background: #ddd;
-                border: 3px solid #30313D;
-                border-radius: 10px;
-                padding: 5px;
-                display:flex;
-            }
-            form input[type="text"] {
-                background: none;
-                color:#000000;
-                border:none;
-                padding: 2px 8px;
-                display:block;
-                width: 100%;
-            }
-            form button{
-                background-color: #61DAFB;
-                border:0;
-                border-radius: 6px;
-                cursor:pointer;
-            }
-            div.task{
-                background-color: #30313D;
-                border-radius: 10px;
-                padding: 5px 9px;
-                margin-top: 5px;
-                display:flex;
-                align-items: center;
-                transition: opacity .3s linear;
-            }
-            div.task svg{
-                height: 20px;
-                margin-right: 6px;
-                fill: #61DAFB;
-            }
-            div.task.done{
-                opacity: 0.3;
-            }
-            div.task-name, div.task form{
-                flex-grow:1;
-            }
-            div.task span{
-                position:relative;
-            }
-            div.task span:before{
-                content:'';
-                display:block;
-                width:0;
-                height:1px;
-                background-color: #ddd;
-                position:absolute;
-                top: 10px;
-                transition: width .1s linear;
-            }
-            div.task.done span:before{
-                width: 100%;
-            }
-            h1, h2{
-                text-align: center;
-            }
-            h1 {
-              color: aquamarine;
-            }
+          *{
+              box-sizing: border-box;
+          }
+          main{
+              max-width: 300px;
+              margin: 20px auto;
+          }
+          form{
+              background: #ddd;
+              border: 3px solid #30313D;
+              border-radius: 10px;
+              padding: 5px;
+              display:flex;
+          }
+          form input[type="text"] {
+              background: none;
+              color:#000000;
+              border:none;
+              padding: 2px 8px;
+              display:block;
+              width: 100%;
+          }
+          form button{
+              background-color: #61DAFB;
+              border:0;
+              border-radius: 6px;
+              cursor:pointer;
+          }
+          div.task{
+              background-color: #30313D;
+              border-radius: 10px;
+              padding: 5px 9px;
+              margin-top: 5px;
+              display:flex;
+              align-items: center;
+              transition: opacity .3s linear;
+          }
+          div.task svg{
+              height: 20px;
+              margin-right: 6px;
+              fill: #61DAFB;
+          }
+          div.task.done{
+              opacity: 0.3;
+          }
+          div.task-name, div.task form{
+              flex-grow:1;
+          }
+          div.task span{
+              position:relative;
+          }
+          div.task span:before{
+              content:'';
+              display:block;
+              width:0;
+              height:1px;
+              background-color: #ddd;
+              position:absolute;
+              top: 10px;
+              transition: width .1s linear;
+          }
+          div.task.done span:before{
+              width: 100%;
+          }
+          h1, h2{
+              text-align: center;
+          }
+          h1 {
+            color: aquamarine;
+          }
 
-            div.checkbox{
-                display:flex;
-                align-items: center;
-            }
+          div.checkbox{
+              display:flex;
+              align-items: center;
+          }
 
-            button.trash{
-                background:none;
-                border:none;
-                display:flex;
-                cursor:pointer;
-            }
-            button.trash svg{
-                fill: #888;
-                height: 14px;
-            }
-            div.task input{
-                border: 2px solid #555;
-                border-radius:5px;
-                padding: 2px 4px;
-            }
+          button.trash{
+              background:none;
+              border:none;
+              display:flex;
+              cursor:pointer;
+          }
+          button.trash svg{
+              fill: #888;
+              height: 14px;
+          }
+          div.task input{
+              border: 2px solid #555;
+              border-radius:5px;
+              padding: 2px 4px;
+          }
 
-            code {
-              font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-                monospace;
-            }
+          code {
+            font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+              monospace;
+          }
 
-        </style>
+      </style>
 
-        <script type="text/babel">
+      <script type="text/babel">
 
-            function App() {
-              const [tasks,setTasks] = React.useState([]);
+          function App() {
+            const [tasks, setTasks] = React.useState([]);
 
-              React.useEffect(() => {
-                if (tasks.length === 0) return;
-                localStorage.setItem('tasks', JSON.stringify(tasks));
-              }, [tasks]);
+            React.useEffect(() => {
+              const tasks = JSON.parse(localStorage.getItem('tasks'));
+              setTasks(tasks || []);
+            }, []);
 
-              React.useEffect(() => {
-                const tasks = JSON.parse(localStorage.getItem('tasks'));
-                setTasks(tasks || []);
-              }, []);
+            React.useEffect(() => {
+              if (tasks.length === 0) return;
+              localStorage.setItem('tasks', JSON.stringify(tasks));
+            }, [tasks]);
 
-              function addTask(name) {
-                setTasks(prev => {
-                  return [...prev, {name:name,done:false}];
-                });
-              }
-
-              function removeTask(indexToRemove) {
-                setTasks(prev => {
-                  return prev.filter((taskObject,index) => index !== indexToRemove);
-                });
-              }
-
-              function updateTaskDone(taskIndex, newDone) {
-                setTasks(prev => {
-                  const newTasks = [...prev];
-                  newTasks[taskIndex].done = newDone;
-                  return newTasks;
-                });
-              }
-
-              const numberComplete = tasks.filter(t => t.done).length;
-              const numberTotal = tasks.length;
-
-              function renameTask(index,newName) {
-                setTasks(prev => {
-                  const newTasks = [...prev];
-                  newTasks[index].name = newName;
-                  return newTasks;
-                })
-              }
-
-              return (
-                <main>
-                  <h1>Lista de Tareas</h1> 
-                  <h2>{numberComplete}/{numberTotal} Finalizada</h2>
-                  
-                  <TaskForm onAdd={addTask} />
-                  {tasks.map((task,index) => (
-                    <TaskItem {...task}
-                          onRename={newName => renameTask(index,newName)}
-                          onTrash={() => removeTask(index)}
-                          onToggle={done => updateTaskDone(index, done)} />
-                  ))}
-                </main>
-              );
+            function addTask(name) {
+              setTasks(prev => {
+                return [...prev, {name:name, done:false}];
+              });
             }
 
-            function Checkbox({checked = false, onClick}) {
-              return (
-                <div onClick={onClick}>
-                  {!checked && (
-                    <div className="checkbox unchecked">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM384 80H64C55.16 80 48 87.16 48 96V416C48 424.8 55.16 432 64 432H384C392.8 432 400 424.8 400 416V96C400 87.16 392.8 80 384 80z"/></svg>
-                    </div>
-                  )}
-                  {checked && (
-                    <div className="checkbox checked">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                    </div>
-                  )}
-                </div>
-              );
+            function removeTask(indexToRemove) {
+              setTasks(prev => prev.filter((taskObject,index) => index !== indexToRemove));
             }
 
-            function TaskItem({name,done,onToggle,onTrash,onRename}) {
-              const [editMode,setEditMode] = React.useState(false);
-              return (
-                <div className={'task ' + (done?'done':'')}>
-                  <Checkbox checked={done} onClick={() => onToggle(!done)} />
-                  {!editMode && (
-                    <div className="task-name" onClick={() => setEditMode(prev => !prev)}>
-                      <span>{name}</span>
-                    </div>
-                  )}
-                  {editMode && (
-                    <form onSubmit={ev => {ev.preventDefault();setEditMode(false);}}>
-                      <input type="text" value={name}
-                            onChange={ev => onRename(ev.target.value)} />
-                    </form>
-                  )}
-                  <button className="trash" onClick={onTrash}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg>
-                  </button>
-                </div>
-              );
+            function updateTaskDone(taskIndex, newDone) {
+              setTasks(prev => {
+                const newTasks = [...prev];
+                newTasks[taskIndex].done = newDone;
+                return newTasks;
+              });
             }
 
-            function TaskForm({onAdd}) {
-              const [taskName,setTaskName] = React.useState('');
-              function handleSubmit(ev) {
-                ev.preventDefault();
-                onAdd(taskName);
-                setTaskName('');
-              }
-              return (
-                <form onSubmit={handleSubmit}>
-                  <button>+</button>
-                  <input type="text"
-                        value={taskName}
-                        onChange={ev => setTaskName(ev.target.value)}
-                        placeholder="Proxima tarea..."/>
-                </form>
-              );
+            const numberComplete = tasks.filter(t => t.done).length;
+            const numberTotal = tasks.length;
+
+            function renameTask(index,newName) {
+              setTasks(prev => {
+                const newTasks = [...prev];
+                newTasks[index].name = newName;
+                return newTasks;
+              })
             }
 
-            ReactDOM.render(<React.StrictMode><App /></React.StrictMode>, document.getElementById('root'));
-        </script>
+            return (
+              <main>
+                <h1>Lista de Tareas</h1> 
+                <h2>{numberComplete}/{numberTotal} Finalizada</h2>
+                
+                <TaskForm onAdd={addTask} />
+                {tasks.map((task,index) => (
+                  <TaskItem {...task}
+                    onRename={newName => renameTask(index,newName)}
+                    onTrash={() => removeTask(index)}
+                    onToggle={done => updateTaskDone(index, done)} />
+                ))}
+              </main>
+            );
+          }
+
+          function Checkbox({checked = false, onClick}) {
+            return (
+              <div onClick={onClick}>
+                {!checked && (
+                  <div className="checkbox unchecked">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM384 80H64C55.16 80 48 87.16 48 96V416C48 424.8 55.16 432 64 432H384C392.8 432 400 424.8 400 416V96C400 87.16 392.8 80 384 80z"/></svg>
+                  </div>
+                )}
+                {checked && (
+                  <div className="checkbox checked">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                  </div>
+                )}
+              </div>
+            );
+          }
+
+          function TaskItem({name,done,onToggle,onTrash,onRename}) {
+            const [editMode,setEditMode] = React.useState(false);
+            return (
+              <div className={'task ' + (done?'done':'')}>
+                <Checkbox checked={done} onClick={() => onToggle(!done)} />
+                {!editMode && (
+                  <div className="task-name" onClick={() => setEditMode(prev => !prev)}>
+                    <span>{name}</span>
+                  </div>
+                )}
+                {editMode && (
+                  <form onSubmit={ev => {ev.preventDefault();setEditMode(false);}}>
+                    <input type="text" value={name}
+                          onChange={ev => onRename(ev.target.value)} />
+                  </form>
+                )}
+                <button className="trash" onClick={onTrash}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg>
+                </button>
+              </div>
+            );
+          }
+
+          function TaskForm({onAdd}) {
+            const [taskName,setTaskName] = React.useState('');
+            
+            function handleSubmit(ev) {
+              ev.preventDefault();
+              onAdd(taskName);
+              setTaskName('');
+            }
+
+            return (
+              <form onSubmit={handleSubmit}>
+                <button>+</button>
+                <input type="text"
+                  value={taskName}
+                  onChange={ev => setTaskName(ev.target.value)}
+                  placeholder="Proxima tarea..."/>
+              </form>
+            );
+          }
+
+          ReactDOM.render(<React.StrictMode><App /></React.StrictMode>, document.getElementById('root'));
+      </script>
     </head>
 
     <body>

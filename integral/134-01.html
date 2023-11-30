@@ -142,7 +142,7 @@
 
             if (trimmedTask === '') return;
 
-            addTask({ id: tasks.length + 1, name: trimmedTask, completed: false });
+            addTask({ id: Date.now(), name: trimmedTask, completed: false });
 
             setNewTask('');
           };

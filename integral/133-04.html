@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 
 	<!-- 
 	  Curso 133 - Grupo 04 -> sec.carrion@gmail.com
@@ -18,11 +19,11 @@
 		17606845; Russo, Javier
 		23543250; Siccardi, Javier
 	
-		funciona: 
-		diseño: 
-	
+		funciona: si
+		diseño: si
+		
+		- emplea useReduce lo que complejiza innecesariamente la aplicación aunque demuestra conomiento de la herramienta
 	-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -251,7 +252,7 @@
 		//hooks
 		// Manejo del formulario
 
-		function formulario (inicioFormulario = {}) {
+		function formulario(inicioFormulario = {}) {
 			const [estadoFormulario, setEstadoFormulario] = useState(inicioFormulario);
 
 			const onInputChange = e => {
@@ -437,9 +438,7 @@
 			return (
 				<li>
 					<span onClick={() => completarTarea(tarea.id)}>
-						<label
-							className={`container-done ${tarea.done ? 'active' : ''}`}
-						></label>
+						<label className={`container-done ${tarea.done ? 'active' : ''}`}></label>
 					</span>
 					<TareaActualizar tarea={tarea} actualizarTarea={actualizarTarea} />
 					<button

@@ -1,7 +1,9 @@
 require 'json'
 require 'csv'
 
-# --- Utilidades ---
+def extraer_curso(nombre)
+    nombre.match(/-FR_T-(\d{3})/)[1].to_i
+end
 
 def leer_json(origen)
     JSON.parse(File.read("#{origen}.json"), symbolize_names: true)
@@ -27,7 +29,7 @@ end
 # --- Asistencias ---
 
 def leer_asistencias
-    cursos = Dir["../extras/asistencia/*.txt"]
+    cursos = Dir["./extras/asistencia/*.txt"]
 
     salida = []
     for curso in cursos
@@ -56,25 +58,54 @@ def leer_asistencia(origen)
     data
 end
 
-def extraer_curso(nombre)
-    nombre.split("_")[1].split("-").last.to_i
+def leer_examenes()
+    cursos = Dir["./extras/examen/*.csv"]
+
+    salida = []
+    for curso in cursos
+        examenes = leer_examen(curso)
+        examenes.each{|x| salida << x}
+    end 
+    salida 
 end
 
-def listar_detalle_asistencias(asistencias)
+def leer_examen(origen)
+    texto = File.open(origen, 'r')
+    data = texto.readlines[1..-1].map{|linea| linea.split(";")}
+    data = data.map do |x|
+        {   
+            email: x[5],
+            departamento: x[4],
+            examen: x[6],
+        }
+    end
+    texto.close
+    data
+end
+
+def listar_detalle_asistencias(asistencias, titulo="Detalle de asistencias")
+    puts ">> #{titulo}\n"
     i = 0 
     asistencias.each do |asistencia|
-        falto = asistencia[:asistio] == 'si' ? "  " : "❌"
-        dias = asistencia[:dias].gsub("A", " 🔴").gsub("P", " 🟢")
+        falto = asistencia[:asistio] == 'si' ? "👍" : "❌"
+        dias = asistencia[:dias].split(//).map{|x| x == "A" ? "·": "●"}.join(" ")
+        ojo = asistencia[:revisar] == 'si' ? "👀" : " "
+        # dias = asistencia[:dias]
         mostrar = block_given? ? yield(asistencia) : true
 
         if mostrar  
-            puts "%3i) %8i - %-50s  Curso: %3i  Grupo: %2i  | %2i |  %2i | %s  | %s | %s" % [i+=1,asistencia[:dni], asistencia[:nombre], 
-                asistencia[:curso], asistencia[:grupo], 
-                asistencia[:asistencias], asistencia[:dias].size, dias, falto, asistencia[:practico]]
+            puts "%3i) %8i - %-50s  %3i-%02i  | %2i  %10s  | %s %s %s | %s | %s  " % [i+=1, 
+                asistencia[:dni], asistencia[:nombre], asistencia[:curso], asistencia[:grupo], 
+                asistencia[:asistencias], dias, 
+                falto, asistencia[:practico], asistencia[:integral], ojo, asistencia[:examen]]
         end
     end
-    n = asistencias.count{|a| a[:asistio] == 'no' && a[:practico] == 'si'}
-    puts "Hay #{n} alumnos que no completaron el curso (faltaron al 4 ultimas clases)"
+
+    np = asistencias.count{|a| a[:asistio] == 'no' && a[:practico] == 'si'}
+    ni = asistencias.count{|a| a[:asistio] == 'no' && a[:integral] == 'si'}
+
+    puts "Hay #{np} alumnos que no completaron el curso pero aprobaron el práctico"
+    puts "Hay #{ni} alumnos que no completaron el curso pero aprobaron el integral"
 end 
 
 
@@ -82,7 +113,7 @@ end
 
 def leer_grupos()
     salida = {}
-    Dir["../extras/asistencia/*.csv"].each do |file|
+    Dir["./extras/asistencia/*.csv"].each do |file|
         curso = file.split("_")[1].split(".")[0].to_i
         grupos = CSV.read(file)
         grupos = grupos.select{|x| !x[0][/^\s*grupo/i]}
@@ -107,12 +138,11 @@ def traer_grupo(asistencias, curso, grupo)
     asistencias.select{|a| a[:curso] == curso && a[:grupo] == grupo}.map{|a| a[:dni]}
 end
 
-
 # --- Resultados ---
 
 def leer_resultados(base=:practicos)
     resultados = []
-    Dir["../#{base}/*.html"].sort.each do |file|
+    Dir["./#{base}/*.html"].sort.each do |file|
 
         lineas = File.read(file).split("\n").map{|l| l.chomp.strip}
         lineas = lineas.select{|l| l.size > 0}
@@ -145,24 +175,51 @@ def leer_resultados(base=:practicos)
     resultados
 end
 
-def registrar_resultados(asistencias, resultados)
-
+def registrar_resultados(asistencias, practicos, integral=[])
     asistencias.each do |x|
         x[:practico] = 'no'
+        x[:integral] = 'no'
+
         x[:asistio] = (!x[:dias][/.*AAAA$/] && x[:asistencias] >= 3) ? "si" : "no" # 3 clases o más y no faltó a las últimas 4
     end
 
-    resultados.each do |resultado|
+    practicos.each do |resultado|
         resultado[:alumnos].each do |dni|
             if asistencia = asistencias.find{|a| a[:dni] == dni}
                 asistencia[:practico] = resultado[:resultado][:funciona]
             else 
-                puts "ERROR: #{dni} no está en asistencias"
+                puts "ERROR: #{dni} no está en asistencias (practico)"
             end
         end
     end
+
+    integral.each do |resultado|
+        resultado[:alumnos].each do |dni|
+            if asistencia = asistencias.find{|a| a[:dni] == dni}
+                asistencia[:integral] = resultado[:resultado][:funciona]
+            else 
+                puts "ERROR: #{dni} no está en asistencias (integral)"
+            end
+        end
+    end
+
+    asistencias.each do |x|
+        x[:correcto] = (x[:practico] == 'si' && x[:integral] == 'si') && x[:asistio] == 'si' ? 'si' : 'no'
+        x[:revisar]  = (x[:practico] == 'no' || x[:integral] == 'no') && x[:asistio] == 'si' ? 'si' : 'no'
+        x[:error]    = (x[:practico] == 'si' || x[:integral] == 'si') && x[:asistio] == 'no' ? 'si' : 'no'
+    end
 end
 
+def registra_examenes(asistencias, examenes)
+    asistencias.each{|a| a[:examen] = ''}
+    examenes.each do |examen|
+        if asistencia = asistencias.find{|a| a[:email] == examen[:email]}
+            asistencia[:examen] = examen[:examen]
+        else 
+            puts "ERROR: #{examen[:email]} no está en asistencias (examen)"
+        end
+    end
+end
 # --- Estadisticas ---
 
 def listar_con_notas(ejercicios)
@@ -226,29 +283,36 @@ def resumir_resultados(resultados)
     puts "Total miembros: #{resultados.map{|r| r[:miembros]}.sum}"
 end
 
-
-pp integral = leer_resultados(:integral)
-return
-
 asistencias = leer_asistencias()
 puts "Hay #{asistencias.size} alumnos en asistencias"
 
 grupos = leer_grupos()
 puts "Hay #{grupos.size} alumnos en grupos"
 
-resultados = leer_resultados()
-puts "Hay #{resultados.size} resultados"
+resultados = leer_resultados(:practicos)
+puts "Hay #{resultados.size} resultados de prácticos"
 
 integral = leer_resultados(:integral)
+puts "Hay #{integral.size} resultados de integral"
+
+examenes = leer_examenes()
+
 registrar_grupos(asistencias, grupos)
-registrar_resultados(asistencias, resultados)
+registrar_resultados(asistencias, resultados, integral)
+registra_examenes(asistencias, examenes)
+
 registrar_ausentes(asistencias, resultados)
+registrar_ausentes(asistencias, integral)
 
 escribir_json(asistencias, :alumnos)
 escribir_json(resultados, :resultados)
 
-asistencias.sort_by{|a| [a[:curso], a[:grupo], a[:nombre]]}
-listar_detalle_asistencias( asistencias){|a|  a[:practico] == 'si' && a[:asistio] == 'no'}
+asistencias = asistencias.sort_by{|a| [a[:curso], a[:grupo], a[:nombre]]}
+# listar_detalle_asistencias( asistencias, 'Listado completo')
+# listar_detalle_asistencias( asistencias, 'Alumos que presentaron tareas pero no asistieron'){|a| (a[:practico] == 'si' || a[:integral] == 'si') && a[:asistio] == 'no'}
+# listar_detalle_asistencias( asistencias, 'Alumos asistieron pero faltan tareas'){|a| (a[:practico] == 'no' || a[:integral] == 'no') && a[:asistio] == 'si'}
+# listar_detalle_asistencias( asistencias, 'Faltan integrador'){|a| (a[:practico] == 'si' && a[:integral] == 'no') && a[:asistio] == 'si'}
+# listar_detalle_asistencias( asistencias, 'Faltan práctico'){|a| (a[:practico] == 'no' && a[:integral] == 'si') && a[:asistio] == 'si'}
 return 
 
 estadistica_resultado(resultados)
