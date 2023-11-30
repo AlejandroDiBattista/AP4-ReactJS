@@ -309,10 +309,12 @@ escribir_json(resultados, :resultados)
 
 asistencias = asistencias.sort_by{|a| [a[:curso], a[:grupo], a[:nombre]]}
 # listar_detalle_asistencias( asistencias, 'Listado completo')
-# listar_detalle_asistencias( asistencias, 'Alumos que presentaron tareas pero no asistieron'){|a| (a[:practico] == 'si' || a[:integral] == 'si') && a[:asistio] == 'no'}
-# listar_detalle_asistencias( asistencias, 'Alumos asistieron pero faltan tareas'){|a| (a[:practico] == 'no' || a[:integral] == 'no') && a[:asistio] == 'si'}
-# listar_detalle_asistencias( asistencias, 'Faltan integrador'){|a| (a[:practico] == 'si' && a[:integral] == 'no') && a[:asistio] == 'si'}
+# listar_detalle_asistencias( asistencias, 'Alumnos que presentaron tareas pero no asistieron'){|a| (a[:practico] == 'si' || a[:integral] == 'si') && a[:asistio] == 'no'}
+# listar_detalle_asistencias( asistencias, 'Alumnos asistieron pero faltan tareas'){|a| (a[:practico] == 'no' || a[:integral] == 'no') && a[:asistio] == 'si'}
+listar_detalle_asistencias( asistencias, 'Faltan integrador'){|a| (a[:practico] == 'si' && a[:integral] == 'no') && a[:asistio] == 'si'}
 # listar_detalle_asistencias( asistencias, 'Faltan práctico'){|a| (a[:practico] == 'no' && a[:integral] == 'si') && a[:asistio] == 'si'}
+# listar_detalle_asistencias( asistencias, 'Faltan examen'){|a| (a[:practico] == 'si' && a[:integral] == 'si') && a[:examen] == '-'}
+
 return 
 
 estadistica_resultado(resultados)
