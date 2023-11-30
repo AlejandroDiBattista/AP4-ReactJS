@@ -100,12 +100,6 @@ def listar_detalle_asistencias(asistencias, titulo="Detalle de asistencias")
                 falto, asistencia[:practico], asistencia[:integral], ojo, asistencia[:examen]]
         end
     end
-
-    np = asistencias.count{|a| a[:asistio] == 'no' && a[:practico] == 'si'}
-    ni = asistencias.count{|a| a[:asistio] == 'no' && a[:integral] == 'si'}
-
-    puts "Hay #{np} alumnos que no completaron el curso pero aprobaron el práctico"
-    puts "Hay #{ni} alumnos que no completaron el curso pero aprobaron el integral"
 end 
 
 
@@ -117,7 +111,7 @@ def leer_grupos()
         curso = file.split("_")[1].split(".")[0].to_i
         grupos = CSV.read(file)
         grupos = grupos.select{|x| !x[0][/^\s*grupo/i]}
-        grupos.each{|x|  salida[x[2].to_i] = {grupo: x[0].strip.to_i, curso: curso}}
+        grupos.each{|x| salida[x[2].to_i] = {grupo: x[0].strip.to_i, curso: curso}}
     end 
     salida 
 end
@@ -283,6 +277,26 @@ def resumir_resultados(resultados)
     puts "Total miembros: #{resultados.map{|r| r[:miembros]}.sum}"
 end
 
+def informar(asistencias)
+    asistencias.select{|a| block_given? ? yield(a) : true}.map{|a| [a[:curso], a[:email], a[:nombre]]}
+end
+
+def resumir_grupos(asistencias)
+    salida = []
+    grupos = asistencias.group_by{|a| [a[:curso], a[:grupo]]}
+    grupos.sort.each do |k,v|
+        salida << {curso: k[0], grupo: k[1], alumnos: v.map{|x|x[:dni]}, asistencia: [], practico: [], integral: [], examen: []}
+    end
+    asistencias.each do |a|
+        grupo = salida.find{|s| s[:curso] == a[:curso] && s[:grupo] == a[:grupo]}
+        grupo[:practico] << a[:dni] if a[:practico] == 'si'
+        grupo[:integral] << a[:dni] if a[:integral] == 'si'
+        grupo[:examen]   << a[:dni] if a[:examen] != "-"
+        grupo[:asistencia] << a[:dni] if a[:asistio] == "si"
+    end
+    salida
+end
+
 asistencias = leer_asistencias()
 puts "Hay #{asistencias.size} alumnos en asistencias"
 
@@ -303,17 +317,23 @@ registra_examenes(asistencias, examenes)
 
 registrar_ausentes(asistencias, resultados)
 registrar_ausentes(asistencias, integral)
+resumen = resumir_grupos(asistencias)
 
 escribir_json(asistencias, :alumnos)
 escribir_json(resultados, :resultados)
+escribir_json(resumen, :grupos)
 
+# pp grupos 
 asistencias = asistencias.sort_by{|a| [a[:curso], a[:grupo], a[:nombre]]}
 # listar_detalle_asistencias( asistencias, 'Listado completo')
 # listar_detalle_asistencias( asistencias, 'Alumnos que presentaron tareas pero no asistieron'){|a| (a[:practico] == 'si' || a[:integral] == 'si') && a[:asistio] == 'no'}
 # listar_detalle_asistencias( asistencias, 'Alumnos asistieron pero faltan tareas'){|a| (a[:practico] == 'no' || a[:integral] == 'no') && a[:asistio] == 'si'}
-listar_detalle_asistencias( asistencias, 'Faltan integrador'){|a| (a[:practico] == 'si' && a[:integral] == 'no') && a[:asistio] == 'si'}
+# listar_detalle_asistencias( asistencias, 'Faltan integrador'){|a| (a[:practico] == 'si' && a[:integral] == 'no') && a[:asistio] == 'si'}
 # listar_detalle_asistencias( asistencias, 'Faltan práctico'){|a| (a[:practico] == 'no' && a[:integral] == 'si') && a[:asistio] == 'si'}
 # listar_detalle_asistencias( asistencias, 'Faltan examen'){|a| (a[:practico] == 'si' && a[:integral] == 'si') && a[:examen] == '-'}
+# listar_detalle_asistencias( asistencias, 'Sin grupos'){|a| (a[:grupo] == 0) && a[:asistio] == 'si'}
+
+pp informar(asistencias){|a| a[:practico] == 'si' && a[:integral] == 'no' && a[:asistio] == 'si'}
 
 return 
 

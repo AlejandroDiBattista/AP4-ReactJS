@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+  <!-- 
+    Curso 134 - Grupo 10 -> monser980@gmail.com
+      16778627; Ucelay, Hector
+
+      funciona: si  
+      diseño: si
+      nombre: no
+
+      - Usa bootstrap para dar formato a la pagina
+      - Usa el ejemplo de contadores
+  -->
+  <title>Tareas</title>
+
+  <style>
+  /* App.css------------------------------------------------------- */
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(29, 27, 27, 0.226);
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  .contenedor {
+    padding: 20px;
+    border: 2px solid rgb(233, 211, 18);
+    border-radius: 0.5rem;
+    background: rgb(27, 27, 27);
+    color: white;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contadorTotal {
+    position: relative;
+    left: -15px;
+    top: -20px;
+    background: rgb(221, 38, 13);
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin-left: 5px;
+    height: 140px;
+    font-size: 15px;
+  }
+
+  h3 {
+    margin-right: auto;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+
+  h3 button {
+    background: red;
+    padding: 3px 10px;
+    margin-left: 15px;
+  }
+
+  .reset {
+    background: rgb(78, 161, 99);
+    padding: 3px 10px;
+    margin-left: 15px;
+  }
+
+  .clear {
+    background: goldenrod;
+  }
+
+  h3 button:hover {
+    background: rgb(100, 97, 97);
+    color: white;
+  }
+
+  /* formulario.css------------------------------------------- */
+  form button {
+    background: rgb(5, 5, 5);
+    font-size: 20px;
+    padding: 10px 25px;
+    margin-left: 20px;
+    color: rgb(238, 235, 59);
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s;
+  }
+
+  form button:hover {
+    background: rgb(238, 235, 59);
+    color: rgb(5, 5, 5);
+  }
+
+  form input {
+    font-size: 25px;
+    padding: 1rem 2rem;
+    background: rgba(197, 194, 194, 0.575);
+    border-radius: 15px;
+    color: yellow;
+  }
+
+  form {
+    border: 2px solid black;
+    padding: 5px 30px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+    background: rgba(183, 185, 183, 0.555);
+  }
+
+  /* index.css------------------------------------------- */
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
+
+  a:hover {
+    color: #535bf2;
+  }
+
+  body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+
+  button:hover {
+    border-color: #646cff;
+  }
+
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+
+    a:hover {
+      color: #747bff;
+    }
+
+    button {
+      background-color: #f9f9f9;
+    }
+  }
+
+  /* listado.css------------------------------------------- */
+
+
+  tbody tr {
+    padding: 0;
+    margin: 0;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    align-items: center;
+  }
+
+  .estadoButton {
+    text-align: center;
+    align-items: center;
+  }
+
+  tbody tr button {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    font-size: 45px;
+    background: transparent;
+  }
+
+  tbody tr button:hover {
+    border: 1px solid rgba(0, 0, 0, 0)
+  }
+
+  table {
+    width: 600PX;
+  }
+
+  thead {
+    background: black;
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  table td button {
+    color: rgb(198, 96, 96);
+    font-size: 35px;
+  }
+
+  .estado {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .estadoP {
+    color: rgb(197, 255, 121);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .estadoR {
+    color: rgb(99, 216, 95);
+    font-weight: bold;
+  }
+</style>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+
+
+      let datosIniciales = [
+        { id: 1, nombre: "Curso de Javascript", realizada: true },
+        { id: 2, nombre: "Curso de React", realizada: false },
+        { id: 3, nombre: "Curso de PHP", realizada: true },
+      ];
+
+      function App() {
+        const [cantidad, setCantidad] = useState(0);
+        const [contadores, setContadores] = useLocalStorage('contadores', datosIniciales);
+
+        useEffect(() => {
+          let datos = localStorage.getItem('contadores');
+          if (datos) {
+            setContadores(JSON.parse(datos));
+          }
+        }, []);
+
+        useEffect(() => {
+          setCantidad(contar());
+        }, [contadores]);
+
+        function contar() {
+          return contadores.length;
+        }
+
+        function agregar(nombre) {
+          const idTemp = new Date().getTime().toString();
+          const contador = { id: idTemp, nombre, realizada: false };
+          const nuevos = [...contadores, contador];
+          setContadores(nuevos);
+        }
+
+        function borrar(id) {
+          const nuevos = contadores.filter((contador) => contador.id !== id);
+          setContadores(nuevos);
+        }
+
+        function reset() {
+          setContadores(datosIniciales);
+          localStorage.setItem('contadores', JSON.stringify(datosIniciales));
+        }
+
+        function clear() {
+          setContadores([]);
+        }
+
+        function alActualisa(id) {
+          const nuevos = contadores.map((contador) =>
+            contador.id === id ? { ...contador, realizada: !contador.realizada } : contador
+          );
+          setContadores(nuevos);
+        }
+
+        return (
+          <div className="contenedor">
+            <ContarOrdenes cantidad={cantidad} alReset={reset} alClear={clear} />
+            <ContadorFormulario alAgregar={agregar} />
+            <ContadorListado contadores={contadores} alBorrar={borrar} alActualisa={alActualisa} />
+          </div>
+        );
+      }
+
+      function ContarOrdenes({ cantidad, alReset, alClear }) {
+        return (
+          <h3>
+            Registros<b className="contadorTotal">{cantidad}</b>
+            <button className="reset" title="RECUPERAR DATOS INICIALES" onClick={alReset}>
+              Reset
+            </button>
+            <button className="clear" title="LIMPIAR LISTA" onClick={alClear}>
+              Clear
+            </button>
+          </h3>
+        );
+      }
+
+      function useLocalStorage(key, initialValue = []) {
+        const [value, setValue] = useState(() => {
+          const initial = localStorage.getItem(key);
+          return initial ? JSON.parse(initial) : initialValue;
+        });
+
+        useEffect(() => {
+          localStorage.setItem(key, JSON.stringify(value));
+        }, [key, value]);
+
+        return [value, setValue];
+      }
+
+      function ContadorFormulario({ alAgregar }) {
+        const [nombre, setNombre] = useState('');
+
+        function cambiarNombre(e) {
+          setNombre(e.target.value);
+        }
+
+        function agregar(e) {
+          e.preventDefault();
+          if (nombre !== '') {
+            alAgregar(nombre);
+            setNombre('');
+          }
+        }
+
+        return (
+          <form>
+            <input maxLength={22} type="text" value={nombre} onChange={cambiarNombre} />
+            <button onClick={agregar}>Agregar</button>
+          </form>
+        );
+      }
+
+      function ContadorListado({ contadores, alBorrar, alActualisa }) {
+        return (
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <td>Descripcion</td>
+                  <td>Condicion</td>
+                  <td>Estado</td>
+                </tr>
+              </thead>
+              <tbody>
+                {contadores.map((contador) => (
+                  <ContadorItem
+                    key={contador.id}
+                    contador={contador}
+                    alBorrar={alBorrar}
+                    alActualisa={alActualisa}
+                  />
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      }
+
+      function ContadorItem({ contador, alBorrar, alActualisa }) {
+        const { id, nombre, realizada } = contador;
+
+        function borrar() {
+          alBorrar(id);
+        }
+
+        function actualisar() {
+          alActualisa(id);
+        }
+
+        function ejecutada(e) {
+          e.preventDefault();
+          //alert('La tarea realizada no se puede eliminar ni modificar');
+        }
+
+        return (
+          <tr>
+            <td>{nombre}</td>
+
+            <td className="estadoButton">
+              <button className="" title="Borrar seleccionada" disabled={realizada} onClick={() => borrar(id)}>
+                {!realizada && <i class="bi bi-trash3-fill" style={{ color: 'red' }}></i>}
+              </button>
+
+              <button title="Marcar como Realizada" disabled={realizada} onClick={() => actualisar(id)}>
+                {!realizada && (<i class="bi bi-check2-all" style={{ color: 'yellow' }}></i>)}
+              </button>
+
+            </td>
+            <td className="estado">
+              <p title="Tarea Realizada no se puede modificar ni eliminar" onClick={ejecutada}>{realizada ? <small className="estadoR">Realizada</small> : <small className="estadoP">Pendiente</small>}</p>
+            </td>
+          </tr>
+        );
+      }
+// ------------------------------------------------------------------
+      const root = document.getElementById('root');
+      ReactDOM.render(<App />, root);
+    </script>
+
+</head>
+
+<body>
+  <main>
+    <div id="root"></div>
+  </main>
+</body>
+
+</html>

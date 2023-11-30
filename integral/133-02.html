@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+
+    <!-- 
+      Curso 133 - Grupo 02 -> mariapaularodriguezmontes@gmail.com
+        17675854; Gonzalez, Mirian Yolanda
+        26631150; Milano, Cristian Andrés
+        26321091; Otegui, Luciano Jesús
+        26107345; Rodríguez, María Paula
+        25106719; Ruiz Diaz, Betiana
+        22776836; Sierra, Magdalena
+    
+        funciona: si
+        diseño: no
+        nombre: si
+
+        - Tuve que incorporar babel para que funcione el código
+    -->
+    
+    <title>Lista de Tareas</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .lista {
+            list-style: square;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .btn {
+            width: auto;
+        }
+    </style>
+
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState } = React;
+
+    const tareasIniciales = [
+      { id: 1, tarea: "Monarca", completada: true },
+      { id: 2, tarea: "Aureliano", completada: false },
+      { id: 3, tarea: "Dietetica Naturalmente", completada: false },
+    ];
+
+    function App() {
+      const [tareas, setTareas] = useState(tareasIniciales);
+      const [nuevaTarea, setNuevaTarea] = useState('');
+      const [nextId, setNextId] = useState(tareas.length + 1);
+
+      const agregarTarea = () => {
+        if (nuevaTarea.trim() !== '') {
+          const nueva = { id: nextId, tarea: nuevaTarea, completada: false };
+          setTareas([...tareas, nueva]);
+          setNuevaTarea('');
+          setNextId(nextId + 1);
+        }
+      };
+
+      const completada = (id) => {
+        const nuevasTareas = tareas.map((tarea) =>
+          tarea.id === id ? { ...tarea, completada: !tarea.completada } : tarea
+        );
+        setTareas(nuevasTareas);
+      };
+
+      const eliminarTarea = (id) => {
+        const nuevasTareas = tareas.filter((tarea) => tarea.id !== id);
+        setTareas(nuevasTareas);
+      };
+
+      return (
+        <div>
+          <h1 className='titulo'>Lista de Tareas</h1>
+          <ul className='lista'>
+            {tareas.map((tarea) => (
+              <li key={tarea.id}>
+                <span
+                  style={{
+                    textDecoration: tarea.completada ? 'line-through' : 'none',
+                    marginRight: '8px',
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => completada(tarea.id)}
+                >
+                  {tarea.tarea}
+                </span>
+                <span
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => eliminarTarea(tarea.id)}>
+                  &#10006;
+                </span>
+              </li>
+            ))}
+          </ul>
+          <input
+            type="text"
+            value={nuevaTarea}
+            onChange={(e) => setNuevaTarea(e.target.value)}
+            placeholder="Nueva tarea"
+          />
+          <button onClick={agregarTarea}>Agregar</button>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+
+<head>
+
+</head>
+
+<body>
+  
+</body>
+
+</html>
+
+
+

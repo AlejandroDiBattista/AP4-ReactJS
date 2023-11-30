@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Librería REACT -->       
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        
+        <!-- Librería Babel para convertir JSX -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+<!-- 
+  Curso 126 - Grupo 06 -> rosananeiman77@gmail.com
+    25851689; Neiman Rosana
+
+    funciona: si
+    diseño: si
+    nombre: 
+
+-->
+
+        <title>TrabajoPractico1</title>
+        <style>
+            /* Aca va todo los CSS */
+            /*contador.css*/
+
+           .cajaC{
+                  background-color: rgb(250, 250, 243) ;
+                  border: 1px solid #111111 ;
+                  border-radius: 10px;
+                  text-align: center;
+                  margin-bottom: 20px;
+                  width: 200px;
+                  height: 200px;
+                  margin-left: 30%;
+                  margin-right: 30%;
+                 }
+
+.subtitulo{
+    color: #070808;
+}
+/*body.css*/
+body{
+    background-image: linear-gradient(to bottom, blue , #54bfdf); 
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.titulo{
+    color: aliceblue;
+}
+
+.b{
+    background-color: #088a7f;
+    color: aliceblue;
+    width: 60px;
+    margin: 3px;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.numero{
+    font-size: 60px;
+    color: #041a4b;
+    margin: 7px;
+}
+
+</style>
+
+
+
+ <script type="text/babel">
+const { useState } = React        
+
+            /* Aca va todo el codigo de JSX (sin importación ni exportación) */
+    /*Contador1.jsx*/
+    function Contador1(){
+    const[valor, setValor] = useState(0);
+    const incrementar = () =>{    
+        setValor(valor+1);
+    }
+    const decrementar = () =>{
+        setValor(valor-1);
+    }
+
+        return (
+    <div className = "cajaC">
+        <h3 className='subtitulo'>Candidato 1</h3>
+        <p className='numero'> {valor} </p>
+        <div>
+            <button className="b" onClick={incrementar} >+ </button>
+            <button className= "b" onClick={decrementar} >-</button>
+        </div>
+
+    </div>)
+}
+
+/*Contador2.jsx*/
+function Contador2(){
+    const[valor, setValor] = useState(0);
+    const incrementar = () =>{    
+        setValor(valor+1);
+    }
+    const decrementar = () =>{
+        setValor(valor-1);
+    }
+
+        return (
+    <div className = "cajaC">
+        <h3 className='subtitulo'>Candidato 2</h3>
+        <p className='numero'> {valor} </p>
+        <div>
+            <button className="b" onClick={incrementar} >+ </button>
+            <button className= "b" onClick={decrementar} >-</button>
+        </div>
+
+    </div>)
+}
+
+/*App.jsx*/
+            function App(){ /* Sustituir por tu código */
+                return (
+                          < >  
+                        <h3 className='titulo'>Boca de urnas</h3>
+                        <p>Integrantes</p>
+                        <p>Ines Aldeco 25549334</p>
+                        <p>Guillermo Jose Zurita 23079217</p>
+                        <p>Gamboa Rene 23231981</p>
+                        <Contador1 />
+                        <Contador2 />
+                        </>
+                        )
+                     }
+            
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+            ReactDOM.createRoot(document.getElementById('root')).render(
+                 <React.StrictMode>
+                 <App />
+                 </React.StrictMode>,)
+
+     </script>
+
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

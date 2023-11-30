@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"></script>
+
+    <!-- 
+      Curso 133 - Grupo 10 -> diegompanno@gmail.com
+    
+        26703609; Panno, Diego Mauricio
+        26216892; Gonzalez, Armando
+        24803332; Garcia, Dante Marcelo
+        29322781; Marchesini, Ramón Ricardo  
+        20213119; Markus, Laura  
+        27016688; Ortiz, Juan Pablo
+        22252000; Milan, Luciana
+    
+        funciona: si  
+        diseño: si
+        nombre: si
+
+        - Confirma la tarea de borrar con una caja de dialogo
+    -->
+
+    <title>Lista de tareas</title>
+    <style>
+      body {
+        background: none;
+        color: rgb(53, 16, 10);
+        background: #121212;
+      }
+      #root {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .conte {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        width: 500px;
+        margin-top: 20px;
+        border-radius: 15px;
+      }
+      .tarea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .tarea-completada {
+        text-decoration: line-through;
+        color: rgb(245, 7, 7);
+        
+      }
+
+  
+      .texto {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding-left: 10px;
+        gap: 10px;
+        color: rgb(7, 7, 7);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      @media only screen and (max-width: 678px) {
+        .conte {
+          width: 100%;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+      }
+      .conte-lista {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(59, 3, 116);
+        border-radius: 25px;
+        padding: 20px 5px 20px 5px;
+        box-shadow: 0 4px 8px rgba(6, 245, 245, 0.5);
+      }
+
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 800;
+        color: yellow;
+      }
+
+      .input {
+        color: rgb(34, 1, 65);
+        margin-bottom: 30px;
+        width: 500px;
+        height: 35px;
+        border-radius: 25px 0 0 25px;
+        padding-left: 19px;
+        background-color: rgb(204, 173, 235);
+      }
+
+      .btn-input {
+        height: 40px;
+        background: yellow;
+        border-radius: 0 25px 25px 0;
+        color: black;
+        font-weight: 600;
+      }
+
+      .btn-input:hover {
+        background: rgb(52, 52, 214);
+      }
+
+      @media only screen and (max-width: 678px) {
+        .input {
+          width: 100%;
+          border-radius: 25px;
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+
+        .btn-input {
+          border-radius: 25px;
+        }
+      }
+
+      .mensaje-completado{
+        font-weight: 600;
+        color: green;
+      }
+
+    </style>
+
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+      const { Button, Modal } = ReactBootstrap;
+
+      function App() {
+        return (
+          <>
+            <ListaDeTarea />
+          </>
+        );
+      }
+
+      const Formulario = (props) => {
+        const [input, setInput] = useState("");
+        const [idTarea, setIdTarea] = useState(1);
+
+        const cambiosInput = (e) => {
+          setInput(e.target.value);
+        };
+
+        const generarId = () => {
+          setIdTarea((prevId) => prevId + 1);
+          return idTarea + 1;
+        };
+
+        const envio = (e) => {
+          e.preventDefault();
+
+          if (input.trim() !== "") {
+            const tareaNueva = {
+              texto: input,
+              id: generarId(),
+              completada: false,
+            };
+            props.onSubmit(tareaNueva);
+            setInput("");
+          }
+        };
+        return (
+          <form onSubmit={envio}>
+            <input
+              className="input"
+              type="text"
+              placeholder="Escriba nueva tarea..."
+              value={input}
+              onChange={cambiosInput}
+            />
+            <button className="btn-input">Guardar</button>
+          </form>
+        );
+      };
+
+      function BtnModal({ eliminarTarea }) {
+        const [show, setShow] = useState(false);
+
+        const handleClose = () => setShow(false);
+        const handleShow = () => setShow(true);
+
+        return (
+          <>
+            <Button  variant="light" onClick={handleShow}>
+              <i  className="fas fa-trash-alt btn-borrar"></i>
+            </Button>
+
+            <Modal show={show} onHide={handleClose} animation={false}>
+              <Modal.Header closeButton>
+                <Modal.Title
+                  style={{
+                    color: "black",
+                    fontFamily: "arial",
+                    fontWeight: 800,
+                  }}
+                >
+                  Eliminar tarea
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body style={{ color: "red" }}>
+                Estás a punto de borrar la tarea definitivamente
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  <i className="fas fa-times"></i>
+                </Button>
+                <Button variant="danger" onClick={eliminarTarea}>
+                  <i className="fas fa-trash-alt"></i>
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </>
+        );
+      }
+
+      const Tarea = (props) => {
+        const { texto, eliminarTarea, completada, completarTarea, mensaje } = props;
+        return (
+          <div className="conte">
+            <div className={completada ? "tarea tarea-completada" : "tarea"}>
+              <div className="texto" onClick={completarTarea}>
+               ✔️ {texto}
+              </div>
+              </div>
+              {completada && <div className="mensaje-completado">{mensaje}</div>}
+
+            <BtnModal eliminarTarea={eliminarTarea} />
+          </div>
+        );
+      };
+
+      const ListaDeTarea = () => {
+        const [tarea, setTarea] = useState([]);
+
+        const agregarTarea = (tareaNueva) => {
+          setTarea([...tarea, tareaNueva]);
+          localStorage.setItem("clave", JSON.stringify([...tarea, tareaNueva]));
+        };
+
+        const eliminarTarea = (id) => {
+          const tareaActualizada = tarea.filter((t) => t.id !== id);
+          setTarea(tareaActualizada);
+          localStorage.setItem("clave", JSON.stringify(tareaActualizada));
+        };
+
+        const completarTarea = (id) => {
+          const tareaActualizadas = tarea.map((t) => {
+            if (t.id === id) {
+              t.completada = !t.completada;
+              t.mensaje = "Tarea completada!";
+            }
+            return t;
+          });
+          setTarea(tareaActualizadas);
+          
+          localStorage.setItem("keyS", JSON.stringify(tareaActualizadas));
+        };
+
+        useEffect(() => {
+          const datosGuardados = localStorage.getItem("clave");
+          
+          if (datosGuardados) {
+            setTarea(JSON.parse(datosGuardados));
+          }
+        }, []);
+
+        return (
+          <div className="conte-lista">
+            <h1>Lista de Tareas</h1>
+            <Formulario onSubmit={agregarTarea} />
+            {tarea.map((t) => (
+              <Tarea
+                key={t.id}
+                texto={t.texto}
+                eliminarTarea={() => eliminarTarea(t.id)}
+                completada={t.completada}
+                completarTarea={() => completarTarea(t.id)}
+                mensaje={t.mensaje}
+              />
+            ))}
+          </div>
+        );
+      };
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- Bootstrap JS y Popper.js (necesarios para ciertos componentes de Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

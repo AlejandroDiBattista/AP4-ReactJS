@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 
+      Curso 126 - Grupo 5 -> adrianclavario@gmail.com
+        25340610; Clavario, Osvaldo Adrian
+        16415069; Cernada, Miguel Angel
+        28449465; Gonzalez, Griselda Vanina
+        22073012; Jerez, María Carola
+        20542289; Caniza, Roberto Carlos
+        20853611; Villalba, Raul Orlando
+
+    
+        funciona: si
+        diseño: si
+        nombre: si
+
+        - Realiza persistencia en localStorage
+    -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', sans-serif;
+        }
+
+        #root {
+            background: linear-gradient(blue, cornflowerblue);
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+        }
+        main {
+            margin: 10px auto;
+            width: 500px;
+            background-color: rgb(55, 163, 206);
+            padding: 50px;
+        }
+        .boton {
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 100px;
+            border: none;
+            border-radius: 10px;
+            
+        }
+         
+        h1 {
+
+            color: aliceblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        form {
+            background-color: black;
+            justify-content: center;
+            padding: 10px;
+            display: flex;
+            gap:10px
+        }    
+
+        form input {
+            width: 200px;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        form button {
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 100px;
+            border: none;
+            border-radius: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        ul li {
+            display:flex;
+            justify-content: space-between;
+            justify-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+        } 
+        
+        li input{
+            size: 36px;
+        }
+        li button {
+            padding: 10px;
+            font-size: 24px;
+            background-color: beige;
+            border-radius: 10px;
+        }
+
+        li span {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;          
+        }
+    </style>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React
+
+        function App() {
+            const [proximoId, setCuenta] = useState(0)
+            const [tasks, setTasks] = useState([])
+
+            function agregar(tarea) {
+                const nuevo = { id: proximoId, tarea: tarea, completada: false }
+                const copia = [...tasks, nuevo]
+                setTasks(copia)
+                setCuenta(proximoId + 1)
+            }
+
+            function completar(id) {
+                id, !completada ? tarea : { color: grey }
+            }
+
+            function borrar(id) {
+                const copia = tasks.filter(task => task.id != id)
+                setTasks(copia)
+            }
+
+            function reset() {
+                setTasks([])
+            }
+
+            useEffect(() => {
+                const datos = localStorage.getItem('tasks')
+                if (datos) {
+                    setTasks(JSON.parse(datos))
+                }
+            }, [])
+
+            useEffect(() => {
+                localStorage.setItem('tasks', JSON.stringify(tasks))
+                console.log('Lista Actualizada', tasks)
+            })
+
+            return (
+                <>
+                    <main>
+                        <h1>Lista de Tareas</h1>
+                        <TaskForm alAgregar={agregar} />
+                        <TaskList tasks={tasks} alCompletar={completar} alBorrar={borrar} />
+                        <button className='boton' onClick={() => reset()}>Borrar todo</button>
+                    </main>
+                </>
+            )
+        }
+
+        function TaskForm({ alAgregar }) {
+            const [tarea, setTarea] = useState('');
+
+            function manejarEnvio(e) {
+                e.preventDefault();
+                if (tarea === '') return;
+                alAgregar(tarea);
+                setTarea('');
+            }
+
+            return (
+
+                <form onSubmit={manejarEnvio}>
+                    <input type='text' value={tarea} onChange={(e) => setTarea(e.target.value)} />
+                    <button type='submit'>Agregar</button>
+                </form>
+            );
+        }
+
+        function TaskList({ tasks, alCompletar, alBorrar }) {
+            return (
+                <ul>
+                    {tasks.map(task => <TaskItem task={task} alCompletar={alCompletar} alBorrar={alBorrar} />)}
+                </ul>
+            );
+        }
+
+        function TaskItem({ task, alCompletar, alBorrar }) {
+            function completar(id) {
+                alCompletar(task.id, task.completada)
+            }
+
+            function borrar() {
+                alBorrar(task.id)
+            }
+            return (
+                <li>
+                    <input type='checkbox' onClick={completar} />
+                    <span>{task.tarea}</span>
+                    <button onClick={borrar}>🗑</button>
+
+                </li>
+            )
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>

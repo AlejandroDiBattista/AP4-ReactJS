@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+  
+  <!-- 
+      Curso 133 - Grupo 09 -> raul.juarez.ar@gmail.com
+      28139432; Raúl Juárez
+      28788914; Castañar Petarcich, Juan Martin
+      
+      funciona: si
+      diseño: si
+      nombre: si
+      
+      - Usa bootstrap para el estilo
+      - la recuperacion de los datos del localStorage esta hecha en un lugar incorrecto pero funciona
+    -->
+    <title>Trabajo Práctico Integrador ReactJS - Clase 133 - Grupo 9</title>
+    
+  <script type="text/babel">
+    // Funcion del componente para una tarea
+    function TaskItem(props) {
+      // Obtenemos datos y funciones desde props
+      const {id, text, done, toggleTask, removeTask} = props;
+
+      // Devuelve el elemento JSX del componente TaskItem
+      return (
+          <li className="list-group-item">
+          <span className="mr-2" onClick={() => toggleTask(id)}>
+            {done ? <i className="bi bi-check-circle-fill text-success"></i> : <i className="bi bi-circle text-secondary"></i>}
+          </span>
+          <span style={{textDecoration: done ? "line-through" : "none"}}>{text}</span>
+          <button className="btn btn-sm btn-outline-danger float-right" onClick={() => removeTask(id)}>Eliminar</button>
+        </li>
+      );
+    }
+
+    // Definicion del componente para agregar una tarea nueva
+    function TaskForm(props) {
+        const {addTask} = props; // Obtiene la funcion desde props
+        // Devuelve el elemento JSX para mostrar al componente form
+        return (
+            <div className="input-group mb-3">
+                <input type="text" className="form-control" id="task-input" placeholder="Ingresa una tarea" />
+                <div className="input-group-append">
+                    <button className="btn btn-outline-primary" onClick={addTask}>Agregar</button>
+                </div>
+            </div>
+        );
+    }
+            
+    // Defne al componente para mostrar la lista de tareas
+    function TaskList(props) {
+        // Uso del hook useState para definir el estado del componente
+        const [items, setItems] = React.useState(props.items);
+        
+        // Funcion para agregar una nueva tarea a la lista
+        function addTask() {
+            // Guardamos el elemento input en una variable
+            let input = document.getElementById("task-input");
+            // Obtenemos el contenido del input y se lo guarda en una variable
+            let task = input.value;
+            if (task) {// Si el input no esta vacio...
+                // Crear un objeto de tarea nuevo, con un id unico, texto y una bandera para especificar si está hecho o no
+                let newTask = {id: Date.now(), text: task, done: false};
+                // Actualiza el estado con la tarea nueva
+                setItems([...items, newTask]);
+                input.value = "";// Limpia el contenido del input
+            }
+        }
+    
+        // Funcion para cambiar el estado de una tarea
+        function toggleTask(id) {
+            // Busca el indice de la tarea de acuerdo al id dado
+            let index = items.findIndex(item => item.id === id);
+            let task = {...items[index]};// Hace una copia de la tarea
+            task.done = !task.done;// Cambia el estado de la tarea
+            // Actualiza el estado de las tareas con la tarea modificada
+            setItems([...items.slice(0, index), task, ...items.slice(index + 1)]);
+        }
+
+        // Funcion para eliminar una tarea de la lista
+        function removeTask(id) {
+            // Filtra las tareas segun el id dado
+            let newItems = items.filter(item => item.id !== id);
+            // Actualiza el estado de las tareas nuevas
+            setItems(newItems);
+        }
+    
+        // Uso del hook useEffect para guardar las tareas en localStorage
+        React.useEffect(() => {
+            // Convierte el array de tareas a una cadena con formato JSON
+            let itemsJSON = JSON.stringify(items);
+            // Guarda las tareas en el localStorage
+            localStorage.setItem("items", itemsJSON);
+        }, [items]); // Solo ejecuta el useEffect cuando las tareas cambian 
+    
+        // Devuelve el elemento JSX para mostrar el componente
+        return (
+            <div className="container">
+                <h1>Lista de tareas</h1>
+                <TaskForm addTask={addTask} />
+                <ul className="list-group">
+                    {items.map(item => (
+                        <TaskItem key={item.id} id={item.id} text={item.text} done={item.done} toggleTask={toggleTask} removeTask={removeTask} />
+                        ))}
+                </ul>
+            </div>
+        );
+    }
+    
+    // Obtiene las tareas desde localStorage
+    let itemsJSON = localStorage.getItem("items");
+    // Pasa a un array
+    let items = itemsJSON ? JSON.parse(itemsJSON) : [];
+    
+    // Renderiza el componenete con las tareas iniciales
+    ReactDOM.render(<TaskList items={items} />, document.getElementById('root'));
+  </script>
+</head>
+    <body>
+    <div id="root"></div>
+    </body>
+</html>

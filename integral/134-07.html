@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="AUTHOR" content="Alfonso Arias, Adrian Mahmud, Carlos Manera" />
+
+        <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+         
+
+        <!-- 
+          Curso 134 - Grupo 07 -> mahmudpaa@gmail.com
+            21418801; Adrián Mahmud
+            20948507; Carlos Manera
+            18383939; Alfonso Arias
+        
+            funciona: no
+            diseño: si
+            nombre: 
+        -->
+        
+    
+        <title>Lista de Tareas</title>
+        <style>
+            /* App.css */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            main {
+                border: 1px solid rgb(61, 13, 13);
+                margin: 0 auto;
+                max-width: 800px;
+                background-color: rgb(7, 7, 7);
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+                
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                color: #222;
+                padding: 10px;
+                background-color: rgb(147, 182, 228);
+                color: rgb(9, 16, 119)
+
+            }
+                        /* ContadorFormulario.css */
+            form {
+                width: 95%;
+                padding: 10px;
+                display: flex;
+                gap: 10px;
+                margin: 5px;
+            }
+            form input {
+                width: 90%;
+                padding: 5px;
+                border: 1px solid #ccc;
+            }
+
+            form button {
+                cursor:pointer;
+                width: 100px;
+                font-size: 20px;
+                background-color: rgb(168, 8, 8);
+                border: 2px solid transparent;
+                color: white;
+                border-radius: 5px;
+            }
+
+                        /* ContadorLista.css */
+            ul {
+                
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                padding: 10px;
+            }
+
+            li {
+                font-size: 20px;
+                padding: 10px;
+                margin: 5px;
+                border-radius: 5px;
+                border: 1px solid rgb(233, 225, 225);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                background-color: rgb(58, 25, 25);
+                color: white;
+            }
+
+            .botones {
+                display: flex;
+                gap: 30px;
+            }
+
+        
+            
+            li button {
+                cursor:pointer;
+                background-color: rgb(163, 8, 8);
+                border: 3px solid transparent;
+                color: white;
+                border-radius: 15px;
+                border-color:black ;
+                width: 100px;
+                height: 30px;
+                font-size: 18px;
+            }
+        </style>
+
+        <script type="text/babel">
+            const { useState, useEffect } = React        
+            const datosInicial = [
+            { id: 1, tarea: 'abrir visual estudio code', estado: 'a realizar' },
+            { id: 3, tarea: 'crear ambiente de trabajo', estado: 'a realizar' },
+            { id: 4, tarea: 'crear archivo index.html', estado: 'a realizar' },
+            ]
+
+                        // App.jsx
+            function App() {
+                const [contadores, setContadores] = useState(datosInicial)
+
+                function agregar(tarea) {
+                    const original = { id: Number(Date.now()), tarea, estado: 'a realizar', }
+                    const copia = [...contadores, original]
+                    
+                    setContadores(copia)
+                }
+
+                function realizar(id, estado) {
+                    const original = contadores.find((contador) => contador.id === id)
+                    const nuevo = { ...original, estado }
+                    const copia = contadores.map(contador => contador.id === nuevo.id ? nuevo : contador)
+                    
+                    setContadores(copia)
+                }
+            
+                function borrar(id) {
+                    const copia = contadores.filter((contador) => contador.id !== id)
+                    setContadores(copia)
+                }
+            
+                useEffect(() => {
+                    console.log('Se elimino una tarea :' + contadores.length)
+                }, [contadores.length])	
+
+                return (
+                    <>
+                    <main>
+                        <h1>Lista de Tareas</h1>
+                        <ContadorFormulario alAgregar={agregar} />
+                        <ContadorLista contadores={contadores} alRealizar={realizar} alBorrar={borrar} />
+                    </main>
+                    </>
+                )
+            }
+                        // ContadorFormulario.jsx
+            function ContadorFormulario({ alAgregar }) {
+                const [tarea, setTarea] = useState('')
+
+                function cambiarTarea(event) {
+                    setTarea(event.target.value)
+                }
+            
+                function agregar(event) {
+                    alAgregar(tarea)
+                    setTarea('')
+                    event.preventDefault()
+                }
+
+                return (
+                    <form>
+                        <input type="search" value={tarea} onChange={cambiarTarea} />
+                        <button onClick={agregar}>Agregar</button>
+                    </form>
+                )
+            }
+
+            // ContadorLista.jsx
+
+            function ContadorLista({ contadores, alRealizar, alBorrar }) {
+                return (
+                    <>
+                    <ul>
+                        {contadores.map((contador) => <ContadorItem
+                            key={contador.id}
+                            contador={contador} 
+                            alRealizar={alRealizar}
+                            alBorrar={alBorrar} />)
+                        }
+                    </ul>
+                    </>
+                );
+            }
+
+            function ContadorItem({contador, alRealizar, alBorrar}) {
+                const { id, tarea, estado } = contador
+
+                function realizar(){
+                    alRealizar(id, 'Raalizada')
+                }
+
+                function borrar() {
+                    alBorrar(id)
+                }
+
+                return (
+                    <li>  {tarea}
+                        <div className='botones'>
+                            
+                            <button onClick={realizar}>{estado}</button>
+                            <button onClick={borrar}>Eliminar</button>
+                        </div>
+                    </li>
+                )
+            }
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        </script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TF-React</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- 
+      Curso 126 - Grupo 06 -> rosananeiman77@gmail.com
+        25851689; Neiman, Rosana
+    
+        funciona: si
+        diseño: si
+        nombre: si
+    -->
+    
+    <style>
+      body {
+          box-sizing: border-box;
+          background : linear-gradient(to bottom right, blue, cyan);
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #root {
+          margin: 0 auto;
+          width: 450px;
+      }
+
+      h2  {
+          text-align: center;
+          font-size: 32px;
+          color: white;
+          margin-top: 20px;
+          margin-bottom:  20px;
+
+      }
+
+      ul {
+          padding: 0;
+      }
+
+      li {
+          list-style: none;
+          margin-bottom: 15px;
+          padding: 10px 15px;
+          width: 100%;
+          background: linear-gradient(rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.5) 100%);
+          border-radius: 10px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 40px 0px, rgba(0, 0, 0, 0.1) 0px 15px 30px 0px, rgba(0, 0, 0, 0.1) 0px 5px 10px 0px;
+      }
+     
+      li span {
+          color: rgb(61, 18, 163);
+          margin: 0;
+          font-size: 24px;
+      }
+      button {
+          border-radius: 50%;
+          background-color: rgb(190, 202, 211);
+          color: black;
+      }
+      .formulario {
+         margin-bottom: 15px;
+      }
+      input {
+          width: 100%;
+          border-radius: 6px;
+          margin-left: 0px;
+          padding-left: 0px;
+          font-size: 24px;
+          border: none;
+          background-color:rgb(213, 220, 225) ;
+      }
+      .agregar {
+          font-size: 22px;
+          margin-left: 0px;
+          font-weight: bold;          
+      }
+      
+    </style>
+    <script type="text/babel">
+
+      function App() {
+        const tareasIniciales = [ 
+                    {id:1, nombre:"sacar basura", completada:true},
+                    {id:2, nombre:"codear", completada:false},
+                    {id:3, nombre:"ir al gym", completada:false}
+        ]
+        const [count, setCount] = React.useState(3)
+        const [tareas, setTareas] = React.useState(tareasIniciales)
+        function cargar(nuevaTarea) {
+          const nueva = {id:count + 1, nombre:nuevaTarea, completada:false}
+          const copia = [nueva, ...tareas]
+          setTareas(copia)
+          setCount(count+1)
+        }
+        function completar(id) {
+          const actual = tareas.find(tarea => tarea.id == id)
+          const nuevo = {...actual, completada : true}
+          const copia = tareas.map(tarea => tarea.id == id ? nuevo : tarea)
+          setTareas(copia)
+          }
+
+        function borrar(id){
+          const copia = tareas.filter(tarea => tarea.id != id)
+          setTareas(copia)
+        }
+
+        React.useEffect(() => {
+          sessionStorage.setItem('Tareas', JSON.stringify(tareas))
+          console.log("La lista se actualizo ",  tareas)})
+
+        return (
+          <><main className="container">      
+              <h2>Lista de tareas</h2>
+              <TaskForm alCargar={cargar}></TaskForm>  
+                  
+              <TaskList className="row align-items-start" tareas={tareas} alCompletar={completar} alBorrar={borrar} ></TaskList>
+            </main>
+          </>
+        )
+      }
+
+      function TaskForm({alCargar}) {
+        const [tarea, setTarea] = React.useState('')
+
+        function hacerCarga(e){
+          e.preventDefault()
+          if (tarea=='') return 
+          alCargar(tarea)
+          setTarea('')
+        }
+        return (
+          <>
+          <form onSubmit={hacerCarga}>
+          <div className="container">
+              <div className="row formulario">          
+                      
+                          <div className="col-10 align-items-start">
+                              <input type='text' value={tarea} onChange={(e) => setTarea(e.target.value)}></input>
+                          </div>
+                          <div className="col-2 align-items-start agregar">
+                              <button className="btn btn-secondary boton" type='submit'>+</button>
+                          </div>
+                      
+                  
+              </div>
+          </div>
+      </form>
+          </>
+
+        )
+      }
+      
+      function TaskList({tareas, alCompletar, alBorrar}){
+        return(
+          <ul>
+            {tareas.map(tarea => <TaskItem key={tarea.id} tarea={tarea} alCompletar={alCompletar} alBorrar={alBorrar}></TaskItem>)}
+          </ul>
+        )
+      }
+
+      function TaskItem({tarea, alCompletar, alBorrar}) {
+        return(
+          <>
+          <li style={{ listStyle: "none" }}>
+            <div className="container">
+              <div className="row"> 
+                  <div className="col-4 align-items-start">
+                      <button style={{ color: 'red', borderRadius: '15px',  textAlign: "left", margin: "0 auto",}} onClick={() => alCompletar(tarea.id)}>Terminada</button>  
+                  </div>
+                  <div className="col-6 align-items-start">
+                      <span >{(tarea.completada) ? <del>{tarea.nombre}</del> : <span>{tarea.nombre}</span> }</span>
+                  </div>
+                  <div className="col-2 align-items-end">    
+                      <button className='boton btn btn-secondary' onClick={() => alBorrar(tarea.id)}>X</button>
+                  </div>
+            </div>
+          
+      </div>
+          </li>
+          </>
+        )
+      }
+              
+      let root = document.getElementById('root')       
+      ReactDOM.render( <App />, root);
+    </script> 
+  </head>
+  <body>  
+
+    <div id="root"></div>
+  </body>
+</html>
