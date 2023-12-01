@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Librería REACT -->
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <!-- Librería Babel para convertir JSX -->
+    <script src="https://unpkg.com/@babel/standalone@7.23.4/babel.min.js"></script>
+
+    <!-- 
+      Curso 132 - Grupo 15 -> estalej@gmail.com
+        24271970; Perez, Esteban Alejandro
+    
+        funciona: 
+        diseño: 
+        nombre: 
+    
+    -->
+    <title>Título</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+      }
+      #root {
+        max-width: 1280px;
+        margin: 10em auto;
+        padding: 2rem;
+        text-align: center;
+        background-color: rgb(242, 245, 255);
+        border-radius: 0.5em;
+        border: 1px solid black;
+      }
+
+      .lista {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .titulo {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2em;
+        color: rgb(99, 99, 150);
+      }
+      form,
+      input {
+        padding: 0.5em;
+        border-radius: 0.5em;
+        margin-bottom: 2em;
+      }
+
+      input {
+        border: 1px solid gray;
+        width: 40em;
+        margin: 1em;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      span {
+        background-color: rgb(255, 255, 255);
+        width: 20em;
+      }
+
+      .completa {
+        margin-right: 2em;
+      }
+
+      .btn-add-tarea {
+        color: rgb(3, 3, 3);
+        background-color: rgb(163, 235, 48);
+        padding: 0.5em;
+        border-radius: 7px;
+        border: none;
+      }
+
+      .btn-guardar {
+        color: aliceblue;
+        background-color: rgb(126, 126, 255);
+        padding: 0.5em;
+        border-radius: 7px;
+        border: none;
+      }
+
+      .btn-editar {
+        color: aliceblue;
+        background-color: rgb(124, 190, 82);
+        padding: 0.5em;
+        border-radius: 7px;
+        border: none;
+      }
+
+      .btn-borrar {
+        color: aliceblue;
+        background-color: rgb(228, 80, 80);
+        padding: 0.5em;
+        border-radius: 7px;
+        border: none;
+        margin: 2px;
+      }
+
+      .btn-estado {
+        color: aliceblue;
+        background-color: rgb(173, 195, 202);
+        padding: 0.5em;
+        border-radius: 7px;
+        border: none;
+      }
+    </style>
+
+<script type="text/babel">
+
+const { useState } = React 
+
+//cargo desde el almacenamientop local del Browser la lista de tareas almacenada
+
+if (localStorage.getItem('tareas')== null){
+  localStorage.setItem('tareas','[]')
+  localStorage.setItem('idInicial','1')
+}
+
+const tareasIniciales = JSON.parse(localStorage.getItem('tareas'))
+const idInicial = JSON.parse(localStorage.getItem('idInicial'))
+
+//componente principal de la aplicacion
+function App() {
+  const [proximoID, setProximoID] = useState(idInicial)
+  const [tareas, setTareas] = useState(tareasIniciales)
+  
+  function agregar(nombre) {
+    const tareaNueva = { id: proximoID, nombre, completa: false }
+    setTareas([...tareas,tareaNueva])
+    setProximoID(proximoID + 1)
+  }
+
+  localStorage.setItem('tareas',JSON.stringify(tareas))
+  localStorage.setItem('idInicial',proximoID)
+  
+  function editar(id, nuevoNombre) {
+
+        tareas.map(function (tarea) {
+            if (tarea.id == id) {
+                tarea.nombre = nuevoNombre;
+            }
+
+            return tarea;
+        });
+    }
+
+    function estado(id) {
+        tareas.map(function (tarea) {
+            if (tarea.id == id) {
+                tarea.completa ? tarea.completa = false : tarea.completa = true;
+            }
+            return tarea;
+        });
+    }
+
+    function borrar(id) {
+        const nuevasTareas = tareas.filter(tareas => tareas.id !== id)
+        setTareas(nuevasTareas)
+    }
+
+    return (
+
+        <main>
+            <div className='contenedor'>
+                <div className='lista'>
+                    <div className="titulo">Lista de tareas</div>
+                    <TareasForm alAgregar={agregar} />
+                    <TareasList tareas={tareas} al alEditar={editar} alBorrar={borrar} alEstado={estado} />
+                </div>
+            </div>
+        </main>
+
+    )
+}
+//componente que renderiza y le da funcionalidad al formulario de agregar tareas
+function TareasForm({ alAgregar }) {
+    const [nombre, setNombre] = useState('')
+
+    function cambiar(evento) {
+        setNombre(evento.target.value)
+    }
+
+    function agregar(evento) {
+        alAgregar(nombre)
+        setNombre('')
+        evento.preventDefault()
+    }
+    
+    return (
+        <form >
+            <input type="search" value={nombre} onChange={cambiar} placeholder='tareas' />
+            <button className='btn-add-tarea' onClick={agregar}>Agregar Tarea</button>
+        </form>
+    )
+}
+
+//Componente para renderizar la lista de Tareas
+function TareasList({ tareas, alEditar, alBorrar, alEstado }) {
+    return (
+        <ul>
+            {tareas.map((tarea)=> <TareasItem
+                key={tareas.id}
+                tarea={tarea}
+                alEditar={alEditar}
+                alBorrar={alBorrar}
+                alEstado={alEstado}
+            />
+            )}
+        </ul>
+    )
+}
+//componente para renderizar cada objeto en el array tareas
+function TareasItem({ tarea, alEditar, alBorrar, alEstado }) {
+
+    //Funcion para cambiar la Tarea, se oculta el boton "editar" y se pone visible el de "guardar"
+    function cambiar(id) {
+        document.getElementById('input' + id).readOnly = false
+        document.getElementById('botonGuardar' + id).style.display = "inline"
+        document.getElementById('botonEdit' + id).style.display = "none"
+
+    }
+
+    //Funcion para guardar la Tarea editada, se oculta el boton "guardar" y se pone visible el de "editar"
+    function guardar(id) {
+        document.getElementById('botonGuardar' + id).style.display = "none"
+        document.getElementById('botonEdit' + id).style.display = "inline"
+        document.getElementById('input' + id).readOnly = true
+        tarea = document.getElementById('input' + id).value
+        alEditar(id, tarea)
+
+    }
+    
+    // funcion para cambiar el estado de una tarea
+    function estado(id) {
+        alEstado(id)
+    }
+    
+    const { completa, nombre, id } = tarea
+    const color = { color: completa ? 'green' : 'red' };
+    return (
+        <li>
+            <input type="search" id={'input' + id} readOnly={true} placeholder={nombre} />
+            <span className='completa' style={color}>{completa ? 'Realizada' : 'Sin hacer'}</span>
+            <div className="botones">
+                <button className='btn-editar' id={'botonEdit' + id} onClick={() => cambiar(id)}>Editar</button>
+                <button className='btn-guardar' id={'botonGuardar' + id} onClick={() => guardar(id)} hidden={true} > Guardar</button>
+                <button className='btn-borrar' onClick={() => alBorrar(id)}> Eliminar</button>
+                <button className='btn-estado' onClick={() => estado(id)}> Estado</button>
+            </div>
+
+        </li>
+    )
+
+}
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

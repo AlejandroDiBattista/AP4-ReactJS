@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://kit.fontawesome.com/f5cbecb85f.js" crossorigin="anonymous"></script>
+
+  <!-- 
+    Curso 132 - Grupo 12 -> agustiiin@yahoo.com.ar
+        27792195; Fernández Gasc, Agustín		
+        26054685; Colinas, Mauricio
+        
+        funciona: si
+        diseño: si
+        nombre: si
+  -->
+
+  <title>Lista de Tareas</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items:start;
+        height: 100vh;
+        background-color: #f4f4f4;
+        }
+
+        .app {
+        width: 400px;
+        background-color: white;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            color: rgb(78, 78, 234);
+        }
+
+        .tarea {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        margin-bottom: 10px;
+        }
+
+        .tarea input {
+        margin-right: 10px;
+        }
+
+        .tarea span {
+            width: 80%;
+        }
+
+        .tarea.completed span {
+        text-decoration: line-through;
+        color: #888;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            /* padding-bottom: 10px; */
+            /* border-bottom: 2px solid gray; */
+        }
+
+        form input {
+        width: 70%;
+        padding: 8px;
+        margin-right: 10px;
+        }
+
+        .form button, .listaTareas button {
+        padding: 8px;
+        cursor: pointer;
+        }
+
+        ul {
+            background-color: burlywood;
+            border-radius: 5px;
+            padding: 20px 0 10px 10px;
+        }
+    </style>
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        
+        function TaskList() {
+            // const [tareas, setTareas] = useState(tareasInicial);
+
+            const [tareas, setTareas] = useState(() => {
+                // Recuperar las tareas desde localStorage o devolver un array vacío si no hay datos.
+                const tareasAlmacenadas = localStorage.getItem('tareas');
+                return tareasAlmacenadas ? JSON.parse(tareasAlmacenadas) : [];
+            });
+            const [proximoID, setProximoID] = useState(4);
+
+            // Efecto para guardar en localStorage
+            useEffect(() => {
+                localStorage.setItem('tareas', JSON.stringify(tareas));
+                console.log('Lista de tareas actualizada:', tareas);
+            }, [tareas]);
+
+            function agregar(nombre) {
+                const nuevaTarea = { id: proximoID, nombre, completada: false };
+
+                setTareas([...tareas, nuevaTarea]);
+                setProximoID(proximoID + 1);
+            }
+
+            function borrar(id) {
+                const nuevasTareas = tareas.filter(tarea => tarea.id !== id);
+                setTareas(nuevasTareas);
+            }
+
+            function completar(id) {
+                const nuevasTareas = tareas.map(tarea => tarea.id === id ? { ...tarea, completada: !tarea.completada } : tarea);
+                setTareas(nuevasTareas);
+            }
+
+            return (
+                <div className="app">
+                    <h1>LISTA DE TAREAS</h1>
+                    <TaskForm alAgregar={agregar} />
+                    <TaskItem tareas={tareas} alBorrar={borrar} alCompletar={completar} />
+                </div>
+            );
+        }
+
+        function TaskForm({ alAgregar }) {
+            const [nombre, setNombre] = useState('');
+
+            function cambiar(evento) {
+                setNombre(evento.target.value);
+            }
+
+            function agregar(evento) {
+                alAgregar(nombre);
+                setNombre('');
+                evento.preventDefault();
+            }
+
+            return (
+                <form>
+                <input type="text" value={nombre} onChange={cambiar} placeholder="Nombre de tarea" />
+                <button onClick={agregar}><i className="fas fa-plus"></i></button>
+                </form>
+            );
+        }
+
+        function TaskItem({ tareas, alBorrar, alCompletar }) {
+            return (
+                <ul>
+                {tareas.map(tarea => <MostrarItem key={tarea.id} tarea={tarea} alBorrar={alBorrar} alCompletar={alCompletar} />)}
+                </ul>
+            );
+        }
+
+        function MostrarItem({ tarea, alBorrar, alCompletar }) {
+            return (
+                <li key={tarea.id} className={`tarea ${tarea.completada ? 'completed' : ''}`}>
+                    <input type="checkbox" checked={tarea.completada} onChange={() => alCompletar(tarea.id)} />
+                    <span>{tarea.nombre}</span>
+                    
+                    <button onClick={() => alBorrar(tarea.id)}><i className="fas fa-trash"></i></button>
+                </li>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(
+            <React.StrictMode>
+                <TaskList />
+            </React.StrictMode>,
+        );
+    </script>
+</head>
+
+    <body>
+    <div id="root"></div>
+    </body>
+</html>
