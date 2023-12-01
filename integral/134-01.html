@@ -28,197 +28,167 @@
   
     <title>Título</title>
     <style>
-      #root {
-        max-width: 500px;
-        margin: 50px auto;
-        padding: 20px;
-        border: 2px solid #ffb6c1;
-        background-color: #d879d8;
-        min-height: 200px; 
-      }
-      .task-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 2px solid #ffb6c1;
-        padding: 10px;
-        margin: 5px;
-        background-color: #256d55;
-        overflow: hidden; 
-      }
+    #root {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 2px solid #ffb6c1;
+      background-color: #d879d8;
+      min-height: 200px;
+    }
 
-      .task-item span {
-        flex-grow: 1;
-        white-space: nowrap; 
-        overflow: hidden;
-        text-overflow: ellipsis; 
-      }
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 2px solid #ffb6c1;
+      padding: 10px;
+      margin: 5px;
+      background-color: #256d55;
+      overflow: hidden;
+    }
 
-      .task-buttons {
-        display: flex;
-      }
+    .task-item span {
+      flex-grow: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-      .task-buttons button {
-        background-color: #e74c3c;
-        color: #fff;
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-        margin-left: 5px;
-      }
+    .task-buttons {
+      display: flex;
+    }
 
-      .task-buttons button:hover {
-        background-color: #c0392b;
-      }
+    .task-buttons button {
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    .task-buttons button:hover {
+      background-color: #c0392b;
+    }
   </style>
 
-<script type="text/babel">
-        const { useState, useEffect } = React        
+  <script type="text/babel">
+    const { useState, useEffect } = React
 
-                      
-        function App() {
-          // Obtiene las tareas almacenadas en el localStorage al montar el componente
-          const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    function App() {
+      const storedTasks = () => JSON.parse(localStorage.getItem('tasks')) || [];
 
-          // Establece el estado inicial de las tareas
-          const [tasks, setTasks] = useState(storedTasks);
+      const [tasks, setTasks] = useState(storedTasks);
 
-          // Guarda tareas en el localStorage cada vez que cambien
-          useEffect(() => {
-            const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-          
-          // Verifica si storedTasks no está vacío antes de actualizar el estado
-          
-          if (storedTasks.length > 0) {
-              setTasks(storedTasks);
-            }
-          }, []);
-          
-          const addTask = (task) => {
-            const newTasks = [...tasks, task];
-            setTasks(newTasks);
-            console.log('Task added. Updated tasks:', newTasks);
-          };
-          
-          const deleteTask = (taskId) => {
-            const updatedTasks = tasks.filter((task) => task.id !== taskId);
-            setTasks(updatedTasks);
-            console.log('Task deleted. Updated tasks:', updatedTasks);
-          };
-          
-          const toggleComplete = (taskId) => {
-            // Implementa la lógica para marcar o desmarcar la tarea completada
-            const updatedTasks = tasks.map((task) =>
-              task.id === taskId ? { ...task, completed: !task.completed } : task
-            );
-          
-            // Guarda las tareas actualizadas en el localStorage
-            localStorage.setItem('tasks', JSON.stringify(updatedTasks));
-          
-            setTasks(updatedTasks);
-          };  
-          
-          return (
-            <div id="root">
-              <h1>Gestión de Tareas</h1>
-              <TaskForm tasks={tasks} addTask={addTask} />
-              <h2>Lista de Tareas</h2>
-              <TaskList tasks={tasks} deleteTask={deleteTask} toggleComplete={toggleComplete} />
-            </div>
-          );
-        }
+      useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+      }, [tasks]);
 
-        // TaskForm.js
+      const addTask = (task) => {
+        const newTasks = [...tasks, task];
+        setTasks(newTasks);
+        console.log('Task added. Updated tasks:', newTasks);
+      };
 
-        const TaskForm = ({ tasks, addTask }) => {
-          const [newTask, setNewTask] = useState('');
+      const deleteTask = (taskId) => {
+        const updatedTasks = tasks.filter((task) => task.id !== taskId);
+        setTasks(updatedTasks);
+        console.log('Task deleted. Updated tasks:', updatedTasks);
+      };
 
-          const handleAddTask = () => {
-            if (!tasks) {
-              tasks = []; 
-            }
+      const toggleComplete = (taskId) => {
+        const updatedTasks = tasks.map((task) =>
+          task.id === taskId ? { ...task, completed: !task.completed } : task
+        );
 
-            const trimmedTask = newTask.trim();
+        localStorage.setItem('tasks', JSON.stringify(updatedTasks));
 
-            if (trimmedTask === '') return;
+        setTasks(updatedTasks);
+      };
 
-            addTask({ id: Date.now(), name: trimmedTask, completed: false });
+      return (
+        <div id="root">
+          <h1>Gestión de Tareas</h1>
+          <TaskForm tasks={tasks} addTask={addTask} />
+          <h2>Lista de Tareas</h2>
+          <TaskList tasks={tasks} deleteTask={deleteTask} toggleComplete={toggleComplete} />
+        </div>
+      );
+    }
 
-            setNewTask('');
-          };
+    const TaskForm = ({ tasks, addTask }) => {
+      const [newTask, setNewTask] = useState('');
+      const handleAddTask = () => {
+        const trimmedTask = newTask.trim();
+        if (trimmedTask === '') return;
+        addTask({ id: Date.now(), name: trimmedTask, completed: false });
+        setNewTask('');
+      };
+      return (
+        <div className="task-form">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Nombre de la tarea"
+            value={newTask}
+            onChange={(e) => setNewTask(e.target.value)}
+          />
+          <button onClick={handleAddTask}>Agregar Tarea</button>
+        </div>
+      );
+    };
 
-          return (
-            <div className="task-form">
-              <input
-                type="text"
-                id="taskInput"
-                placeholder="Nombre de la tarea"
-                value={newTask}
-                onChange={(e) => setNewTask(e.target.value)}
-              />
-              <button onClick={handleAddTask}>Agregar Tarea</button>
-            </div>
-          );
-        };
+    const TaskItem = ({ task, deleteTask, toggleComplete }) => {
+      const handleToggleComplete = () => {
+        toggleComplete(task.id);
+      };
 
-        // TaskItem.js
+      const handleDeleteTask = () => {
+        deleteTask(task.id);
+      };
 
+      return (
+        <div className="task-item">
+          <span
+            style={{
+              textDecoration: task.completed ? 'line-through' : 'none',
+              color: task.completed ? 'limegreen' : 'white',
+            }}
+          >
+            {task.name}
+          </span>
+          <div className="task-buttons">
+            <button onClick={handleToggleComplete}>
+              {task.completed ? 'Desmarcar' : 'Marcar'}
+            </button>
+            <button onClick={handleDeleteTask}>X</button>
+          </div>
+        </div>
+      );
+    };
 
-        const TaskItem = ({ task, deleteTask, toggleComplete }) => {
-          const handleToggleComplete = () => {
-            // Llamamos a la función toggleComplete con el ID de la tarea
-            toggleComplete(task.id);
-          };
+    const TaskList = ({ tasks, deleteTask, toggleComplete }) => {
+      console.log('Received tasks:', tasks);
 
-          const handleDeleteTask = () => {
-            deleteTask(task.id);
-          };
+      return (
+        <div className="task-list">
+          {tasks.map((task) => (
+            <TaskItem
+              key={task.id}
+              task={task}
+              deleteTask={deleteTask}
+              toggleComplete={toggleComplete}
+            />
+          ))}
+        </div>
+      );
+    };
 
-          return (
-            <div className="task-item">
-              <span
-                style={{
-                  textDecoration: task.completed ? 'line-through' : 'none',
-                  color: task.completed ? 'limegreen' : 'white',
-                }}
-              >
-                {task.name}
-              </span>
-              <div className="task-buttons">
-                <button onClick={handleToggleComplete}>
-                  {task.completed ? 'Desmarcar' : 'Marcar'}
-                </button>
-                <button onClick={handleDeleteTask}>X</button>
-              </div>
-            </div>
-          );
-        };
-
-        // TaskList.js
-
-        const TaskList = ({ tasks, deleteTask, toggleComplete }) => {
-          console.log('Received tasks:', tasks);
-
-          return (
-            <div className="task-list">
-              {tasks.map((task) => (
-                <TaskItem
-                  key={task.id}
-                  task={task}
-                  deleteTask={deleteTask}
-                  toggleComplete={toggleComplete}
-                />
-              ))}
-            </div>
-          );
-        };
-
-
-        ReactDOM.render(<App />, document.getElementById('root'));
-      </script>
-    </head>
-
-    <body>
-        <div id="root"></div>
-    </body>
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
