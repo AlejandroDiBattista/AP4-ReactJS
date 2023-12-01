@@ -878,6 +878,30 @@
   },
   {
     "curso": 133,
+    "grupo": 9,
+    "email": "raul.juarez.ar@gmail.com",
+    "alumnos": [
+      28139432,
+      28788914
+    ],
+    "notas": [
+
+    ],
+    "resultado": {
+      "funciona": "si",
+      "implementacion": "funcion",
+      "reutilizacion": "si"
+    },
+    "faltan": [
+      28496461,
+      28602971,
+      26949681,
+      24271308
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 133,
     "grupo": 10,
     "email": "vampirulo10@hotmail.com",
     "alumnos": [
