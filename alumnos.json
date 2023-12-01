@@ -269,7 +269,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "10.00"
   },
   {
     "curso": 132,
@@ -694,7 +694,7 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "5.50"
   },
   {
     "curso": 132,
@@ -796,7 +796,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "8.00"
   },
   {
     "curso": 132,
@@ -864,7 +864,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "8.50"
   },
   {
     "curso": 132,
@@ -966,7 +966,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "9.00"
   },
   {
     "curso": 132,
@@ -1085,7 +1085,7 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "7.50"
   },
   {
     "curso": 132,
@@ -1255,7 +1255,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "8.00"
   },
   {
     "curso": 132,
@@ -1374,7 +1374,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "7.50"
   },
   {
     "curso": 132,
@@ -1765,7 +1765,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "9.50"
   },
   {
     "curso": 132,
@@ -2513,7 +2513,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "7.00"
   },
   {
     "curso": 134,
@@ -2797,10 +2797,10 @@
     "dias": "PPPPPPPP",
     "id": "3164",
     "practico": "si",
-    "integral": "no",
+    "integral": "si",
     "asistio": "si",
-    "correcto": "no",
-    "revisar": "si",
+    "correcto": "si",
+    "revisar": "no",
     "error": "no",
     "examen": "9.00"
   },
@@ -3040,7 +3040,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "9.50"
   },
   {
     "curso": 134,
@@ -3142,7 +3142,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "8.50"
   },
   {
     "curso": 134,
@@ -3618,7 +3618,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "8.50"
   },
   {
     "curso": 133,
@@ -3873,7 +3873,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "9.00"
   },
   {
     "curso": 133,
@@ -4043,7 +4043,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "9.00"
   },
   {
     "curso": 133,
@@ -4196,7 +4196,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "5.50"
   },
   {
     "curso": 133,
@@ -5602,12 +5602,12 @@
     "dias": "PPPPPPPP",
     "id": "21949",
     "practico": "si",
-    "integral": "no",
+    "integral": "si",
     "asistio": "si",
-    "correcto": "no",
-    "revisar": "si",
+    "correcto": "si",
+    "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "8.50"
   },
   {
     "curso": 126,
@@ -6022,7 +6022,7 @@
     "grupo": 0,
     "nombre": "Mao, Nicolas",
     "dni": 41435342,
-    "email": "nicolas_mao@outlook.com             P (1/1)",
+    "email": "nicolas_mao@outlook.com",
     "asistencias": 3,
     "dias": "PPPAAAAA",
     "id": "24925",
@@ -6032,7 +6032,7 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": ""
+    "examen": "-"
   },
   {
     "curso": 126,
@@ -6338,7 +6338,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "8.00"
   },
   {
     "curso": 126,
@@ -6406,7 +6406,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "8.00"
   },
   {
     "curso": 126,
@@ -6440,7 +6440,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "6.50"
   },
   {
     "curso": 126,
@@ -6661,7 +6661,7 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "8.00"
   },
   {
     "curso": 126,
@@ -6707,10 +6707,10 @@
     "dias": "PPPPPPPA",
     "id": "18178",
     "practico": "si",
-    "integral": "no",
+    "integral": "si",
     "asistio": "si",
-    "correcto": "no",
-    "revisar": "si",
+    "correcto": "si",
+    "revisar": "no",
     "error": "no",
     "examen": "8.50"
   },
@@ -6741,10 +6741,10 @@
     "dias": "PPPPPPPA",
     "id": "22195",
     "practico": "si",
-    "integral": "no",
+    "integral": "si",
     "asistio": "si",
-    "correcto": "no",
-    "revisar": "si",
+    "correcto": "si",
+    "revisar": "no",
     "error": "no",
     "examen": "-"
   },
