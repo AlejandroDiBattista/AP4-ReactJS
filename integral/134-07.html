@@ -13,10 +13,10 @@
         <!-- 
           Curso 134 - Grupo 07 -> mahmudpaa@gmail.com
             21418801; Adrián Mahmud
-            20948507; Carlos Manera
             18383939; Alfonso Arias
-        
-            funciona: no
+            20948507: Manera, Carlos Federico
+
+            funciona: si
             diseño: si
             nombre: 
         -->
@@ -24,7 +24,7 @@
     
         <title>Lista de Tareas</title>
         <style>
-            /* App.css */
+         
             * {
                 box-sizing: border-box;
                 margin: 0;
@@ -49,7 +49,7 @@
                 color: rgb(9, 16, 119)
 
             }
-                        /* ContadorFormulario.css */
+                     
             form {
                 width: 95%;
                 padding: 10px;
@@ -73,7 +73,7 @@
                 border-radius: 5px;
             }
 
-                        /* ContadorLista.css */
+            
             ul {
                 
                 list-style: none;
@@ -118,52 +118,52 @@
 
         <script type="text/babel">
             const { useState, useEffect } = React        
-            const datosInicial = [
-            { id: 1, tarea: 'abrir visual estudio code', estado: 'a realizar' },
-            { id: 3, tarea: 'crear ambiente de trabajo', estado: 'a realizar' },
-            { id: 4, tarea: 'crear archivo index.html', estado: 'a realizar' },
+            const tareasIniciales = [
+            { id: 1, tarea: 'abrir visual estudio code', estado: 'A realizar' },
+            { id: 3, tarea: 'crear ambiente de trabajo', estado: 'A realizar' },
+            { id: 4, tarea: 'crear archivo index.html', estado: 'A realizar' },
             ]
 
                         // App.jsx
             function App() {
-                const [contadores, setContadores] = useState(datosInicial)
+                const [tasks, setTasks] = useState(tareasIniciales)
 
                 function agregar(tarea) {
-                    const original = { id: Number(Date.now()), tarea, estado: 'a realizar', }
-                    const copia = [...contadores, original]
+                    const original = { id: Number(Date.now()), tarea, estado: 'A realizar', }
+                    const copia = [...tasks, original]
                     
-                    setContadores(copia)
+                    setTasks(copia)
                 }
 
                 function realizar(id, estado) {
-                    const original = contadores.find((contador) => contador.id === id)
+                    const original = tasks.find((task) => task.id === id)
                     const nuevo = { ...original, estado }
-                    const copia = contadores.map(contador => contador.id === nuevo.id ? nuevo : contador)
+                    const copia = tasks.map(task => task.id === nuevo.id ? nuevo : task)
                     
-                    setContadores(copia)
+                    setTasks(copia)
                 }
             
                 function borrar(id) {
-                    const copia = contadores.filter((contador) => contador.id !== id)
-                    setContadores(copia)
+                    const copia = tasks.filter((task) => task.id !== id)
+                    setTasks(copia)
                 }
             
                 useEffect(() => {
-                    console.log('Se elimino una tarea :' + contadores.length)
-                }, [contadores.length])	
+                    console.log('Se elimino una tarea :' + tasks.length)
+                }, [tasks.length])	
 
                 return (
                     <>
                     <main>
                         <h1>Lista de Tareas</h1>
-                        <ContadorFormulario alAgregar={agregar} />
-                        <ContadorLista contadores={contadores} alRealizar={realizar} alBorrar={borrar} />
+                        <TaskForm alAgregar={agregar} />
+                        <TaskList tasks={tasks} alRealizar={realizar} alBorrar={borrar} />
                     </main>
                     </>
                 )
             }
-                        // ContadorFormulario.jsx
-            function ContadorFormulario({ alAgregar }) {
+                        // TaskForm.jsx
+            function TaskForm({ alAgregar }) {
                 const [tarea, setTarea] = useState('')
 
                 function cambiarTarea(event) {
@@ -171,8 +171,10 @@
                 }
             
                 function agregar(event) {
-                    alAgregar(tarea)
-                    setTarea('')
+                    if (tarea){
+                        alAgregar(tarea)
+                        setTarea('')
+                    }
                     event.preventDefault()
                 }
 
@@ -184,28 +186,32 @@
                 )
             }
 
-            // ContadorLista.jsx
+              
 
-            function ContadorLista({ contadores, alRealizar, alBorrar }) {
+            function TaskList({ tasks, alRealizar, alBorrar }) {
                 return (
                     <>
                     <ul>
-                        {contadores.map((contador) => <ContadorItem
-                            key={contador.id}
-                            contador={contador} 
-                            alRealizar={alRealizar}
-                            alBorrar={alBorrar} />)
+                        {tasks.map((task) => <TaskItem
+                        key={task.id}
+                        task={task} 
+                        alRealizar={alRealizar}
+                        alBorrar={alBorrar} />)
                         }
                     </ul>
                     </>
                 );
             }
 
-            function ContadorItem({contador, alRealizar, alBorrar}) {
-                const { id, tarea, estado } = contador
+            function TaskItem({task, alRealizar, alBorrar}) {
+                const { id, tarea, estado } = task
 
                 function realizar(){
-                    alRealizar(id, 'Raalizada')
+                   if (estado=="A realizar"){                 
+                    alRealizar(id, 'Realizada')
+                   }else{
+                    alRealizar(id, 'A realizar')
+                   } 
                 }
 
                 function borrar() {

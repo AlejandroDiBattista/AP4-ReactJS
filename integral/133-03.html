@@ -10,10 +10,10 @@
 
   <!-- 
     Curso 133 - Grupo 03 -> tsade@live.com.ar
-      21992626; Adriana Villafañe 
-      18445270; Viviana Lopez 
-      17219543; Edmundo Molina  
-      18123292; Angel Aberbach  
+      18445270; Lopez, Viviana  
+      21992626; Villafañe, Adriana 
+      17219543; Molina, Edmundo   
+      18123292; Aberbach, Angel   
 
       funciona: si
       diseño: si
@@ -191,9 +191,7 @@
         </div>
       );
     };
-    // hasta aca app.jsx
-    //
-    //taskForm.js
+
     const TaskForm = ({ addTask }) => {
       const [newTask, setNewTask] = useState('');
 
@@ -221,9 +219,7 @@
         </form>
       );
     };
-    //hasta aca taskForm.js
-    //
-    //taskItem.js
+
     const TaskItem = ({ task, completeTask, deleteTask }) => {
       const handleComplete = () => {
         completeTask(task.id);
@@ -241,9 +237,7 @@
         </div>
       );
     };
-    //hasta aca taskItem.js
-    //
-    //task.List.js
+
     const TaskList = ({ tasks, completeTask, deleteTask }) => {
       return (
         <div className="task-list">
