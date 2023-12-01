@@ -52,7 +52,7 @@ LIRUSSI	DARIO	4533	24679669	dlirussi@hotmail.com	P (1/1)	P (1/1)	A (0/1)	A (0/1)
 LOFIEGO	MARCELO ALEJANDRO	24125	27678855	marceloalejandrolofiego@hotmail.com.ar	A (0/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	7	1	8	7 / 8	87,5
 LORENZO	MARIELA ANDREA	14666	27544892	mariulorenzo@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	8	0	8	8 / 8	100,0
 MAO	NICOLAS	24925	41435342	nicolas_mao@outlook.com	P (1/1)	P (1/1)	P (1/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	1	5	6	1 / 6	16,7
-VEGA	MARCELA	CARABAJAL	13430	20310629	marcelavega.mv.3024@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
+VEGA	MARCELA CARABAJAL	13430	20310629	marcelavega.mv.3024@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
 MARTIN	NORMA NOEMI	17287	18018838	normamanassero@gmail.com	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	A (0/1)	0	8	8	0 / 8	0,0
 MARTINEZ	CARLOS DANIEL	3141	26412222	carlosdmartinez121@gmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	P (1/1)	8	0	8	8 / 8	100,0
 MAURICIO	TOLOSA	26054	27584437	tolosamauricio@hotmail.com	P (1/1)	P (1/1)	P (1/1)	P (1/1)	A (0/1)	P (1/1)	P (1/1)	P (1/1)	7	1	8	7 / 8	87,5

@@ -90,7 +90,6 @@ def listar_detalle_asistencias(asistencias, titulo="Detalle de asistencias")
         falto = asistencia[:asistio] == 'si' ? "👍" : "❌"
         dias = asistencia[:dias].split(//).map{|x| x == "A" ? "·": "●"}.join(" ")
         ojo = asistencia[:revisar] == 'si' ? "👀" : " "
-        # dias = asistencia[:dias]
         mostrar = block_given? ? yield(asistencia) : true
 
         if mostrar  
@@ -101,7 +100,6 @@ def listar_detalle_asistencias(asistencias, titulo="Detalle de asistencias")
         end
     end
 end 
-
 
 # --- Grupos --- 
 
@@ -137,7 +135,6 @@ end
 def leer_resultados(base=:practicos)
     resultados = []
     Dir["./#{base}/*.html"].sort.each do |file|
-
         lineas = File.read(file).split("\n").map{|l| l.chomp.strip}
         lineas = lineas.select{|l| l.size > 0}
         desde  = lineas.find_index{ |line| line.include?("<!--") } + 1
@@ -214,6 +211,7 @@ def registra_examenes(asistencias, examenes)
         end
     end
 end
+
 # --- Estadisticas ---
 
 def listar_con_notas(ejercicios)
@@ -231,7 +229,7 @@ end
 def estadistica_resultado(ejercicios)
     funcionan = ejercicios.select{|e| e[:resultado][:funciona] == 'si'}
     diseño = ejercicios.select{|e| e[:resultado][:diseño] == 'si'}
-    # Cuenta cuanto veces se repita cada valor del campo :implementacion
+
     implementacion = ejercicios.map{|e| e[:resultado][:implementacion]}.group_by{|e| e}.map{|k,v| [k, v.size]}.to_h
     reutilizacion = ejercicios.select{|e| e[:resultado][:reutilizacion] == 'si'}
 

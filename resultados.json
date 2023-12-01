@@ -143,8 +143,10 @@
 
     ],
     "resultado": {
-      "funciona": "si",
-      "diseño": "si"
+      "funciona ": "si",
+      "diseño ": "si",
+      "implementacion ": "funcion",
+      "reutilizacion ": "no"
     },
     "faltan": [
       25549334,

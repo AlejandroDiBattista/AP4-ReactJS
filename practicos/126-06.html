@@ -12,15 +12,15 @@
         Curso 126 - Grupo 06 -> rosananeiman77@gmail.com
             25851689; Neiman Rosana
 
-            funciona: si
-            diseño: si
-            nombre: 
+            funciona : si
+            diseño : si
+            implementacion : funcion
+            reutilizacion : no
 
         -->
 
         <title>TrabajoPractico1</title>
         <style>
-
            .cajaC{
                   background-color: rgb(250, 250, 243) ;
                   border: 1px solid #111111 ;
@@ -63,15 +63,11 @@
                     margin: 7px;
                 }
 
-                </style>
+        </style>
 
+    <script type="text/babel">
+        const { useState } = React        
 
-
- <script type="text/babel">
-const { useState } = React        
-
-            /* Aca va todo el codigo de JSX (sin importación ni exportación) */
-    /*Contador1.jsx*/
     function Contador1(){
     const[valor, setValor] = useState(0);
     const incrementar = () =>{    
