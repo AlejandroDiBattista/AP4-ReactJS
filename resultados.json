@@ -134,6 +134,29 @@
   },
   {
     "curso": 126,
+    "grupo": 6,
+    "email": "rosananeiman77@gmail.com",
+    "alumnos": [
+      25851689
+    ],
+    "notas": [
+
+    ],
+    "resultado": {
+      "funciona": "si",
+      "diseño": "si"
+    },
+    "faltan": [
+      25549334,
+      25427798,
+      23231981,
+      28362944,
+      23079217
+    ],
+    "miembros": 6
+  },
+  {
+    "curso": 126,
     "grupo": 7,
     "email": "veritocapito@gmail.com",
     "alumnos": [
