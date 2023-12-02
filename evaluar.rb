@@ -1,5 +1,6 @@
 require 'json'
 require 'csv'
+require 'colorize'
 
 def extraer_curso(nombre)
     nombre.match(/-FR_T-(\d{3})/)[1].to_i
@@ -83,20 +84,25 @@ def leer_examen(origen)
     data
 end
 
+def color(valor, simbolo: "●", si: :green, no: :red)
+    valor = valor == "si" if String === valor 
+    simbolo.colorize( valor ? si : no )
+end
+
 def listar_detalle_asistencias(asistencias, titulo="Detalle de asistencias")
     puts ">> #{titulo}\n"
     i = 0 
     asistencias.each do |asistencia|
-        falto = asistencia[:asistio] == 'si' ? "👍" : "❌"
-        dias = asistencia[:dias].split(//).map{|x| x == "A" ? "·": "●"}.join(" ")
-        ojo = asistencia[:revisar] == 'si' ? "👀" : " "
+        falto = color(asistencia[:asistio]) # == 'si' ? "👍" : "❌"
+        dias = asistencia[:dias].split(//).map{|x| color(x == "P")}.join(" ")
+        ojo = color(asistencia[:revisar], si: :yellow, no: :black)
         mostrar = block_given? ? yield(asistencia) : true
 
         if mostrar  
-            puts "%3i) %8i - %-50s  %3i-%02i  | %2i  %10s  | %s %s %s | %s | %s  " % [i+=1, 
+            puts "%3i) %8i - %-50s  %3i-%02i  | %2i  %10s | %s %s %s | %s | %s  " % [i+=1, 
                 asistencia[:dni], asistencia[:nombre], asistencia[:curso], asistencia[:grupo], 
                 asistencia[:asistencias], dias, 
-                falto, asistencia[:practico], asistencia[:integral], ojo, asistencia[:examen]]
+                falto, color(asistencia[:practico]), color(asistencia[:integral]), ojo, asistencia[:examen]]
         end
     end
 end 
@@ -166,12 +172,14 @@ def leer_resultados(base=:practicos)
     resultados
 end
 
+AsistenciaMinima = 4 
+
 def registrar_resultados(asistencias, practicos, integral=[])
     asistencias.each do |x|
         x[:practico] = 'no'
         x[:integral] = 'no'
 
-        x[:asistio] = (!x[:dias][/.*AAAA$/] && x[:asistencias] >= 3) ? "si" : "no" # 3 clases o más y no faltó a las últimas 4
+        x[:asistio] = (!x[:dias][/.*AAA$/] && x[:asistencias] >= AsistenciaMinima) ? "si" : "no" # 3 clases o más y no faltó a las últimas 4
     end
 
     practicos.each do |resultado|
@@ -245,6 +253,17 @@ end
 def alumnos_sin_presentar(asistencias)
     faltan = asistencias.select{|a| a[:practico] == '' && a[:grupo] != 0}
     puts "Alumnos sin presentar"
+    n = 0
+    faltan.each do |f|
+        print "%4i -" % (n += 1)
+        puts " #{f[:dni]} | #{f[:nombre].ljust(40)} #{f[:curso]} #{f[:grupo].ljust(2,"0")} | #{f[:email].ljust(32)} #{f[:dni]}"
+    end
+end
+
+
+def alumnos_sin_rendir(asistencias)
+    faltan = asistencias.select{|x| x[:practico] == 'si' && x[:integral] == 'si' && x[:examen] == '-'}
+    puts "Alumnos en condiciones de aprobar pero sin Examen"
     n = 0
     faltan.each do |f|
         print "%4i -" % (n += 1)
@@ -323,7 +342,7 @@ escribir_json(resumen, :grupos)
 
 # pp grupos 
 asistencias = asistencias.sort_by{|a| [a[:curso], a[:grupo], a[:nombre]]}
-# listar_detalle_asistencias( asistencias, 'Listado completo')
+listar_detalle_asistencias( asistencias, 'Listado completo'){|x|  x[:practico] == 'si' && x[:integral] == 'si' && x[:examen] == '-'}
 # listar_detalle_asistencias( asistencias, 'Alumnos que presentaron tareas pero no asistieron'){|a| (a[:practico] == 'si' || a[:integral] == 'si') && a[:asistio] == 'no'}
 # listar_detalle_asistencias( asistencias, 'Alumnos asistieron pero faltan tareas'){|a| (a[:practico] == 'no' || a[:integral] == 'no') && a[:asistio] == 'si'}
 # listar_detalle_asistencias( asistencias, 'Faltan integrador'){|a| (a[:practico] == 'si' && a[:integral] == 'no') && a[:asistio] == 'si'}
@@ -331,15 +350,13 @@ asistencias = asistencias.sort_by{|a| [a[:curso], a[:grupo], a[:nombre]]}
 # listar_detalle_asistencias( asistencias, 'Faltan examen'){|a| (a[:practico] == 'si' && a[:integral] == 'si') && a[:examen] == '-'}
 # listar_detalle_asistencias( asistencias, 'Sin grupos'){|a| (a[:grupo] == 0) && a[:asistio] == 'si'}
 
-pp informar(asistencias){|a| a[:practico] == 'si' && a[:integral] == 'no' && a[:asistio] == 'si'}
-
-return 
-
-estadistica_resultado(resultados)
-alumnos_sin_presentar(asistencias)
-resumir_resultados(resultados)
+# estadistica_resultado(resultados)
+# alumnos_sin_presentar(asistencias)
+# resumir_resultados(resultados)
 
 # pp a=traer_grupo(asistencias, 132, 10).sort.reverse
 # pp b=resultados.find{|r| r[:curso] == 132 && r[:grupo] == 10}[:alumnos].sort
 # pp c=resultados.find{|r| r[:curso] == 132 && r[:grupo] == 10}[:faltan].sort
 # pp b - a
+
+pp informar(asistencias){|x|x[:practico] == 'si' && x[:integral] == 'si' && x[:examen] == '-'}
