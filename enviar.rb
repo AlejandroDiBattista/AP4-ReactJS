@@ -208,16 +208,25 @@ def enviar_segunda_oportunidad(oportunidades)
     puts "Enviando correo electrónico a #{nombre} (#{email})"
     
     texto = """
-#{nombre}:
+Hola #{nombre}:
 
-Según mis registros, aún no has completado el Examen Online, un cuestionario de 20 preguntas de opciones múltiples que deberías poder responder en unos minutos. Habiendo cumplido con la asistencia y la aprobación de los trabajos prácticos, confío en que el examen no representará una dificultad para ti, al igual que no lo fue para tus compañeros. No obstante, la plataforma exige que se complete.
+Según mis registros, aún no has completado el Examen Online, 
+es un cuestionario de 20 preguntas de opciones múltiples que deberías poder responder en unos minutos. 
 
-Considerando que ya has cumplido con el resto de las consignas, hemos decidido brindarte una última oportunidad y habilitar la posibilidad de que lo respondas durante el fin de semana.
+Habiendo cumplido con la asistencia y la aprobación de los trabajos prácticos, confío en que el examen 
+no representará una dificultad para ti, al igual que no lo fue para tus compañeros. 
 
-Puedes acceder directamente desde aquí: #{url}
+No obstante, la plataforma exige que lo completes.
 
-¡Buena suerte!
-    
+Considerando que ya has cumplido con el resto de las consignas, hemos decidido brindarte una última oportunidad y
+habilitar la posibilidad de que lo respondas durante el fin de semana.
+
+Puedes acceder directamente al examen haciendo click aquí: #{url}
+
+¡¡ Buena suerte !!
+
+"""
+
     puts "Enviando correo electrónico a #{nombre} (#{email}) (#{i+=1}/#{n})"
     texto = texto.gsub("\n", "\r\n")
     enviar email, "Recuperación examen Argentina Programa", texto
@@ -251,14 +260,12 @@ def enviar_falta_integral(sin_integral)
 end 
 
 respondieron = oportunidades - segunda_oportunidad
-puts "1 Oportunidad #{oportunidades.size}"
-puts "Respondieron #{respondieron.size}"
-puts "2 Oportunidad #{segunda_oportunidad.size}"
+puts "1 Oportunidad  : #{oportunidades.size}"
+puts "  Respondieron : #{respondieron.size}"
+puts "2 Oportunidad  : #{segunda_oportunidad.size}"
 
 Gmail = Gmail.connect(Username, Password)
 # enviar_oportunidad oportunidades
 # enviar_falta_integral sin_integrador
-
-
-
+# enviar_segunda_oportunidad(segunda_oportunidad) 
 Gmail.logout

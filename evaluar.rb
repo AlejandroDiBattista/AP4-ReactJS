@@ -359,4 +359,36 @@ listar_detalle_asistencias( asistencias, 'Listado completo'){|x|  x[:practico] =
 # pp c=resultados.find{|r| r[:curso] == 132 && r[:grupo] == 10}[:faltan].sort
 # pp b - a
 
-pp informar(asistencias){|x|x[:practico] == 'si' && x[:integral] == 'si' && x[:examen] == '-'}
+
+def listar_alumnos_aprobados(asistencias, destino = :resultados)
+    asistencias = asistencias.map(&:clone)
+    asistencias.each do |a|
+        a[:aprobado] = (a[:practico] =='si' && a[:integral] =='si' && a[:examen] != '-' && a[:asistio] = "si") ? 'si' : 'no'
+        apellido, nombre = a[:nombre].split(",")
+        a[:apellido] = apellido.strip
+        a[:nombre] = nombre.strip
+    end 
+
+    asistencias = asistencias.select{|a| yield(a)} if block_given? 
+    asistencias = asistencias.sort_by{|a| [a[:curso], a[:apellido], a[:nombre]]}
+    
+    campos = [:nombre, :apellido,  :email, :aprobado, :asistio, :practico, :integral, :examen]
+    salida = [] 
+    salida << campos.join(";")
+
+    asistencias.each do |a|
+        salida << campos.map{|c| a[c]}.join(";")
+    end 
+    open("#{destino}.csv", "w"){|f| f.write salida.join("\n")}
+end 
+
+def informar(asistencias)
+    asistencias.select{|a| block_given? ? yield(a) : true}.map{|a| [a[:curso], a[:email], a[:nombre]]}
+end
+
+pp asistencias.select{|a|a[:nombre][","].nil?}
+listar_alumnos_aprobados(asistencias, :resultados_126){|a| a[:aprobado] == 'si' && a[:curso] == 126}
+listar_alumnos_aprobados(asistencias, :resultados_132){|a| a[:aprobado] == 'si' && a[:curso] == 132}
+listar_alumnos_aprobados(asistencias, :resultados_133){|a| a[:aprobado] == 'si' && a[:curso] == 133}
+listar_alumnos_aprobados(asistencias, :resultados_134){|a| a[:aprobado] == 'si' && a[:curso] == 134}
+
