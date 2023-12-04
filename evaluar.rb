@@ -359,7 +359,6 @@ listar_detalle_asistencias( asistencias, 'Listado completo'){|x|  x[:practico] =
 # pp c=resultados.find{|r| r[:curso] == 132 && r[:grupo] == 10}[:faltan].sort
 # pp b - a
 
-
 def listar_alumnos_aprobados(asistencias, destino = :resultados)
     asistencias = asistencias.map(&:clone)
     asistencias.each do |a|
