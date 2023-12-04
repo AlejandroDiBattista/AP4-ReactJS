@@ -14,7 +14,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -31,7 +32,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -48,7 +50,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "10.00"
+    "examen": "10.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -59,13 +62,14 @@
     "asistencias": 8,
     "dias": "PPPPPPPP",
     "id": "9489",
-    "practico": "no",
+    "practico": "si",
     "integral": "si",
     "asistio": "si",
-    "correcto": "no",
-    "revisar": "si",
+    "correcto": "si",
+    "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -82,7 +86,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "6.50"
+    "examen": "6.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -99,7 +104,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -116,7 +122,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -133,7 +140,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -150,7 +158,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -167,7 +176,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -184,7 +194,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -201,7 +212,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "6.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -218,7 +230,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -235,7 +248,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -252,7 +266,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -269,7 +284,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "10.00"
+    "examen": "10.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -286,7 +302,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -303,7 +320,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -314,13 +332,14 @@
     "asistencias": 7,
     "dias": "PPPPPAPP",
     "id": "19862",
-    "practico": "no",
+    "practico": "si",
     "integral": "no",
     "asistio": "si",
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -337,7 +356,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -354,7 +374,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -371,7 +392,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -388,7 +410,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -405,7 +428,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -422,7 +446,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -439,7 +464,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -456,7 +482,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -473,7 +500,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -490,7 +518,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -507,7 +536,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -524,7 +554,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -541,7 +572,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -552,13 +584,14 @@
     "asistencias": 8,
     "dias": "PPPPPPPP",
     "id": "1152",
-    "practico": "no",
+    "practico": "si",
     "integral": "si",
     "asistio": "si",
-    "correcto": "no",
-    "revisar": "si",
+    "correcto": "si",
+    "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -575,7 +608,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -592,7 +626,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -609,7 +644,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -626,7 +662,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -643,7 +680,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -660,7 +698,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -677,7 +716,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -688,13 +728,14 @@
     "asistencias": 4,
     "dias": "AAPPPPAA",
     "id": "23981",
-    "practico": "no",
+    "practico": "si",
     "integral": "no",
     "asistio": "si",
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "5.50"
+    "examen": "5.50",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -711,7 +752,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -728,7 +770,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -745,7 +788,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -762,7 +806,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "4.00"
+    "examen": "4.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -779,7 +824,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -796,7 +842,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -813,7 +860,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -830,7 +878,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -847,7 +896,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -864,7 +914,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -881,7 +932,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -898,7 +950,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "10.00"
+    "examen": "10.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -915,7 +968,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "5.50"
+    "examen": "5.50",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -932,7 +986,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -949,7 +1004,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -966,7 +1022,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -983,7 +1040,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1000,7 +1058,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1017,7 +1076,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1034,7 +1094,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1051,7 +1112,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1068,7 +1130,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1079,13 +1142,14 @@
     "asistencias": 7,
     "dias": "PPPPPPPA",
     "id": "12258",
-    "practico": "no",
+    "practico": "si",
     "integral": "no",
     "asistio": "si",
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1102,7 +1166,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1119,7 +1184,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "5.50"
+    "examen": "5.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1136,7 +1202,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1153,7 +1220,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1170,7 +1238,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "10.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1187,7 +1256,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "6.00"
+    "examen": "6.00",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1204,7 +1274,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1221,7 +1292,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1238,7 +1310,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1255,7 +1328,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1272,7 +1346,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1289,7 +1364,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1306,7 +1382,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1323,7 +1400,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1340,7 +1418,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1357,7 +1436,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1374,7 +1454,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1391,7 +1472,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1408,7 +1490,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1425,7 +1508,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1442,7 +1526,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1459,7 +1544,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1476,7 +1562,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1493,7 +1580,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1510,7 +1598,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1527,7 +1616,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1544,7 +1634,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1561,7 +1652,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1578,7 +1670,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1595,7 +1688,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1612,7 +1706,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1629,7 +1724,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1646,7 +1742,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1663,7 +1760,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1680,7 +1778,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1697,7 +1796,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1714,7 +1814,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1731,7 +1832,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1748,7 +1850,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "4.50"
+    "examen": "4.50",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1765,7 +1868,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1782,7 +1886,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1799,7 +1904,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1816,7 +1922,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "5.50"
+    "examen": "5.50",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1833,7 +1940,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1850,7 +1958,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1867,7 +1976,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1880,11 +1990,12 @@
     "id": "1794",
     "practico": "si",
     "integral": "si",
-    "asistio": "no",
+    "asistio": "si",
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1901,7 +2012,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1918,7 +2030,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1935,7 +2048,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1952,7 +2066,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -1969,7 +2084,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -1986,7 +2102,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -2003,7 +2120,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -2020,7 +2138,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -2037,7 +2156,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -2054,7 +2174,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 132,
@@ -2071,7 +2192,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -2088,7 +2210,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 132,
@@ -2105,7 +2228,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2122,7 +2246,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2139,7 +2264,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2156,7 +2282,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2173,7 +2300,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2190,7 +2318,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "5.50"
+    "examen": "5.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2207,7 +2336,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2224,7 +2354,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2241,7 +2372,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2258,7 +2390,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2275,7 +2408,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2292,7 +2426,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2309,7 +2444,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2326,7 +2462,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2343,7 +2480,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2360,7 +2498,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2377,7 +2516,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2394,7 +2534,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2411,7 +2552,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "10.00"
+    "examen": "10.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2428,7 +2570,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2445,7 +2588,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2462,7 +2606,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2479,7 +2624,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2496,7 +2642,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2513,7 +2660,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2530,7 +2678,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2547,7 +2696,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2564,7 +2714,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2581,7 +2732,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2598,7 +2750,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2615,7 +2768,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2632,7 +2786,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2649,7 +2804,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "10.00"
+    "examen": "10.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2666,7 +2822,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2683,7 +2840,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2700,7 +2858,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2717,7 +2876,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2734,7 +2894,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2751,7 +2912,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2768,7 +2930,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2785,7 +2948,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2802,7 +2966,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2819,7 +2984,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2836,7 +3002,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2853,7 +3020,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2870,7 +3038,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2887,7 +3056,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2904,7 +3074,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2921,7 +3092,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2938,7 +3110,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2955,7 +3128,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -2972,7 +3146,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "10.00"
+    "examen": "10.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -2989,7 +3164,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3006,7 +3182,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "6.50"
+    "examen": "6.50",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3023,7 +3200,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3040,7 +3218,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -3057,7 +3236,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -3074,7 +3254,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3091,7 +3272,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -3108,7 +3290,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3125,7 +3308,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3142,7 +3326,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -3159,7 +3344,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -3176,7 +3362,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3193,7 +3380,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3210,7 +3398,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3227,7 +3416,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3244,7 +3434,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3261,7 +3452,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -3278,7 +3470,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -3295,7 +3488,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3312,7 +3506,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3329,7 +3524,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -3346,7 +3542,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 134,
@@ -3363,7 +3560,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3380,7 +3578,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "no"
   },
   {
     "curso": 134,
@@ -3397,7 +3596,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3414,7 +3614,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3431,7 +3632,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3448,7 +3650,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3465,7 +3668,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3482,7 +3686,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3499,7 +3704,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "10.00"
+    "examen": "10.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3516,7 +3722,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3533,7 +3740,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3550,7 +3758,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3567,7 +3776,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3584,7 +3794,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3597,11 +3808,12 @@
     "id": "13923",
     "practico": "si",
     "integral": "si",
-    "asistio": "no",
+    "asistio": "si",
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3618,7 +3830,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3635,7 +3848,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3652,7 +3866,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3669,7 +3884,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3686,7 +3902,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3703,7 +3920,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3720,7 +3938,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3737,7 +3956,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3754,7 +3974,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3771,7 +3992,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3788,7 +4010,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3805,7 +4028,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3822,7 +4046,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3839,7 +4064,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3856,7 +4082,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3873,7 +4100,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3890,7 +4118,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3907,7 +4136,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3924,7 +4154,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3941,7 +4172,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3958,7 +4190,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -3975,7 +4208,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -3992,7 +4226,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4009,7 +4244,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4026,7 +4262,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "6.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4043,7 +4280,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4060,7 +4298,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4077,7 +4316,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4094,7 +4334,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4111,7 +4352,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4128,7 +4370,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4145,7 +4388,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4162,7 +4406,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4179,7 +4424,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4196,7 +4442,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "5.50"
+    "examen": "5.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4213,7 +4460,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4230,7 +4478,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4247,7 +4496,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4264,7 +4514,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4281,7 +4532,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4298,7 +4550,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4315,7 +4568,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4332,7 +4586,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "6.50"
+    "examen": "6.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4349,7 +4604,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4366,7 +4622,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4383,7 +4640,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4400,7 +4658,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4417,7 +4676,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4434,7 +4694,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4451,7 +4712,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4468,7 +4730,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4485,7 +4748,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4502,7 +4766,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4519,7 +4784,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4536,7 +4802,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4553,7 +4820,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4570,7 +4838,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4587,7 +4856,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4604,7 +4874,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4621,7 +4892,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4638,7 +4910,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4655,7 +4928,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "5.00"
+    "examen": "5.00",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4672,7 +4946,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4689,7 +4964,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "5.00"
+    "examen": "5.00",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4706,7 +4982,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4723,7 +5000,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4740,7 +5018,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4757,7 +5036,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4774,7 +5054,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4791,7 +5072,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "5.50"
+    "examen": "5.50",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4808,7 +5090,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "5.00"
+    "examen": "5.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4825,7 +5108,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4842,7 +5126,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4859,7 +5144,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4876,7 +5162,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4893,7 +5180,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "3.00"
+    "examen": "3.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4910,7 +5198,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4927,7 +5216,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4944,7 +5234,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4961,7 +5252,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -4978,7 +5270,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -4995,7 +5288,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -5012,7 +5306,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -5029,7 +5324,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -5046,7 +5342,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -5063,7 +5360,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -5080,7 +5378,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -5093,11 +5392,12 @@
     "id": "419",
     "practico": "si",
     "integral": "si",
-    "asistio": "no",
+    "asistio": "si",
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 133,
@@ -5114,7 +5414,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -5131,7 +5432,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -5148,7 +5450,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -5165,7 +5468,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 133,
@@ -5182,7 +5486,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "5.50"
+    "examen": "5.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5199,7 +5504,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5216,7 +5522,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5233,7 +5540,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5250,7 +5558,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "10.00"
+    "examen": "10.00",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5267,7 +5576,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "9.00",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5284,7 +5594,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5301,7 +5612,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5318,7 +5630,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5335,7 +5648,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "6.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5352,7 +5666,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5369,7 +5684,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5386,7 +5702,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5403,7 +5720,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5420,7 +5738,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5437,7 +5756,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5454,7 +5774,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5471,7 +5792,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5488,7 +5810,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5505,7 +5828,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5522,7 +5846,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5539,7 +5864,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5556,7 +5882,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5573,7 +5900,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5590,7 +5918,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "6.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5607,7 +5936,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5624,7 +5954,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5641,7 +5972,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5658,7 +5990,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5675,7 +6008,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5692,7 +6026,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5709,7 +6044,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5726,7 +6062,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5743,7 +6080,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5760,7 +6098,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5777,7 +6116,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5794,7 +6134,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5811,7 +6152,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5828,7 +6170,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "6.50"
+    "examen": "6.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5845,7 +6188,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5862,7 +6206,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5879,7 +6224,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5896,7 +6242,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5913,7 +6260,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5930,7 +6278,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5947,7 +6296,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5964,7 +6314,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -5981,7 +6332,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -5998,7 +6350,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6015,7 +6368,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6032,7 +6386,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6049,7 +6404,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6066,7 +6422,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6083,7 +6440,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "10.00"
+    "examen": "10.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6100,7 +6458,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "10.00"
+    "examen": "10.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6117,7 +6476,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6134,7 +6494,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6151,7 +6512,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "4.00"
+    "examen": "4.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6168,7 +6530,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6185,7 +6548,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6202,7 +6566,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6219,7 +6584,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.50"
+    "examen": "9.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6236,7 +6602,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6253,7 +6620,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6270,7 +6638,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6287,7 +6656,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6304,7 +6674,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6321,7 +6692,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6338,7 +6710,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6355,7 +6728,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6372,7 +6746,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6389,7 +6764,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "si",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6406,7 +6782,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6423,7 +6800,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6440,7 +6818,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "6.50"
+    "examen": "6.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6457,7 +6836,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6474,7 +6854,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6491,7 +6872,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6508,7 +6890,8 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6525,7 +6908,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6542,7 +6926,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6559,7 +6944,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6576,7 +6962,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6593,7 +6980,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6610,7 +6998,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "6.50"
+    "examen": "6.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6627,7 +7016,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "7.00"
+    "examen": "7.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6644,7 +7034,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "7.50"
+    "examen": "7.50",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6661,7 +7052,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6678,7 +7070,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "9.00"
+    "examen": "9.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6695,7 +7088,8 @@
     "correcto": "no",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6712,7 +7106,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.50"
+    "examen": "8.50",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6729,7 +7124,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6746,7 +7142,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "-"
+    "examen": "-",
+    "aprobado": "no"
   },
   {
     "curso": 126,
@@ -6763,7 +7160,8 @@
     "correcto": "si",
     "revisar": "no",
     "error": "no",
-    "examen": "10.00"
+    "examen": "10.00",
+    "aprobado": "si"
   },
   {
     "curso": 126,
@@ -6780,6 +7178,7 @@
     "correcto": "no",
     "revisar": "si",
     "error": "no",
-    "examen": "8.00"
+    "examen": "8.00",
+    "aprobado": "no"
   }
 ]

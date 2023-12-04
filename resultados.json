@@ -607,7 +607,7 @@
       "La gestión de los estilos se hace desde el mismo componente"
     ],
     "resultado": {
-      "funciona": "no",
+      "funciona": "si",
       "diseño": "si",
       "implementacion": "funcion",
       "reutilizacion": "no"
