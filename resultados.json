@@ -15,7 +15,7 @@
     "resultado": {
       "funciona": "si",
       "diseño": "si",
-      "implementacion": "función",
+      "implementacion": "funcion",
       "reutilizacion": "si"
     },
     "faltan": [

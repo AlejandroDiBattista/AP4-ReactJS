@@ -99,7 +99,7 @@ def listar_detalle_asistencias(asistencias, titulo="Detalle de asistencias")
         mostrar = block_given? ? yield(asistencia) : true
 
         if mostrar  
-            puts "%3i) %8i - %-50s  %3i-%02i  | %2i  %10s | %s %s %s | %s | %s  " % [i+=1, 
+            puts "%3i) %8i - %-50s  %3i-%02i  | %2i  %10s | %s %s %s | %s | %5s  " % [i+=1, 
                 asistencia[:dni], asistencia[:nombre], asistencia[:curso], asistencia[:grupo], 
                 asistencia[:asistencias], dias, 
                 falto, color(asistencia[:practico]), color(asistencia[:integral]), ojo, asistencia[:examen]]
@@ -350,8 +350,6 @@ end
 
 def subir(asistencias, curso)
     asistencias = asistencias.select{|a| a[:curso] == curso}
-    pp asistencias.group_by{|a|a[:aprobado]}.map{|k,v| [k, v.size]}
-    pp asistencias.first(2)
     resultados = asistencias.map{|a| {email: a[:email], integral: a[:integral] == 'si' ? "100" : "0", calificacion: a[:aprobado] == 'si' ? 'Aprobado' : 'Desaprobado'}}
     
     escribir_csv(resultados, "subir-#{curso}")
@@ -369,8 +367,6 @@ puts "Hay #{resultados.size} resultados de prácticos"
 integral = leer_resultados(:integral)
 
 puts "Hay #{integral.size} resultados de integral"
-# pp resultados.select{|r| r[:curso] == 132 && r[:grupo] == 11}	
-# pp integral.select{|r| r[:curso] == 132 && r[:grupo] == 11}	
 
 # return 
 examenes = leer_examenes()
